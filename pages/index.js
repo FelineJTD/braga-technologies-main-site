@@ -138,7 +138,7 @@ export default function Home() {
 
       <main className='text-gray-900 w-full'>
         {/* 00 */}
-        <section className='w-full h-screen text-center px-6 lg:px-[25vw] flex flex-col justify-between'>
+        <section className='w-full h-screen text-center px-6 lg:px-[25vw] xl:px-[30vw] flex flex-col justify-between'>
           <div className='flex items-center w-full flex-grow'>
             <h1>
               Answering <i>How</i>, by Understanding <span className='underline italic'>Where</span>
@@ -195,10 +195,10 @@ export default function Home() {
 
           <div className='col-span-12 h-96 w-full bg-white my-6 rounded-xl' />
 
-          <div className='col-start-2 col-span-11 flex space-x-3 overflow-auto'>
+          <div className='col-start-2 col-span-11 flex space-x-3 overflow-auto w-full'>
             { 
               features.map((feature, index) => (
-                <div key={index} className='flex border-2 border-gray-700 rounded-lg p-3 space-x-4 min-w-[35vw]'>
+                <div key={index} className='flex border-2 border-gray-700 rounded-lg p-3 space-x-4 min-w-[24rem] lg:min-w-[35vw]'>
                   <div className='bg-gray-700 h-full w-24 rounded-lg' />
                   <div>
                     <h5 className='font-bold'>{feature.title}</h5>
@@ -259,7 +259,7 @@ export default function Home() {
           <p className='col-span-3 col-start-7 md:self-end mb-4'>Our interdisciplinary design and development approach accelerates the geospatial tech delivery to your hands.</p>
           <button className='col-span-2 md:self-end mb-4'>Works</button>
 
-          <div className='col-start-2 col-span-11 flex space-x-3 overflow-auto'>
+          <div className='col-start-2 col-span-11 flex space-x-3 overflow-auto w-full'>
             {
               examples.map((example, index) => (
                 <CardSolution solution={example} isDarkMode={true} key={index} />
@@ -277,7 +277,7 @@ export default function Home() {
             <div className='flex flex-col space-y-1 w-full md:grid grid-cols-2 px-0 gap-4 mt-8'>
             {
               services.map((service, index) => (
-                <div key={index} className='flex border-2 border-gray-700 rounded-lg p-3 space-x-4 w-full'>
+                <div key={index} className='border-2 border-gray-700 rounded-lg p-3 w-full'>
                   <h5 className='font-bold'>{service.title}</h5>
                   <p className='text-sm'>{service.desc}</p>
                 </div>
