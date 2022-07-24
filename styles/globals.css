@@ -137,5 +137,13 @@ button {
 }
 
 .defaultPadding {
-  @apply p-6 xl:px-[10%];
+  @apply px-6 py-16 xl:px-[10%];
+}
+
+.blackBG {
+  @apply bg-gray-900 text-white md:mx-6 rounded-2xl defaultPadding flex flex-col items-start lg:grid lg:grid-cols-12;
+}
+
+.whiteBG {
+  @apply defaultPadding flex flex-col lg:grid lg:grid-cols-12;
 }
