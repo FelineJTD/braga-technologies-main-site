@@ -220,7 +220,7 @@ export default function Home() {
           <p className='font-bold mb-4'>03.</p>
           <p className='mb-4 font-bold col-span-3'>GeoSpatial Potential</p>
           {/* Experts' Quotes */}
-          <div className='col-span-4 lg:mx-6 overflow-hidden w-full'>
+          <div className='col-span-4 lg:px-6 overflow-hidden w-full'>
             <div id='quotes' className='flex w-full duration-500'>
               {
                 quotes.map((quote, index) => (
