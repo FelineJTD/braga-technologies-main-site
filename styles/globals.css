@@ -174,5 +174,5 @@ button {
 }
 
 .whiteBG {
-  @apply defaultPadding flex flex-col lg:grid lg:grid-cols-12;
+  @apply defaultPadding flex flex-col lg:grid lg:grid-cols-12 items-start;
 }
