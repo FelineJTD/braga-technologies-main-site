@@ -294,8 +294,8 @@ export default function Home() {
             <p className='mb-4 font-bold'>Get in Touch</p>
             <h2 className='mb-4'>Start Mapping Your Future, Today.</h2>
           </div>
-          <p className='col-span-3 col-start-7 md:self-end mb-4'>Find out how you can maximize the value from data and strengthen your decision making.</p>
-          <button className='col-span-2 md:self-end mb-4'>Contact Us</button>
+          <p className='col-span-3 col-start-7 lg:self-end mb-4'>Find out how you can maximize the value from data and strengthen your decision making.</p>
+          <button className='col-span-2 lg:self-end mb-4'>Contact Us</button>
 
           <div className='col-start-2 col-span-10 h-96 w-full bg-gray-200 my-6 rounded-xl' />
         </section>
