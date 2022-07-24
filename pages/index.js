@@ -278,10 +278,8 @@ export default function Home() {
             {
               services.map((service, index) => (
                 <div key={index} className='flex border-2 border-gray-700 rounded-lg p-3 space-x-4 w-full'>
-                  <div>
-                    <h5 className='font-bold'>{service.title}</h5>
-                    <p className='text-sm'>{service.desc}</p>
-                  </div>
+                  <h5 className='font-bold'>{service.title}</h5>
+                  <p className='text-sm'>{service.desc}</p>
                 </div>
               ))
             }
