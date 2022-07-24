@@ -277,7 +277,7 @@ export default function Home() {
             <div className='flex flex-col space-y-1 w-full md:grid grid-cols-2 px-0 gap-4 mt-8'>
             {
               services.map((service, index) => (
-                <div key={index} className='flex border-2 border-gray-700 rounded-lg p-3 space-x-4 min-w-[35vw]'>
+                <div key={index} className='flex border-2 border-gray-700 rounded-lg p-3 space-x-4 w-full'>
                   <div>
                     <h5 className='font-bold'>{service.title}</h5>
                     <p className='text-sm'>{service.desc}</p>
