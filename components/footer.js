@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className='p-6 pt-0 flex flex-col lg:grid lg:grid-cols-12'>
+    <footer className='p-6 pt-0 xl:px-[10%] flex flex-col lg:grid lg:grid-cols-12'>
         <div className='col-span-3'>
           <p>Indonesia&apos;s Leading Geospatial Technology that optimize analytics and performance, moving the world one map at a time.</p>
         </div>
