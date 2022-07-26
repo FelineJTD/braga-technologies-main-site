@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, createRef } from 'react'
 
 import CardSolution from '../components/card-solution'
-import Footer from '../components/footer'
 
 // Partner Logos
 import LogoA from '../assets/images/partner-logos/logo-a.png'
@@ -12,9 +11,12 @@ import LogoC from '../assets/images/partner-logos/logo-c.png'
 import LogoD from '../assets/images/partner-logos/logo-d.png'
 import LogoE from '../assets/images/partner-logos/logo-e.png'
 import LogoF from '../assets/images/partner-logos/logo-f.png'
+import QuotesCarousel from '../components/quotes-carousel'
 
 export default function Home() {
   const partnerLogos = [LogoA, LogoB, LogoC, LogoD, LogoE, LogoF]
+  const featureRef = createRef();
+  const examplesRef = createRef();
 
   const solutions = [
     {
@@ -101,48 +103,16 @@ export default function Home() {
     }
   ]
 
-
-  // ** quotes **
-  const [activeQuote, setActiveQuote] = useState(0)
-  const count = quotes.length;
-  useEffect(() => {
-    const calcWidth = `${100*count}%`
-    document.getElementById("quotes").style.width = calcWidth;
-  }, [count]);
-
-  const nextQuote = () => {
-    document.getElementById("quotes").style.transform = `translateX(-${((activeQuote+1)%count)*100/count}%)`;
-    setActiveQuote((activeQuote+1)%count);
-  }
-
-  const prevQuote = () => {
-    document.getElementById("quotes").style.transform = `translateX(-${((activeQuote-1+count)%count)*100/count}%)`;
-    setActiveQuote((activeQuote-1+count)%count);
-  }
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextQuote();
-    }, 5000);
-    return () => clearInterval(interval);
-  });
-  // ** end quotes **
-
-  // ** scrolls **
-  const scrollLeft = (elementId) => {
-    // let element = document.getElementById(elementId);
-    // if (element) {
-    //   console.log("scrolling left");
-    //   element.scrollBy(100, 0);
-    // }
-  }
-
-  const scrollRight = (elementId) => {
-    // let element = document.getElementById(elementId);
-    // if (element) {
-    //   console.log("scrolling right");
-    //   element.scrollBy(-100, 0);
-    // }
+  // ** scroll **
+  const scroll = (elementRef, scrollAmount) => {
+    const currOffset = elementRef.current.scrollLeft;
+    let element = elementRef.current;
+    if (element) {
+      element.scrollTo({
+        left: currOffset + scrollAmount,
+        behavior: 'smooth'
+      });
+    }
   }
 
   return (
@@ -212,10 +182,10 @@ export default function Home() {
 
           <div className='col-span-12 h-96 w-full bg-white my-6 rounded-xl' />
 
-          <div id='features' className='col-start-2 col-span-11 flex space-x-3 snap-x overflow-auto w-full pb-3 no-scrollbar'>
+          <div id='features' className='col-start-2 col-span-11 flex space-x-3 snap-x overflow-auto w-full no-scrollbar' ref={featureRef}>
             { 
               features.map((feature, index) => (
-                <div key={index} className='snap-start flex border-2 border-gray-700 rounded-lg p-3 space-x-4 min-w-[24rem] lg:min-w-[35vw]'>
+                <div key={index} className='snap-start flex border-2 border-gray-700 rounded-lg p-3 space-x-4 min-w-[20rem] lg:min-w-[35vw]'>
                   <div className='bg-gray-700 h-full w-24 rounded-lg' />
                   <div>
                     <h5 className='font-bold'>{feature.title}</h5>
@@ -226,16 +196,16 @@ export default function Home() {
             }
           </div>
           {/* TODO: change to icon */}
-          <div className='col-start-2 col-span-11 mt-2'>
+          <div className='col-start-2 col-span-11 -ml-4'>
             <button 
-              className='border-0 py-0 hover:text-primary duration-200'
-              onClick={scrollLeft('features')}
+              className='border-0 hover:text-primary duration-200' 
+              onClick={() => scroll(featureRef, -400)}
             >
               &lt;
             </button>
             <button 
-              className='border-0 py-0 hover:text-primary duration-200'
-              onClick={scrollRight('features')}
+              className='border-0 hover:text-primary duration-200'
+              onClick={() => scroll(featureRef, 400)}
             >
               &gt;
             </button>
@@ -250,26 +220,19 @@ export default function Home() {
             <p className='text-xl'><b>We believe Geospatial Approach could solve various issues for everyone, <u>everywhere.</u></b></p>
           </div>
           {/* Experts' Quotes */}
-          <div className='col-start-5 row-start-1 col-span-4 overflow-hidden w-full'>
-            <div id='quotes' className='flex w-full duration-500'>
-              {
-                quotes.map((quote, index) => (
-                  <blockquote key={index} className='max-w-full'>
-                    <p className='font-tt-hoves font-bold text-2xl lg:text-3xl mb-6'>{quote.quote}</p>
-                    <div className='flex space-x-3'>
-                      <div className='w-24 h-24 bg-gray-400'/>
-                      <p>{quote.author} <br /> {quote.author_title}</p>
-                    </div>
-                  </blockquote>
-                ))
-              }
-            </div>
-            
-            <div className='col-start-2'>
-              <button className='mr-3' onClick={prevQuote}>&lt;</button>
-              <button onClick={nextQuote}>&gt;</button>
-            </div>
-          </div>
+          <QuotesCarousel>
+            {
+              quotes.map((quote, index) => (
+                <blockquote key={index} className='max-w-full'>
+                  <p className='font-tt-hoves font-bold text-2xl lg:text-3xl mb-6'>{quote.quote}</p>
+                  <div className='flex space-x-3'>
+                    <div className='w-24 h-24 bg-gray-400'/>
+                    <p>{quote.author} <br /> {quote.author_title}</p>
+                  </div>
+                </blockquote>
+              ))
+            }
+          </QuotesCarousel>
           
         </section>
 
@@ -283,12 +246,12 @@ export default function Home() {
           <p className='bold mb-4'>04.</p>
           <div className='col-span-4'>
             <p className='mb-4 bold'>Our Works</p>
-            <h2 className='mb-4'>Braga Solutions, Integrated to You.</h2>
+            <h2 className='mb-10'>Braga Solutions, Integrated to You.</h2>
           </div>
-          <p className='col-span-3 col-start-7 lg:self-end mb-4'>Our interdisciplinary design and development approach accelerates the geospatial tech delivery to your hands.</p>
-          <button className='col-span-2 lg:self-end mb-4'>Works</button>
+          <p className='col-span-3 col-start-7 lg:self-end mb-10'>Our interdisciplinary design and development approach accelerates the geospatial tech delivery to your hands.</p>
+          <button className='col-span-2 lg:self-end mb-10'>Works</button>
 
-          <div className='col-start-2 col-span-11 flex space-x-3 overflow-auto no-scrollbar w-full'>
+          <div className='col-start-2 col-span-11 flex space-x-3 overflow-auto no-scrollbar w-full snap-x' ref={examplesRef}>
             {
               examples.map((example, index) => (
                 <CardSolution solution={example} isDarkMode={true} key={index} />
@@ -296,9 +259,19 @@ export default function Home() {
             }
           </div>
           {/* TODO: change to icon */}
-          <div className='col-start-2 col-span-10'>
-            <button className='mr-3'>&lt;</button>
-            <button>&gt;</button>
+          <div className='col-start-2 col-span-11 -ml-4 mt-8'>
+            <button 
+              className='border-0 hover:text-primary duration-200' 
+              onClick={() => scroll(examplesRef, -200)}
+            >
+              &lt;
+            </button>
+            <button 
+              className='border-0 hover:text-primary duration-200'
+              onClick={() => scroll(examplesRef, 200)}
+            >
+              &gt;
+            </button>
           </div>
 
           <div className='col-start-2 col-span-10 mt-11'>
