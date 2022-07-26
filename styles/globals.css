@@ -91,7 +91,7 @@ h6 {
   line-height: 26px;
 }
 
-p {
+a, p {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
