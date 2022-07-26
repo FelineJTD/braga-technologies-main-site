@@ -1,22 +1,22 @@
 export default function Footer() {
   return (
-    <footer className='p-6 pt-0 xl:px-[10%] flex flex-col lg:grid lg:grid-cols-12'>
+    <footer className='bg-gray-50 text-gray-900 p-6 pt-0 xl:px-[10%] flex flex-col lg:grid lg:grid-cols-12'>
         <div className='col-span-3'>
           <p>Indonesia&apos;s Leading Geospatial Technology that optimize analytics and performance, moving the world one map at a time.</p>
         </div>
-        <div className='col-start-5 col-span-2 pr-6'>
+        <div className='col-start-5 col-span-2'>
           <h6>Product</h6>
           <a href='#'><p>GeoDashboard</p></a>
           <a href='#'><p>Braga Enterprise</p></a>
           <a href='#'><p>Braga AI</p></a>
         </div>
-        <div className='col-span-2 pr-6'>
+        <div className='col-span-2'>
           <h6>Works</h6>
           <a href='#'><p>Works</p></a>
           <a href='#'><p>Case Study</p></a>
           <a href='#'><p>Portfolio</p></a>
         </div>
-        <div className='col-span-2 pr-6'>
+        <div className='col-span-2'>
           <h6>Office</h6>
           <a href='#'><p>About</p></a>
           <a href='#'><p>Team</p></a>

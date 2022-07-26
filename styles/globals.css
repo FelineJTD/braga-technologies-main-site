@@ -106,6 +106,11 @@ b {
   font-variation-settings: 'wght' 500;
 }
 
+.bold {
+  font-weight: 500;
+  font-variation-settings: 'wght' 500;
+}
+
 button {
   font-family: 'Inter';
   font-style: normal;
@@ -113,7 +118,9 @@ button {
   font-variation-settings: 'wght' 600;
   font-size: 16px;
   line-height: 24px;
-  border: 1px;
+  border-width: 1px;
+  border-radius: 8px;
+  padding: 8px 16px;
 }
 
 @media screen and (max-width: 768px) {
@@ -170,9 +177,21 @@ button {
 }
 
 .blackBG {
-  @apply bg-gray-900 text-white md:mx-6 rounded-2xl defaultPadding flex flex-col items-start lg:grid lg:grid-cols-12;
+  @apply bg-gray-900 text-gray-50 md:mx-6 rounded-2xl defaultPadding flex flex-col items-start lg:grid lg:grid-cols-12 gap-x-6;
 }
 
 .whiteBG {
-  @apply defaultPadding flex flex-col lg:grid lg:grid-cols-12 items-start;
+  @apply bg-gray-50 text-gray-900 defaultPadding flex flex-col lg:grid lg:grid-cols-12 items-start gap-x-6;
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
