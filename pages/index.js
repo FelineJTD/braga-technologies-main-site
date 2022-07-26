@@ -123,7 +123,7 @@ export default function Home() {
         <meta name="keywords" content="Braga Technologies, Braga GeoDashboard, GeoDashboard, GIS, GIS Indonesia, WEBGIS, geospatial services, Bandung technology services" key="keywords"/>
       </Head>
 
-      <main className='text-gray-900 w-full'>
+      <main className='text-gray-900 bg-gray-50 w-full'>
         {/* 00 */}
         <section className='w-full h-screen text-center px-6 lg:px-[25vw] xl:px-[30vw] flex flex-col justify-between'>
           <div className='flex items-center w-full flex-grow'>
@@ -276,7 +276,7 @@ export default function Home() {
 
           <div className='col-start-2 col-span-10 mt-11'>
             <h4>What We Do</h4>
-            <div className='flex flex-col space-y-1 w-full md:grid grid-cols-2 px-0 gap-4 mt-8'>
+            <div className='flex flex-col space-y-1 md:space-y-0 w-full md:grid grid-cols-2 px-0 gap-4 mt-8'>
             {
               services.map((service, index) => (
                 <div key={index} className='border-2 border-gray-600 rounded-lg p-3 w-full'>

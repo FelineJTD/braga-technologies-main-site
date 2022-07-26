@@ -31,15 +31,16 @@ export default function QuotesCarousel(props) {
       <div id='quotes' className='flex w-full duration-500'>
         {props.children}
       </div>
-      <div className='flex'>
+      {/* TODO: change to icon */}
+      <div className='flex -ml-4 mt-8'>
         <button 
-          className='border-0 py-0 hover:text-primary duration-200'
+          className='border-0 hover:text-primary duration-200' 
           onClick={prevQuote}
         >
           &lt;
         </button>
         <button 
-          className='border-0 py-0 hover:text-primary duration-200'
+          className='border-0 hover:text-primary duration-200'
           onClick={nextQuote}
         >
           &gt;
