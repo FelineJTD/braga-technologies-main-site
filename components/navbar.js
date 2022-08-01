@@ -31,13 +31,17 @@ export default function Navbar() {
         <img src='/logo-braga-sm.svg' alt='Braga Technologies Logo' className='md:hidden h-5' />
         <div className='justify-self-center space-x-6 hidden lg:block'>
           <Link href='/'><a className='un text-sm'>Home</a></Link>
-          <a href='https://geodashboard.braga.co.id/' rel='noreferrer noopener' className='un text-sm'>GeoDashboard</a>
+          <Link href='/geodashboard'><a className='un text-sm'>GeoDashboard</a></Link>
           <Link href='/'><a className='un text-sm'>Works</a></Link>
           <Link href='/'><a className='un text-sm'>Company</a></Link>
           <Link href='/'><a className='un text-sm'>Contact</a></Link>
         </div>
         <div>
-          <button className='buttonLight text-gray-900 bg-white bg-opacity-50'>Map Demo</button>
+          <a href='https://geodashboard.braga.co.id/' rel='noreferrer noopener'>
+            <button className='buttonLight text-gray-900 bg-white bg-opacity-50'>
+              Map Demo
+            </button>
+          </a>
           <button onClick={openMobileNav} className='lg:hidden'>DropDown</button>
         </div>
       </nav>
