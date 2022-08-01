@@ -17,7 +17,7 @@ export default function Navbar() {
         <div className='flex flex-col space-y-6 text-right'>
           <button onClick={closeMobileNav}>Close Nav</button>
           <Link href='/'><a className='un text-lg'>Home</a></Link>
-          <a href='https://geodashboard.braga.co.id/' rel='noreferrer noopener' className='un text-lg'>GeoDashboard</a>
+          <Link href='/geodashboard'><a className='un text-sm'>GeoDashboard</a></Link>
           <Link href='/'><a className='un text-lg'>Works</a></Link>
           <Link href='/'><a className='un text-lg'>Company</a></Link>
           <Link href='/'><a className='un text-lg'>Contact</a></Link>
