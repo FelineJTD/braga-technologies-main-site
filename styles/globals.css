@@ -174,7 +174,7 @@ button {
 }
 
 .defaultPadding {
-  @apply px-6 py-16 xl:px-[10%];
+  @apply px-6 py-14 xl:px-[10%];
 }
 
 .blackBG {
@@ -191,6 +191,10 @@ button {
 
 .buttonPrimary {
   @apply border-primary text-gray-100 hover:bg-primary duration-300;
+}
+
+.divider {
+  @apply border-t-[1px] border-gray-200 mt-10 mb-4;
 }
 
 @layer utilities {

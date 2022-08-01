@@ -1,20 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useState, useEffect, createRef } from 'react'
+import { createRef } from 'react'
 
+import PartnerLogos from '../components/partner-logos'
 import CardSolution from '../components/card-solution'
-
-// Partner Logos
-import LogoA from '../assets/images/partner-logos/logo-a.png'
-import LogoB from '../assets/images/partner-logos/logo-b.png'
-import LogoC from '../assets/images/partner-logos/logo-c.png'
-import LogoD from '../assets/images/partner-logos/logo-d.png'
-import LogoE from '../assets/images/partner-logos/logo-e.png'
-import LogoF from '../assets/images/partner-logos/logo-f.png'
 import QuotesCarousel from '../components/quotes-carousel'
 
 export default function Home() {
-  const partnerLogos = [LogoA, LogoB, LogoC, LogoD, LogoE, LogoF]
   const featureRef = createRef();
   const examplesRef = createRef();
 
@@ -125,7 +117,7 @@ export default function Home() {
 
       <main className='text-gray-900 bg-gray-50 w-full'>
         {/* 00 */}
-        <section className='w-full h-screen text-center px-6 lg:px-[25vw] xl:px-[30vw] flex flex-col justify-between'>
+        <section className='w-full h-[calc(100vh-2rem)] py-12 text-center px-6 lg:px-[25vw] xl:px-[30vw] flex flex-col justify-between'>
           <div className='flex items-center w-full flex-grow'>
             <h1>
               Answering <i>How</i>, by Understanding <span className='underline italic'>Where</span>
@@ -139,19 +131,7 @@ export default function Home() {
         </section>
 
         {/* PARTNER LOGOS */}
-        <section className='defaultPadding flex justify-center items-center w-full space-x-3 md:space-x-12'>
-          {
-            partnerLogos.map((logo, index) => (
-              <div key={index}>
-                <Image
-                  src={logo}
-                  alt='Partner Logo'
-                  className='mx-auto'
-                />
-              </div>
-            ))
-          }
-        </section>
+        <PartnerLogos />
 
         {/* 01 */}
         <section className='whiteBG'>
