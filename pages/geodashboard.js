@@ -1,8 +1,17 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import { useEffect } from 'react'
 import PartnerLogos from '../components/partner-logos'
 
 export default function Home() {
+  useEffect(() => {
+    const onScroll = () => {
+      console.log(document.getElementById('scroll-area').scrollTop);
+    }
+    document.getElementById('scroll-area').addEventListener('scroll', onScroll);
+    return () => {
+      document.getElementById('scroll-area').removeEventListener('scroll', onScroll);
+    }
+  }, []);
 
   return (
     <div>
@@ -24,7 +33,7 @@ export default function Home() {
         <PartnerLogos />
 
         {/* 01 */}
-        <section className='whiteBG'>
+        <section className='whiteBG pb-0'>
           <p className='bold mb-4 z-10'>01.</p>
           <div className='col-span-4 z-10'>
             <p className='mb-4 bold'>Visualize Easily</p>
@@ -32,13 +41,18 @@ export default function Home() {
           </div>
           <p className='text-gray-600 lg:self-end col-start-7 col-span-4 z-10'>Created with less time, easy to add data, interactive visualization and user friendly interface.</p>
           <div className='col-start-2 col-span-10 border-t-[1px] border-gray-600 mt-5 mb-10 z-10' aria-hidden/>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src='/geodashboard/01.svg' alt='' className='hidden md:block absolute lg:relative col-start-2 col-span-4 z-0' />
-          <div className='col-start-7 col-span-5 row-span-2 bg-gray-200 h-[50vh] w-full rounded-xl' />
-          <div className='col-start-2 col-span-4 self-end'>
-            <h5 className='text-2xl mb-4'>Multi-Format Data Visualization</h5>
-            <p>GeoDashboard easily visualize data in point, polygon and polyline format. Inspect rich data display for each attribute.</p>
+        </section>
+
+        {/* 01 SCROLL AREA */}
+        <section id='scroll-area' className='whiteBG pt-0 -mt-10 flex relative h-[50vh] overflow-scroll'>
+          <div className='flex flex-col justify-between h-[50vh] col-start-2 col-span-4'>
+            <h3 className='font-inter text-[13.5rem] [line-height:10rem] font-medium text-gray-100'>01.</h3>
+            <div className='self-end'>
+              <h5 className='text-2xl mb-4'>Multi-Format Data Visualization</h5>
+              <p>GeoDashboard easily visualize data in point, polygon and polyline format. Inspect rich data display for each attribute.</p>
+            </div>
           </div>
+          <div className='col-start-7 col-span-5 row-span-2 bg-gray-200 h-[100vh] w-full rounded-xl' />
         </section>
 
         {/* 02 */}

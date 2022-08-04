@@ -203,7 +203,7 @@ export default function Home() {
           <QuotesCarousel>
             {
               quotes.map((quote, index) => (
-                <blockquote key={index} className='max-w-full'>
+                <blockquote key={index} className='max-w-full px-0.5'>
                   <p className='font-tt-hoves font-bold text-2xl lg:text-3xl mb-6'>{quote.quote}</p>
                   <div className='flex space-x-3'>
                     <div className='w-24 h-24 bg-gray-400'/>

@@ -49,7 +49,7 @@ export default function Navbar() {
         if (window.scrollY > lastScrollY) { // scroll down
           if (window.scrollY > 0) {
             navbar.style.transform = 'translateY(-5rem)';
-            navbar.style.transitionDelay = '0.3s';
+            navbar.style.transitionDelay = '0.2s';
           } else {
             navbar.style.transform = 'translateY(0)';
             navbar.style.transitionDelay = '0s';
