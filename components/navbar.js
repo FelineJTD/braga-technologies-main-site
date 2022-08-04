@@ -14,6 +14,7 @@ export default function Navbar() {
   const openMobileNav = () => {
     document.getElementById('toggle').style.transform = 'rotate(180deg)';
     document.getElementById('nav').style.transform = 'translateY(0)';
+    document.getElementById('mobile-nav').style.height = window.innerHeight + 'px';
     document.getElementById('mobile-nav').style.transform = 'translateY(0)';
     setIsMobileNavOpen(true);
   }
@@ -27,6 +28,17 @@ export default function Navbar() {
   }
 
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  // fix mobile nav height when window is resized
+  useEffect(() => {
+    const handleResize = () => {
+      document.getElementById('mobile-nav').style.height = window.innerHeight + 'px';
+    }
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
 
   // hide navbar when scrolled
   useEffect(() => {
