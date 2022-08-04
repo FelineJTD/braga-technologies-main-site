@@ -141,7 +141,7 @@ export default function Home() {
             <h2 className='mb-4'>Sustainably Accelerating through Geospatial Tech</h2>
             <p className='text-gray-600'>Meticulously designed solutions, implemented with geospatial expertise to empower You today, tomorrow and many years to come.</p>
           </div>
-          <div className='flex flex-col space-y-1 col-span-6 md:grid grid-cols-2 gap-6 mt-8'>
+          <div className='flex flex-col space-y-1 lg:space-y-0 col-span-6 md:grid grid-cols-2 gap-6 mt-8'>
             {
               solutions.map((solution, index) => (
                 <CardSolution solution={solution} key={index} />
