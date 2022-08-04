@@ -162,10 +162,10 @@ export default function Home() {
 
           <div className='col-span-12 h-96 w-full bg-white my-6 rounded-xl' />
 
-          <div id='features' className='col-start-2 col-span-11 flex space-x-3 snap-x overflow-auto w-full no-scrollbar' ref={featureRef}>
+          <div id='features' className='col-start-2 col-span-11 flex space-x-3 overflow-auto w-full lg:snap-x no-scrollbar' ref={featureRef}>
             { 
               features.map((feature, index) => (
-                <div key={index} className='snap-start flex border-2 border-gray-700 rounded-lg p-3 space-x-4 min-w-[20rem] lg:min-w-[35vw]'>
+                <div key={index} className='lg:snap-start flex border-2 border-gray-700 rounded-lg p-3 space-x-4 min-w-[30rem] lg:min-w-[35vw]'>
                   <div className='bg-gray-700 h-full w-24 rounded-lg' />
                   <div>
                     <h5 className='font-bold'>{feature.title}</h5>
