@@ -102,7 +102,7 @@ export default function GeoDashboard() {
         <section className='blackBG'>
           <p className='bold mb-4 z-10'>02.</p>
           <div className='col-span-4 z-10'>
-            <p className='mb-4 bold'>Visualize Easily</p>
+            <p className='mb-4 bold'>Key Features</p>
             <h2>Gathering Insights through Spatial Data</h2>
           </div>
         </section>
