@@ -201,15 +201,15 @@ button {
 }
 
 .buttonLight {
-  @apply border-gray-800 hover:bg-gray-800 hover:text-gray-50 duration-300;
+  @apply border-gray-800 enabled:hover:bg-gray-800 enabled:hover:text-gray-50 duration-300;
 }
 
 .buttonDark {
-  @apply border-white hover:bg-white hover:text-gray-900 duration-300;
+  @apply border-white enabled:hover:bg-white enabled:hover:text-gray-900 duration-300;
 }
 
 .buttonPrimary {
-  @apply border-primary text-gray-100 hover:bg-primary duration-300;
+  @apply border-primary text-gray-100 enabled:hover:bg-primary duration-300;
 }
 
 .divider {
