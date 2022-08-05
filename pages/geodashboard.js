@@ -84,7 +84,7 @@ export default function GeoDashboard() {
             {
               data01.map((item, idx) => {
                 return (
-                  <div className='flex flex-col justify-end min-h-[50vh] h-full col-start-2 col-span-4 relative' key={idx}>
+                  <div className='md:hidden flex flex-col justify-end min-h-[50vh] h-full col-start-2 col-span-4 relative' key={idx}>
                     <div className='self-end relative z-10'>
                       <h5 className='text-2xl mb-4'>{item.title}</h5>
                       <p>{item.text}</p>
