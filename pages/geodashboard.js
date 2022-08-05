@@ -142,9 +142,9 @@ export default function GeoDashboard() {
 
         {/* 03 */}
         <section className='whiteBG'>
-          <p className='bold z-10 sticky top-20 mb-4 md:mb-16'>03.</p>
-          <p className='bold col-span-3 sticky top-20 mb-4 md:mb-16'>Customer Stories</p>
-          <h6 className='text-xl col-start-9 col-span-4 row-start-1 sticky top-20'>We believe Geospatial Approach could solve various issues for everyone, <u>everywhere.</u></h6>
+          <p className='bold z-10 sticky top-20 mb-4 md:-mb-20'>03.</p>
+          <p className='bold col-span-3 sticky top-20 mb-4 md:-mb-20'>Customer Stories</p>
+          <h6 className='text-xl col-start-9 col-span-4 row-start-1 sticky top-20 md:-mb-36'>We believe Geospatial Approach could solve various issues for everyone, <u>everywhere.</u></h6>
 
           <div className='row-start-1 col-start-5 col-span-4'>
             <h3 className='mb-44'>
@@ -152,27 +152,30 @@ export default function GeoDashboard() {
               A simply-powerful tool, made <u>for everyone to explore</u> location insights faster than ever.
             </h3>
             <div className='bg-gray-200 rounded-lg h-72 w-full' />
-            <div className='border-t-[1px] border-gray-600 my-10 w-full' aria-hidden/>
-            {/* Carousel */}
-            <Carousel>
-              {
-                custStories.map((item, idx) => {
-                  return (
-                    <div key={idx} className='w-full'>
-                      <img src={item.client_logo} alt={item.client_logo_alt} className='h-6' />
-                      <img src={item.image_url} alt='cover image' className='w-full h-36 bg-gray-200 text-center my-6' />
-                      <h3 className='mb-4'>{item.title}</h3>
-                      <p className='mb-12'>{item.text}</p>
-                      <div className='flex justify-between text-gray-800'>
-                        <p className='text-sm'>{item.source_name}, <br /> {item.source_title}</p>
-                        <button className='buttonLight'>Read Story</button>
-                      </div>
-                    </div>
-                  )
-                })
-              }
-            </Carousel>
+            <div className='border-t-[1px] border-gray-600 mt-10 -mb-4 w-full' aria-hidden/>
           </div>
+        </section>
+
+        {/* Carousel */}
+        <section className='bg-gray-50 text-gray-900 flex flex-col lg:grid lg:grid-cols-12 items-start gap-x-6 px-6 pb-14 xl:px-[10%]'>
+          <Carousel>
+            {
+              custStories.map((item, idx) => {
+                return (
+                  <div key={idx} className='w-full'>
+                    <img src={item.client_logo} alt={item.client_logo_alt} className='h-6' />
+                    <img src={item.image_url} alt='cover image' className='w-full h-36 bg-gray-200 text-center my-6' />
+                    <h3 className='mb-4'>{item.title}</h3>
+                    <p className='mb-12'>{item.text}</p>
+                    <div className='flex justify-between text-gray-800'>
+                      <p className='text-sm'>{item.source_name}, <br /> {item.source_title}</p>
+                      <button className='buttonLight'>Read Story</button>
+                    </div>
+                  </div>
+                )
+              })
+            }
+          </Carousel>
         </section>
 
         <GetInTouch number='04.' />
