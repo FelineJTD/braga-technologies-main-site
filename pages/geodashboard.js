@@ -142,9 +142,9 @@ export default function GeoDashboard() {
 
         {/* 03 */}
         <section className='whiteBG'>
-          <p className='bold z-10 sticky top-20 mb-4 md:-mb-20'>03.</p>
-          <p className='bold col-span-3 sticky top-20 mb-4 md:-mb-20'>Customer Stories</p>
-          <h6 className='text-xl col-start-9 col-span-4 row-start-1 sticky top-20 md:-mb-36'>We believe Geospatial Approach could solve various issues for everyone, <u>everywhere.</u></h6>
+          <p className='bold z-10 lg:sticky top-20 mb-4 lg:-mb-20'>03.</p>
+          <p className='bold col-span-3 lg:sticky top-20 mb-4 lg:-mb-20'>Customer Stories</p>
+          <h6 className='text-xl col-start-9 col-span-4 row-start-1 lg:sticky top-20 mb-11 lg:-mb-36'>We believe Geospatial Approach could solve various issues for everyone, <u>everywhere.</u></h6>
 
           <div className='row-start-1 col-start-5 col-span-4'>
             <h3 className='mb-44'>
@@ -162,13 +162,13 @@ export default function GeoDashboard() {
             {
               custStories.map((item, idx) => {
                 return (
-                  <div key={idx} className='w-full'>
+                  <div key={idx} className='w-full px-0.5'>
                     <img src={item.client_logo} alt={item.client_logo_alt} className='h-6' />
                     <img src={item.image_url} alt='cover image' className='w-full h-36 bg-gray-200 text-center my-6' />
                     <h3 className='mb-4'>{item.title}</h3>
-                    <p className='mb-12'>{item.text}</p>
-                    <div className='flex justify-between text-gray-800'>
-                      <p className='text-sm'>{item.source_name}, <br /> {item.source_title}</p>
+                    <p className='mb-4 md:mb-12'>{item.text}</p>
+                    <div className='md:flex justify-between text-gray-800'>
+                      <p className='text-sm mb-3 md:mb-0'>{item.source_name}, <br /> {item.source_title}</p>
                       <button className='buttonLight'>Read Story</button>
                     </div>
                   </div>
