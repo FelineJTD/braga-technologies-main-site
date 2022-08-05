@@ -5,6 +5,7 @@ import { createRef } from 'react'
 import PartnerLogos from '../components/partner-logos'
 import CardSolution from '../components/card-solution'
 import QuotesCarousel from '../components/quotes-carousel'
+import GetInTouch from '../components/get-in-touch-section'
 
 export default function Home() {
   const featureRef = createRef();
@@ -268,6 +269,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <GetInTouch number='05.' />
       </main>
     </div>
   )

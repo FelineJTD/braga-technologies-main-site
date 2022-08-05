@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
+import GetInTouch from '../components/get-in-touch-section';
 import PartnerLogos from '../components/partner-logos'
 
 export default function GeoDashboard() {
@@ -112,6 +113,8 @@ export default function GeoDashboard() {
           <p className='bold mb-4 z-10'>03.</p>
           <p className='mb-4 bold col-span-4'>Customer Stories</p>
         </section>
+
+        <GetInTouch number='04.' />
       </main>
     </div>
   )
