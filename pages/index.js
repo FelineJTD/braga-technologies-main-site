@@ -1,10 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { createRef } from 'react'
 
 import PartnerLogos from '../components/partner-logos'
 import CardSolution from '../components/card-solution'
-import QuotesCarousel from '../components/quotes-carousel'
+import Carousel from '../components/carousel'
 import GetInTouch from '../components/get-in-touch-section'
 
 export default function Home() {
@@ -201,7 +200,7 @@ export default function Home() {
             <p className='text-xl'><b>We believe Geospatial Approach could solve various issues for everyone, <u>everywhere.</u></b></p>
           </div>
           {/* Experts' Quotes */}
-          <QuotesCarousel>
+          <Carousel>
             {
               quotes.map((quote, index) => (
                 <blockquote key={index} className='max-w-full px-0.5'>
@@ -213,7 +212,7 @@ export default function Home() {
                 </blockquote>
               ))
             }
-          </QuotesCarousel>
+          </Carousel>
           
         </section>
 

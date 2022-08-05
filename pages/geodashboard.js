@@ -1,7 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import GetInTouch from '../components/get-in-touch-section';
-import PartnerLogos from '../components/partner-logos'
+import PartnerLogos from '../components/partner-logos';
+import Carousel from '../components/carousel';
 
 export default function GeoDashboard() {
   const data01 = [
@@ -19,6 +21,36 @@ export default function GeoDashboard() {
       num: '03.',
       title: 'Bootstrap Approach',
       text: 'Created in no time through bootstrap. Get all the desired features, tailored to your needs.',
+    },
+  ]
+
+  const custStories = [
+    {
+      client_logo: '/static/images/logos/logo-1.png',
+      client_logo_alt: 'Pertamina',
+      image_url: '/images/cust-stories/1.png',
+      title: 'Accelerating Agricultural Sustainability',
+      text: '“It has provided a fast-track to enhance the solution & bring value to our clients. The Python package has allowed us to integrate CARTO into our DataOps pipelines, allowing us to create, update & publish maps faster, saving our team valuable time, and giving a better service.”',
+      source_name: 'Isaac Pernas',
+      source_title: 'Chief Information Officer at JLL',
+    },
+    {
+      client_logo: '/static/images/logos/logo-2.png',
+      client_logo_alt: 'Pertamina',
+      image_url: '/images/cust-stories/2.png',
+      title: 'Accelerating Agricultural Sustainability 2',
+      text: '“It has provided a fast-track to enhance the solution & bring value to our clients. The Python package has allowed us to integrate CARTO into our DataOps pipelines, allowing us to create, update & publish maps faster, saving our team valuable time, and giving a better service.”',
+      source_name: 'Isaac Pernas',
+      source_title: 'Chief Information Officer at JLL',
+    },
+    {
+      client_logo: '/static/images/logos/logo-3.png',
+      client_logo_alt: 'Pertamina',
+      image_url: '/images/cust-stories/3.png',
+      title: 'Accelerating Agricultural Sustainability 3',
+      text: '“It has provided a fast-track to enhance the solution & bring value to our clients. The Python package has allowed us to integrate CARTO into our DataOps pipelines, allowing us to create, update & publish maps faster, saving our team valuable time, and giving a better service.”',
+      source_name: 'Isaac Pernas',
+      source_title: 'Chief Information Officer at JLL',
     },
   ]
 
@@ -110,8 +142,37 @@ export default function GeoDashboard() {
 
         {/* 03 */}
         <section className='whiteBG'>
-          <p className='bold mb-4 z-10'>03.</p>
-          <p className='mb-4 bold col-span-4'>Customer Stories</p>
+          <p className='bold z-10 sticky top-20 mb-4 md:mb-16'>03.</p>
+          <p className='bold col-span-3 sticky top-20 mb-4 md:mb-16'>Customer Stories</p>
+          <h6 className='text-xl col-start-9 col-span-4 row-start-1 sticky top-20'>We believe Geospatial Approach could solve various issues for everyone, <u>everywhere.</u></h6>
+
+          <div className='row-start-1 col-start-5 col-span-4'>
+            <h3 className='mb-44'>
+              Designed for discoveries. <br />
+              A simply-powerful tool, made <u>for everyone to explore</u> location insights faster than ever.
+            </h3>
+            <div className='bg-gray-200 rounded-lg h-72 w-full' />
+            <div className='border-t-[1px] border-gray-600 my-10 w-full' aria-hidden/>
+            {/* Carousel */}
+            <Carousel>
+              {
+                custStories.map((item, idx) => {
+                  return (
+                    <div key={idx} className='w-full'>
+                      <img src={item.client_logo} alt={item.client_logo_alt} className='h-6' />
+                      <img src={item.image_url} alt='cover image' className='w-full h-36 bg-gray-200 text-center my-6' />
+                      <h3 className='mb-4'>{item.title}</h3>
+                      <p className='mb-12'>{item.text}</p>
+                      <div className='flex justify-between text-gray-800'>
+                        <p className='text-sm'>{item.source_name}, <br /> {item.source_title}</p>
+                        <button className='buttonLight'>Read Story</button>
+                      </div>
+                    </div>
+                  )
+                })
+              }
+            </Carousel>
+          </div>
         </section>
 
         <GetInTouch number='04.' />

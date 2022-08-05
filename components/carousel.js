@@ -1,21 +1,21 @@
 import { useState, useEffect } from 'react';
 
-export default function QuotesCarousel(props) {
+export default function Carousel(props) {
 
   const [activeQuote, setActiveQuote] = useState(0)
   const count = props.children.length;
   useEffect(() => {
     const calcWidth = `${100*count}%`
-    document.getElementById("quotes").style.width = calcWidth;
+    document.getElementById("carousel").style.width = calcWidth;
   }, [count]);
 
   const nextQuote = () => {
-    document.getElementById("quotes").style.transform = `translateX(-${((activeQuote+1)%count)*100/count}%)`;
+    document.getElementById("carousel").style.transform = `translateX(-${((activeQuote+1)%count)*100/count}%)`;
     setActiveQuote((activeQuote+1)%count);
   }
 
   const prevQuote = () => {
-    document.getElementById("quotes").style.transform = `translateX(-${((activeQuote-1+count)%count)*100/count}%)`;
+    document.getElementById("carousel").style.transform = `translateX(-${((activeQuote-1+count)%count)*100/count}%)`;
     setActiveQuote((activeQuote-1+count)%count);
   }
 
@@ -28,7 +28,7 @@ export default function QuotesCarousel(props) {
   
   return (
     <div className='col-start-5 row-start-1 col-span-4 overflow-hidden w-full'>
-      <div id='quotes' className='flex w-full duration-500'>
+      <div id='carousel' className='flex w-full duration-500'>
         {props.children}
       </div>
       {/* TODO: change to icon */}

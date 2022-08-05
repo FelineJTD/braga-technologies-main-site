@@ -18,6 +18,8 @@ export default function Works() {
           <p className='col-span-4 mb-4 bold'>Works /</p>
           <h1 className='row-start-2 col-start-4 col-span-6 text-center mb-6'><i>Navigating</i> the World, One <u>Map</u> at a Time.</h1>
           <p className='col-start-5 col-span-4 text-center text-sm'>See our approach in utilizing, creating, and engineering maps to help in navigate various fields and sectors.</p>
+
+          
         </section>
 
         <GetInTouch number='01.' />
