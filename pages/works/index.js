@@ -48,7 +48,15 @@ export default function Works() {
           </div>
 
           {/* TOOLTIP */}
-          
+          <nav className='flex justify-between sticky bottom-6 mt-6 col-start-1 col-span-12'>
+            <p>Compass</p>
+            <div className='flex space-x-3'>
+              <button>&lt;</button>
+              <button>Page 1</button>
+              <button>&gt;</button>
+              <button>Show All Projects</button>
+            </div>
+          </nav>
         </section>
 
         <GetInTouch number='01.' />
