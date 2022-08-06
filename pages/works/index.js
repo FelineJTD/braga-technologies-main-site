@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
+import Image from 'next/image';
 import { useState } from 'react'
 import CardWorks from '../../components/card-works';
 import GetInTouch from '../../components/get-in-touch-section';
@@ -13,7 +14,8 @@ export default function Works() {
       img: "https://www.google.com/maps/d/u/0/thumbnail?mid=1frHExlCasUKm6ymzyyUyuCvrtp0",
       coordinates: "37° 48' 15.7068'' N  122° 16' 15.9996'' W",
       number: "No. 03",
-      isComingSoon: false,
+      is_coming_soon: false,
+      work_type: "Project",
     },
     {
       id: "2",
@@ -22,7 +24,8 @@ export default function Works() {
       img: "https://www.google.com/maps/d/u/0/thumbnail?mid=1frHExlCasUKm6ymzyyUyuCvrtp0",
       coordinates: "37° 48' 15.7068'' N  122° 16' 15.9996'' W",
       number: "No. 03",
-      isComingSoon: true,
+      is_coming_soon: true,
+      work_type: "Case Study",
     },
   ]
 
@@ -34,11 +37,14 @@ export default function Works() {
       img: "https://www.google.com/maps/d/u/0/thumbnail?mid=1frHExlCasUKm6ymzyyUyuCvrtp0",
       coordinates: "37° 48' 15.7068'' N  122° 16' 15.9996'' W",
       number: `No. ${i}`,
-      isComingSoon: false,
+      is_coming_soon: false,
+      work_type: "Case Study",
     })
   }
 
+
   const [currPage, setCurrPage] = useState(1);
+  const [worksToShow, setWorksToShow] = useState(works);
   const lastPage = Math.ceil(works.length / 12);
 
   const scrollToWorksTop = () => {
@@ -54,6 +60,8 @@ export default function Works() {
     setCurrPage(Math.max(1, currPage - 1));
     scrollToWorksTop();
   }
+
+
 
   return (
     <div>
@@ -73,19 +81,32 @@ export default function Works() {
 
           {/* WORKS */}
           <div id='works-container' className='pt-24 col-start-2 col-span-10 flex flex-col md:grid md:grid-cols-3 gap-6 w-full'>
-            {works.slice(12*(currPage-1),12*currPage).map((work, index) => (
+            {worksToShow.slice(12*(currPage-1),12*currPage).map((work, index) => (
               <CardWorks work={work} key={index} className='md:[&:nth-child(3n+2)]:translate-y-16' />
             ))}
           </div>
 
           {/* TOOLTIP */}
-          <nav className='flex justify-between sticky bottom-6 mt-24 col-start-1 col-span-12 w-full z-30'>
-            <p>Compass</p>
-            <div className='flex space-x-3'>
-              <button onClick={prevPage} className='bg-white'>&lt;</button>
-              <button className='bg-white'>Page {currPage}</button>
-              <button onClick={nextPage} className='bg-white'>&gt;</button>
-              <button className='bg-white'>Show All Projects</button>
+          <nav className='flex items-center justify-between sticky bottom-6 mt-24 col-start-1 col-span-12 w-full z-30'>
+            <div className='hidden md:block'>
+              <Image src='/works/Compass.svg' alt='' width={56} height={56} />
+            </div>
+            <div className='flex space-x-3 w-full md:w-auto justify-between'>
+              <div className='flex space-x-3'>
+                <button onClick={prevPage} className='buttonTooltip'>&lt;</button>
+                <button className='buttonTooltip md:hidden' disabled>{currPage}</button> {/* Mobile Ver */}
+                <button className='buttonTooltip hidden md:block' disabled>Page {currPage}</button> {/* Desktop Ver */}
+                <button onClick={nextPage} className='buttonTooltip'>&gt;</button>
+              </div>
+              <button className='buttonTooltip flex justify-between space-x-3'>
+                <p className='text-xs md:text-sm bold mr-2'>Show All Projects</p>
+                <Image src='/works/ic-filter.svg' alt='' width={14} height={14} />
+              </button>
+              <div>
+                <button onClick={() => setWorksToShow(works)}>All</button>
+                <button onClick={() => setWorksToShow(works.filter(work => work.work_type === 'Project'))}>Project</button>
+                <button onClick={() => setWorksToShow(works.filter(work => work.work_type === 'Case Study'))}>Case Study</button>
+              </div>
             </div>
           </nav>
         </section>
