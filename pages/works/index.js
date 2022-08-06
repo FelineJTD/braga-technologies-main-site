@@ -93,19 +93,40 @@ export default function Works() {
             </div>
             <div className='flex space-x-3 w-full md:w-auto justify-between'>
               <div className='flex space-x-3'>
-                <button onClick={prevPage} className='buttonTooltip'>&lt;</button>
-                <button className='buttonTooltip md:hidden' disabled>{currPage}</button> {/* Mobile Ver */}
-                <button className='buttonTooltip hidden md:block' disabled>Page {currPage}</button> {/* Desktop Ver */}
-                <button onClick={nextPage} className='buttonTooltip'>&gt;</button>
+                <button onClick={prevPage} className='buttonTooltip shadow-lg'>&lt;</button>
+                <button className='buttonTooltip shadow-lg md:hidden' disabled>{currPage}</button> {/* Mobile Ver */}
+                <button className='buttonTooltip shadow-lg hidden md:block' disabled>Page {currPage}</button> {/* Desktop Ver */}
+                <button onClick={nextPage} className='buttonTooltip shadow-lg'>&gt;</button>
               </div>
-              <button className='buttonTooltip flex justify-between space-x-3'>
+              <button className='peer buttonTooltip shadow-lg flex justify-between space-x-3'>
                 <p className='text-xs md:text-sm bold mr-2'>Show All Projects</p>
                 <Image src='/works/ic-filter.svg' alt='' width={14} height={14} />
               </button>
-              <div>
-                <button onClick={() => setWorksToShow(works)}>All</button>
-                <button onClick={() => setWorksToShow(works.filter(work => work.work_type === 'Project'))}>Project</button>
-                <button onClick={() => setWorksToShow(works.filter(work => work.work_type === 'Case Study'))}>Case Study</button>
+              <div className='hidden peer-hover:flex flex-col bg-white rounded-lg p-2 shadow-lg'>
+                <button 
+                  onClick={() => {
+                    setWorksToShow(works); 
+                    scrollToWorksTop();}
+                  } 
+                  className='buttonTooltip text-left'>
+                    All Projects
+                </button>
+                <button 
+                  onClick={() => {
+                    setWorksToShow(works.filter(work => work.work_type === 'Project'));
+                    scrollToWorksTop();}
+                  } 
+                  className='buttonTooltip text-left'>
+                    Projects
+                </button>
+                <button 
+                  onClick={() => {
+                    setWorksToShow(works.filter(work => work.work_type === 'Case Study'));
+                    scrollToWorksTop();}
+                  } 
+                  className='buttonTooltip text-left'>
+                    Case Studies
+                </button>
               </div>
             </div>
           </nav>

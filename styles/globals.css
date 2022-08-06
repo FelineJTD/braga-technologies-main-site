@@ -213,7 +213,7 @@ button {
 }
 
 .buttonTooltip {
-  @apply border-white bg-white text-gray-600 enabled:hover:bg-gray-200 enabled:hover:border-gray-200 duration-300 text-xs md:text-sm shadow-lg;
+  @apply border-white bg-white text-gray-600 enabled:hover:bg-gray-200 enabled:hover:border-gray-200 duration-300 text-xs md:text-sm;
 }
 
 .divider {
