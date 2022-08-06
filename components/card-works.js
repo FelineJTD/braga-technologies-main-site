@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import WorkIcon from '../assets/images/works/work-icon';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function CardWorks({ work }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -17,7 +18,9 @@ export default function CardWorks({ work }) {
       <img src={work.img} alt='' className={`${isHovered? 'h-full' : 'h-72'} w-full rounded-lg object-cover object-bottom absolute z-0 bottom-0 duration-500`} />
       <div className={`${isHovered? 'opacity-100 h-full' : 'opacity-0 h-72'} bg-gray-900 bg-opacity-50 w-full bottom-0 rounded-lg z-0 duration-500 absolute flex flex-col items-center justify-end p-3 text-white`}>
         <div className={`${isHovered? 'translate-y-0': 'translate-y-2'} w-full duration-500`}>
-          <button className='buttonDark w-full mb-2 text-sm' disabled={work.isComingSoon}>{work.isComingSoon? 'Coming Soon' : 'View Work'}</button>
+          <Link href={`/works/casestudy/${work.id}`}><a>
+            <button className='buttonDark w-full mb-2 text-sm' disabled={work.isComingSoon}>{work.isComingSoon? 'Coming Soon' : 'View Work'}</button>
+          </a></Link>
           <div className='flex justify-between w-full'>
             <p className='text-xs font-normal'>{work.coordinates}</p>
             <p className='text-xs font-normal'>{work.number}</p>

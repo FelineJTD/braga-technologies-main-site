@@ -7,6 +7,7 @@ import GetInTouch from '../../components/get-in-touch-section';
 export default function Works() {
   const works = [
     {
+      id: "1",
       title: "Smiling Java / Event Portal",
       type: "Braga Enterprise",
       img: "https://www.google.com/maps/d/u/0/thumbnail?mid=1frHExlCasUKm6ymzyyUyuCvrtp0",
@@ -15,6 +16,7 @@ export default function Works() {
       isComingSoon: false,
     },
     {
+      id: "2",
       title: "Smiling Java / Event Portal",
       type: "Braga Enterprise",
       img: "https://www.google.com/maps/d/u/0/thumbnail?mid=1frHExlCasUKm6ymzyyUyuCvrtp0",
