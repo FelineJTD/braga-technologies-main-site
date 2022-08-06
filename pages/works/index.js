@@ -72,9 +72,9 @@ export default function Works() {
           <p className='col-start-5 col-span-4 text-center text-sm'>See our approach in utilizing, creating, and engineering maps to help in navigate various fields and sectors.</p>
 
           {/* WORKS */}
-          <div id='works-container' className='pt-24 col-start-2 col-span-10 grid grid-cols-3 gap-6'>
+          <div id='works-container' className='pt-24 col-start-2 col-span-10 flex flex-col md:grid md:grid-cols-3 gap-6 w-full'>
             {works.slice(12*(currPage-1),12*currPage).map((work, index) => (
-              <CardWorks work={work} key={index} className='[&:nth-child(3n+2)]:translate-y-16' />
+              <CardWorks work={work} key={index} className='md:[&:nth-child(3n+2)]:translate-y-16' />
             ))}
           </div>
 
