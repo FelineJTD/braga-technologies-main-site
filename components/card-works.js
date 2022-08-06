@@ -3,11 +3,13 @@ import WorkIcon from '../assets/images/works/work-icon';
 import { useState } from 'react';
 import Link from 'next/link';
 
-export default function CardWorks({ work }) {
+// TODO: change hover useState to TailwindCSS group
+
+export default function CardWorks({ work, className }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className='w-full rounded-lg border-[1px] border-gray-500 relative' onMouseOver={() => setIsHovered(true)} onMouseOut={() => setIsHovered(false)}>
+    <div className={`w-full rounded-lg border-[1px] border-gray-500 relative ${className}`} onMouseOver={() => setIsHovered(true)} onMouseOut={() => setIsHovered(false)}>
       {/* Title */}
       <div className='p-3 relative z-10'>
         <WorkIcon className={`${isHovered? 'fill-white' : 'fill-gray-500'} duration-500`} />

@@ -69,7 +69,7 @@ export default function Navbar() {
   return (
     <>
       {/* MOBILE NAV */}
-      <nav id='mobile-nav' className='h-screen w-full bg-white bg-opacity-90 backdrop-blur z-50 fixed top-0 left-0 p-6 duration-300 translate-y-[-100vh] lg:hidden flex flex-col space-y-6 text-right justify-end'>
+      <nav id='mobile-nav' className='h-screen w-full bg-white bg-opacity-90 backdrop-blur z-50 fixed top-0 left-0 p-6 duration-300 translate-y-[-100vh] lg:hidden flex flex-col space-y-6 text-right justify-end selection:bg-primary selection:text-gray-50'>
         <div className='divider' aria-hidden/>
         <Link href='/'><a className='text-lg' onClick={closeMobileNav}>Home</a></Link>
         <Link href='/geodashboard'><a className='text-lg' onClick={closeMobileNav}>GeoDashboard™</a></Link>
