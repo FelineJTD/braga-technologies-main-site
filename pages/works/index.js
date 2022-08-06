@@ -61,6 +61,15 @@ export default function Works() {
     scrollToWorksTop();
   }
 
+  const showSelections = () => {
+    document.getElementById('selections').classList.remove('hidden');
+    document.getElementById('selections').classList.add('flex');
+  }
+
+  const hideSelections = () => {
+    document.getElementById('selections').classList.add('hidden');
+    document.getElementById('selections').classList.remove('flex');
+  }
 
 
   return (
@@ -98,11 +107,11 @@ export default function Works() {
                 <button className='buttonTooltip shadow-lg hidden md:block' disabled>Page {currPage}</button> {/* Desktop Ver */}
                 <button onClick={nextPage} className='buttonTooltip shadow-lg'>&gt;</button>
               </div>
-              <button className='peer buttonTooltip shadow-lg flex justify-between space-x-3'>
+              <button className='buttonTooltip shadow-lg flex justify-between space-x-3 w-44' onClick={showSelections}>
                 <p className='text-xs md:text-sm bold mr-2'>Show All Projects</p>
                 <Image src='/works/ic-filter.svg' alt='' width={14} height={14} />
               </button>
-              <div className='hidden peer-hover:flex flex-col bg-white rounded-lg p-2 shadow-lg'>
+              <div id='selections' className='w-44 flex-col bg-white rounded-lg p-2 shadow-lg absolute bottom-16 right-0 z-[25] duration-300 hidden'>
                 <button 
                   onClick={() => {
                     setWorksToShow(works); 
