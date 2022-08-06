@@ -216,6 +216,10 @@ button {
   @apply border-t-[1px] border-gray-200 mt-10 mb-4;
 }
 
+.dividerBlack {
+  @apply border-t-[1px] border-gray-600 mt-10 mb-4;
+}
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
