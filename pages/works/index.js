@@ -122,19 +122,19 @@ export default function Works() {
               <Image src='/works/Compass.svg' alt='' width={56} height={56} />
             </div>
             <div className='flex space-x-3 w-full md:w-auto justify-between'>
-              <div className='flex space-x-3'>
+              <div className='flex space-x-1 md:space-x-3'>
                 <button onClick={prevPage} className='buttonTooltip shadow-lg'>&lt;</button>
                 <button className='buttonTooltip shadow-lg md:hidden' disabled>{currPage}</button> {/* Mobile Ver */}
                 <button className='buttonTooltip shadow-lg hidden md:block' disabled>Page {currPage}</button> {/* Desktop Ver */}
                 <button onClick={nextPage} className='buttonTooltip shadow-lg'>&gt;</button>
               </div>
-              <div className='group'>
-                <button className='buttonTooltip shadow-lg flex justify-between space-x-3 w-40 z-30 relative duration-300'>
+              <div>
+                <button className='buttonTooltip shadow-lg flex justify-between space-x-3 w-40 z-30 relative duration-300' onClick={() => setIsSelectionOpened(!isSelectionOpened)}>
                   <p className='text-xs md:text-sm bold mr-2'>{currWorksType}</p>
                   <Image src='/works/ic-filter.svg' alt='' width={14} height={14} />
                 </button>
-                <div id='selections-container' className='pb-16 absolute bottom-0 right-0 z-[25] group-hover:block hidden'>
-                  <div id='selections' className='w-40 flex-col bg-white rounded-lg p-2 shadow-lg transition duration-300 max-h-0 group-hover:max-h-screen overflow-hidden'>
+                <div id='selections-container' className={`${isSelectionOpened? 'block' : 'hidden'} pb-12 md:pb-16 absolute bottom-0 right-0 z-[25]`}>
+                  <div id='selections' className={`${isSelectionOpened? 'max-h-screen' : 'max-h-0'} w-40 flex-col bg-white rounded-lg p-2 shadow-lg transition duration-300 overflow-hidden`}>
                     <button 
                       onClick={() => {
                         setWorksToShow(works); 
