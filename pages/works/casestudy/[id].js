@@ -51,8 +51,13 @@ export default function Works() {
 
       <main className='text-gray-900 bg-gray-50 w-full -mt-[4.2rem]'>
         {/* 00 */}
-        <section className='text-white h-screen rounded-b-2xl px-6 pb-14 pt-[7rem] xl:px-[10%] flex flex-col lg:grid lg:grid-cols-12 items-start gap-x-6 bg-cover bg-center bg-no-repeat' style={{backgroundImage: `url(${data.img})`}}>
-          <div className='[background-image:linear-gradient(to_bottom,rgba(35,34,33,0.12),rgba(35,34,33,0.8))] w-full h-full absolute top-0 left-0 rounded-b-2xl z-0'/>
+        <section className='text-white rounded-b-2xl px-6 pb-10 pt-[7rem] xl:px-[10%] flex flex-col lg:grid lg:grid-cols-12 items-start gap-x-6 bg-cover bg-center bg-no-repeat'>
+
+          {/* Image Background */}
+          <div className='w-full h-screen absolute top-0 left-0 rounded-b-2xl z-0' style={{backgroundImage: `url(${data.img})`}}/> 
+          {/* Gradient Background */}
+          <div className='[background-image:linear-gradient(to_bottom,rgba(35,34,33,0.12),rgba(35,34,33,0.8))] w-full h-screen absolute top-0 left-0 rounded-b-2xl z-0'/>
+
           <p className='bold mb-4 relative z-10'>00.</p>
           <p className='col-span-11 mb-4 bold relative z-10'>Works / Case Study</p>
           <div className='col-start-2 col-span-4 relative z-10'>
@@ -61,7 +66,7 @@ export default function Works() {
           </div>
           <div className='col-start-7 col-span-4 relative z-10 flex flex-col justify-between'>
             <img src={data.logo_url} alt={data.logo_alt} className='h-14 object-contain'/>
-            <div>
+            <div className='mb-14'>
               <div className='grid grid-cols-2'>
                 <div>
                   <p>Date</p>
@@ -76,14 +81,14 @@ export default function Works() {
               <div className='border-t-[1px] border-gray-100 my-4' />
               <p>{data.solution_desc}</p>
             </div>
-          </div>
-        </section>
 
-        {/* VISIT PROJECT */}
-        <section className='px-6 xl:px-[10%] flex flex-col lg:grid lg:grid-cols-12 items-start gap-x-6 relative -mt-[20vh] pb-10'>
-          <div className='col-start-2 col-span-10 rounded-xl w-full h-[67vh] bg-gray-100 border-[1px] border-black relative z-10' />
-          <div className='col-start-2 col-span-10 flex items-center justify-center w-full h-full absolute top-0 left-0 z-20'>
-            <button className='buttonDark bg-white shadow-md'>Visit Project</button>
+            {/* VISIT PROJECT */}
+            <section className='col-start-2 col-span-10 relative'>
+              <div className='rounded-xl w-full h-[67vh] bg-gray-100 border-[1px] border-black relative z-10' />
+              <div className='flex items-center justify-center w-full h-full absolute top-0 left-0 z-20'>
+                <button className='buttonDark bg-white shadow-md'>Visit Project</button>
+              </div>
+            </section>
           </div>
         </section>
 
