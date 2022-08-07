@@ -8,12 +8,14 @@ export default function Navbar() {
   const closeMobileNav = () => {
     document.getElementById('toggle').style.transform = 'rotate(0)';
     document.getElementById('mobile-nav').style.transform = 'translateY(-100vh)';
+    document.getElementById('mobile-nav').style.display = 'hidden';
     setIsMobileNavOpen(false);
   }
 
   const openMobileNav = () => {
     document.getElementById('toggle').style.transform = 'rotate(180deg)';
     document.getElementById('nav').style.transform = 'translateY(0)';
+    document.getElementById('mobile-nav').style.display = 'flex';
     document.getElementById('mobile-nav').style.height = window.innerHeight + 'px';
     document.getElementById('mobile-nav').style.transform = 'translateY(0)';
     setIsMobileNavOpen(true);

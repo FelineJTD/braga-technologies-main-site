@@ -62,7 +62,7 @@ export default function Works() {
           <p className='col-span-11 mb-4 bold relative z-10'>Works / Case Study</p>
           <div className='col-start-2 col-span-4 relative z-10'>
             <p className='mb-3'>{data.title}</p>
-            <h1 className='font-inter font-semibold text-[36px] md:text-[48px] [line-height:46px] md:[line-height:58px]'>{data.headline}</h1>
+            <h1 className='font-inter font-semibold text-[36px] md:text-[48px] [line-height:46px] md:[line-height:58px] mb-[5vh] lg:mb-0'>{data.headline}</h1>
           </div>
           <div className='col-start-7 col-span-4 relative z-10 flex flex-col justify-between mb-14'>
             <img src={data.logo_url} alt={data.logo_alt} className='h-14 object-contain'/>
