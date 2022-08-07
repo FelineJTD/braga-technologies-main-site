@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import Image from 'next/image';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import CardWorks from '../../components/card-works';
 import GetInTouch from '../../components/get-in-touch-section';
 
@@ -45,7 +45,13 @@ export default function Works() {
 
   const [currPage, setCurrPage] = useState(1);
   const [worksToShow, setWorksToShow] = useState(works);
-  const lastPage = Math.ceil(works.length / 12);
+  const [lastPage, setLastPage] = useState(Math.ceil(works.length / 12));
+
+  useEffect(() => {
+    setLastPage(Math.ceil(worksToShow.length / 12));
+    setCurrPage(1);
+    scrollToWorksTop();
+  }, [worksToShow]);
 
   const scrollToWorksTop = () => {
     document.getElementById('works-container').scrollIntoView({ behavior: 'smooth' });
@@ -115,8 +121,6 @@ export default function Works() {
                 <button 
                   onClick={() => {
                     setWorksToShow(works); 
-                    setCurrPage(1);
-                    scrollToWorksTop();
                   }} 
                   className='buttonTooltip text-left'>
                     All Projects
@@ -124,8 +128,6 @@ export default function Works() {
                 <button 
                   onClick={() => {
                     setWorksToShow(works.filter(work => work.work_type === 'Project'));
-                    setCurrPage(1);
-                    scrollToWorksTop();
                   }}
                   className='buttonTooltip text-left'>
                     Projects
@@ -133,8 +135,6 @@ export default function Works() {
                 <button 
                   onClick={() => {
                     setWorksToShow(works.filter(work => work.work_type === 'Case Study'));
-                    setCurrPage(1);
-                    scrollToWorksTop();
                   }}
                   className='buttonTooltip text-left'>
                     Case Studies
