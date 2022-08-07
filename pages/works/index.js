@@ -114,35 +114,39 @@ export default function Works() {
                 <button className='buttonTooltip shadow-lg hidden md:block' disabled>Page {currPage}</button> {/* Desktop Ver */}
                 <button onClick={nextPage} className='buttonTooltip shadow-lg'>&gt;</button>
               </div>
-              <button className='buttonTooltip shadow-lg flex justify-between space-x-3 w-44' onClick={showSelections}>
-                <p className='text-xs md:text-sm bold mr-2'>Showing {currWorksType}</p>
-                <Image src='/works/ic-filter.svg' alt='' width={14} height={14} />
-              </button>
-              <div id='selections' className='w-44 flex-col bg-white rounded-lg p-2 shadow-lg absolute bottom-16 right-0 z-[25] duration-300 hidden'>
-                <button 
-                  onClick={() => {
-                    setWorksToShow(works); 
-                    setCurrWorksType("All Projects");
-                  }} 
-                  className='buttonTooltip text-left'>
-                    All Projects
+              <div className='group'>
+                <button className='buttonTooltip shadow-lg flex justify-between space-x-3 w-40 z-30 relative duration-300' onClick={showSelections}>
+                  <p className='text-xs md:text-sm bold mr-2'>{currWorksType}</p>
+                  <Image src='/works/ic-filter.svg' alt='' width={14} height={14} />
                 </button>
-                <button 
-                  onClick={() => {
-                    setWorksToShow(works.filter(work => work.work_type === 'Project'));
-                    setCurrWorksType('Projects');
-                  }}
-                  className='buttonTooltip text-left'>
-                    Projects
-                </button>
-                <button 
-                  onClick={() => {
-                    setWorksToShow(works.filter(work => work.work_type === 'Case Study'));
-                    setCurrWorksType('Case Studies');
-                  }}
-                  className='buttonTooltip text-left'>
-                    Case Studies
-                </button>
+                <div className='pb-16 absolute bottom-0 right-0 z-[25] group-hover:block hidden'>
+                  <div id='selections' className='w-40 flex-col bg-white rounded-lg p-2 shadow-lg transition duration-300 max-h-0 group-hover:max-h-36 overflow-hidden'>
+                    <button 
+                      onClick={() => {
+                        setWorksToShow(works); 
+                        setCurrWorksType("All Projects");
+                      }} 
+                      className='buttonTooltip w-full text-left'>
+                        All Projects
+                    </button>
+                    <button 
+                      onClick={() => {
+                        setWorksToShow(works.filter(work => work.work_type === 'Project'));
+                        setCurrWorksType('Projects');
+                      }}
+                      className='buttonTooltip w-full text-left'>
+                        Projects
+                    </button>
+                    <button 
+                      onClick={() => {
+                        setWorksToShow(works.filter(work => work.work_type === 'Case Study'));
+                        setCurrWorksType('Case Studies');
+                      }}
+                      className='buttonTooltip w-full text-left'>
+                        Case Studies
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </nav>
