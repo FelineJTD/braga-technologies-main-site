@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <Navbar />
-      <main className='w-full min-h-screen bg-gray-50 selection:bg-primary selection:text-gray-50'>
+      <main className='w-full min-h-screen bg-gray-50 selection:bg-primary selection:text-gray-50 focus:border-primary'>
         <Component {...pageProps} />
       </main>
       <Footer />
