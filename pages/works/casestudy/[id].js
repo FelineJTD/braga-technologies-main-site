@@ -64,9 +64,9 @@ export default function Works() {
             <p className='mb-3'>{data.title}</p>
             <h1 className='font-inter font-semibold text-[36px] md:text-[48px] [line-height:46px] md:[line-height:58px]'>{data.headline}</h1>
           </div>
-          <div className='col-start-7 col-span-4 relative z-10 flex flex-col justify-between'>
+          <div className='col-start-7 col-span-4 relative z-10 flex flex-col justify-between mb-14'>
             <img src={data.logo_url} alt={data.logo_alt} className='h-14 object-contain'/>
-            <div className='mb-14'>
+            <div>
               <div className='grid grid-cols-2'>
                 <div>
                   <p>Date</p>
@@ -81,15 +81,15 @@ export default function Works() {
               <div className='border-t-[1px] border-gray-100 my-4' />
               <p>{data.solution_desc}</p>
             </div>
+          </div>
 
-            {/* VISIT PROJECT */}
-            <section className='col-start-2 col-span-10 relative'>
+          {/* VISIT PROJECT */}
+          <section className='col-start-2 col-span-10 relative w-full'>
               <div className='rounded-xl w-full h-[67vh] bg-gray-100 border-[1px] border-black relative z-10' />
               <div className='flex items-center justify-center w-full h-full absolute top-0 left-0 z-20'>
                 <button className='buttonDark bg-white shadow-md'>Visit Project</button>
               </div>
             </section>
-          </div>
         </section>
 
         {/* 01 */}
