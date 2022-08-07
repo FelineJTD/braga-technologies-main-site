@@ -46,6 +46,7 @@ export default function Works() {
   const [currPage, setCurrPage] = useState(1);
   const [currWorksType, setCurrWorksType] = useState("All Projects");
   const [worksToShow, setWorksToShow] = useState(works);
+  const [isSelectionOpened, setIsSelectionOpened] = useState(false);
   const [lastPage, setLastPage] = useState(Math.ceil(works.length / 12));
 
   useEffect(() => {
@@ -69,15 +70,28 @@ export default function Works() {
   }
 
   const showSelections = () => {
-    document.getElementById('selections').classList.remove('hidden');
-    document.getElementById('selections').classList.add('flex');
+    console.log('showing');
+    document.getElementById('selections').style.maxHeight = '100vh';
+    document.getElementById('selections-container').style.display = 'flex';
+    // document.getElementById('selections-container').classList.add('flex');
+    setIsSelectionOpened(true);
   }
 
   const hideSelections = () => {
+    document.getElementById('selections').classList.add('max-h-0');
+    document.getElementById('selections').classList.remove('max-h-screen');
     document.getElementById('selections').classList.add('hidden');
     document.getElementById('selections').classList.remove('flex');
+    setIsSelectionOpened(false);
   }
 
+  const toggleSelections = () => {
+    if (isSelectionOpened) {
+      hideSelections();
+    } else {
+      showSelections();
+    }
+  }
 
   return (
     <div>
@@ -115,12 +129,12 @@ export default function Works() {
                 <button onClick={nextPage} className='buttonTooltip shadow-lg'>&gt;</button>
               </div>
               <div className='group'>
-                <button className='buttonTooltip shadow-lg flex justify-between space-x-3 w-40 z-30 relative duration-300' onClick={showSelections}>
+                <button className='buttonTooltip shadow-lg flex justify-between space-x-3 w-40 z-30 relative duration-300'>
                   <p className='text-xs md:text-sm bold mr-2'>{currWorksType}</p>
                   <Image src='/works/ic-filter.svg' alt='' width={14} height={14} />
                 </button>
-                <div className='pb-16 absolute bottom-0 right-0 z-[25] group-hover:block hidden'>
-                  <div id='selections' className='w-40 flex-col bg-white rounded-lg p-2 shadow-lg transition duration-300 max-h-0 group-hover:max-h-36 overflow-hidden'>
+                <div id='selections-container' className='pb-16 absolute bottom-0 right-0 z-[25] group-hover:block hidden'>
+                  <div id='selections' className='w-40 flex-col bg-white rounded-lg p-2 shadow-lg transition duration-300 max-h-0 group-hover:max-h-screen overflow-hidden'>
                     <button 
                       onClick={() => {
                         setWorksToShow(works); 
