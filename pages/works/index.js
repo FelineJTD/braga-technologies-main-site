@@ -115,24 +115,27 @@ export default function Works() {
                 <button 
                   onClick={() => {
                     setWorksToShow(works); 
-                    scrollToWorksTop();}
-                  } 
+                    setCurrPage(1);
+                    scrollToWorksTop();
+                  }} 
                   className='buttonTooltip text-left'>
                     All Projects
                 </button>
                 <button 
                   onClick={() => {
                     setWorksToShow(works.filter(work => work.work_type === 'Project'));
-                    scrollToWorksTop();}
-                  } 
+                    setCurrPage(1);
+                    scrollToWorksTop();
+                  }}
                   className='buttonTooltip text-left'>
                     Projects
                 </button>
                 <button 
                   onClick={() => {
                     setWorksToShow(works.filter(work => work.work_type === 'Case Study'));
-                    scrollToWorksTop();}
-                  } 
+                    setCurrPage(1);
+                    scrollToWorksTop();
+                  }}
                   className='buttonTooltip text-left'>
                     Case Studies
                 </button>
