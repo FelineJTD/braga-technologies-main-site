@@ -53,7 +53,6 @@ export default function Works() {
 
   useEffect(() => {
     setLastPage(Math.ceil(worksToShow.length / 12));
-    setCurrPage(1);
   }, [worksToShow]);
 
   const nextPage = () => {
@@ -115,6 +114,7 @@ export default function Works() {
                     <button 
                       onClick={() => {
                         setWorksToShow(works); 
+                        setCurrPage(1);
                         scrollToWorksTop();
                         setCurrWorksType("All Projects");
                       }} 
@@ -124,6 +124,7 @@ export default function Works() {
                     <button 
                       onClick={() => {
                         setWorksToShow(works.filter(work => work.work_type === 'Project'));
+                        setCurrPage(1);
                         scrollToWorksTop();
                         setCurrWorksType('Projects');
                       }}
@@ -133,6 +134,7 @@ export default function Works() {
                     <button 
                       onClick={() => {
                         setWorksToShow(works.filter(work => work.work_type === 'Case Study'));
+                        setCurrPage(1);
                         scrollToWorksTop();
                         setCurrWorksType('Case Studies');
                       }}
