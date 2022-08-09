@@ -9,7 +9,7 @@ export default function CardWorks({ work, className }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-      <div className={`w-full rounded-lg border-[1px] border-gray-500 relative ${className}`} onMouseOver={() => setIsHovered(true)} onMouseOut={() => setIsHovered(false)} ref={domRef}>
+      <div className={`w-full rounded-lg border-[1px] border-gray-500 relative ${className}`} onMouseOver={() => setIsHovered(true)} onMouseOut={() => setIsHovered(false)}>
         {/* Title */}
         <div className='p-3 relative z-10'>
           <WorkIcon className={`${isHovered? 'fill-white' : 'fill-gray-500'} duration-500`} />

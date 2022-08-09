@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import Image from 'next/image';
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import CardWorks from '../../components/card-works';
 import GetInTouch from '../../components/get-in-touch-section';
 
@@ -49,15 +49,12 @@ export default function Works() {
   const [isSelectionOpened, setIsSelectionOpened] = useState(false);
   const [lastPage, setLastPage] = useState(Math.ceil(works.length / 12));
 
+  const worksContainer = useRef();
+
   useEffect(() => {
     setLastPage(Math.ceil(worksToShow.length / 12));
     setCurrPage(1);
-    scrollToWorksTop();
   }, [worksToShow]);
-
-  function scrollToWorksTop() {
-    document.getElementById('works-container').scrollIntoView({ behavior: 'smooth' });
-  }
 
   const nextPage = () => {
     setCurrPage(Math.min(lastPage, currPage + 1));
@@ -69,27 +66,8 @@ export default function Works() {
     scrollToWorksTop();
   }
 
-  const showSelections = () => {
-    console.log('showing');
-    document.getElementById('selections').style.maxHeight = '100vh';
-    document.getElementById('selections-container').style.display = 'flex';
-    setIsSelectionOpened(true);
-  }
-
-  const hideSelections = () => {
-    document.getElementById('selections').classList.add('max-h-0');
-    document.getElementById('selections').classList.remove('max-h-screen');
-    document.getElementById('selections').classList.add('hidden');
-    document.getElementById('selections').classList.remove('flex');
-    setIsSelectionOpened(false);
-  }
-
-  const toggleSelections = () => {
-    if (isSelectionOpened) {
-      hideSelections();
-    } else {
-      showSelections();
-    }
+  const scrollToWorksTop = () => {
+    worksContainer.current.scrollIntoView({ behavior: 'smooth' });
   }
 
   return (
@@ -109,7 +87,7 @@ export default function Works() {
           <p className='col-start-5 col-span-4 text-center text-sm'>See our approach in utilizing, creating, and engineering maps to help in navigate various fields and sectors.</p>
 
           {/* WORKS */}
-          <div id='works-container' className='pt-24 col-start-2 col-span-10 flex flex-col md:grid md:grid-cols-3 gap-6 w-full relative'>
+          <div ref={worksContainer} className='pt-24 col-start-2 col-span-10 flex flex-col md:grid md:grid-cols-3 gap-6 w-full relative'>
             {worksToShow.slice(12*(currPage-1),12*currPage).map((work, index) => (
               <CardWorks work={work} key={index} className='md:[&:nth-child(3n+2)]:top-16' />
             ))}
@@ -137,6 +115,7 @@ export default function Works() {
                     <button 
                       onClick={() => {
                         setWorksToShow(works); 
+                        scrollToWorksTop();
                         setCurrWorksType("All Projects");
                       }} 
                       className='buttonTooltip w-full text-left'>
@@ -145,6 +124,7 @@ export default function Works() {
                     <button 
                       onClick={() => {
                         setWorksToShow(works.filter(work => work.work_type === 'Project'));
+                        scrollToWorksTop();
                         setCurrWorksType('Projects');
                       }}
                       className='buttonTooltip w-full text-left'>
@@ -153,6 +133,7 @@ export default function Works() {
                     <button 
                       onClick={() => {
                         setWorksToShow(works.filter(work => work.work_type === 'Case Study'));
+                        scrollToWorksTop();
                         setCurrWorksType('Case Studies');
                       }}
                       className='buttonTooltip w-full text-left'>
