@@ -1,27 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import WorkIcon from '../assets/images/works/work-icon';
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 
 // TODO: change hover useState to TailwindCSS group
 
 export default function CardWorks({ work, className }) {
   const [isHovered, setIsHovered] = useState(false);
-  const [isVisible, setVisible] = useState(false);
-  const domRef = useRef();
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting));
-    });
-    observer.observe(domRef.current);
-
-    // on unmount
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    return () => observer.unobserve(domRef.current);
-  });
 
   return (
-      <div className={`${isVisible? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'} w-full rounded-lg border-[1px] border-gray-500 relative duration-1000 ${className}`} onMouseOver={() => setIsHovered(true)} onMouseOut={() => setIsHovered(false)} ref={domRef}>
+      <div className={`w-full rounded-lg border-[1px] border-gray-500 relative ${className}`} onMouseOver={() => setIsHovered(true)} onMouseOut={() => setIsHovered(false)} ref={domRef}>
         {/* Title */}
         <div className='p-3 relative z-10'>
           <WorkIcon className={`${isHovered? 'fill-white' : 'fill-gray-500'} duration-500`} />

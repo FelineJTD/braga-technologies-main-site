@@ -55,7 +55,7 @@ export default function Works() {
     scrollToWorksTop();
   }, [worksToShow]);
 
-  const scrollToWorksTop = () => {
+  function scrollToWorksTop() {
     document.getElementById('works-container').scrollIntoView({ behavior: 'smooth' });
   }
 

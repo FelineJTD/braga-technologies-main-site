@@ -84,7 +84,7 @@ export default function Navbar() {
       </nav>
 
       {/* DESKTOP NAV */}
-      <nav id='nav' className='flex items-center justify-between w-full px-6 py-3 bg-white text-gray-600 bg-opacity-50 backdrop-blur sticky top-0 z-50 duration-200'>
+      <nav id='nav' className='flex items-center justify-between w-full px-6 py-3 bg-white text-gray-600 bg-opacity-50 backdrop-blur sticky top-0 z-50 duration-200 selection:bg-primary selection:text-gray-50'>
         {/* Logo images might be redundant, can be combined with conditionals */}
         <Link href='/'><img src='/logo-braga-sm.svg' alt='Braga Technologies Logo' className='md:hidden h-5 cursor-pointer' onClick={closeMobileNav}/></Link>
         <Link href='/'><img src='/logo-braga-full.svg' alt='Braga Technologies Logo' className='hidden md:block h-5 cursor-pointer' /></Link>
