@@ -73,7 +73,6 @@ export default function Works() {
     console.log('showing');
     document.getElementById('selections').style.maxHeight = '100vh';
     document.getElementById('selections-container').style.display = 'flex';
-    // document.getElementById('selections-container').classList.add('flex');
     setIsSelectionOpened(true);
   }
 
@@ -110,9 +109,9 @@ export default function Works() {
           <p className='col-start-5 col-span-4 text-center text-sm'>See our approach in utilizing, creating, and engineering maps to help in navigate various fields and sectors.</p>
 
           {/* WORKS */}
-          <div id='works-container' className='pt-24 col-start-2 col-span-10 flex flex-col md:grid md:grid-cols-3 gap-6 w-full'>
+          <div id='works-container' className='pt-24 col-start-2 col-span-10 flex flex-col md:grid md:grid-cols-3 gap-6 w-full relative'>
             {worksToShow.slice(12*(currPage-1),12*currPage).map((work, index) => (
-              <CardWorks work={work} key={index} className='md:[&:nth-child(3n+2)]:translate-y-16' />
+              <CardWorks work={work} key={index} className='md:[&:nth-child(3n+2)]:top-16' />
             ))}
           </div>
 
