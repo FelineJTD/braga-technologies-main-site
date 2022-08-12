@@ -20,6 +20,18 @@ export default function Culture() {
           <p className='row-start-3 text-sm text-gray-600 col-span-3'>We&apos;re creating an environment to keep everyone standout with their talents and be able to cherish each and every unique qualities that we have.</p>
           <p className='row-start-3 text-sm text-gray-600 col-span-3'>Dare to act, own the work, be the truest you. Seizing opportunities daily, that’s how we do.</p>
         </section>
+
+        {/* 01 */}
+        <section className='whiteBG'>
+          <p className='bold mb-4'>01.</p>
+          <div className='col-span-4'>
+            <p className='mb-4 bold'>Our Team</p>
+            <h2>Here, our difference makes a difference.</h2>
+          </div>
+          <p className='col-start-7 col-span-5 self-end -translate-y-2'>We&apos;re creating an environment to keep everyone standout with their talents and be able to cherish each and every unique qualities that we have.</p>
+
+          <div className='col-start-2 col-span-10 w-full dividerBlack' />
+        </section>
       </main>
     </div>
   )
