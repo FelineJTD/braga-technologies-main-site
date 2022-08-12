@@ -216,12 +216,16 @@ button {
   @apply border-white bg-white text-gray-600 enabled:hover:bg-gray-200 enabled:hover:border-gray-200 duration-300 text-xs md:text-sm;
 }
 
+.buttonPlain {
+  @apply border-0 p-2 un rounded-none font-normal;
+}
+
 .divider {
   @apply border-t-[1px] border-gray-200 mt-10 mb-4;
 }
 
 .dividerBlack {
-  @apply border-t-[1px] border-gray-600 mt-10 mb-4;
+  @apply border-t-[1px] border-gray-600;
 }
 
 @layer utilities {

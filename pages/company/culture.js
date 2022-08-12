@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 export default function Culture() {
-
+  const Departments = ['Management', 'Design', 'Development', 'Technology', 'Operation', 'General Affairs', 'Others'];
   return (
     <div>
       <Head>
@@ -30,7 +30,21 @@ export default function Culture() {
           </div>
           <p className='col-start-7 col-span-5 self-end -translate-y-2'>We&apos;re creating an environment to keep everyone standout with their talents and be able to cherish each and every unique qualities that we have.</p>
 
-          <div className='col-start-2 col-span-10 w-full dividerBlack' />
+          <div className='col-start-2 col-span-10 w-full dividerBlack mt-10 mb-3' />
+
+          <div className='col-start-2 col-span-10 flex justify-between'>
+            { Departments.map((department, index) => (
+              <button key={index} className='buttonPlain font-normal'>{department}</button>
+            )) }
+          </div>
+
+          <div className='col-start-2 col-span-10 grid grid-cols-4 gap-4'>
+            <div className='rounded-lg border-2 border-gray-300'>
+              <div className='bg-gray-500 w-full h-48'/>
+              <p className='text-lg bold mb-1'>Gunawan Wibisono</p>
+              <p className='text-xs text-gray-500'>IoT Engineer</p>
+            </div>
+          </div>
         </section>
       </main>
     </div>
