@@ -151,7 +151,7 @@ export default function Career() {
             <div className='flex flex-col lg:flex-row lg:space-x-4 bg-gray-50 rounded-b-2xl rounded-tr-2xl p-6 lg:items-center justify-between'>
               <p className='text-sm mb-3 lg:mb-0'>Being part of Braga means finding yourself in a unique position. Seize the possibility to work on challanges that impacts all over the world.</p>
               <Link href='/company/culture'><a>
-                <button className='buttonLight w-2/3 lg:w-auto'>Our Culture &gt;</button>
+                <button className='buttonLight w-2/3 lg:w-auto whitespace-nowrap'>Our Culture &gt;</button>
               </a></Link>
             </div>
           </div>
