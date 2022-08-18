@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import WorkIcon from '../assets/images/works/work-icon';
+import WorkIcon from '../assets/images/company/work-icon';
 import { useState } from 'react';
 import Link from 'next/link';
 
