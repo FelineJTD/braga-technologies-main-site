@@ -2,13 +2,12 @@
 import Head from 'next/head'
 import Link from 'next/link';
 import TeamIcon from '../../assets/images/company/team-icon';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CardTeam from '../../components/card-team';
 
 export default function Culture() {
   const Departments = ['Management', 'Design', 'Development', 'Technology', 'Operation', 'General Affairs', 'Others'];
   const lastSectionImage = "https://picsum.photos/1080/1920";
-  const [isHovered, setIsHovered] = useState(false);
 
   const Team = [
     {
@@ -67,6 +66,15 @@ export default function Culture() {
     },
   ]
 
+  const [selectedDepartment, setSelectedDepartment] = useState(Departments[0]);
+
+  const [fullTeam, setFullTeam] = useState(Team);
+  const [currTeam, setCurrTeam] = useState(Team);
+
+  useEffect(() => {
+    setCurrTeam(fullTeam.filter(team => team.dept === selectedDepartment));
+  }, [fullTeam, selectedDepartment]);
+
   return (
     <div>
       <Head>
@@ -99,12 +107,12 @@ export default function Culture() {
 
           <div className='col-start-2 col-span-10 flex justify-between'>
             { Departments.map((department, index) => (
-              <button key={index} className='buttonPlain font-normal'>{department}</button>
+              <button key={index} className='buttonPlain font-normal' onClick={() => setSelectedDepartment(department)}>{department}</button>
             )) }
           </div>
 
           <div className='col-start-2 col-span-10 grid grid-cols-4 gap-4 my-6'>          
-            { Team.map((staff, index) => (
+            { currTeam.map((staff, index) => (
               <CardTeam key={index} staff={staff} />
             ))}
           </div>
