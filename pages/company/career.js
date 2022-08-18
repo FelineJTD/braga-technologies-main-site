@@ -131,7 +131,7 @@ export default function Career() {
           </div>
         </section>
 
-        <section className='px-6 py-14 xl:px-[10%] h-screen bg-cover bg-center bg-no-repeat flex flex-col md:flex-row items-end justify-end' style={{backgroundImage: `url(${lastSectionImage})`}}>
+        <section className='px-6 py-14 lg:px-[10%] h-screen bg-cover bg-center bg-no-repeat flex flex-col md:flex-row items-end justify-end' style={{backgroundImage: `url(${lastSectionImage})`}}>
           <div className='w-full md:w-1/2 md:mb-4 flex md:flex-col items-end'>
             <div className='flex lg:flex-row flex-col lg:space-x-4 bg-gray-50 rounded-t-2xl rounded-bl-2xl p-6'>
               <p className='bold mb-4'>01.</p>
