@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Footer() {
   const copyrightText = '© Braga Technologies 2022';
   return (
-    <footer className='bg-gray-100 text-gray-500 p-6 pt-0 xl:px-[10%] grid grid-cols-12 w-full gap-6 selection:bg-primary selection:text-gray-50'>
+    <footer className='bg-gray-100 text-gray-500 p-6 xl:px-[10%] grid grid-cols-12 w-full gap-6 selection:bg-primary selection:text-gray-50'>
       <div className='col-span-12 md:col-span-3'>
         <Link href='/'><img src='/logo-braga-sm.svg' alt='Braga Technologies Logo' className='col-span-6 h-5 cursor-pointer mb-6'/></Link>
         <p className='text-gray-600'>Indonesia&apos;s Leading Geospatial Technology that optimize analytics and performance, moving the world one map at a time.</p>

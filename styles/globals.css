@@ -139,6 +139,10 @@ button {
   padding: 8px 16px;
 }
 
+.fontVarNormal {
+  font-variation-settings: 'wght' 400;
+}
+
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 40px;
@@ -214,6 +218,10 @@ button {
 
 .buttonTooltip {
   @apply border-white bg-white text-gray-600 enabled:hover:bg-gray-200 enabled:hover:border-gray-200 duration-300 text-xs md:text-sm;
+}
+
+.buttonFilter {
+  @apply border-gray-400 bg-white text-gray-800 enabled:hover:bg-gray-200 enabled:hover:border-gray-200 duration-300 text-xs md:text-sm;
 }
 
 .buttonPlain {
