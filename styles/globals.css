@@ -196,12 +196,16 @@ button {
   @apply px-6 py-14 xl:px-[10%];
 }
 
+.defaultGrid {
+  @apply flex flex-col items-start lg:grid lg:grid-cols-12 gap-x-6;
+}
+
 .blackBG {
-  @apply bg-gray-900 text-gray-50 md:mx-6 rounded-2xl defaultPadding flex flex-col items-start lg:grid lg:grid-cols-12 gap-x-6;
+  @apply defaultPadding bg-gray-900 text-gray-50 md:mx-6 rounded-2xl defaultGrid;
 }
 
 .whiteBG {
-  @apply bg-gray-50 text-gray-900 defaultPadding flex flex-col lg:grid lg:grid-cols-12 items-start gap-x-6;
+  @apply defaultPadding bg-gray-50 text-gray-900 defaultPadding defaultGrid;
 }
 
 .buttonLight {
