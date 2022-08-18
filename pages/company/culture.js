@@ -1,4 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
+import Link from 'next/link';
 
 export default function Culture() {
   const Departments = ['Management', 'Design', 'Development', 'Technology', 'Operation', 'General Affairs', 'Others'];
@@ -43,6 +45,31 @@ export default function Culture() {
               <div className='bg-gray-500 w-full h-48'/>
               <p className='text-lg bold mb-1'>Gunawan Wibisono</p>
               <p className='text-xs text-gray-500'>IoT Engineer</p>
+            </div>
+          </div>
+        </section>
+
+        <section className='px-6 py-14 lg:px-[10%] h-screen bg-cover bg-center bg-no-repeat flex flex-col md:flex-row items-end justify-end' style={{backgroundImage: `url(${lastSectionImage})`}}>
+          <div className='w-full md:w-1/2 md:mb-4 flex md:flex-col items-end'>
+            <div className='flex lg:flex-row flex-col lg:space-x-4 bg-gray-50 rounded-t-2xl rounded-bl-2xl p-6'>
+              <p className='bold mb-4'>01.</p>
+              <div>
+                <p className='mb-4 bold'>Work at Braga</p>
+                <h3>Location Intelligence meets <u>your</u> uniquity creates something new.</h3>
+              </div>
+            </div>
+            <img src='/company/corner.svg' alt='' className='md:-mt-0.5 md:-mr-0.5 select-none rotate-180 md:rotate-0 mr-4 -mb-0.5' />
+          </div>
+          <div className='w-full md:w-1/2 flex md:flex-col'>
+            <div className='flex items-start md:items-end md:space-x-10'>
+              <img src='/company/corner.svg' alt='' className='md:-mb-0.5 md:-ml-0.5 select-none md:rotate-180 rotate-0 min-w-[24px] ml-4 -mt-0.5' />
+              <img src='/company/additional.svg' alt='' className='-mb-0.5 -ml-0.5 select-none hidden md:block' />
+            </div>
+            <div className='flex flex-col lg:flex-row lg:space-x-4 bg-gray-50 rounded-b-2xl rounded-tr-2xl p-6 lg:items-center'>
+              <p className='text-sm lg:w-[60%] mb-3 lg:mb-0'>Being part of Braga means finding yourself in a unique position. Seize the possibility to work on challanges that impacts all over the world.</p>
+              <Link href='/company/career'><a>
+                <button className='buttonLight w-2/3 lg:w-auto'>Grow With Us &gt;</button>
+              </a></Link>
             </div>
           </div>
         </section>

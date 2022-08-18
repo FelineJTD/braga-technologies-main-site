@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Career() {
   const Benefits = [
@@ -149,7 +150,9 @@ export default function Career() {
             </div>
             <div className='flex flex-col lg:flex-row lg:space-x-4 bg-gray-50 rounded-b-2xl rounded-tr-2xl p-6 lg:items-center'>
               <p className='text-sm lg:w-[60%] mb-3 lg:mb-0'>Being part of Braga means finding yourself in a unique position. Seize the possibility to work on challanges that impacts all over the world.</p>
-              <button className='buttonLight w-2/3 lg:w-auto'>Our Culture &gt;</button>
+              <Link href='/company/culture'><a>
+                <button className='buttonLight w-2/3 lg:w-auto'>Our Culture &gt;</button>
+              </a></Link>
             </div>
           </div>
         </section>
