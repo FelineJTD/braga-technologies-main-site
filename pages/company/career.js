@@ -90,9 +90,9 @@ export default function Career() {
 
         <section className='whiteBG'>
           <p className='col-start-2 col-span-2'>Perks & Amenities</p>
-          <h2 className='col-span-3 mb-10'>We&apos;ve got your back, always.</h2>
-          <p className='col-span-3 text-gray-600'>We&apos;re creating an environment to keep everyone stand out with their talents and be able to cherish each and every unique qualities that we have.</p>
-          <div className='col-start-4 col-span-6 grid grid-cols-3 gap-6'>
+          <h2 className='col-span-3 mb-3'>We&apos;ve got your back, always.</h2>
+          <p className='col-span-3 text-gray-600 mb-10'>We&apos;re creating an environment to keep everyone stand out with their talents and be able to cherish each and every unique qualities that we have.</p>
+          <div className='col-start-4 col-span-6 grid grid-cols-2 md:grid-cols-3 gap-6'>
             {Benefits.map((benefit, index) => (
               <div key={index}>
                 <div className='h-12 w-12 rounded-lg bg-gray-200 mb-2'/>
