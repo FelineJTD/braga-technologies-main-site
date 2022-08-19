@@ -223,8 +223,8 @@ export default function Contact() {
             <form className='md:col-start-1 md:col-span-4 md:grid md:grid-cols-4 md:gap-3 flex flex-col space-y-2'>
               {currForm.form.map((field, index) => (
                 <div key={index} className={`w-full col-span-${field.size}`} style={{columnSpan: field.size}}>
-                  <label className='text-sm'>{field.label}<br/></label>
-                  <input type={field.type} name={field.name} placeholder={field.placeholder} className='input' />
+                  <label className='text-sm' htmlFor={field.name}>{field.label}<br/></label>
+                  <input type={field.type} name={field.name} id={field.name} placeholder={field.placeholder} className='input' />
                 </div>
               ))}
               <button className='bg-black hover:bg-primary duration-300 text-white border-0'>{currForm.submitLabel}</button>
