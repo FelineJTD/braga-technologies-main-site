@@ -193,19 +193,19 @@ export default function Culture() {
           <p className='bold mb-4'>01.</p>
           <div className='col-span-4'>
             <p className='mb-4 bold'>Our Team</p>
-            <h2>Here, our difference makes a difference.</h2>
+            <h2 className='mb-6 lg:mb-10'>Here, our difference makes a difference.</h2>
           </div>
-          <p className='col-start-7 col-span-5 self-end -translate-y-2'>We&apos;re creating an environment to keep everyone standout with their talents and be able to cherish each and every unique qualities that we have.</p>
+          <p className='col-start-7 col-span-5 self-end -translate-y-2 mb-10'>We&apos;re creating an environment to keep everyone standout with their talents and be able to cherish each and every unique qualities that we have.</p>
 
-          <div className='col-start-2 col-span-10 w-full dividerBlack mt-10 mb-3' />
+          <div className='col-start-2 col-span-10 w-full dividerBlack' />
 
-          <div className='col-start-2 col-span-10 flex justify-between'>
+          <div className='col-start-2 col-span-10 w-full flex space-x-3 md:space-x-0 justify-between overflow-y-auto pb-3 md:pb-0'>
             { Departments.map((department, index) => (
-              <button key={index} className='buttonPlain font-normal' onClick={() => setSelectedDepartment(department)}>{department}</button>
+              <button key={index} className={`${selectedDepartment === department? 'buttonSelectionSelected' : 'buttonSelection'} font-normal min-w-[8rem] md:min-w-[12%]`} onClick={() => setSelectedDepartment(department)}>{department}</button>
             )) }
           </div>
 
-          <div className='col-start-2 col-span-10 grid grid-cols-4 gap-4 my-6'>          
+          <div className='col-start-2 col-span-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 my-6'>          
             { currTeam.map((staff, index) => (
               <CardTeam key={index} staff={staff} />
             ))}
