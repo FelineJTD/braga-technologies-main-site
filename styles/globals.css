@@ -307,5 +307,5 @@ button {
 }
 
 .select-input {
-  @apply rounded-lg py-[10px] px-3 w-full bg-white border-[1px] border-gray-400 text-sm;
+  @apply rounded-lg pt-4 pb-[1.125rem] px-3 w-full bg-white border-[1px] border-gray-400 text-sm text-gray-600;
 }
