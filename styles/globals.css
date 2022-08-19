@@ -286,11 +286,11 @@ button {
   }
 }
 
-.input {
-  @apply border-gray-800 border-2 rounded-lg py-2 px-4 w-full;
+.text-input {
+  @apply rounded-lg pt-6 pb-2 px-3 w-full bg-white border-[1px] border-gray-400;
 }
 
-.text-input {
+.text-input-label {
   @apply top-2 text-xs text-gray-400 absolute left-3 cursor-text select-none
   duration-300 
   autofill:bg-gray-200
@@ -300,4 +300,8 @@ button {
   peer-focus:top-2
   peer-focus:text-xs
   peer-focus:text-gray-400; 
+}
+
+.textarea-input-label {
+  @apply top-2 text-xs text-gray-400 absolute left-3 cursor-text select-none;
 }
