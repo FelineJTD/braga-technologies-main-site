@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import Link from 'next/link';
 import { useState } from 'react';
+import FormField from '../components/form-field';
 
 export default function Contact() {
   const lastSectionImage = "https://picsum.photos/1080/1920";
@@ -220,12 +221,9 @@ export default function Contact() {
             </div>
 
             {/* FORM */}
-            <form className='md:col-start-1 md:col-span-4 md:grid md:grid-cols-4 md:gap-3 flex flex-col space-y-2'>
+            <form className='md:col-start-1 md:col-span-4 md:grid md:grid-cols-4 md:gap-3 flex flex-col space-y-2 md:space-y-0'>
               {currForm.form.map((field, index) => (
-                <div key={index} className={`w-full col-span-${field.size}`} style={{columnSpan: field.size}}>
-                  <label className='text-sm' htmlFor={field.name}>{field.label}<br/></label>
-                  <input type={field.type} name={field.name} id={field.name} placeholder={field.placeholder} className='input' />
-                </div>
+                <FormField field={field} key={index} />
               ))}
               <button className='bg-black hover:bg-primary duration-300 text-white border-0'>{currForm.submitLabel}</button>
             </form>
