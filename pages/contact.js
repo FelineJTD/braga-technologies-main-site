@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
-import Link from 'next/link';
 import { useState } from 'react';
 import FormField from '../components/form-field';
 
@@ -33,6 +32,7 @@ export default function Contact() {
           label: 'Country/Region',
           type: 'select',
           name: 'region',
+          options: ['Indonesia', 'United States', 'United Kingdom', 'Australia', 'Canada', 'New Zealand', 'Other'],
           size: 2,
         },
         {
@@ -96,12 +96,14 @@ export default function Contact() {
           label: 'Country/Region',
           type: 'select',
           name: 'region',
+          options: ['Indonesia', 'United States', 'United Kingdom', 'Australia', 'Canada', 'New Zealand', 'Other'],
           size: 2,
         },
         {
           label: 'Select Technical Support',
           type: 'select',
           name: 'phone-number',
+          options: ['Technical Support', 'Billing Support', 'Other'],
           size: 4,
         },
         {
@@ -140,6 +142,7 @@ export default function Contact() {
           label: 'Country/Region',
           type: 'select',
           name: 'region',
+          options: ['Indonesia', 'Malaysia', 'Singapore', 'Thailand', 'Vietnam'],
           size: 2,
         },
         {
@@ -225,7 +228,7 @@ export default function Contact() {
               {currForm.form.map((field, index) => (
                 <FormField field={field} key={index} />
               ))}
-              <button className='bg-black hover:bg-primary duration-300 text-white border-0'>{currForm.submitLabel}</button>
+              <button className='bg-black hover:bg-primary duration-300 text-white border-0 mt-2'>{currForm.submitLabel}</button>
             </form>
           </div>
 
