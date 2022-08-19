@@ -192,6 +192,32 @@ button {
   background-size: 100% 2px;
 }
 
+.unSelection {
+  display: inline-block;
+  padding-bottom:16px;
+  background-image: linear-gradient(#4F4C4A, #4F4C4A), linear-gradient(#C4C3C2, #C4C3C2);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 2px, 100% 1px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s; /*change after the size immediately*/
+}
+
+.unSelection:hover {
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 2px;
+}
+
+.unSelectionSelected {
+  display: inline-block;
+  padding-bottom:16px;
+  background-image: linear-gradient(#4F4C4A, #4F4C4A);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+}
+
 .defaultPadding {
   @apply px-6 py-14 xl:px-[10%];
 }
@@ -229,7 +255,15 @@ button {
 }
 
 .buttonPlain {
-  @apply border-0 p-2 un rounded-none font-normal;
+  @apply border-0 py-4 px-0 rounded-none font-normal fontVarNormal;
+}
+
+.buttonSelection {
+  @apply buttonPlain unSelection;
+}
+
+.buttonSelectionSelected {
+  @apply buttonPlain unSelectionSelected;
 }
 
 .divider {
