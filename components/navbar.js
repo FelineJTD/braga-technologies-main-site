@@ -77,7 +77,7 @@ export default function Navbar() {
         <Link href='/geodashboard'><a className='text-lg' onClick={closeMobileNav}>GeoDashboard™</a></Link>
         <Link href='/works'><a className='text-lg' onClick={closeMobileNav}>Works</a></Link>
         <Link href='/company/culture'><a className='text-lg' onClick={closeMobileNav}>Company</a></Link>
-        <Link href='/'><a className='text-lg' onClick={closeMobileNav}>Contact</a></Link>
+        <Link href='/contact'><a className='text-lg' onClick={closeMobileNav}>Contact</a></Link>
         <div className='divider' aria-hidden/>
         <Link href='/'><a className='text-sm text-gray-500' onClick={closeMobileNav}>Terms of Use</a></Link>
         <Link href='/'><a className='text-sm text-gray-500' onClick={closeMobileNav}>Privacy</a></Link>
@@ -93,7 +93,7 @@ export default function Navbar() {
           <Link href='/geodashboard'><a className='un text-sm'>GeoDashboard™</a></Link>
           <Link href='/works'><a className='un text-sm'>Works</a></Link>
           <Link href='/company/culture'><a className='un text-sm'>Company</a></Link>
-          <Link href='/'><a className='un text-sm'>Contact</a></Link>
+          <Link href='/contact'><a className='un text-sm'>Contact</a></Link>
         </div>
         <div className='flex'>
           <a href='https://geodashboard.braga.co.id/' rel='noreferrer noopener'>
