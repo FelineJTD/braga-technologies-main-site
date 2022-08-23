@@ -150,9 +150,6 @@ export default function Career() {
               <button 
                 ref={el => deptRef.current[index] = el} key={index} 
                 className={`${selectedDepartmentIdx === index ? 'buttonSelectionTimedSelected' : 'buttonSelection'} font-normal relative min-w-[8rem]`} 
-                // style={{
-                //   backgroundSize: selectedDepartmentIdx === index ? '100% 2px, 100% 1px' : '0% 2px, 100% 1px',
-                // }}
                 onClick={() => setSelectedDepartmentIdx(index)}
               >{department.title}</button>
             )) }
@@ -160,7 +157,7 @@ export default function Career() {
 
           <div className='col-start-4 col-span-6 w-ful relative mb-8'>
             { Departments.map((department, index) => (
-              <img key={index} src={department.image} alt={department.title} className={` 
+              <img key={index} src={department.image} alt='' className={` 
                 ${index === selectedDepartmentIdx ? 'opacity-100 z-20' : 'opacity-50 z-10'} 
                 w-full aspect-[600/260] mt-4 rounded-lg object-cover animate-fade-in absolute duration-500`} />
             )) }
