@@ -147,7 +147,7 @@ export default function Culture() {
           <p className='row-start-3 text-sm text-gray-600 col-span-3'>Dare to act, own the work, be the truest you. Seizing opportunities daily, that’s how we do.</p>
           {/* carousel */}
           <div className='col-start-1 col-span-12 flex space-x-3 overflow-auto no-scrollbar w-full mt-10' ref={valuesRef}>
-            <div className='min-w-[7.5%] h-full' />
+            <div className='min-w-[24%] h-full' />
             {
               Values.map((value, index) => (
                 <div key={index} className='flex flex-col space-y-2 min-w-[287px] w-full rounded-lg p-3 border-2 border-gray-200'>
@@ -160,7 +160,7 @@ export default function Culture() {
             }
           </div>
           {/* TODO: change to icon */}
-          <div className='col-start-2 col-span-11 -ml-4 mt-8'>
+          <div className='col-start-4 col-span-3 -ml-4 mt-8'>
             <button 
               className='border-0 hover:text-primary duration-200' 
               onClick={() => scroll(valuesRef, -200)}
