@@ -141,11 +141,11 @@ export default function Career() {
           <h1 className='row-start-2 lg:col-start-4 col-span-6 mb-6'>Together, Creating an Enormous <u>Impact.</u></h1>
           <p className='row-start-3 lg:col-start-2 col-span-2'>Work with Us</p>
           <p className='row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-4 col-span-4 lg:col-span-3 mb-6'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
-          <p className='row-start-4 lg:row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-7 col-span-4 lg:col-span-3'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
+          <p className='row-start-4 lg:row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-7 col-span-4 lg:col-span-3 mb-6'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
 
           {/* Team Overview */}
-          <div className='col-start-4 col-span-6 w-full dividerBlack' />
-          <div ref={deptContainer} className='col-start-4 col-span-6 w-full flex space-x-3 justify-between overflow-y-auto pb-3 relative no-scrollbar'>
+          <div className='lg:col-start-4 col-span-6 w-full dividerBlack' />
+          <div ref={deptContainer} className='lg:col-start-4 col-span-6 w-full flex space-x-3 justify-between overflow-y-auto pb-3 relative no-scrollbar'>
             { Departments.map((department, index) => (
               <button 
                 ref={el => deptRef.current[index] = el} key={index} 
@@ -155,7 +155,7 @@ export default function Career() {
             )) }
           </div>
 
-          <div className='col-start-4 col-span-6 w-ful relative mb-8'>
+          <div className='lg:col-start-4 col-span-6 w-ful relative mb-8'>
             { Departments.map((department, index) => (
               <img key={index} src={department.image} alt='' className={` 
                 ${index === selectedDepartmentIdx ? 'opacity-100 z-20' : 'opacity-50 z-10'} 
