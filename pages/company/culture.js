@@ -104,7 +104,7 @@ export default function Culture() {
 
   const [selectedDepartment, setSelectedDepartment] = useState(Departments[0]);
 
-  const [fullTeam, setFullTeam] = useState(Team);
+  const [fullTeam, _setFullTeam] = useState(Team);
   const [currTeam, setCurrTeam] = useState(Team);
 
   useEffect(() => {

@@ -2,7 +2,7 @@
 import Head from 'next/head'
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Career() {
   const Departments = [{
@@ -100,6 +100,30 @@ export default function Career() {
   const lastSectionImage = "https://picsum.photos/1080/1920";
 
   const [selectedDepartmentIdx, setSelectedDepartmentIdx] = useState(0);
+  const [departmentLength, _setDepartmentLength] = useState(Departments.length);
+
+  const deptRef = useRef([]);
+  const deptContainer = useRef(null);
+  
+  useEffect(() => {
+    deptRef.current = deptRef.current.slice(0, departmentLength);
+  }, [departmentLength]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSelectedDepartmentIdx((selectedDepartmentIdx + 1)%departmentLength);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [departmentLength, selectedDepartmentIdx]);
+
+  useEffect(() => {
+    const position = deptRef.current[selectedDepartmentIdx].offsetLeft;
+    console.log(deptContainer.current.offsetWidth);
+    deptContainer.current.scrollTo({
+      left: position - deptContainer.current.clientWidth/2,
+      behavior: 'smooth',
+    });
+  }, [selectedDepartmentIdx]);
 
   return (
     <div>
@@ -114,27 +138,26 @@ export default function Career() {
         <section className='whiteBGFullGrid'>
           <p className='bold mb-4'>00.</p>
           <p className='col-start-2 col-span-4 mb-4'>Company / <b>Career</b></p>
-          <h1 className='row-start-2 lg:col-start-4 col-span-6 mb-6'>Together, Creating and Enormous <u>Impact.</u></h1>
+          <h1 className='row-start-2 lg:col-start-4 col-span-6 mb-6'>Together, Creating an Enormous <u>Impact.</u></h1>
           <p className='row-start-3 lg:col-start-2 col-span-2'>Work with Us</p>
           <p className='row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-4 col-span-4 lg:col-span-3 mb-6'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
           <p className='row-start-4 lg:row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-7 col-span-4 lg:col-span-3'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
 
           {/* Team Overview */}
           <div className='col-start-4 col-span-6 w-full dividerBlack' />
-          <div className='col-start-4 col-span-6 w-full flex space-x-3 justify-between overflow-y-auto pb-3'>
+          <div ref={deptContainer} className='col-start-4 col-span-6 w-full flex space-x-3 justify-between overflow-y-auto pb-3 relative no-scrollbar'>
             { Departments.map((department, index) => (
-              <button key={index} className={`${selectedDepartmentIdx === index ?'buttonSelectionSelected' : 'buttonSelection'} font-normal min-w-[8rem]`} onClick={() => setSelectedDepartmentIdx(index)}>{department.title}</button>
+              <button ref={el => deptRef.current[index] = el} key={index} className={`${selectedDepartmentIdx === index ?'buttonSelectionSelected' : 'buttonSelection'} font-normal min-w-[8rem]`} onClick={() => setSelectedDepartmentIdx(index)}>{department.title}</button>
             )) }
           </div>
 
-          <div className='col-start-4 col-span-6 w-ful relative'>
+          <div className='col-start-4 col-span-6 w-ful relative mb-8'>
             { Departments.map((department, index) => (
               <img key={index} src={department.image} alt={department.title} className={` 
                 ${index === selectedDepartmentIdx ? 'opacity-100 z-20' : 'opacity-50 z-10'} 
                 w-full aspect-[600/260] mt-4 rounded-lg object-cover animate-fade-in absolute duration-500`} />
             )) }
             <div className='w-full relative aspect-[600/260] z-0 mt-8' />
-
             <p className='text-xs text-gray-600'>{Departments[selectedDepartmentIdx].desc}</p>
           </div>
 
