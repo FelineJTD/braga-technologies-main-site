@@ -97,6 +97,30 @@ export default function Career() {
     },
   ];
 
+  const Testimonials = [
+    {
+      name: 'Muhammad Dita Farel',
+      title: 'Product Designer',
+      img: 'https://picsum.photos/1080/1920',
+      headline: 'An out-of-the-box solution for many things to do about Lorem Ipsum Sit.',
+      desc: 'The work environment is supportive and, personally, gives me warmth. Braga always has an out-of-the-box solution for everything. \n\nThere’s also this continuous learning aspect of the people in it and i saw the potential for rapid development in the geospatial technology industry.”',
+    },
+    {
+      name: 'Akmal Rohmatdianto',
+      title: 'Account Executive',
+      img: 'https://picsum.photos/600/800',
+      headline: 'Comfortable working environment, Braga supports their employees.',
+      desc: 'Braga consists of many young people but can provide solutions to many businesses and government offices professionally.\n\nComfortable working environment and how Braga supports their employees to develop their skills and education.',
+    },
+    {
+      name: 'John Doe',
+      title: 'CEO',
+      img: 'https://picsum.photos/1000/1200',
+      headline: 'I am very happy to be working with this company. The team is very friendly and helpful.',
+      desc: 'If you are looking the opportunity to make an impact by sharing your passion and make a better life for others, this one is match for you! If you are looking the opportunity to make an impact by sharing your passion and make a better life for others, this one is match for you! If you are looking the opportunity to make an impact by sharing your passion and make a better life for others, this one is match for you!',
+    },
+  ];
+
   const lastSectionImage = "https://picsum.photos/1080/1920";
 
   const [selectedDepartmentIdx, setSelectedDepartmentIdx] = useState(0);
@@ -226,7 +250,7 @@ export default function Career() {
             <Image src='/company/quotation.svg' alt='"' width={26} height={20} />
             <p className='mt-4 flex-grow w-3/4 text-gray-800'>
               The work environment is supportive and, personally, gives me warmth. Braga always has an out-of-the-box solution for everything. <br /><br />
-              There’s also thos continuous learning aspect of the people in it and i saw the potential for rapid development in the geospatial technology industry.”
+              There’s also this continuous learning aspect of the people in it and i saw the potential for rapid development in the geospatial technology industry.”
             </p>
             <div className='w-full'>
               <p className='md:text-lg text-gray-800'><b>Muhammad Dita Farel</b></p>
