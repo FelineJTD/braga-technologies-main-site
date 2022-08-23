@@ -218,7 +218,18 @@ button {
     background-position 0s 0.3s; /*change after the size immediately*/
 }
 
-.unSelectionSelected:before {
+.unSelectionSelected {
+  position: relative;
+  display: inline-block;
+  padding-bottom:16px;
+  background-image: linear-gradient(#4F4C4A, #4F4C4A);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.unSelectionSelected:after {
   content: ' ';
   display: inline-block;
   width: 100%;
@@ -231,17 +242,6 @@ button {
   bottom: 0px;
   left: 0px;
   z-index: 0;
-}
-
-.unSelectionSelected {
-  position: relative;
-  display: inline-block;
-  padding-bottom:16px;
-  background-image: linear-gradient(#4F4C4A, #4F4C4A);
-  background-position: 0 100%; /*OR bottom left*/
-  background-size: 100% 2px;
-  background-repeat: no-repeat;
-  z-index: 1;
 }
 
 .defaultPadding {
