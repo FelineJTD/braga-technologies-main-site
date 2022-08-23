@@ -139,7 +139,7 @@ export default function Career() {
           <p className='bold mb-4'>00.</p>
           <p className='col-start-2 col-span-4 mb-4'>Company / <b>Career</b></p>
           <h1 className='row-start-2 lg:col-start-4 col-span-6 mb-6'>Together, Creating an Enormous <u>Impact.</u></h1>
-          <p className='row-start-3 lg:col-start-2 col-span-2'>Work with Us</p>
+          <p className='row-start-3 lg:col-start-2 col-span-2'><b>Work with Us</b></p>
           <p className='row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-4 col-span-4 lg:col-span-3 mb-6'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
           <p className='row-start-4 lg:row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-7 col-span-4 lg:col-span-3 mb-6'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
 
@@ -169,7 +169,7 @@ export default function Career() {
         </section>
 
         <section className='whiteBG'>
-          <p className='col-start-2 col-span-2'>Perks & Amenities</p>
+          <p className='col-start-2 col-span-2'><b>Perks & Amenities</b></p>
           <h2 className='col-span-3 mb-3'>We&apos;ve got your back, always.</h2>
           <p className='col-span-3 text-gray-600 mb-10'>We&apos;re creating an environment to keep everyone stand out with their talents and be able to cherish each and every unique qualities that we have.</p>
           <div className='col-start-4 col-span-6 grid grid-cols-2 md:grid-cols-3 gap-6'>
@@ -185,7 +185,7 @@ export default function Career() {
 
         <section className='whiteBG'>
           <div className='col-start-2 col-span-4'>
-            <p className='mb-4'>Work at Braga</p>
+            <p className='mb-4'><b>Work at Braga</b></p>
             <h2>Explore the career paths.</h2>
           </div>
           <p className='col-start-7 col-span-4 self-end'>Help us to solve the world’s problems through maps, and You. Interested? Find your forte below!</p>
@@ -209,6 +209,43 @@ export default function Career() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* THOUGHTS ON BRAGA */}
+        <section className='whiteBG mb-12'>
+          <p className='col-start-2 col-span-3 mb-4'><b>Thoughts on Braga</b></p>
+          <div className='dividerBlack col-start-2 col-span-10 w-full mb-10' />
+
+          {/* Left */}
+          <h2 className='row-start-3 col-start-2 col-span-4 relative z-10 mt-8 text-gray-800'>An out-of-the-box solution for many things to do about Lorem Ipsum Sit.</h2>
+          <img src='https://picsum.photos/200/300' alt='photo' className='row-start-3 col-start-4 col-span-4 aspect-[380/460] w-full bg-gray-500 relative z-0 rounded-xl' />
+
+          {/* Right */}
+          <div className='col-start-8 col-span-4 flex flex-col justify-between items-start h-full'>
+            <Image src='/company/quotation.svg' alt='"' width={26} height={20} />
+            <p className='mt-4 flex-grow w-3/4 text-gray-800'>
+              The work environment is supportive and, personally, gives me warmth. Braga always has an out-of-the-box solution for everything. <br /><br />
+              There’s also thos continuous learning aspect of the people in it and i saw the potential for rapid development in the geospatial technology industry.”
+            </p>
+            <div className='w-full'>
+              <p className='md:text-lg text-gray-800'><b>Muhammad Dita Farel</b></p>
+              <p className='text-xs md:text-sm text-gray-600'><i>Product Designer</i></p>
+              <div className='dividerBlack w-full mt-6' />
+              {/* TODO: change to icon */}
+              <div className='col-start-2 col-span-11 -ml-4 mt-2'>
+                <button 
+                  className='border-0 hover:text-primary duration-200' 
+                >
+                  &lt;
+                </button>
+                <button 
+                  className='border-0 hover:text-primary duration-200'
+                >
+                  &gt;
+                </button>
+              </div>
+            </div>
           </div>
         </section>
 
