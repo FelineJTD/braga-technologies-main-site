@@ -78,14 +78,14 @@ export default function Career() {
 
       <main className='text-gray-900 bg-gray-50 w-full'>
         {/* 00 */}
-        <section className='whiteBG'>
+        <section className='whiteBGFullGrid'>
           <p className='bold mb-4'>00.</p>
-          <p className='col-span-4 mb-4'>Company / <b>Career</b></p>
-          <h1 className='row-start-2 col-start-4 col-span-6 mb-6'>Together, Creating and Enormous <u>Impact.</u></h1>
-          <p className='row-start-3 col-start-2 col-span-2'>Work with Us</p>
-          <p className='row-start-3 text-sm text-gray-600 col-span-3'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
-          <p className='row-start-3 text-sm text-gray-600 col-span-3'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
-          <div className='divider col-start-2 col-span-10 w-full' />
+          <p className='col-start-2 col-span-4 mb-4'>Company / <b>Career</b></p>
+          <h1 className='row-start-2 lg:col-start-4 col-span-6 mb-6'>Together, Creating and Enormous <u>Impact.</u></h1>
+          <p className='row-start-3 lg:col-start-2 col-span-2'>Work with Us</p>
+          <p className='row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-4 col-span-4 lg:col-span-3 mb-6'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
+          <p className='row-start-4 lg:row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-7 col-span-4 lg:col-span-3'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
+          <div className='divider col-span-6 lg:col-start-2 lg:col-span-10' />
         </section>
 
         <section className='whiteBG'>
