@@ -230,6 +230,7 @@ button {
   position: absolute;
   bottom: 0px;
   left: 0px;
+  z-index: 0;
 }
 
 .unSelectionSelected {
@@ -240,6 +241,7 @@ button {
   background-position: 0 100%; /*OR bottom left*/
   background-size: 100% 2px;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .defaultPadding {
