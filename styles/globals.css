@@ -187,6 +187,15 @@ button {
     background-position 0s 0.3s; /*change after the size immediately*/
 }
 
+@keyframes timeout {
+  0% {
+    background-size: 0% 2px;
+  }
+  100% {
+    background-size: 100% 2px;
+  }
+}
+
 .un:hover,
 .unPrimary:hover,
 .unSelection:hover {
