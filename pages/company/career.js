@@ -149,7 +149,7 @@ export default function Career() {
             { Departments.map((department, index) => (
               <button 
                 ref={el => deptRef.current[index] = el} key={index} 
-                className={`${selectedDepartmentIdx === index ? 'buttonSelectionSelected animate-timeout' : 'buttonSelection'} font-normal relative min-w-[8rem]`} 
+                className={`${selectedDepartmentIdx === index ? 'buttonSelectionTimedSelected' : 'buttonSelection'} font-normal relative min-w-[8rem]`} 
                 // style={{
                 //   backgroundSize: selectedDepartmentIdx === index ? '100% 2px, 100% 1px' : '0% 2px, 100% 1px',
                 // }}
