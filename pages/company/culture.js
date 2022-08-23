@@ -138,29 +138,27 @@ export default function Culture() {
 
       <main className='text-gray-900 bg-gray-50 w-full'>
         {/* 00 */}
-        <section className='whiteBG'>
+        <section className='whiteBGFullGrid'>
           <p className='bold mb-4'>00.</p>
-          <p className='col-span-4 mb-4'>Company / <b>Culture</b></p>
-          <h1 className='row-start-2 col-start-4 col-span-6 mb-6'>Locate your <u>uncharted</u> passion here.</h1>
-          <p className='row-start-3 col-start-2 col-span-2'>Values</p>
-          <p className='row-start-3 text-sm text-gray-600 col-span-3'>We&apos;re creating an environment to keep everyone standout with their talents and be able to cherish each and every unique qualities that we have.</p>
-          <p className='row-start-3 text-sm text-gray-600 col-span-3'>Dare to act, own the work, be the truest you. Seizing opportunities daily, that’s how we do.</p>
+          <p className='col-start-2 col-span-4 mb-4'>Company / <b>Culture</b></p>
+          <h1 className='row-start-2 lg:col-start-4 col-span-6 mb-6'>Locate your <u>uncharted</u> passion here.</h1>
+          <p className='row-start-3 lg:col-start-2 col-span-2'>Values</p>
+          <p className='row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-4 col-span-4 lg:col-span-3 mb-6'>We&apos;re creating an environment to keep everyone standout with their talents and be able to cherish each and every unique qualities that we have.</p>
+          <p className='row-start-4 lg:row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-7 col-span-4 lg:col-span-3'>Dare to act, own the work, be the truest you. Seizing opportunities daily, that’s how we do.</p>
           {/* carousel */}
-          <div className='col-start-1 col-span-12 flex space-x-3 overflow-auto no-scrollbar w-full mt-10' ref={valuesRef}>
-            <div className='min-w-[24%] h-full' />
-            {
-              Values.map((value, index) => (
+          <div className='col-start-1 col-span-6 lg:col-span-12 flex space-x-3 overflow-auto no-scrollbar w-full mt-10' ref={valuesRef}>
+            <div className='lg:min-w-[24%] min-w-0 -ml-3 lg:ml-0 h-full' />
+            { Values.map((value, index) => (
                 <div key={index} className='flex flex-col space-y-2 min-w-[287px] w-full rounded-lg p-3 border-2 border-gray-200'>
                   <div className='bg-gray-200 w-full h-24'/>
                   <p className='text-xs'>{value.title}</p>
                   <h5 className='w-7/12'>{value.headline}</h5>
                   <p className='text-sm'>{value.desc}</p>
                 </div>
-              ))
-            }
+            ))}
           </div>
           {/* TODO: change to icon */}
-          <div className='col-start-4 col-span-3 -ml-4 mt-8'>
+          <div className='lg:col-start-4 col-span-3 -ml-4 mt-8'>
             <button 
               className='border-0 hover:text-primary duration-200' 
               onClick={() => scroll(valuesRef, -200)}
@@ -178,12 +176,12 @@ export default function Culture() {
 
         <section ref={scrollAreaRef} className={`defaultGrid py-14 text-gray-50 bg-gray-900 ${isScrollArea? 'mt-0 mx-0 px-6 xl:px-[calc(10%+1.5rem)]' : 'mt-12 mx-6 rounded-2xl px-0 xl:px-[10%]'} duration-500`}>
           <img src='/company/bg.png' alt='' className='absolute z-0 justify-self-center w-1/2 h-[140%] object-cover' />
-          <div className='col-start-2 col-span-3 sticky top-14 z-10'>
+          <div className='col-start-2 col-span-3 lg:sticky top-14 z-10 mb-[44vh] lg:mb-0'>
             <p className='bold mb-4'>Culture Manifesto</p>
-            <h2>Only good <u>well-being</u> leads to <i>well-working.</i></h2>
+            <h2 className='w-2/3 lg:w-full'>Only good <u>well-being</u> leads to <i>well-working.</i></h2>
           </div>
           <p className='col-start-9 col-span-3 text-gray-200 mt-8 mb-[44vh] text-sm relative z-10'>More than our work, we are valuable as a person. As much as you do your best at work, We are committed at prioritizing and improving your well-being.</p>
-          <p className='col-start-9 col-span-3 text-gray-200 mt-8 bold mb-[44vh] relative z-10'>With Braga Technologies, navigate your passion and expertise here together.</p>
+          <p className='col-start-9 col-span-3 text-gray-200 mt-8 bold mb-[44vh] relative z-10 text-lg'>With Braga Technologies, navigate your passion and expertise here together.</p>
           <p className='col-start-9 col-span-3 text-gray-200 mt-8 text-sm relative z-10'>Braga’s living systems and playbook are designed to ensure you have a wholly impeccable experience here.</p>
           <button className='col-start-9 col-span-2 text-gray-200 mt-8 buttonDark relative z-10'>Grow With Us &gt;</button>
         </section>
