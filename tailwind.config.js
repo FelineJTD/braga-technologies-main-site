@@ -44,9 +44,18 @@ module.exports = {
             opacity: 1,
           },
         },
+        'timeout': {
+          '0%': {
+            backgroundSize: '0% 2px',
+          },
+          '100%': {
+            backgroundSize: '100% 2px',
+          },
+        }
       },
       animation: {
         'fade-in': 'fade-in 0.5s ease-in-out',
+        'timeout': 'timeout 5s ease-in-out',
       }
     },
   },

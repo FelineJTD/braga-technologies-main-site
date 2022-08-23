@@ -147,7 +147,14 @@ export default function Career() {
           <div className='col-start-4 col-span-6 w-full dividerBlack' />
           <div ref={deptContainer} className='col-start-4 col-span-6 w-full flex space-x-3 justify-between overflow-y-auto pb-3 relative no-scrollbar'>
             { Departments.map((department, index) => (
-              <button ref={el => deptRef.current[index] = el} key={index} className={`${selectedDepartmentIdx === index ?'buttonSelectionSelected' : 'buttonSelection'} font-normal min-w-[8rem]`} onClick={() => setSelectedDepartmentIdx(index)}>{department.title}</button>
+              <button 
+                ref={el => deptRef.current[index] = el} key={index} 
+                className={`${selectedDepartmentIdx === index ? 'buttonSelectionSelected animate-timeout' : 'buttonSelection'} font-normal relative min-w-[8rem]`} 
+                // style={{
+                //   backgroundSize: selectedDepartmentIdx === index ? '100% 2px, 100% 1px' : '0% 2px, 100% 1px',
+                // }}
+                onClick={() => setSelectedDepartmentIdx(index)}
+              >{department.title}</button>
             )) }
           </div>
 
