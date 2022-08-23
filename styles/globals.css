@@ -272,7 +272,7 @@ button {
 }
 
 .buttonPlain {
-  @apply border-0 py-4 px-0 rounded-none font-normal fontVarNormal;
+  @apply border-0 py-2 px-0 rounded-none font-normal fontVarNormal;
 }
 
 .buttonSelection {

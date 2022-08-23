@@ -2,8 +2,39 @@
 import Head from 'next/head'
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Career() {
+  const Departments = [{
+      title: 'Management', 
+      image: 'https://picsum.photos/200/300',
+      desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
+    }, {
+      title: 'Design', 
+      image: 'https://picsum.photos/200/400',
+      desc: 'A team of Designers, Developers, and Product Managers alike. We work together to create beautiful, functional, and user-friendly products.',
+    }, {
+      title:'Development',
+      image: 'https://picsum.photos/200/200',
+      desc: 'A team of Developers at work. We ensure that our products are functional and user-friendly.',
+    }, {
+      title: 'Technology',
+      image: 'https://picsum.photos/200/500',
+      desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
+    }, {
+      title: 'Operation',
+      image: 'https://picsum.photos/400/300',
+      desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
+    }, {
+      title: 'General Affairs',
+      image: 'https://picsum.photos/200/600',
+      desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
+    }, {
+      title: 'Others',
+      image: 'https://picsum.photos/200/100',
+      desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
+    }];
+
   const Benefits = [
     {
       title: 'Paid Leaves',
@@ -68,6 +99,8 @@ export default function Career() {
 
   const lastSectionImage = "https://picsum.photos/1080/1920";
 
+  const [selectedDepartmentIdx, setSelectedDepartmentIdx] = useState(0);
+
   return (
     <div>
       <Head>
@@ -85,6 +118,26 @@ export default function Career() {
           <p className='row-start-3 lg:col-start-2 col-span-2'>Work with Us</p>
           <p className='row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-4 col-span-4 lg:col-span-3 mb-6'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
           <p className='row-start-4 lg:row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-7 col-span-4 lg:col-span-3'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
+
+          {/* Team Overview */}
+          <div className='col-start-4 col-span-6 w-full dividerBlack' />
+          <div className='col-start-4 col-span-6 w-full flex space-x-3 justify-between overflow-y-auto pb-3'>
+            { Departments.map((department, index) => (
+              <button key={index} className={`${selectedDepartmentIdx === index ?'buttonSelectionSelected' : 'buttonSelection'} font-normal min-w-[8rem]`} onClick={() => setSelectedDepartmentIdx(index)}>{department.title}</button>
+            )) }
+          </div>
+
+          <div className='col-start-4 col-span-6 w-ful relative'>
+            { Departments.map((department, index) => (
+              <img key={index} src={department.image} alt={department.title} className={` 
+                ${index === selectedDepartmentIdx ? 'opacity-100 z-20' : 'opacity-50 z-10'} 
+                w-full aspect-[600/260] mt-4 rounded-lg object-cover animate-fade-in absolute duration-500`} />
+            )) }
+            <div className='w-full relative aspect-[600/260] z-0 mt-8' />
+
+            <p className='text-xs text-gray-600'>{Departments[selectedDepartmentIdx].desc}</p>
+          </div>
+
           <div className='divider col-span-6 lg:col-start-2 lg:col-span-10' />
         </section>
 
