@@ -128,26 +128,30 @@ export default function Career() {
 
   const deptRef = useRef([]);
   const deptContainer = useRef(null);
+  const bottomRef = useRef(null);
   
   useEffect(() => {
     deptRef.current = deptRef.current.slice(0, departmentLength);
   }, [departmentLength]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setSelectedDepartmentIdx((selectedDepartmentIdx + 1)%departmentLength);
-    }, 5000);
-    return () => clearInterval(interval);
+    if (bottomRef.current.getBoundingClientRect().bottom > 0) {
+      const interval = setInterval(() => {
+        setSelectedDepartmentIdx((selectedDepartmentIdx + 1)%departmentLength);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
   }, [departmentLength, selectedDepartmentIdx]);
 
   useEffect(() => {
     const position = deptRef.current[selectedDepartmentIdx].offsetLeft;
-    console.log(deptContainer.current.offsetWidth);
     deptContainer.current.scrollTo({
       left: position - deptContainer.current.clientWidth/2,
       behavior: 'smooth',
     });
   }, [selectedDepartmentIdx]);
+
+  const [currTestimonialIdx, setCurrTestimonialIdx] = useState(0);
 
   return (
     <div>
@@ -186,7 +190,7 @@ export default function Career() {
                 w-full aspect-[600/260] mt-4 rounded-lg object-cover animate-fade-in absolute duration-500`} />
             )) }
             <div className='w-full relative aspect-[600/260] z-0 mt-8' />
-            <p className='text-xs text-gray-600'>{Departments[selectedDepartmentIdx].desc}</p>
+            <p ref={bottomRef} className='text-xs text-gray-600'>{Departments[selectedDepartmentIdx].desc}</p>
           </div>
 
           <div className='divider col-span-6 lg:col-start-2 lg:col-span-10' />
@@ -242,33 +246,43 @@ export default function Career() {
           <div className='dividerBlack col-start-2 col-span-10 w-full mb-10' />
 
           {/* Left */}
-          <h2 className='row-start-3 col-start-2 col-span-4 relative z-10 mt-8 text-gray-800'>An out-of-the-box solution for many things to do about Lorem Ipsum Sit.</h2>
-          <img src='https://picsum.photos/200/300' alt='photo' className='row-start-3 col-start-4 col-span-4 aspect-[380/460] w-full bg-gray-500 relative z-0 rounded-xl' />
+          { Testimonials.map((testimonial, index) => (
+            <h2 key={index} className={`${index === currTestimonialIdx ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-12 motion-reduce:translate-y-0'} row-start-3 col-start-2 col-span-4 relative z-10 mt-8 text-gray-800 duration-200 ease-in`}>{testimonial.headline}</h2>
+          )) }
+          { Testimonials.map((testimonial, index) => (
+            <img key= {index} src={testimonial.img} alt={`Photo of ${testimonial.name}`} className={`${index === currTestimonialIdx ? 'max-h-full z-10' : 'max-h-0 motion-reduce:max-h-full delay-300 z-0'} object-cover object-center row-start-3 col-start-4 col-span-4 aspect-[380/460] w-full bg-gray-500 relative z-0 rounded-xl duration-300`} />
+          )) }
 
           {/* Right */}
-          <div className='col-start-8 col-span-4 flex flex-col justify-between items-start h-full'>
+          <div className='col-start-8 col-span-4 flex flex-col justify-between items-start h-full relative'>
             <Image src='/company/quotation.svg' alt='"' width={26} height={20} />
-            <p className='mt-4 flex-grow w-3/4 text-gray-800'>
-              The work environment is supportive and, personally, gives me warmth. Braga always has an out-of-the-box solution for everything. <br /><br />
-              There’s also this continuous learning aspect of the people in it and i saw the potential for rapid development in the geospatial technology industry.”
-            </p>
-            <div className='w-full'>
-              <p className='md:text-lg text-gray-800'><b>Muhammad Dita Farel</b></p>
-              <p className='text-xs md:text-sm text-gray-600'><i>Product Designer</i></p>
-              <div className='dividerBlack w-full mt-6' />
-              {/* TODO: change to icon */}
-              <div className='col-start-2 col-span-11 -ml-4 mt-2'>
-                <button 
-                  className='border-0 hover:text-primary duration-200' 
-                >
-                  &lt;
-                </button>
-                <button 
-                  className='border-0 hover:text-primary duration-200'
-                >
-                  &gt;
-                </button>
+            { Testimonials.map((testimonial, index) => (
+              <p key={index} className={`${index === currTestimonialIdx ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6 motion-reduce:translate-y-0'} mt-8 flex-grow w-3/4 text-gray-800 duration-500 ease-in absolute`}>
+                {testimonial.desc}
+              </p>
+            )) }
+            <div className='flex-grow w-full' />
+            { Testimonials.map((testimonial, index) => (
+              <div key={index} className={`${index === currTestimonialIdx ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6 motion-reduce:translate-y-0'} absolute bottom-16 duration-500 ease-in`}>
+                <p className='md:text-lg text-gray-800'><b>{testimonial.name}</b></p>
+                <p className='text-xs md:text-sm text-gray-600'><i>{testimonial.title}</i></p>
               </div>
+            )) }
+            <div className='dividerBlack w-full mt-6' />
+            {/* TODO: change to icon */}
+            <div className='col-start-2 col-span-11 -ml-4 mt-2 relative z-30'>
+              <button 
+                className='border-0 hover:text-primary duration-200' 
+                onClick={() => setCurrTestimonialIdx((currTestimonialIdx - 1 + Testimonials.length)%Testimonials.length)}
+              >
+                &lt;
+              </button>
+              <button 
+                className='border-0 hover:text-primary duration-200'
+                onClick={() => setCurrTestimonialIdx((currTestimonialIdx + 1)%Testimonials.length)}
+              >
+                &gt;
+              </button>
             </div>
           </div>
         </section>
