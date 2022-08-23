@@ -114,17 +114,19 @@ export default function Culture() {
   const [isScrollArea, setIsScrollArea] = useState(false);
   const scrollAreaRef = useRef();
   useEffect(() => {
-    const onScroll = () => {
-      const top = scrollAreaRef.current.getBoundingClientRect().top;
-      if (top < 50) {
-        setIsScrollArea(true);
-      } else {
-        setIsScrollArea(false);
+    if (window.innerWidth > 768) {
+      const onScroll = () => {
+        const top = scrollAreaRef.current.getBoundingClientRect().top;
+        if (top < 50) {
+          setIsScrollArea(true);
+        } else {
+          setIsScrollArea(false);
+        }
       }
-    }
-    window.addEventListener('scroll', onScroll);
-    return () => {
-      window.removeEventListener('scroll', onScroll);
+      window.addEventListener('scroll', onScroll);
+      return () => {
+        window.removeEventListener('scroll', onScroll);
+      }
     }
   }, []);
 
@@ -174,7 +176,7 @@ export default function Culture() {
           </div>
         </section>
 
-        <section ref={scrollAreaRef} className={`defaultGrid py-14 text-gray-50 bg-gray-900 ${isScrollArea? 'mt-0 mx-0 px-6 xl:px-[calc(10%+1.5rem)]' : 'mt-12 mx-6 rounded-2xl px-0 xl:px-[10%]'} duration-500`}>
+        <section ref={scrollAreaRef} className={`defaultGrid py-14 text-gray-50 bg-gray-900 ${isScrollArea? 'mt-0 mx-0 px-6 xl:px-[calc(10%+1.5rem)]' : 'mt-12 lg:mx-6 rounded-2xl px-6 lg:px-0 xl:px-[10%]'} duration-500`}>
           <img src='/company/bg.png' alt='' className='absolute z-0 justify-self-center w-1/2 h-[140%] object-cover' />
           <div className='col-start-2 col-span-3 lg:sticky top-14 z-10 mb-[44vh] lg:mb-0'>
             <p className='bold mb-4'>Culture Manifesto</p>
