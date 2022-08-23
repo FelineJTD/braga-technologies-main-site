@@ -135,12 +135,12 @@ export default function Career() {
   }, [departmentLength]);
 
   useEffect(() => {
-    if (bottomRef.current.getBoundingClientRect().bottom > 0) {
-      const interval = setInterval(() => {
+    const interval = setInterval(() => {
+      if (bottomRef.current.getBoundingClientRect().bottom > 0) {
         setSelectedDepartmentIdx((selectedDepartmentIdx + 1)%departmentLength);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
+      }
+    }, 5000);
+    return () => clearInterval(interval);
   }, [departmentLength, selectedDepartmentIdx]);
 
   useEffect(() => {
