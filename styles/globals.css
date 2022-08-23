@@ -220,9 +220,9 @@ button {
 .unSelection {
   display: inline-block;
   padding-bottom:16px;
-  background-image: linear-gradient(#4F4C4A, #4F4C4A), linear-gradient(#C4C3C2, #C4C3C2);
+  background-image: linear-gradient(#4F4C4A, #4F4C4A);
   background-position: 0 100%; /*OR bottom left*/
-  background-size: 0% 2px, 100% 1px;
+  background-size: 0% 2px;
   background-repeat: no-repeat;
   transition:
     background-size 0.3s,
@@ -230,7 +230,8 @@ button {
 }
 
 .unSelectionSelectedTimed,
-.unSelectionSelected {
+.unSelectionSelected,
+.unSelection {
   position: relative;
   display: inline-block;
   padding-bottom:16px;
