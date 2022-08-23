@@ -219,9 +219,10 @@ button {
 }
 
 .unSelectionSelected:before {
-  content: 'test';
+  content: ' ';
   display: inline-block;
   width: 100%;
+  height: 1px;
   background-image: linear-gradient(#C4C3C2, #C4C3C2);
   background-position: 0 100%;
   background-size: 100% 1px;
@@ -229,7 +230,6 @@ button {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  z-index: -10;
 }
 
 .unSelectionSelected {
