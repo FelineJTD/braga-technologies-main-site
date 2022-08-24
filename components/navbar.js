@@ -49,10 +49,10 @@ export default function Navbar() {
       setLastScrollY(window.scrollY);
       if (!isMobileNavOpen) {
         if (window.scrollY > lastScrollY) { // scroll down
-          if (window.scrollY > 0) {
+          if (window.scrollY > 40) { // hide navbar
             navbar.style.transform = 'translateY(-5rem)';
             navbar.style.transitionDelay = '0.2s';
-          } else {
+          } else { // show navbar
             navbar.style.transform = 'translateY(0)';
             navbar.style.transitionDelay = '0s';
           }
