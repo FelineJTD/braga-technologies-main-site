@@ -289,23 +289,34 @@ export default function Home() {
         </section>
 
         {/* Sectors */}
-        <section ref={sectorsRef} className='whiteBG'>
+        <section ref={sectorsRef} className='whiteBGFullGrid'>
           {/* Left */}
-          <div className='col-start-2 col-span-3 flex flex-col pr-6'>
+          <div className='hidden md:flex flex-col col-start-1 lg:col-start-2 col-span-2 lg:col-span-3 pr-6'>
             { Sectors.filter((_, idx) => {return(idx%4 == 0 || idx%4 == 1)}).map((sector, index) => (
               <div key={index} className={`${index%2 == 0 ? 'mt-8' : '-mt-12 self-end'} ${sector.title == Sectors[selectedSectorIdx].title ? 'opacity-100' : 'opacity-0 translate-y-3'} w-2/3 rounded-lg border-[1px] border-gray-200 duration-300`}>
                 <img src={sector.img} alt={sector.title} className='w-full aspect-[185/120] object-cover object-center rounded-t-lg' />
-                <div className='flex justify-between p-2'>
-                  <p>Initiative Count</p>
-                  <p>{ sector.count }</p>
+                <div className='flex justify-between p-2 text-gray-800'>
+                  <p className='text-xs lg:text-sm'>Initiative Count</p>
+                  <p className='text-xs lg:text-sm'>{ sector.count }</p>
                 </div>
               </div>
             )) }
           </div>
 
           {/* Center */}
-          <div className='col-start-5 col-span-4'>
-            <h6 className='text-gray-800 text-[20px] md:text-[22px] mb-6'>We have navigated enterprises and organizations across these sectors.</h6>
+          <div className='col-span-6 md:col-start-3 md:col-span-2 lg:col-start-5 lg:col-span-4'>
+            <h6 className='text-gray-800 text-[20px] lg:text-[22px] mb-6'>We have navigated enterprises and organizations across these sectors.</h6>
+            <div className='w-full flex flex-col relative md:hidden'>
+              { Sectors.map((sector, index) => (
+                <div key={index} className={`${sector.title == Sectors[selectedSectorIdx].title ? 'opacity-100 relative' : 'opacity-0 absolute'} w-2/3 self-center rounded-lg border-[1px] border-gray-200 duration-300`}>
+                  <img src={sector.img} alt={sector.title} className='w-full aspect-[185/120] object-cover object-center rounded-t-lg' />
+                  <div className='flex justify-between p-2 text-gray-800'>
+                    <p className='text-xs lg:text-sm'>Initiative Count</p>
+                    <p className='text-xs lg:text-sm'>{ sector.count }</p>
+                  </div>
+                </div>
+              )) }
+            </div>
             { Sectors.map((sector, index) => (
               <div key={index} className='flex flex-col space-y-1'>
                 <button 
@@ -314,20 +325,20 @@ export default function Home() {
                   onClick={() => setSelectedSectorIdx(index)}
                 >
                   <Image src={sector.icon} alt='' width={16} height={16} />
-                  <h3 className='text-left mt-4 text-gray-800 ml-3'>{sector.title}</h3>
+                  <h3 className='text-left mt-4 text-gray-800 ml-3 text-2xl md:text-xl lg:text-3xl '>{sector.title}</h3>
                 </button>
               </div>
             )) }
           </div>
 
           {/* Right */}
-          <div className='col-start-9 col-span-3 flex flex-col pt-36 pl-6'>
+          <div className='hidden md:flex flex-col col-start-5 col-span-2 lg:col-start-9 lg:col-span-3 pt-36 pl-6'>
             { Sectors.filter((_, idx) => {return(idx%4 == 2 || idx%4 == 3)}).map((sector, index) => (
               <div key={index} className={`${index%2 == 0 ? 'mt-4 self-end' : '-mt-16'} ${sector.title == Sectors[selectedSectorIdx].title ? 'opacity-100' : 'opacity-0 translate-y-3'} w-2/3 rounded-lg border-[1px] border-gray-200 duration-300`}>
                 <img src={sector.img} alt={sector.title} className='w-full aspect-[185/120] object-cover object-center rounded-t-lg' />
-                <div className='flex justify-between p-2'>
-                  <p>Initiative Count</p>
-                  <p>{ sector.count }</p>
+                <div className='flex justify-between p-2 text-gray-800'>
+                  <p className='text-xs lg:text-sm'>Initiative Count</p>
+                  <p className='text-xs lg:text-sm'>{ sector.count }</p>
                 </div>
               </div>
             )) }
