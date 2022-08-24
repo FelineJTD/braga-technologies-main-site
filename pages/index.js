@@ -1,14 +1,15 @@
 import Head from 'next/head'
-import { createRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 import PartnerLogos from '../components/partner-logos'
 import CardSolution from '../components/card-solution'
 import Carousel from '../components/carousel'
 import GetInTouch from '../components/get-in-touch-section'
+import Image from 'next/image'
 
 export default function Home() {
-  const featureRef = createRef();
-  const examplesRef = createRef();
+  const featureRef = useRef();
+  const examplesRef = useRef();
 
   const solutions = [
     {
@@ -59,6 +60,63 @@ export default function Home() {
     }
   ]
 
+  const Sectors = [
+    {
+      title: 'Oil, Mining, and Gas',
+      icon: '/logo-braga-sm.svg',
+      img: 'https://picsum.photos/200/300',
+      count: 12,
+    },
+    {
+      title: 'Retail and Real Estate',
+      icon: '/logo-braga-sm.svg',
+      img: 'https://picsum.photos/200/300',
+      count: 12,
+    },
+    {
+      title: 'Agriculture',
+      icon: '/logo-braga-sm.svg',
+      img: 'https://picsum.photos/200/300',
+      count: 12,
+    },
+    {
+      title: 'Logistics and Fleet',
+      icon: '/logo-braga-sm.svg',
+      img: 'https://picsum.photos/200/300',
+      count: 12,
+    },
+    {
+      title: 'Tourism',
+      icon: '/logo-braga-sm.svg',
+      img: 'https://picsum.photos/200/300',
+      count: 12,
+    },
+    {
+      title: 'Assets Management',
+      icon: '/logo-braga-sm.svg',
+      img: 'https://picsum.photos/200/300',
+      count: 12,
+    },
+    {
+      title: 'Government',
+      icon: '/logo-braga-sm.svg',
+      img: 'https://picsum.photos/200/300',
+      count: 12,
+    },
+    {
+      title: 'Bank and Finance',
+      icon: '/logo-braga-sm.svg',
+      img: 'https://picsum.photos/200/300',
+      count: 12,
+    },
+    {
+      title: 'Supply Chain',
+      icon: '/logo-braga-sm.svg',
+      img: 'https://picsum.photos/200/300',
+      count: 12,
+    },
+  ]
+
   const examples = [
     {
       "title": "Si-Pulau", 
@@ -106,6 +164,16 @@ export default function Home() {
       });
     }
   }
+
+  const [selectedSectorIdx, setSelectedSectorIdx] = useState(0);
+  const [sectorLength, _setSectorLength] = useState(Sectors.length);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSelectedSectorIdx((selectedSectorIdx + 1)%sectorLength);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [sectorLength, selectedSectorIdx]);
 
   return (
     <div>
@@ -218,7 +286,30 @@ export default function Home() {
 
         {/* Sectors */}
         <section className='whiteBG'>
-          
+          {/* Left */}
+          <div className='col-start-1 col-span-3'>
+
+          </div>
+          {/* Center */}
+          <div className='col-start-5 col-span-4'>
+            <h6 className='text-gray-800 text-[20px] md:text-[22px] mb-6'>We have navigated enterprises and organizations across these sectors.</h6>
+            { Sectors.map((sector, index) => (
+              <div key={index} className='flex flex-col space-y-1'>
+                <button 
+                  key={index} 
+                  className={`${selectedSectorIdx === index ? 'buttonSelectionTimedSelected' : 'buttonSelection'} font-normal relative min-w-[8rem] !flex`} 
+                  onClick={() => setSelectedSectorIdx(index)}
+                >
+                  <Image src={sector.icon} alt='' width={16} height={16} />
+                  <h3 className='text-left mt-4 text-gray-800 ml-3'>{sector.title}</h3>
+                </button>
+              </div>
+            )) }
+          </div>
+          {/* Right */}
+          <div className='col-start-9 col-span-3'>
+
+          </div>
         </section>
 
         {/* 04 */}
