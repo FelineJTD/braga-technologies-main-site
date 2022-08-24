@@ -232,7 +232,9 @@ export default function Home() {
 
           <div className='col-span-12 h-96 w-full bg-white my-6 rounded-xl' />
 
-          <div id='features' className='col-start-2 col-span-11 flex space-x-3 overflow-auto w-full lg:snap-x no-scrollbar' ref={featureRef}>
+          <div id='features' className='col-start-1 col-span-12 flex space-x-3 overflow-auto w-full lg:snap-x no-scrollbar' ref={featureRef}>
+            {/* spacer */}
+            <div className='lg:min-w-[7.5%] min-w-0 -ml-3 lg:ml-0 h-full snap-start' />
             { 
               features.map((feature, index) => (
                 <div key={index} className='lg:snap-start flex border-2 border-gray-700 rounded-lg p-3 space-x-4 min-w-[30rem] lg:min-w-[35vw]'>
@@ -342,7 +344,8 @@ export default function Home() {
           <p className='col-span-3 col-start-7 lg:self-end mb-10'>Our interdisciplinary design and development approach accelerates the geospatial tech delivery to your hands.</p>
           <button className='col-span-2 lg:self-end mb-10'>Works</button>
 
-          <div className='col-start-2 col-span-11 flex space-x-3 overflow-auto no-scrollbar w-full snap-x' ref={examplesRef}>
+          <div className='col-start-1 col-span-12 flex space-x-3 overflow-auto no-scrollbar w-full snap-x' ref={examplesRef}>
+          <div className='lg:min-w-[7.5%] min-w-0 -ml-3 lg:ml-0 h-full snap-start' />
             {
               examples.map((example, index) => (
                 <CardSolution solution={example} isDarkMode={true} key={index} />
@@ -353,13 +356,13 @@ export default function Home() {
           <div className='col-start-2 col-span-11 -ml-4 mt-8'>
             <button 
               className='border-0 hover:text-primary duration-200' 
-              onClick={() => scroll(examplesRef, -200)}
+              onClick={() => scroll(examplesRef, -300)}
             >
               &lt;
             </button>
             <button 
               className='border-0 hover:text-primary duration-200'
-              onClick={() => scroll(examplesRef, 200)}
+              onClick={() => scroll(examplesRef, 300)}
             >
               &gt;
             </button>
