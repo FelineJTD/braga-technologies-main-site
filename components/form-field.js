@@ -12,7 +12,7 @@ export default function FormField({ field, className }) {
   } else if (field.type === 'select') {
     return (
       <div className={`w-full col-span-${field.size} relative ${className}`}>
-        <select name={field.name} id={field.name} className='select-input' required>
+        <select name={field.name} id={field.name} className='select-input' defaultValue={field.label} required>
           <option value='' disabled selected>{field.label}</option>
           {field.options.map((option, index) => (
             <option key={index} value={option} className='text-gray-600'>{option}</option>

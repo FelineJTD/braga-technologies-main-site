@@ -34,6 +34,7 @@ module.exports = {
         },
         primary: '#F36A1D',
         secondary: '#C3E85F',
+        error: '#E35131',
       },
       keyframes: {
         'fade-in': {
