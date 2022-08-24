@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import { useState, useEffect, useRef } from 'react'
 
@@ -70,7 +71,7 @@ export default function Home() {
     {
       title: 'Retail and Real Estate',
       icon: '/logo-braga-sm.svg',
-      img: 'https://picsum.photos/200/300',
+      img: 'https://picsum.photos/200/500',
       count: 12,
     },
     {
@@ -82,13 +83,13 @@ export default function Home() {
     {
       title: 'Logistics and Fleet',
       icon: '/logo-braga-sm.svg',
-      img: 'https://picsum.photos/200/300',
+      img: 'https://picsum.photos/100/300',
       count: 12,
     },
     {
       title: 'Tourism',
       icon: '/logo-braga-sm.svg',
-      img: 'https://picsum.photos/200/300',
+      img: 'https://picsum.photos/500/300',
       count: 12,
     },
     {
@@ -100,19 +101,19 @@ export default function Home() {
     {
       title: 'Government',
       icon: '/logo-braga-sm.svg',
-      img: 'https://picsum.photos/200/300',
+      img: 'https://picsum.photos/300/300',
       count: 12,
     },
     {
       title: 'Bank and Finance',
       icon: '/logo-braga-sm.svg',
-      img: 'https://picsum.photos/200/300',
+      img: 'https://picsum.photos/600/300',
       count: 12,
     },
     {
       title: 'Supply Chain',
       icon: '/logo-braga-sm.svg',
-      img: 'https://picsum.photos/200/300',
+      img: 'https://picsum.photos/340/300',
       count: 12,
     },
   ]
@@ -167,6 +168,7 @@ export default function Home() {
 
   const [selectedSectorIdx, setSelectedSectorIdx] = useState(0);
   const [sectorLength, _setSectorLength] = useState(Sectors.length);
+  const sectorsRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -285,11 +287,20 @@ export default function Home() {
         </section>
 
         {/* Sectors */}
-        <section className='whiteBG'>
+        <section ref={sectorsRef} className='whiteBG'>
           {/* Left */}
-          <div className='col-start-1 col-span-3'>
-
+          <div className='col-start-2 col-span-3 flex flex-col pr-6'>
+            { Sectors.filter((_, idx) => {return(idx%4 == 0 || idx%4 == 1)}).map((sector, index) => (
+              <div key={index} className={`${index%2 == 0 ? 'mt-8' : '-mt-12 self-end'} ${sector.title == Sectors[selectedSectorIdx].title ? 'opacity-100' : 'opacity-0 translate-y-3'} w-2/3 rounded-lg border-[1px] border-gray-200 duration-300`}>
+                <img src={sector.img} alt={sector.title} className='w-full aspect-[185/120] object-cover object-center rounded-t-lg' />
+                <div className='flex justify-between p-2'>
+                  <p>Initiative Count</p>
+                  <p>{ sector.count }</p>
+                </div>
+              </div>
+            )) }
           </div>
+
           {/* Center */}
           <div className='col-start-5 col-span-4'>
             <h6 className='text-gray-800 text-[20px] md:text-[22px] mb-6'>We have navigated enterprises and organizations across these sectors.</h6>
@@ -306,9 +317,18 @@ export default function Home() {
               </div>
             )) }
           </div>
-          {/* Right */}
-          <div className='col-start-9 col-span-3'>
 
+          {/* Right */}
+          <div className='col-start-9 col-span-3 flex flex-col pt-36 pl-6'>
+            { Sectors.filter((_, idx) => {return(idx%4 == 2 || idx%4 == 3)}).map((sector, index) => (
+              <div key={index} className={`${index%2 == 0 ? 'mt-4 self-end' : '-mt-16'} ${sector.title == Sectors[selectedSectorIdx].title ? 'opacity-100' : 'opacity-0 translate-y-3'} w-2/3 rounded-lg border-[1px] border-gray-200 duration-300`}>
+                <img src={sector.img} alt={sector.title} className='w-full aspect-[185/120] object-cover object-center rounded-t-lg' />
+                <div className='flex justify-between p-2'>
+                  <p>Initiative Count</p>
+                  <p>{ sector.count }</p>
+                </div>
+              </div>
+            )) }
           </div>
         </section>
 
