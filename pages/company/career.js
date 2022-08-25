@@ -117,7 +117,7 @@ export default function Career() {
       title: 'CEO',
       img: 'https://picsum.photos/1000/1200',
       headline: 'I am very happy to be working with this company. The team is very friendly and helpful.',
-      desc: 'If you are looking the opportunity to make an impact by sharing your passion and make a better life for others, this one is match for you! If you are looking the opportunity to make an impact by sharing your passion and make a better life for others, this one is match for you! If you are looking the opportunity to make an impact by sharing your passion and make a better life for others, this one is match for you!',
+      desc: 'If you are looking the opportunity to make an impact by sharing your passion and make a better life for others, this one is match for you! If you are looking the opportunity to make an impact by sharing your passion and make a better life for others, this one is match for you!',
     },
   ];
 
@@ -254,10 +254,10 @@ export default function Career() {
           )) }
 
           {/* Right */}
-          <div className='lg:col-start-8 lg:col-span-4 col-span-6 flex flex-col justify-between items-start lg:h-full h-[30rem] relative mt-4 lg:mt-0'>
+          <div className='lg:col-start-8 lg:col-span-4 col-span-6 flex flex-col justify-between items-start lg:h-full h-[24rem] relative mt-4 lg:mt-0'>
             <Image src='/company/quotation.svg' alt='"' width={26} height={20} />
             { Testimonials.map((testimonial, index) => (
-              <p key={index} className={`${index === currTestimonialIdx ? 'relative opacity-100 translate-y-0' : 'absolute opacity-0 translate-y-6 motion-reduce:translate-y-0'} mt-4 flex-grow lg:w-3/4 text-gray-800 duration-500 ease-in mb-16`}>
+              <p key={index} className={`${index === currTestimonialIdx ? 'relative opacity-100 translate-y-0' : 'absolute opacity-0 translate-y-6 motion-reduce:translate-y-0'} mt-4 flex-grow lg:w-3/4 text-gray-800 duration-500 ease-in mb-4`}>
                 {testimonial.desc}
               </p>
             )) }
