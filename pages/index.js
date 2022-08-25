@@ -7,6 +7,7 @@ import CardSolution from '../components/card-solution'
 import Carousel from '../components/carousel'
 import GetInTouch from '../components/get-in-touch-section'
 import Image from 'next/image'
+import CardSector from '../components/card-sector'
 
 export default function Home() {
   const featureRef = useRef();
@@ -293,13 +294,12 @@ export default function Home() {
           {/* Left */}
           <div className='hidden md:flex flex-col col-start-1 lg:col-start-2 col-span-2 lg:col-span-3 pr-6'>
             { Sectors.filter((_, idx) => {return(idx%4 == 0 || idx%4 == 1)}).map((sector, index) => (
-              <div key={index} className={`${index%2 == 0 ? 'mt-8' : '-mt-12 self-end'} ${sector.title == Sectors[selectedSectorIdx].title ? 'opacity-100' : 'opacity-0 translate-y-3'} w-2/3 rounded-lg border-[1px] border-gray-200 duration-300`}>
-                <img src={sector.img} alt={sector.title} className='w-full aspect-[185/120] object-cover object-center rounded-t-lg' />
-                <div className='flex justify-between p-2 text-gray-800'>
-                  <p className='text-xs lg:text-sm'>Initiative Count</p>
-                  <p className='text-xs lg:text-sm'>{ sector.count }</p>
-                </div>
-              </div>
+              <CardSector 
+                key={index} 
+                sector={sector} 
+                index={index} 
+                selectedSectorTitle={Sectors[selectedSectorIdx].title} 
+              />
             )) }
           </div>
 
@@ -308,13 +308,13 @@ export default function Home() {
             <h6 className='text-gray-800 text-[20px] lg:text-[22px] mb-6'>We have navigated enterprises and organizations across these sectors.</h6>
             <div className='w-full flex flex-col relative md:hidden'>
               { Sectors.map((sector, index) => (
-                <div key={index} className={`${sector.title == Sectors[selectedSectorIdx].title ? 'opacity-100 relative' : 'opacity-0 absolute'} w-2/3 self-center rounded-lg border-[1px] border-gray-200 duration-300`}>
-                  <img src={sector.img} alt={sector.title} className='w-full aspect-[185/120] object-cover object-center rounded-t-lg' />
-                  <div className='flex justify-between p-2 text-gray-800'>
-                    <p className='text-xs lg:text-sm'>Initiative Count</p>
-                    <p className='text-xs lg:text-sm'>{ sector.count }</p>
-                  </div>
-                </div>
+                <CardSector 
+                  key={index} 
+                  sector={sector} 
+                  index={index} 
+                  selectedSectorTitle={Sectors[selectedSectorIdx].title} 
+                  isMobile={true} 
+                />
               )) }
             </div>
             { Sectors.map((sector, index) => (
@@ -334,13 +334,12 @@ export default function Home() {
           {/* Right */}
           <div className='hidden md:flex flex-col col-start-5 col-span-2 lg:col-start-9 lg:col-span-3 pt-36 pl-6'>
             { Sectors.filter((_, idx) => {return(idx%4 == 2 || idx%4 == 3)}).map((sector, index) => (
-              <div key={index} className={`${index%2 == 0 ? 'mt-4 self-end' : '-mt-16'} ${sector.title == Sectors[selectedSectorIdx].title ? 'opacity-100' : 'opacity-0 translate-y-3'} w-2/3 rounded-lg border-[1px] border-gray-200 duration-300`}>
-                <img src={sector.img} alt={sector.title} className='w-full aspect-[185/120] object-cover object-center rounded-t-lg' />
-                <div className='flex justify-between p-2 text-gray-800'>
-                  <p className='text-xs lg:text-sm'>Initiative Count</p>
-                  <p className='text-xs lg:text-sm'>{ sector.count }</p>
-                </div>
-              </div>
+              <CardSector 
+                key={index} 
+                sector={sector} 
+                index={index} 
+                selectedSectorTitle={Sectors[selectedSectorIdx].title} 
+              />
             )) }
           </div>
         </section>
