@@ -306,7 +306,7 @@ export default function Home() {
           {/* Center */}
           <div className='col-span-6 md:col-start-3 md:col-span-2 lg:col-start-5 lg:col-span-4'>
             <h6 className='text-gray-800 text-[20px] lg:text-[22px] mb-6'>We have navigated enterprises and organizations across these sectors.</h6>
-            <div className='w-full flex flex-col relative md:hidden'>
+            <div className='w-full flex flex-col sticky top-6 md:hidden'>
               { Sectors.map((sector, index) => (
                 <CardSector 
                   key={index} 
