@@ -74,7 +74,7 @@ export default function Navbar() {
       <nav id='mobile-nav' className='h-screen w-full bg-white bg-opacity-90 backdrop-blur z-50 fixed top-0 left-0 p-6 duration-300 translate-y-[-100vh] lg:hidden flex flex-col space-y-6 text-right justify-end selection:bg-primary selection:text-gray-50'>
         <div className='divider' aria-hidden/>
         <Link href='/'><a className='text-lg' onClick={closeMobileNav}>Home</a></Link>
-        <Link href='/geodashboard'><a className='text-lg' onClick={closeMobileNav}>GeoDashboard™</a></Link>
+        <Link href='/geodashboard'><a className='text-lg' onClick={closeMobileNav}>GeoDashboard</a></Link>
         <Link href='/works'><a className='text-lg' onClick={closeMobileNav}>Works</a></Link>
         <Link href='/company/culture'><a className='text-lg' onClick={closeMobileNav}>Company</a></Link>
         <Link href='/contact'><a className='text-lg' onClick={closeMobileNav}>Contact</a></Link>
@@ -90,7 +90,7 @@ export default function Navbar() {
         <Link href='/'><img src='/logo-braga-full.svg' alt='Braga Technologies Logo' className='hidden md:block h-5 cursor-pointer' /></Link>
         <div className='justify-self-center space-x-6 hidden lg:block'>
           <Link href='/'><a className='un text-sm'>Home</a></Link>
-          <Link href='/geodashboard'><a className='un text-sm'>GeoDashboard™</a></Link>
+          <Link href='/geodashboard'><a className='un text-sm'>GeoDashboard</a></Link>
           <Link href='/works'><a className='un text-sm'>Works</a></Link>
           <Link href='/company/culture'><a className='un text-sm'>Company</a></Link>
           <Link href='/contact'><a className='un text-sm'>Contact</a></Link>
