@@ -10,7 +10,7 @@ import {
   Sectors, 
   Examples, 
   Services 
-} from '../config/homepage'
+} from '../config/cfg-homepage'
 
 // Components
 import PartnerLogos from '../components/partner-logos'
