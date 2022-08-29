@@ -2,6 +2,17 @@
 import Head from 'next/head'
 import { useState, useEffect, useRef } from 'react'
 
+// Data
+import { 
+  Solutions, 
+  Features, 
+  Quotes, 
+  Sectors, 
+  Examples, 
+  Services 
+} from '../config/homepage'
+
+// Components
 import PartnerLogos from '../components/partner-logos'
 import CardSolution from '../components/card-solution'
 import Carousel from '../components/carousel'
@@ -12,148 +23,6 @@ import CardSector from '../components/card-sector'
 export default function Home() {
   const featureRef = useRef();
   const examplesRef = useRef();
-
-  const solutions = [
-    {
-      "title": "Big Data Processing", 
-      "desc": "Technologies that integrate, process, analyze, and visualize big data for your collective's solution.",
-      "type": "Powerful",
-    }, {
-      "title": "Rich Analytics",
-      "desc": "Advanced tools that Braga provides helps to come up with analytics that beneficial to tackle various challanges.",
-      "type": "Advanced",
-    }, {
-      "title": "IoT and AI Integration",
-      "desc": "Connect to IoT and AI tools, models, or hardwares for furhterly advanced and integrated problem solving.",
-      "type": "Dynamic",
-    }, {
-      "title": "Access Anywhere, Anytime.",
-      "desc": "Not bounded by space and time, we help in multiple platforms, adapting to different conditions and terrains.",
-      "type": "Global",
-    }
-  ]
-
-  const features = [
-    {
-      "title": "Spatial Range Calculation",
-      "desc": "Visualize multiple layers both vector and raster to perform a detailed, precise, and insightful analysis.",
-    }, {
-      "title": "Multi-Format Data Visualization",
-      "desc": "Easily visualize data in point, polygon and polyline format. Inspect rich data display for each attribute.",
-    }, {
-      "title": "Bootstrap Approach",
-      "desc": "Created in no time through bootstrap. Get all the desired features, tailored to your needs.",
-    }
-  ]
-
-  const quotes = [
-    {
-      "quote": "“The Framework will help countries in building capacity using geospatial technology ... to achieve a digital transformation, and bridge the digital divide”",
-      "author": "Anna Wellenstein",
-      "author_title": "Director, Land and Geospatial, World Bank.",
-    }, {
-      "quote": "“The Framework will help countries in building capacity using geospatial technology ... to achieve a digital transformation, and bridge the digital divide”",
-      "author": "Anna Wellenstein 2",
-      "author_title": "Director, Land and Geospatial, World Bank.",
-    }, {
-      "quote": "“The Framework will help countries in building capacity using geospatial technology ... to achieve a digital transformation, and bridge the digital divide”",
-      "author": "Anna Wellenstein 3",
-      "author_title": "Director, Land and Geospatial, World Bank.",
-    }
-  ]
-
-  const Sectors = [
-    {
-      title: 'Oil, Mining, and Gas',
-      icon: '/homepage/sector-icons/icon-gas.svg',
-      img: '/homepage/sector-imgs/img-gas.png',
-      count: 12,
-    },
-    {
-      title: 'Retail and Real Estate',
-      icon: '/homepage/sector-icons/icon-retail.svg',
-      img: '/homepage/sector-imgs/img-retail.png',
-      count: 12,
-    },
-    {
-      title: 'Agriculture',
-      icon: '/homepage/sector-icons/icon-agriculture.svg',
-      img: '/homepage/sector-imgs/img-agriculture.png',
-      count: 12,
-    },
-    {
-      title: 'Logistics and Fleet',
-      icon: '/homepage/sector-icons/icon-fleet.svg',
-      img: '/homepage/sector-imgs/img-fleet.png',
-      count: 12,
-    },
-    {
-      title: 'Tourism',
-      icon: '/homepage/sector-icons/icon-tourism.svg',
-      img: '/homepage/sector-imgs/img-tourism.png',
-      count: 12,
-    },
-    {
-      title: 'Assets Management',
-      icon: '/homepage/sector-icons/icon-assets.svg',
-      img: '/homepage/sector-imgs/img-assets.png',
-      count: 12,
-    },
-    {
-      title: 'Government',
-      icon: '/homepage/sector-icons/icon-govt.svg',
-      img: '/homepage/sector-imgs/img-govt.png',
-      count: 12,
-    },
-    {
-      title: 'Bank and Finance',
-      icon: '/homepage/sector-icons/icon-bank.svg',
-      img: '/homepage/sector-imgs/img-bank.png',
-      count: 12,
-    },
-    {
-      title: 'Supply Chain',
-      icon: '/homepage/sector-icons/icon-supply.svg',
-      img: '/homepage/sector-imgs/img-supply.png',
-      count: 12,
-    },
-  ]
-
-  const examples = [
-    {
-      "title": "Si-Pulau", 
-      "desc": "Technologies that integrate, process, analyze, and visualize big data for your collective's solution.",
-      "type": "GeoDashboard",
-    }, {
-      "title": "Fleet Management System",
-      "desc": "Technologies that integrate, process, analyze, and visualize big data for your collective's solution.",
-      "type": "Enterprise",
-    }, {
-      "title": "Visitor Monitoring",
-      "desc": "Technologies that integrate, process, analyze, and visualize big data for your collective's solution.",
-      "type": "Braga-AI",
-    }, {
-      "title": "West Java Tourism",
-      "desc": "Technologies that integrate, process, analyze, and visualize big data for your collective's solution..",
-      "type": "GeoDashboard",
-    }
-  ]
-
-  const services = [
-    {
-      "title": "GIS",
-      "desc": "Data Collection / GeoMapping Tools / Spatial Research / Data Collections / ETC",
-    }, {
-      "title": "Development",
-      "desc": "Full-Stack Web & Mobile / Product Cycle Management / CMS / Artificial Intelligence / GIS Integration / ETC",
-    }, {
-      "title": "Design",
-      "desc": "Design System / Prototyping / Interaction Design / Digital Platform Design / Kits / Experience Design",
-    }, {
-      "title": "Services",
-      "desc": "Lorem / Ipsum Dolor / Sit Amet Const / ETC",
-    }
-  ]
 
   // ** scroll **
   const scroll = (elementRef, scrollAmount) => {
@@ -214,7 +83,7 @@ export default function Home() {
           </div>
           <div className='flex flex-col space-y-1 lg:space-y-0 col-span-6 md:grid grid-cols-2 gap-6 mt-8'>
             {
-              solutions.map((solution, index) => (
+              Solutions.map((solution, index) => (
                 <CardSolution solution={solution} key={index} />
               ))
             }
@@ -237,7 +106,7 @@ export default function Home() {
             {/* spacer */}
             <div className='lg:min-w-[7.5%] min-w-0 -ml-3 lg:ml-0 h-full snap-start' />
             { 
-              features.map((feature, index) => (
+              Features.map((feature, index) => (
                 <div key={index} className='lg:snap-start flex border-2 border-gray-700 rounded-lg p-3 space-x-4 min-w-[30rem] lg:min-w-[35vw]'>
                   <div className='bg-gray-700 h-full w-24 rounded-lg' />
                   <div>
@@ -275,7 +144,7 @@ export default function Home() {
           {/* Experts' Quotes */}
           <Carousel>
             {
-              quotes.map((quote, index) => (
+              Quotes.map((quote, index) => (
                 <blockquote key={index} className='max-w-full px-0.5'>
                   <p className='font-tt-hoves font-bold text-2xl lg:text-3xl mb-6'>{quote.quote}</p>
                   <div className='flex space-x-3'>
@@ -357,7 +226,7 @@ export default function Home() {
           <div className='col-start-1 col-span-12 flex space-x-3 overflow-auto no-scrollbar w-full snap-x' ref={examplesRef}>
           <div className='lg:min-w-[7.5%] min-w-0 -ml-3 lg:ml-0 h-full snap-start' />
             {
-              examples.map((example, index) => (
+              Examples.map((example, index) => (
                 <CardSolution solution={example} isDarkMode={true} key={index} />
               ))
             }
@@ -382,7 +251,7 @@ export default function Home() {
             <h4>What We Do</h4>
             <div className='flex flex-col space-y-1 md:space-y-0 w-full md:grid grid-cols-2 px-0 gap-4 mt-8'>
             {
-              services.map((service, index) => (
+              Services.map((service, index) => (
                 <div key={index} className='border-2 border-gray-600 rounded-lg p-3 w-full'>
                   <h5 className='font-bold'>{service.title}</h5>
                   <p className='text-sm'>{service.desc}</p>
