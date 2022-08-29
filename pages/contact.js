@@ -1,193 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import { useState } from 'react';
+
+// Data
+import { LastSectionImage, Forms } from '../config/cfg-contact';
+
+// Components
 import FormField from '../components/form-field';
 
 export default function Contact() {
-  const lastSectionImage = "https://picsum.photos/1080/1920";
-  const Forms = [
-    {
-      title: 'Business Inquiries',
-      info: 'Expect our team to reach out to you in at least 2 business days.',
-      form: [
-        {
-          label: 'First Name',
-          type: 'text',
-          name: 'first-name',
-          size: 2,
-        },
-        {
-          label: 'Last Name',
-          type: 'text',
-          name: 'last-name',
-          size: 2,
-        },
-        {
-          label: 'Email Address',
-          type: 'text',
-          name: 'email',
-          size: 2,
-        },
-        {
-          label: 'Country/Region',
-          type: 'select',
-          name: 'region',
-          options: ['Indonesia', 'United States', 'United Kingdom', 'Australia', 'Canada', 'New Zealand', 'Other'],
-          size: 2,
-        },
-        {
-          label: 'Company Name',
-          type: 'text',
-          name: 'company-name',
-          size: 2,
-        },
-        {
-          label: 'Job Title',
-          type: 'text',
-          name: 'job-title',
-          size: 2,
-        },
-        {
-          label: 'Phone Number',
-          type: 'text',
-          name: 'phone-number',
-          size: 4,
-        },
-        {
-          label: 'Message',
-          type: 'textarea',
-          name: 'message',
-          placeholder: 'Tell us about it',
-          size: 4,
-        },
-        {
-          label: 'I would like to receive updates and news from Braga Technologies by email.',
-          type: 'checkbox',
-          name: 'newsletter',
-          checked: true,
-          size: 4,
-        }
-      ],
-      submitLabel: 'Send',
-    },
-    {
-      title: 'Tech Support',
-      info: 'Fill this form if you have technical issue to discuss or report to us.',
-      form: [
-        {
-          label: 'First Name',
-          type: 'text',
-          name: 'first-name',
-          size: 2,
-        },
-        {
-          label: 'Last Name',
-          type: 'text',
-          name: 'last-name',
-          size: 2,
-        },
-        {
-          label: 'Email Address',
-          type: 'text',
-          name: 'email',
-          size: 2,
-        },
-        {
-          label: 'Country/Region',
-          type: 'select',
-          name: 'region',
-          options: ['Indonesia', 'United States', 'United Kingdom', 'Australia', 'Canada', 'New Zealand', 'Other'],
-          size: 2,
-        },
-        {
-          label: 'Select Technical Support',
-          type: 'select',
-          name: 'phone-number',
-          options: ['Technical Support', 'Billing Support', 'Other'],
-          size: 4,
-        },
-        {
-          label: 'Message',
-          type: 'textarea',
-          name: 'message',
-          placeholder: 'Tell us about it',
-          size: 4,
-        },
-      ],
-      submitLabel: 'Send',
-    },
-    {
-      title: 'General Affair',
-      info: 'We\'d love to extend our knowledge to everyone beyond ourselves. We hold sharing sessions and discussions based on our expertise to advocate for Geospatial tech.',
-      form: [
-        {
-          label: 'First Name',
-          type: 'text',
-          name: 'first-name',
-          size: 2,
-        },
-        {
-          label: 'Last Name',
-          type: 'text',
-          name: 'last-name',
-          size: 2,
-        },
-        {
-          label: 'Email Address',
-          type: 'text',
-          name: 'email',
-          size: 2,
-        },
-        {
-          label: 'Country/Region',
-          type: 'select',
-          name: 'region',
-          options: ['Indonesia', 'Malaysia', 'Singapore', 'Thailand', 'Vietnam'],
-          size: 2,
-        },
-        {
-          label: 'Company Name',
-          type: 'text',
-          name: 'company-name',
-          size: 2,
-        },
-        {
-          label: 'Job Title',
-          type: 'text',
-          name: 'job-title',
-          size: 2,
-        },
-        {
-          label: 'Phone Number',
-          type: 'text',
-          name: 'phone-number',
-          size: 4,
-        },
-        {
-          label: 'Message',
-          type: 'textarea',
-          name: 'message',
-          placeholder: 'Tell us about it',
-          size: 4,
-        },
-        {
-          label: 'I would like to receive updates and news from Braga Technologies by email.',
-          type: 'checkbox',
-          name: 'newsletter',
-          checked: true,
-          size: 4,
-        }
-      ],
-      submitLabel: 'Send',
-    },
-    {
-      title: 'Appointment',
-      info: 'Set an appointment and speak with our Representative of Partnership and Strategy for an in depth consultancy or schedule a live demo at your place.',
-      form: [],
-      submitLabel: 'Set a Schedule',
-    },
-  ]
-
   const [currForm, setCurrForm] = useState(Forms[0]);
 
   return (
@@ -236,7 +57,7 @@ export default function Contact() {
         </section>
 
         {/* 01 */}
-        <section className='px-6 py-14 lg:px-[10%] h-screen bg-cover bg-center bg-no-repeat flex flex-col md:flex-row items-end justify-end' style={{backgroundImage: `url(${lastSectionImage})`}}>
+        <section className='px-6 py-14 lg:px-[10%] h-screen bg-cover bg-center bg-no-repeat flex flex-col md:flex-row items-end justify-end' style={{backgroundImage: `url(${LastSectionImage})`}}>
           <div className='w-full md:w-1/2 md:mb-4 flex flex-col items-end pl-[12%] md:pl-0'>
             <img src='/company/additional.svg' alt='' className='-mb-0.5 select-none mr-[12%] w-[20%]' />
             <div className='flex lg:flex-row flex-col lg:space-x-4 bg-gray-50 rounded-2xl p-6 w-full'>

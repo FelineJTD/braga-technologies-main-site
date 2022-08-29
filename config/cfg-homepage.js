@@ -1,3 +1,4 @@
+// SECTION 01
 export const Solutions = [
   {
     "title": "Big Data Processing", 
@@ -18,6 +19,7 @@ export const Solutions = [
   }
 ]
 
+// SECTION 02
 export const Features = [
   {
     "title": "Spatial Range Calculation",
@@ -31,6 +33,7 @@ export const Features = [
   }
 ]
 
+// SECTION 03
 export const Quotes = [
   {
     "quote": "“The Framework will help countries in building capacity using geospatial technology ... to achieve a digital transformation, and bridge the digital divide”",
@@ -104,6 +107,7 @@ export const Sectors = [
   },
 ]
 
+// SECTION 04
 export const Examples = [
   {
     "title": "Si-Pulau", 
