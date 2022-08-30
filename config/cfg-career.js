@@ -90,7 +90,7 @@ export const Jobs = [
 },
 ];
 
-const Testimonials = [
+export const Testimonials = [
 {
   name: 'Muhammad Dita Farel',
   title: 'Product Designer',

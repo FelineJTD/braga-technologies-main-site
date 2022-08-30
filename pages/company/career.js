@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 // Data
-import { Departments, Benefits, Jobs, LastSectionImage } from '../../config/cfg-career';
+import { Departments, Benefits, Jobs, Testimonials, LastSectionImage } from '../../config/cfg-career';
 
 export default function Career() {
 
