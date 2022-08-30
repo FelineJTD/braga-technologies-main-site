@@ -1,58 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
+
+// Data
+import { Data01, CustStories } from '../config/cfg-geodashboard';
+
+// Components
 import GetInTouch from '../components/get-in-touch-section';
 import PartnerLogos from '../components/partner-logos';
 import Carousel from '../components/carousel';
 
 export default function GeoDashboard() {
-  const data01 = [
-    {
-      num: '01.',
-      title: 'Multi-Format Data Visualization',
-      text: 'GeoDashboard easily visualize data in point, polygon and polyline format. Inspect rich data display for each attribute.',
-    },
-    {
-      num: '02.',
-      title: 'Range Calculation',
-      text: 'Visualize multiple layers both vector and raster to perform a detailed, precise, and insightful analysis.',
-    },
-    {
-      num: '03.',
-      title: 'Bootstrap Approach',
-      text: 'Created in no time through bootstrap. Get all the desired features, tailored to your needs.',
-    },
-  ]
-
-  const custStories = [
-    {
-      client_logo: '/static/images/logos/logo-1.png',
-      client_logo_alt: 'Pertamina',
-      image_url: '/images/cust-stories/1.png',
-      title: 'Accelerating Agricultural Sustainability',
-      text: '“It has provided a fast-track to enhance the solution & bring value to our clients. The Python package has allowed us to integrate CARTO into our DataOps pipelines, allowing us to create, update & publish maps faster, saving our team valuable time, and giving a better service.”',
-      source_name: 'Isaac Pernas',
-      source_title: 'Chief Information Officer at JLL',
-    },
-    {
-      client_logo: '/static/images/logos/logo-2.png',
-      client_logo_alt: 'Pertamina',
-      image_url: '/images/cust-stories/2.png',
-      title: 'Accelerating Agricultural Sustainability 2',
-      text: '“It has provided a fast-track to enhance the solution & bring value to our clients. The Python package has allowed us to integrate CARTO into our DataOps pipelines, allowing us to create, update & publish maps faster, saving our team valuable time, and giving a better service.”',
-      source_name: 'Isaac Pernas',
-      source_title: 'Chief Information Officer at JLL',
-    },
-    {
-      client_logo: '/static/images/logos/logo-3.png',
-      client_logo_alt: 'Pertamina',
-      image_url: '/images/cust-stories/3.png',
-      title: 'Accelerating Agricultural Sustainability 3',
-      text: '“It has provided a fast-track to enhance the solution & bring value to our clients. The Python package has allowed us to integrate CARTO into our DataOps pipelines, allowing us to create, update & publish maps faster, saving our team valuable time, and giving a better service.”',
-      source_name: 'Isaac Pernas',
-      source_title: 'Chief Information Officer at JLL',
-    },
-  ]
 
   const [currIdx, setCurrIdx] = useState(0);
   useEffect(() => {
@@ -105,17 +63,17 @@ export default function GeoDashboard() {
 
             {/* 01 SCROLL AREA (DESKTOP) */}
             <div className='hidden md:flex flex-col justify-end min-h-[50vh] h-full col-start-2 col-span-4 relative'>
-              <h3 className='font-inter text-[13.5rem] [line-height:10rem] font-medium text-gray-100 absolute top-0 z-0'>{data01[currIdx].num}</h3>
+              <h3 className='font-inter text-[13.5rem] [line-height:10rem] font-medium text-gray-100 absolute top-0 z-0'>{Data01[currIdx].num}</h3>
               <div className='self-end relative z-10'>
-                <h5 className='text-2xl mb-4'>{data01[currIdx].title}</h5>
-                <p>{data01[currIdx].text}</p>
+                <h5 className='text-2xl mb-4'>{Data01[currIdx].title}</h5>
+                <p>{Data01[currIdx].text}</p>
               </div>
             </div>
             <div className='col-start-7 col-span-5 row-span-2 bg-gray-200 h-full w-full rounded-xl' />
 
             {/* 01 SCROLL AREA (MOBILE) */}
             {
-              data01.map((item, idx) => {
+              Data01.map((item, idx) => {
                 return (
                   <div className='md:hidden flex flex-col justify-end min-h-[50vh] h-full col-start-2 col-span-4 relative' key={idx}>
                     <div className='self-end relative z-10'>
@@ -160,7 +118,7 @@ export default function GeoDashboard() {
         <section className='bg-gray-50 text-gray-900 flex flex-col lg:grid lg:grid-cols-12 items-start gap-x-6 px-6 pb-14 xl:px-[10%]'>
           <Carousel>
             {
-              custStories.map((item, idx) => {
+              CustStories.map((item, idx) => {
                 return (
                   <div key={idx} className='w-full px-0.5'>
                     <img src={item.client_logo} alt={item.client_logo_alt} className='h-6' />

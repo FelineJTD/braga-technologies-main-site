@@ -6,6 +6,7 @@ import CardTeam from '../../components/card-team';
 
 export default function Culture() {
   const Departments = ['Management', 'Design', 'Development', 'Technology', 'Operation', 'General Affairs', 'Others'];
+  
   const lastSectionImage = "https://picsum.photos/1080/1920";
 
   const Values = [
