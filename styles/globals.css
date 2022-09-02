@@ -45,6 +45,7 @@ body {
   font-family: 'Inter', sans-serif;
   scrollbar-color: #777574 #F4F3F1;
   scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {

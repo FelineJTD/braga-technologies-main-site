@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head'
 import { useState, useEffect, useRef } from 'react'
 
 // Data
@@ -11,13 +10,17 @@ import {
   Examples, 
   Services 
 } from '../config/cfg-homepage'
+import BGLottie from '../assets/animations/bg-section-hero.json'
+import ScrollDown from '../assets/animations/scroll-down.json'
 
 // Components
+import Head from 'next/head'
+import Image from 'next/image'
+import Lottie from 'lottie-react'
 import PartnerLogos from '../components/partner-logos'
 import CardSolution from '../components/card-solution'
 import Carousel from '../components/carousel'
 import GetInTouch from '../components/get-in-touch-section'
-import Image from 'next/image'
 import CardSector from '../components/card-sector'
 
 export default function Home() {
@@ -56,14 +59,22 @@ export default function Home() {
       </Head>
 
       <main className='text-gray-900 bg-gray-50 w-full'>
+        <div className='md:w-full w-auto h-[calc(100vh-2rem)] absolute z-0 first:object-cover'>
+          <Lottie animationData={BGLottie} loop={true} style={{height:'100%', objectFit:'cover'}}/>
+        </div>
         {/* 00 */}
-        <section className='w-full h-[calc(100vh-2rem)] py-12 text-center px-6 lg:px-[25vw] xl:px-[30vw] flex flex-col justify-between'>
+        <section className='w-full h-[calc(100vh-2rem)] py-12 text-center px-6 lg:px-[25vw] xl:px-[30vw] flex flex-col justify-between relative z-10'>
           <div className='flex items-center w-full flex-grow'>
             <h1>
               Answering <i>How</i>, by Understanding <span className='underline italic'>Where</span>
             </h1>
           </div>
-          <div>
+          <div className='flex flex-col items-center'>
+            <a href='#section1'>
+              <div className='h-6 w-6'>
+                <Lottie animationData={ScrollDown} loop={true} />
+              </div>
+            </a>
             <p className='text-sm py-10'>
               In this era of volatility, uncertainty, complexity, and ambiguity, Braga Technologies brings Location Insight to help industries and organizations alike in Assets Monitoring, Fleet Management, Campaign Optimation, and more.
             </p>
@@ -74,7 +85,7 @@ export default function Home() {
         <PartnerLogos />
 
         {/* 01 */}
-        <section className='whiteBG'>
+        <section id='section1' className='whiteBG'>
           <p className='bold mb-4'>01.</p>
           <div className='col-span-4'>
             <p className='mb-4 bold'>Powered by Braga</p>
