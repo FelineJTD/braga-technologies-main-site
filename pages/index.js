@@ -59,8 +59,8 @@ export default function Home() {
       </Head>
 
       <main className='text-gray-900 bg-gray-50 w-full'>
-        <div className='md:w-full w-auto h-[calc(100vh-2rem)] absolute z-0 first:object-cover'>
-          <Lottie animationData={BGLottie} loop={true} style={{height:'100%', objectFit:'cover'}}/>
+        <div className='md:w-full w-auto h-[calc(100vh-2rem)] absolute z-0'>
+          <Lottie animationData={BGLottie} loop={true}/>
         </div>
         {/* 00 */}
         <section className='w-full h-[calc(100vh-2rem)] py-12 text-center px-6 lg:px-[25vw] xl:px-[30vw] flex flex-col justify-between relative z-10'>
