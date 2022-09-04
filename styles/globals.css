@@ -180,6 +180,39 @@ button {
   }
 }
 
+.fleet {
+  opacity: 1;
+  background-position: 100% 100%;
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease-in-out,
+    visibility 0s 0.5s,
+    opacity 0.5s;
+}
+
+.fleet-invis {
+  opacity: 0;
+  cursor: default;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition:
+    border-color 0.2s ease-in-out,
+    background-size 0.5s,
+    visibility 0s 0.5s,
+    opacity 0.5s 0.5s;
+}
+
+.fleet-bg-primary {
+  background-image: linear-gradient(#F36A1D, #F36A1D);
+}
+
+.fleet-bg-secondary {
+  background-image: linear-gradient(#C3E85F, #C3E85F);
+}
+
+
 /* taken from https://stackoverflow.com/a/54616200 */
 .un {
   display: inline-block;
