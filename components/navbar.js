@@ -1,9 +1,31 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
+import {useRouter} from 'next/router';
 import { useEffect, useState } from 'react';
 
 export default function Navbar() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const [currPage, setCurrPage] = useState('');
+
+  // router
+  const router = useRouter();
+
+  useEffect(() => {
+    const currPath = router.pathname;
+    if (currPath === '/') {
+      setCurrPage('home');
+    } else if (currPath.substring(0,13) === '/geodashboard') {
+      setCurrPage('geodashboard');
+    } else if (currPath.substring(0,6) === '/works') {
+      setCurrPage('works');
+    } else if (currPath.substring(0,8) === '/company') {
+      setCurrPage('company');
+    } else if (currPath.substring(0,8) === '/contact') {
+      setCurrPage('contact');
+    } else {
+      setCurrPage('');
+    }
+  }, [router]);
 
   const closeMobileNav = () => {
     document.getElementById('toggle').style.transform = 'rotate(0)';
@@ -89,11 +111,21 @@ export default function Navbar() {
         <Link href='/'><img src='/logo-braga-sm.svg' alt='Braga Technologies Logo' className='md:hidden h-5 cursor-pointer' onClick={closeMobileNav}/></Link>
         <Link href='/'><img src='/logo-braga-full.svg' alt='Braga Technologies Logo' className='hidden md:block h-5 cursor-pointer' /></Link>
         <div className='justify-self-center space-x-6 hidden lg:block'>
-          <Link href='/'><a className='un text-sm'>Home</a></Link>
-          <Link href='/geodashboard'><a className='un text-sm'>GeoDashboard</a></Link>
-          <Link href='/works'><a className='un text-sm'>Works</a></Link>
-          <Link href='/company/culture'><a className='un text-sm'>Company</a></Link>
-          <Link href='/contact'><a className='un text-sm'>Contact</a></Link>
+          <Link href='/'>
+            <a className={`${currPage === 'home' ? 'text-primary underline' : 'un'} text-sm`}>Home</a>
+          </Link>
+          <Link href='/geodashboard'>
+            <a className={`${currPage === 'geodashboard' ? 'text-primary underline' : 'un'} text-sm`}>GeoDashboard</a>
+          </Link>
+          <Link href='/works'>
+            <a className={`${currPage === 'works' ? 'text-primary underline' : 'un'} text-sm`}>Works</a>
+          </Link>
+          <Link href='/company/culture'>
+            <a className={`${currPage === 'company' ? 'text-primary underline' : 'un'} text-sm`}>Company</a>
+          </Link>
+          <Link href='/contact'>
+            <a className={`${currPage === 'contact' ? 'text-primary underline' : 'un'} text-sm`}>Contact</a>
+          </Link>
         </div>
         <div className='flex'>
           <a href='https://geodashboard.braga.co.id/' rel='noreferrer noopener'>
