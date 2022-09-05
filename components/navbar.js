@@ -10,6 +10,7 @@ export default function Navbar() {
   // router
   const router = useRouter();
 
+  // TODO: change to split on / and get the first element
   useEffect(() => {
     const currPath = router.pathname;
     if (currPath === '/') {

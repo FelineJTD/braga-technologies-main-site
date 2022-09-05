@@ -10,8 +10,8 @@ import {
   Examples, 
   Services 
 } from '../config/cfg-homepage'
-import BGLottie from '../assets/animations/bg-section-hero.json'
-import ScrollDown from '../assets/animations/scroll-down.json'
+import BGLottie from '../assets/animations/homepage/bg-section-hero.json'
+import ScrollDown from '../assets/animations/homepage/scroll-down.json'
 
 // Components
 import Head from 'next/head'
@@ -144,7 +144,7 @@ export default function Home() {
           <div className='flex flex-col space-y-1 lg:space-y-0 col-span-6 md:grid grid-cols-2 gap-6 mt-8'>
             {
               Solutions.map((solution, index) => (
-                <CardSolution solution={solution} key={index} />
+                <CardSolution solution={solution} comingSoon={true} key={index} />
               ))
             }
           </div>

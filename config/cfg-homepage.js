@@ -2,18 +2,22 @@
 export const Solutions = [
   {
     "title": "Big Data Processing", 
+    "animation": require('../assets/animations/homepage/service-data.json'),
     "desc": "Technologies that integrate, process, analyze, and visualize big data for your collective's solution.",
     "type": "Powerful",
   }, {
     "title": "Rich Analytics",
+    "animation": require('../assets/animations/homepage/service-rich.json'),
     "desc": "Advanced tools that Braga provides helps to come up with analytics that beneficial to tackle various challanges.",
     "type": "Advanced",
   }, {
     "title": "IoT and AI Integration",
+    "animation": require('../assets/animations/homepage/service-intg.json'),
     "desc": "Connect to IoT and AI tools, models, or hardwares for furhterly advanced and integrated problem solving.",
     "type": "Dynamic",
   }, {
     "title": "Access Anywhere, Anytime.",
+    "animation": require('../assets/animations/homepage/service-time.json'),
     "desc": "Not bounded by space and time, we help in multiple platforms, adapting to different conditions and terrains.",
     "type": "Global",
   }
