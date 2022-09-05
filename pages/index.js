@@ -52,7 +52,20 @@ export default function Home() {
   }, [sectorLength, selectedSectorIdx]);
 
   // Fleet
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible1, setIsVisible1] = useState(true);
+  const [isVisible2, setIsVisible2] = useState(true);
+  const [isVisible3, setIsVisible3] = useState(true);
+  const [isVisible4, setIsVisible4] = useState(true);
+  useEffect(() => {
+    if (!isVisible1 && !isVisible2 && !isVisible3) {
+      setTimeout(() => {
+        setIsVisible1(true);
+        setIsVisible2(true);
+        setIsVisible3(true);
+        setIsVisible4(true);
+      }, 1000);
+    }
+  }, [isVisible1, isVisible2, isVisible3]);
 
   return (
     <div>
@@ -68,16 +81,40 @@ export default function Home() {
         </div>
         <Fleet
           fleetNum={120}
-          isVisible={isVisible}
-          setIsVisible={setIsVisible}
+          isVisible={isVisible1}
+          setIsVisible={setIsVisible1}
           type='bus'
           color='primary'
-          className='top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
+          className='top-[25%] left-[10%]'
+        />
+        <Fleet
+          fleetNum={124}
+          isVisible={isVisible2}
+          setIsVisible={setIsVisible2}
+          type='car'
+          color='primary'
+          className='top-[30%] right-[10%]'
+        />
+        <Fleet
+          fleetNum={200}
+          isVisible={isVisible3}
+          setIsVisible={setIsVisible3}
+          type='car'
+          color='secondary'
+          className='bottom-[28%] left-[15%]'
+        />
+        <Fleet
+          fleetNum={200}
+          isVisible={isVisible4}
+          setIsVisible={setIsVisible4}
+          type='bus'
+          color='secondary'
+          className='bottom-[20%] right-[12%]'
         />
         {/* 00 */}
         <section className='w-full h-[calc(100vh-2rem)] py-12 text-center px-6 lg:px-[25vw] xl:px-[30vw] flex flex-col justify-between relative z-10'>
           <div className='flex items-center w-full flex-grow'>
-            <h1 onClick={() => setIsVisible(true)}>
+            <h1>
               Answering <i>How</i>, by Understanding <span className='underline italic'>Where</span>
             </h1>
           </div>
