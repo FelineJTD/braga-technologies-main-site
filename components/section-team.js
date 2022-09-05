@@ -15,10 +15,6 @@ export default function Team({departments, page}) {
       entries.forEach(entry => setVisible(entry.isIntersecting));
     });
     observer.observe(deptContainer.current);
-
-    // on unmount
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    return () => observer.unobserve(deptContainer.current);
   });
 
   useEffect(() => {
