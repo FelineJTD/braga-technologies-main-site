@@ -57,7 +57,7 @@ export default function Home() {
   const [isVisible3, setIsVisible3] = useState(true);
   const [isVisible4, setIsVisible4] = useState(true);
   useEffect(() => {
-    if (!isVisible1 && !isVisible2 && !isVisible3) {
+    if (!isVisible1 && !isVisible2 && !isVisible3 && !isVisible4) {
       setTimeout(() => {
         setIsVisible1(true);
         setIsVisible2(true);
@@ -65,7 +65,7 @@ export default function Home() {
         setIsVisible4(true);
       }, 1000);
     }
-  }, [isVisible1, isVisible2, isVisible3]);
+  }, [isVisible1, isVisible2, isVisible3, isVisible4]);
 
   return (
     <div>
