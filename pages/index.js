@@ -101,7 +101,7 @@ export default function Home() {
           setIsVisible={setIsVisible3}
           type='car'
           color='secondary'
-          className='bottom-64 md:bottom-[28%] left-[15%]'
+          className='bottom-52 md:bottom-[28%] left-[15%]'
         />
         <Fleet
           fleetNum={200}
@@ -109,7 +109,7 @@ export default function Home() {
           setIsVisible={setIsVisible4}
           type='bus'
           color='secondary'
-          className='bottom-72 md:bottom-[20%] right-[10%]'
+          className='bottom-64 md:bottom-[20%] right-[10%]'
         />
         {/* 00 */}
         <section className='w-full h-[calc(100vh-2rem)] py-12 text-center px-6 lg:px-[25vw] xl:px-[30vw] flex flex-col justify-between relative z-10'>
