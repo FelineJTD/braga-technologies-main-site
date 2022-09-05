@@ -7,7 +7,7 @@ import { Data01, CustStories } from '../config/cfg-geodashboard';
 
 // Components
 import GetInTouch from '../components/section-get-in-touch';
-import PartnerLogos from '../components/partner-logos';
+import PartnerLogos from '../components/section-partner-logos';
 import Carousel from '../components/carousel';
 
 export default function GeoDashboard() {
