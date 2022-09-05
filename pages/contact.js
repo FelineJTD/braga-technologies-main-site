@@ -66,7 +66,7 @@ export default function Contact() {
                 <p className='mb-4 bold'>Visit us at</p>
                 <h3 className='mb-4 w-full md:w-2/3'>Braga Technologies Bandung Office</h3>
                 <div className='flex flex-col md:flex-row w-full justify-between'>
-                  <p className='text-sm mb-4 w-full'>Jl. Cilaki No. 23<br />Bandung, Indonesia.<br />40114</p>
+                  <address className='text-sm mb-4 w-full'>Jl. Cilaki No. 23<br />Bandung, Indonesia.<br />40114</address>
                   <button className='buttonLight lg:w-auto whitespace-nowrap mr-3'>See on Map &gt;</button>
                 </div>
               </div>
