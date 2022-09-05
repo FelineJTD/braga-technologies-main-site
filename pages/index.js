@@ -17,12 +17,12 @@ import ScrollDown from '../assets/animations/scroll-down.json'
 import Head from 'next/head'
 import Image from 'next/image'
 import Lottie from 'lottie-react'
-import BusIcon from '../assets/images/homepage/icon-bus'
 import PartnerLogos from '../components/partner-logos'
 import CardSolution from '../components/card-solution'
 import Carousel from '../components/carousel'
 import GetInTouch from '../components/get-in-touch-section'
 import CardSector from '../components/card-sector'
+import Fleet from '../components/fleet'
 
 export default function Home() {
   const featureRef = useRef();
@@ -66,10 +66,14 @@ export default function Home() {
         <div className='md:w-full w-auto h-[calc(100vh-2rem)] absolute -mt-8 z-0'>
           <Lottie animationData={BGLottie} loop={true}/>
         </div>
-        <div className={`${isVisible? 'fleet' : 'fleet-invis'} fleet-bg-primary flex absolute top-36 px-3 py-2 border-[1px] border-gray-400 hover:border-gray-800 rounded-lg bg-gray-50 z-20`} onClick={() => setIsVisible(false)}>
-          <BusIcon className={`${isVisible? 'fill-gray-800' : 'fill-gray-50'} h-5 w-5 z-50 duration-100`} />
-          <p className={`${isVisible? 'text-gray-800' : 'text-gray-50'} text-sm ml-2 duration-200`}>Fleet #120</p>
-        </div>
+        <Fleet
+          fleetNum={120}
+          isVisible={isVisible}
+          setIsVisible={setIsVisible}
+          type='bus'
+          color='primary'
+          className='top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
+        />
         {/* 00 */}
         <section className='w-full h-[calc(100vh-2rem)] py-12 text-center px-6 lg:px-[25vw] xl:px-[30vw] flex flex-col justify-between relative z-10'>
           <div className='flex items-center w-full flex-grow'>
