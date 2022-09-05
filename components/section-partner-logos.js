@@ -3,7 +3,7 @@ import { Logos } from '../config/cfg-partner-logos'
 
 export default function PartnerLogos() {
   return (
-    <section className='px-6 xl:px-[10%] py-6 flex justify-center items-center w-full space-x-3 md:space-x-12 bg-gray-50'>
+    <section className='px-6 xl:px-[10%] py-6 flex justify-center items-center w-full space-x-3 md:space-x-12 bg-gray-50 relative z-10'>
       {
         Logos.map((logo, index) => (
           <div key={index}>
