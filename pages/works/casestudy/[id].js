@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
-import Image from 'next/image';
 import { useRouter } from 'next/router'
+
+// Components
 import GetInTouch from '../../../components/section-get-in-touch';
 
 export default function Works() {
