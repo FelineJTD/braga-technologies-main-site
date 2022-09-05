@@ -10,7 +10,7 @@ export default function CardSolution({solution, isDarkMode=false, comingSoon=fal
       <p className='text-sm'>{solution.desc}</p>
       <div className='min-h-[40px] flex-grow' />
       <div className='flex justify-between justify-self-end items-center'>
-        <button className={`border-[1px] ${isDarkMode? 'border-white enabled:hover:bg-white enabled:hover:text-black' : 'border-black enabled:hover:bg-black enabled:hover:text-white'} disabled:opacity-50 duration-300`} disabled={comingSoon}>{comingSoon? 'Coming Soon' : 'See Solution'}</button>
+        <button className={`border-[1px] ${isDarkMode? 'border-white enabled:hover:bg-white enabled:hover:text-black' : 'border-black enabled:hover:bg-black enabled:hover:text-white'} disabled:opacity-30 duration-300`} disabled={comingSoon}>{comingSoon? 'Coming Soon' : 'See Solution'}</button>
         <p>{solution.type}</p>
       </div>
     </div>
