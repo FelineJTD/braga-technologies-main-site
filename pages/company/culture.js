@@ -10,9 +10,7 @@ import { Departments } from '../../config/cfg-culture';
 import Team from '../../components/section-team';
 // import CardTeam from '../../components/card-team';
 
-export default function Culture() {
-  const Departments = ['Management', 'Design', 'Development', 'Technology', 'Operation', 'General Affairs', 'Others'];
-  
+export default function Culture() {  
   const lastSectionImage = "https://picsum.photos/1080/1920";
 
   const Values = [
@@ -203,9 +201,7 @@ export default function Culture() {
             <h2 className='mb-6 lg:mb-10'>Here, our difference makes a difference.</h2>
           </div>
           <p className='col-start-7 col-span-5 self-end -translate-y-2 mb-10'>We&apos;re creating an environment to keep everyone standout with their talents and be able to cherish each and every unique qualities that we have.</p>
-
-          <div className='col-start-2 col-span-10 w-full dividerBlack' />
-
+          
           <Team departments={Departments} page='culture' />
         </section>
 
