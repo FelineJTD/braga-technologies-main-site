@@ -1,3 +1,8 @@
+// CONFIG FOR GEODASHBOARD PAGE
+// In this file: Data01, CustStories
+
+// DATA01
+// This is the data for section 1 (the scroll section)
 export const Data01 = [
   {
     num: '01.',

@@ -1,3 +1,6 @@
+// CONFIG FOR CAREER PAGE
+// In this file: Departments, Benefits, Jobs, Testimonials, LastSectionImage
+
 export const Departments = [{
   title: 'Management', 
   image: 'https://picsum.photos/200/300',
@@ -121,4 +124,6 @@ export const Testimonials = [
 },
 ];
 
+// LAST SECTION IMAGE
+// This is the background image for the last section.
 export const LastSectionImage = "https://picsum.photos/1080/1920";

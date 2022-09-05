@@ -1,3 +1,6 @@
+// CONFIG FOR HOME PAGE
+// In this file: Solutions, Features, Quotes, Sectors, Examples, Services
+
 // SECTION 01
 export const Solutions = [
   {

@@ -1,4 +1,7 @@
-const Works = [
+// CONFIG FOR WORKS PAGE
+// In this file: Works
+
+const WorksData = [
   {
     id: "1",
     title: "Smiling Java / Event Portal",
@@ -34,4 +37,4 @@ for (let i = 0; i < 50; i++) {
   })
 }
 
-export default Works;
+export { WorksData };

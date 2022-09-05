@@ -4,95 +4,12 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 // Data
-import { Departments } from '../../config/cfg-culture';
+import { Departments, Values, LastSectionImage } from '../../config/cfg-culture';
 
 // Components
 import Team from '../../components/section-team';
-// import CardTeam from '../../components/card-team';
 
 export default function Culture() {  
-  const lastSectionImage = "https://picsum.photos/1080/1920";
-
-  const Values = [
-    {
-      title: 'Committed',
-      headline: 'People can Count on Us.',
-      desc: 'We commit to being a better professional within each of our own domains to reach the bigger goal.',
-    },
-    {
-      title: 'Courageous',
-      headline: 'Take Risk, Take Ownership.',
-      desc: 'On a highly dynamic of uncertainty and obstacles, it takes courage to sail on that journey.',
-    },
-    {
-      title: 'Focused',
-      headline: 'Setting our Priorities Right',
-      desc: 'We walk further together. As a team player focus on our work as much as the goals of our team.',
-    },
-    {
-      title: 'Courageous',
-      headline: 'Take Risk, Take Ownership.',
-      desc: 'On a highly dynamic of uncertainty and obstacles, it takes courage to sail on that journey.',
-    },
-  ]
-
-  // const Team = [
-  //   {
-  //     name: 'Gunawan Wibisono',
-  //     position: 'IoT Engineer',
-  //     dept: 'Management',
-  //     desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
-  //     linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
-  //     social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
-  //     img: 'https://picsum.photos/112/112',
-  //   },
-  //   {
-  //     name: 'Gunawan Wibisono',
-  //     position: 'IoT Engineer',
-  //     dept: 'Management',
-  //     desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
-  //     linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
-  //     social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
-  //     img: 'https://picsum.photos/112/112',
-  //   },
-  //   {
-  //     name: 'Gunawan Wibisono',
-  //     position: 'IoT Engineer',
-  //     dept: 'Management',
-  //     desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
-  //     linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
-  //     social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
-  //     img: 'https://picsum.photos/112/112',
-  //   },
-  //   {
-  //     name: 'Gunawan Wibisono',
-  //     position: 'IoT Engineer',
-  //     dept: 'Management',
-  //     desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
-  //     linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
-  //     social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
-  //     img: 'https://picsum.photos/112/112',
-  //   },
-  //   {
-  //     name: 'Gunawan Wibisono',
-  //     position: 'IoT Engineer',
-  //     dept: 'Management',
-  //     desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
-  //     linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
-  //     social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
-  //     img: 'https://picsum.photos/112/112',
-  //   },
-  //   {
-  //     name: 'Gunawan Wibisono',
-  //     position: 'IoT Engineer',
-  //     dept: 'Design',
-  //     desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
-  //     linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
-  //     social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
-  //     img: 'https://picsum.photos/112/112',
-  //   },
-  // ]
-
   const valuesRef = useRef();
 
   // ** scroll **
@@ -106,15 +23,6 @@ export default function Culture() {
       });
     }
   }
-
-  // const [selectedDepartment, setSelectedDepartment] = useState(Departments[0]);
-
-  // const [fullTeam, _setFullTeam] = useState(Team);
-  // const [currTeam, setCurrTeam] = useState(Team);
-
-  // useEffect(() => {
-  //   setCurrTeam(fullTeam.filter(team => team.dept === selectedDepartment));
-  // }, [fullTeam, selectedDepartment]);
 
   const [isScrollArea, setIsScrollArea] = useState(false);
   const scrollAreaRef = useRef();
@@ -201,11 +109,11 @@ export default function Culture() {
             <h2 className='mb-6 lg:mb-10'>Here, our difference makes a difference.</h2>
           </div>
           <p className='col-start-7 col-span-5 self-end -translate-y-2 mb-10'>We&apos;re creating an environment to keep everyone standout with their talents and be able to cherish each and every unique qualities that we have.</p>
-          
+
           <Team departments={Departments} page='culture' />
         </section>
 
-        <section className='px-6 py-14 lg:px-[10%] h-screen bg-cover bg-center bg-no-repeat flex flex-col md:flex-row items-end justify-end' style={{backgroundImage: `url(${lastSectionImage})`}}>
+        <section className='px-6 py-14 lg:px-[10%] h-screen bg-cover bg-center bg-no-repeat flex flex-col md:flex-row items-end justify-end' style={{backgroundImage: `url(${LastSectionImage})`}}>
           <div className='w-full md:w-1/2 md:mb-4 flex md:flex-col items-end'>
             <div className='flex lg:flex-row flex-col lg:space-x-4 bg-gray-50 rounded-t-2xl rounded-bl-2xl p-6'>
               <p className='bold mb-4'>01.</p>

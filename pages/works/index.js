@@ -2,52 +2,20 @@
 import Head from 'next/head'
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react'
+
+// Data
+import { WorksData } from '../../config/cfg-works';
+
+// Components
 import CardWorks from '../../components/card-works';
 import GetInTouch from '../../components/section-get-in-touch';
 
 export default function Works() {
-  const works = [
-    {
-      id: "1",
-      title: "Smiling Java / Event Portal",
-      type: "Braga Enterprise",
-      img: "https://www.google.com/maps/d/u/0/thumbnail?mid=1frHExlCasUKm6ymzyyUyuCvrtp0",
-      coordinates: "37° 48' 15.7068'' N  122° 16' 15.9996'' W",
-      number: "No. 03",
-      is_coming_soon: false,
-      work_type: "Project",
-    },
-    {
-      id: "2",
-      title: "Smiling Java / Event Portal",
-      type: "Braga Enterprise",
-      img: "https://www.google.com/maps/d/u/0/thumbnail?mid=1frHExlCasUKm6ymzyyUyuCvrtp0",
-      coordinates: "37° 48' 15.7068'' N  122° 16' 15.9996'' W",
-      number: "No. 03",
-      is_coming_soon: true,
-      work_type: "Case Study",
-    },
-  ]
-
-  for (let i = 0; i < 50; i++) {
-    works.push({
-      id: `${i}`,
-      title: "Smiling Java / Event Portal",
-      type: "Braga Enterprise",
-      img: "https://www.google.com/maps/d/u/0/thumbnail?mid=1frHExlCasUKm6ymzyyUyuCvrtp0",
-      coordinates: "37° 48' 15.7068'' N  122° 16' 15.9996'' W",
-      number: `No. ${i}`,
-      is_coming_soon: false,
-      work_type: "Case Study",
-    })
-  }
-
-
   const [currPage, setCurrPage] = useState(1);
   const [currWorksType, setCurrWorksType] = useState("All Projects");
-  const [worksToShow, setWorksToShow] = useState(works);
+  const [worksToShow, setWorksToShow] = useState(WorksData);
   const [isSelectionOpened, setIsSelectionOpened] = useState(false);
-  const [lastPage, setLastPage] = useState(Math.ceil(works.length / 12));
+  const [lastPage, setLastPage] = useState(Math.ceil(WorksData.length / 12));
 
   const worksContainer = useRef();
 
@@ -113,7 +81,7 @@ export default function Works() {
                   <div id='selections' className={`${isSelectionOpened? 'max-h-screen' : 'max-h-0'} w-40 flex-col bg-white rounded-lg p-2 shadow-lg transition duration-300 overflow-hidden`}>
                     <button 
                       onClick={() => {
-                        setWorksToShow(works); 
+                        setWorksToShow(WorksData); 
                         setCurrPage(1);
                         scrollToWorksTop();
                         setCurrWorksType("All Projects");
@@ -123,7 +91,7 @@ export default function Works() {
                     </button>
                     <button 
                       onClick={() => {
-                        setWorksToShow(works.filter(work => work.work_type === 'Project'));
+                        setWorksToShow(WorksData.filter(work => work.work_type === 'Project'));
                         setCurrPage(1);
                         scrollToWorksTop();
                         setCurrWorksType('Projects');
@@ -133,7 +101,7 @@ export default function Works() {
                     </button>
                     <button 
                       onClick={() => {
-                        setWorksToShow(works.filter(work => work.work_type === 'Case Study'));
+                        setWorksToShow(WorksData.filter(work => work.work_type === 'Case Study'));
                         setCurrPage(1);
                         scrollToWorksTop();
                         setCurrWorksType('Case Studies');

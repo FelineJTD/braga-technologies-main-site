@@ -1,3 +1,6 @@
+// CONFIG FOR CONTACT PAGE
+// In this file: LastSectionImage, Forms
+
 // LAST SECTION IMAGE
 // This is the background image for the last section.
 export const LastSectionImage = "https://picsum.photos/1080/1920";
