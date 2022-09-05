@@ -20,7 +20,7 @@ import Lottie from 'lottie-react'
 import PartnerLogos from '../components/partner-logos'
 import CardSolution from '../components/card-solution'
 import Carousel from '../components/carousel'
-import GetInTouch from '../components/get-in-touch-section'
+import GetInTouch from '../components/section-get-in-touch'
 import CardSector from '../components/card-sector'
 import Fleet from '../components/fleet'
 

@@ -2,7 +2,13 @@
 import Head from 'next/head'
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import CardTeam from '../../components/card-team';
+
+// Data
+import { Departments } from '../../config/cfg-culture';
+
+// Components
+import Team from '../../components/section-team';
+// import CardTeam from '../../components/card-team';
 
 export default function Culture() {
   const Departments = ['Management', 'Design', 'Development', 'Technology', 'Operation', 'General Affairs', 'Others'];
@@ -32,62 +38,62 @@ export default function Culture() {
     },
   ]
 
-  const Team = [
-    {
-      name: 'Gunawan Wibisono',
-      position: 'IoT Engineer',
-      dept: 'Management',
-      desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
-      linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
-      social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
-      img: 'https://picsum.photos/112/112',
-    },
-    {
-      name: 'Gunawan Wibisono',
-      position: 'IoT Engineer',
-      dept: 'Management',
-      desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
-      linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
-      social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
-      img: 'https://picsum.photos/112/112',
-    },
-    {
-      name: 'Gunawan Wibisono',
-      position: 'IoT Engineer',
-      dept: 'Management',
-      desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
-      linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
-      social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
-      img: 'https://picsum.photos/112/112',
-    },
-    {
-      name: 'Gunawan Wibisono',
-      position: 'IoT Engineer',
-      dept: 'Management',
-      desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
-      linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
-      social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
-      img: 'https://picsum.photos/112/112',
-    },
-    {
-      name: 'Gunawan Wibisono',
-      position: 'IoT Engineer',
-      dept: 'Management',
-      desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
-      linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
-      social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
-      img: 'https://picsum.photos/112/112',
-    },
-    {
-      name: 'Gunawan Wibisono',
-      position: 'IoT Engineer',
-      dept: 'Design',
-      desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
-      linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
-      social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
-      img: 'https://picsum.photos/112/112',
-    },
-  ]
+  // const Team = [
+  //   {
+  //     name: 'Gunawan Wibisono',
+  //     position: 'IoT Engineer',
+  //     dept: 'Management',
+  //     desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
+  //     linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
+  //     social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
+  //     img: 'https://picsum.photos/112/112',
+  //   },
+  //   {
+  //     name: 'Gunawan Wibisono',
+  //     position: 'IoT Engineer',
+  //     dept: 'Management',
+  //     desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
+  //     linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
+  //     social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
+  //     img: 'https://picsum.photos/112/112',
+  //   },
+  //   {
+  //     name: 'Gunawan Wibisono',
+  //     position: 'IoT Engineer',
+  //     dept: 'Management',
+  //     desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
+  //     linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
+  //     social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
+  //     img: 'https://picsum.photos/112/112',
+  //   },
+  //   {
+  //     name: 'Gunawan Wibisono',
+  //     position: 'IoT Engineer',
+  //     dept: 'Management',
+  //     desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
+  //     linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
+  //     social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
+  //     img: 'https://picsum.photos/112/112',
+  //   },
+  //   {
+  //     name: 'Gunawan Wibisono',
+  //     position: 'IoT Engineer',
+  //     dept: 'Management',
+  //     desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
+  //     linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
+  //     social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
+  //     img: 'https://picsum.photos/112/112',
+  //   },
+  //   {
+  //     name: 'Gunawan Wibisono',
+  //     position: 'IoT Engineer',
+  //     dept: 'Design',
+  //     desc: 'When she’s not thinking about taxes and quotations, she’s thinking about which Indonesia’s mountain peak or sunny beach to walk on next.',
+  //     linkedin: 'https://www.linkedin.com/in/gunawan-wibisono-a9a8b917/',
+  //     social: 'https://www.instagram.com/gunawan-wibisono-a9a8b917/',
+  //     img: 'https://picsum.photos/112/112',
+  //   },
+  // ]
 
   const valuesRef = useRef();
 
@@ -103,14 +109,14 @@ export default function Culture() {
     }
   }
 
-  const [selectedDepartment, setSelectedDepartment] = useState(Departments[0]);
+  // const [selectedDepartment, setSelectedDepartment] = useState(Departments[0]);
 
-  const [fullTeam, _setFullTeam] = useState(Team);
-  const [currTeam, setCurrTeam] = useState(Team);
+  // const [fullTeam, _setFullTeam] = useState(Team);
+  // const [currTeam, setCurrTeam] = useState(Team);
 
-  useEffect(() => {
-    setCurrTeam(fullTeam.filter(team => team.dept === selectedDepartment));
-  }, [fullTeam, selectedDepartment]);
+  // useEffect(() => {
+  //   setCurrTeam(fullTeam.filter(team => team.dept === selectedDepartment));
+  // }, [fullTeam, selectedDepartment]);
 
   const [isScrollArea, setIsScrollArea] = useState(false);
   const scrollAreaRef = useRef();
@@ -200,17 +206,7 @@ export default function Culture() {
 
           <div className='col-start-2 col-span-10 w-full dividerBlack' />
 
-          <div className='col-start-2 col-span-10 w-full flex space-x-3 md:space-x-0 justify-between overflow-y-auto pb-3 md:pb-0'>
-            { Departments.map((department, index) => (
-              <button key={index} className={`${selectedDepartment === department? 'buttonSelectionSelected' : 'buttonSelection'} font-normal min-w-[8rem] md:min-w-[12%]`} onClick={() => setSelectedDepartment(department)}>{department}</button>
-            )) }
-          </div>
-
-          <div className='col-start-2 col-span-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 my-6'>          
-            { currTeam.map((staff, index) => (
-              <CardTeam key={index} staff={staff} />
-            ))}
-          </div>
+          <Team departments={Departments} page='culture' />
         </section>
 
         <section className='px-6 py-14 lg:px-[10%] h-screen bg-cover bg-center bg-no-repeat flex flex-col md:flex-row items-end justify-end' style={{backgroundImage: `url(${lastSectionImage})`}}>

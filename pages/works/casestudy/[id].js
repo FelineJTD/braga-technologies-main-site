@@ -2,7 +2,7 @@
 import Head from 'next/head'
 import Image from 'next/image';
 import { useRouter } from 'next/router'
-import GetInTouch from '../../../components/get-in-touch-section';
+import GetInTouch from '../../../components/section-get-in-touch';
 
 export default function Works() {
   const router = useRouter();

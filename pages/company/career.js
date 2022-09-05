@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+import Team from '../../components/section-team';
 
 // Data
 import { 
@@ -14,35 +15,6 @@ import {
 } from '../../config/cfg-career';
 
 export default function Career() {
-
-  const [selectedDepartmentIdx, setSelectedDepartmentIdx] = useState(0);
-  const [departmentLength, _setDepartmentLength] = useState(Departments.length);
-
-  const deptRef = useRef([]);
-  const deptContainer = useRef(null);
-  const bottomRef = useRef(null);
-  
-  useEffect(() => {
-    deptRef.current = deptRef.current.slice(0, departmentLength);
-  }, [departmentLength]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (bottomRef.current.getBoundingClientRect().bottom > 0) {
-        setSelectedDepartmentIdx((selectedDepartmentIdx + 1)%departmentLength);
-      }
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [departmentLength, selectedDepartmentIdx]);
-
-  useEffect(() => {
-    const position = deptRef.current[selectedDepartmentIdx].offsetLeft;
-    deptContainer.current.scrollTo({
-      left: position - deptContainer.current.clientWidth/2,
-      behavior: 'smooth',
-    });
-  }, [selectedDepartmentIdx]);
-
   const [currTestimonialIdx, setCurrTestimonialIdx] = useState(0);
 
   return (
@@ -63,29 +35,7 @@ export default function Career() {
           <p className='row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-4 col-span-4 lg:col-span-3 mb-6'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
           <p className='row-start-4 lg:row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-7 col-span-4 lg:col-span-3 mb-6'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
 
-          {/* Team Overview */}
-          <div className='lg:col-start-4 col-span-6 w-full dividerBlack' />
-          <div ref={deptContainer} className='lg:col-start-4 col-span-6 w-full flex space-x-3 justify-between overflow-y-auto pb-3 relative no-scrollbar'>
-            { Departments.map((department, index) => (
-              <button 
-                ref={el => deptRef.current[index] = el} key={index} 
-                className={`${selectedDepartmentIdx === index ? 'buttonSelectionTimedSelected' : 'buttonSelection'} font-normal relative min-w-[8rem]`} 
-                onClick={() => setSelectedDepartmentIdx(index)}
-              >{department.title}</button>
-            )) }
-          </div>
-
-          <div className='lg:col-start-4 col-span-6 w-ful relative mb-8'>
-            { Departments.map((department, index) => (
-              <img key={index} src={department.image} alt='' className={` 
-                ${index === selectedDepartmentIdx ? 'opacity-100 z-20' : 'opacity-50 z-10'} 
-                w-full aspect-[600/260] mt-4 rounded-lg object-cover animate-fade-in absolute duration-500`} />
-            )) }
-            <div className='w-full relative aspect-[600/260] z-0 mt-8' />
-            <p ref={bottomRef} className='text-xs text-gray-600'>{Departments[selectedDepartmentIdx].desc}</p>
-          </div>
-
-          <div className='divider col-span-6 lg:col-start-2 lg:col-span-10' />
+          <Team departments={Departments} page='career' />
         </section>
 
         <section className='whiteBG'>

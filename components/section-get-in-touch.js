@@ -1,5 +1,4 @@
 export default function GetInTouch({number}) {
-  const copyrightText = '© Braga Technologies 2022';
   return (
     <section className='whiteBG bg-gradient-to-b from-gray-100 to-gray-100 bg-[0_100%] [background-size:100%_50%] bg-no-repeat'>
       <p className='bold mb-4 text-gray-800'>{number}</p>

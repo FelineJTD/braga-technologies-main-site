@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 import { Data01, CustStories } from '../config/cfg-geodashboard';
 
 // Components
-import GetInTouch from '../components/get-in-touch-section';
+import GetInTouch from '../components/section-get-in-touch';
 import PartnerLogos from '../components/partner-logos';
 import Carousel from '../components/carousel';
 

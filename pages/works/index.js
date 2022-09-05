@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react'
 import CardWorks from '../../components/card-works';
-import GetInTouch from '../../components/get-in-touch-section';
+import GetInTouch from '../../components/section-get-in-touch';
 
 export default function Works() {
   const works = [

@@ -1,30 +1,37 @@
 export const Departments = [{
   title: 'Management', 
   image: 'https://picsum.photos/200/300',
+  teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
   desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
 }, {
   title: 'Design', 
   image: 'https://picsum.photos/200/400',
+  teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
   desc: 'A team of Designers, Developers, and Product Managers alike. We work together to create beautiful, functional, and user-friendly products.',
 }, {
   title:'Development',
   image: 'https://picsum.photos/200/200',
+  teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
   desc: 'A team of Developers at work. We ensure that our products are functional and user-friendly.',
 }, {
   title: 'Technology',
   image: 'https://picsum.photos/200/500',
+  teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
   desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
 }, {
   title: 'Operation',
   image: 'https://picsum.photos/400/300',
+  teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
   desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
 }, {
   title: 'General Affairs',
   image: 'https://picsum.photos/200/600',
+  teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
   desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
 }, {
   title: 'Others',
   image: 'https://picsum.photos/200/100',
+  teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
   desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
 }];
 

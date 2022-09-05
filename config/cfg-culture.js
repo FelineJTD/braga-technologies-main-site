@@ -1,0 +1,1 @@
+export { Departments } from "./cfg-career"; // Departments is in cfg-career to avoid redundancy
