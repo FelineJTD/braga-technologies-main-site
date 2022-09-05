@@ -25,7 +25,7 @@ const WorksData = [
 ]
 
 for (let i = 0; i < 50; i++) {
-  Works.push({
+  WorksData.push({
     id: `${i}`,
     title: "Smiling Java / Event Portal",
     type: "Braga Enterprise",
