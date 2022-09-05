@@ -117,25 +117,38 @@ export default function Navbar() {
       </nav>
 
       {/* DESKTOP NAV */}
-      <nav id='nav' className='flex items-center justify-between w-full px-6 py-3 bg-white text-gray-600 bg-opacity-50 backdrop-blur sticky top-0 z-50 duration-200 selection:bg-primary selection:text-gray-50'>
+      <nav id='nav' className='flex items-center justify-between w-full px-6 py-3 bg-white text-gray-600 bg-opacity-50 backdrop-blur sticky top-0 z-50 duration-200 selection:bg-primary selection:text-gray-50 h-[60px]'>
         {/* Logo images might be redundant, can be combined with conditionals */}
         <Link href='/'><img src='/logo-braga-sm.svg' alt='Braga Technologies Logo' className='md:hidden h-5 cursor-pointer' onClick={closeMobileNav}/></Link>
         <Link href='/'><img src='/logo-braga-full.svg' alt='Braga Technologies Logo' className='hidden md:block h-5 cursor-pointer' /></Link>
-        <div className='justify-self-center space-x-6 hidden lg:block'>
+        <div className='justify-self-center items-center space-x-6 h-full hidden lg:flex'>
           <Link href='/'>
-            <a className={`${currPage === 'home' ? 'text-primary underline' : 'un'} text-sm`}>Home</a>
+            <a className={`${currPage === 'home' ? 'text-primary underline underline-offset-4' : 'un'} text-sm`}>Home</a>
           </Link>
           <Link href='/geodashboard'>
-            <a className={`${currPage === 'geodashboard' ? 'text-primary underline' : 'un'} text-sm`}>GeoDashboard</a>
+            <a className={`${currPage === 'geodashboard' ? 'text-primary underline underline-offset-4' : 'un'} text-sm`}>GeoDashboard</a>
           </Link>
           <Link href='/works'>
-            <a className={`${currPage === 'works' ? 'text-primary underline' : 'un'} text-sm`}>Works</a>
+            <a className={`${currPage === 'works' ? 'text-primary underline underline-offset-4' : 'un'} text-sm`}>Works</a>
           </Link>
-          <Link href='/company/culture'>
-            <a className={`${currPage === 'company' ? 'text-primary underline' : 'un'} text-sm`}>Company</a>
-          </Link>
+          <div className='relative h-full'>
+            <p className='opacity-0 text-sm relative z-10'>Company</p>
+            <div className='absolute -left-4 top-0 w-[calc(100%+32px)] min-h-[48px] max-h-[48px] hover:max-h-[10rem] duration-500 z-40 overflow-hidden flex flex-col'>
+              <Link href='/company/culture'>
+                <a className={`${currPage === 'company' ? 'text-primary underline underline-offset-4' : 'un'} left-0 top-0 text-sm mt-[7px] mb-[25%] mx-4`}>Company</a>
+              </Link>
+              <div className='flex flex-col space-y-2 mt-0.5 py-3 px-4 bg-white bg-opacity-50 backdrop-blur rounded-md'>
+                <Link href='/company/culture'>
+                  <a className='unThin text-sm'>Culture</a>
+                </Link>
+                <Link href='/company/career'>
+                  <a className='unThin text-sm'>Career</a>
+                </Link>
+              </div>
+            </div>
+          </div>
           <Link href='/contact'>
-            <a className={`${currPage === 'contact' ? 'text-primary underline' : 'un'} text-sm`}>Contact</a>
+            <a className={`${currPage === 'contact' ? 'text-primary underline underline-offset-4' : 'un'} text-sm`}>Contact</a>
           </Link>
         </div>
         <div className='flex'>
