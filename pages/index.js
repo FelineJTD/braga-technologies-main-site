@@ -114,8 +114,8 @@ export default function Home() {
         {/* 00 */}
         <section className='w-full h-[calc(100vh-2rem)] pt-12 text-center flex flex-col justify-between relative z-10'>
           <div className='flex items-center w-full flex-grow px-6 lg:px-[25vw] xl:px-[30vw]'>
-            <h1>
-              Answering <i>How</i>, by Understanding <span className='underline italic'>Where</span>
+            <h1 className='overflow-hidden'>
+              Answering <span className='italic animate-top-to-bottom'>How</span>, by Understanding <span className='underline italic animate-bottom-to-top'>Where</span>
             </h1>
           </div>
           <div className='flex flex-col items-center px-6 lg:px-[25vw] xl:px-[30vw] pb-12 bg-gradient-to-b from-transparent to-gray-50'>

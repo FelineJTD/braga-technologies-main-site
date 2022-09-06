@@ -64,11 +64,29 @@ module.exports = {
             transform: 'translateX(-0.1rem)',
           },
         },
+        'top-to-bottom': {
+          '0%': {
+            transform: 'translateY(2rem)',
+          },
+          '100%': {
+            transform: 'translateY(-2rem)',
+          },
+        },
+        'bottom-to-top': {
+          '0%': {
+            transform: 'translateY(-2rem)',
+          },
+          '100%': {
+            transform: 'translateY(2rem)',
+          },
+        },
       },
       animation: {
         'fade-in': 'fade-in 0.5s ease-in-out',
         'timeout': 'timeout 5s ease-in-out',
         'sideways': 'sideways 3s ease-in-out infinite',
+        'top-to-bottom': 'top-to-bottom 3s ease-out',
+        'bottom-to-top': 'bottom-to-top 3s ease-out',
       }
     },
   },
