@@ -121,20 +121,28 @@ export const Sectors = [
 export const Examples = [
   {
     "title": "Si-Pulau", 
+    "img": require('../assets/images/homepage/products/thumb-sipulau.png'),
     "desc": "Technologies that integrate, process, analyze, and visualize big data for your collective's solution.",
     "type": "GeoDashboard",
+    "link": "sipulau.big.go.id/map",
   }, {
     "title": "Fleet Management System",
+    "img": require('../assets/images/homepage/products/thumb-fleet.png'),
     "desc": "Technologies that integrate, process, analyze, and visualize big data for your collective's solution.",
     "type": "Enterprise",
+    "comingSoon": true,
   }, {
     "title": "Visitor Monitoring",
+    "img": require('../assets/images/homepage/products/thumb-visitor.png'),
     "desc": "Technologies that integrate, process, analyze, and visualize big data for your collective's solution.",
     "type": "Braga-AI",
+    "comingSoon": true,
   }, {
     "title": "West Java Tourism",
+    "img": require('../assets/images/homepage/products/thumb-tourism.png'),
     "desc": "Technologies that integrate, process, analyze, and visualize big data for your collective's solution..",
     "type": "GeoDashboard",
+    "link": "smilingevent.jabarprov.go.id/event-map",
   }
 ]
 
