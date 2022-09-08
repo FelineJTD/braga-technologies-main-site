@@ -93,7 +93,7 @@ export default function Home() {
           setIsVisible={setIsVisible2}
           type='car'
           color='primary'
-          className='top-36 md:top-[30%] right-[10%]'
+          className='top-36 md:top-[30%] right-[10%] delay-300'
         />
         <Fleet
           fleetNum={200}
@@ -109,7 +109,7 @@ export default function Home() {
           setIsVisible={setIsVisible4}
           type='bus'
           color='secondary'
-          className='bottom-64 md:bottom-[20%] right-[10%]'
+          className='bottom-64 md:bottom-[20%] right-[10%] delay-200'
         />
         {/* 00 */}
         <section className='w-full h-[calc(100vh-2rem)] pt-12 text-center flex flex-col justify-between relative z-10'>
@@ -208,7 +208,7 @@ export default function Home() {
                 <blockquote key={index} className='max-w-full px-0.5'>
                   <p className='font-tt-hoves font-bold text-2xl lg:text-3xl mb-6'>{quote.quote}</p>
                   <div className='flex space-x-3'>
-                    <div className='w-24 h-24 bg-gray-400'/>
+                    <Image src={quote.img} alt={'photo of' + quote.author} height={70} width={56} />
                     <p>{quote.author} <br /> {quote.author_title}</p>
                   </div>
                 </blockquote>

@@ -44,16 +44,19 @@ export const Features = [
 export const Quotes = [
   {
     "quote": "“The Framework will help countries in building capacity using geospatial technology ... to achieve a digital transformation, and bridge the digital divide”",
+    "img": require('../assets/images/homepage/quotes/anna-wellenstein.png'),
     "author": "Anna Wellenstein",
     "author_title": "Director, Land and Geospatial, World Bank.",
   }, {
-    "quote": "“The Framework will help countries in building capacity using geospatial technology ... to achieve a digital transformation, and bridge the digital divide”",
-    "author": "Anna Wellenstein 2",
-    "author_title": "Director, Land and Geospatial, World Bank.",
+    "quote": "“Transformasi Digital merupakan solusi tepat dan strategis untuk membawa Indonesia menuju masa depan”",
+    "img": require('../assets/images/homepage/quotes/joko-widodo.png'),
+    "author": "Ir. H. Joko Widodo",
+    "author_title": "President of Indonesia",
   }, {
-    "quote": "“The Framework will help countries in building capacity using geospatial technology ... to achieve a digital transformation, and bridge the digital divide”",
-    "author": "Anna Wellenstein 3",
-    "author_title": "Director, Land and Geospatial, World Bank.",
+    "quote": "“Geospatial information is a critical component of a national infrastructure and a blueprint of what happens where, with proven societal and economic value”",
+    "img": require('../assets/images/homepage/quotes/stefan-schweinfest.png'),
+    "author": "Stefan Schweinfest",
+    "author_title": "UN Department of Economic and Social Affairs",
   }
 ]
 
