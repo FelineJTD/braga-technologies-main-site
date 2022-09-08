@@ -205,11 +205,13 @@ export default function Home() {
           <Carousel>
             {
               Quotes.map((quote, index) => (
-                <blockquote key={index} className='min-w-full max-w-full px-0.5'>
+                <blockquote key={index} className='flex flex-col justify-between w-full max-w-full px-0.5'>
                   <p className='font-tt-hoves font-bold text-2xl lg:text-3xl mb-6'>{quote.quote}</p>
                   <div className='flex space-x-3'>
-                    <Image src={quote.img} alt={'photo of' + quote.author} height={70} width={56} />
-                    <p>{quote.author} <br /> {quote.author_title}</p>
+                    <div className='relative max-h-18 max-w-14 rounded-md flex-shrink-0 flex-grow-0'>
+                      <Image src={quote.img} alt={'photo of ' + quote.author} width={56} height={70} />
+                    </div>
+                    <p className='flex-shrink text-gray-600'><b>{quote.author}</b> <br /> {quote.author_title}</p>
                   </div>
                 </blockquote>
               ))
