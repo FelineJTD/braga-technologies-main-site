@@ -12,7 +12,7 @@ export default function CardSolution({solution, isDarkMode=false}) {
       <p className='text-sm'>{solution.desc}</p>
       <div className='min-h-[40px] flex-grow' />
       <div className='flex justify-between justify-self-end items-center space-x-3'>
-        <a href={solution.link || '#'}>
+        <a href={solution.link || '#'} target="_blank" rel='noreferrer noopener'>
           <button className={`border-[1px] ${isDarkMode? 'border-white enabled:hover:bg-white enabled:hover:text-black' : 'border-black enabled:hover:bg-black enabled:hover:text-white'} disabled:opacity-30 duration-300 whitespace-nowrap`} disabled={solution.comingSoon || false}>{solution.comingSoon? 'Coming Soon' : 'See Solution'}</button>
         </a>
         <p className='whitespace-nowrap'>{solution.type}</p>

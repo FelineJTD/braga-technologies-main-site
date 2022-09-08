@@ -152,7 +152,7 @@ export default function Navbar() {
           </Link>
         </div>
         <div className='flex'>
-          <a href='https://geodashboard.braga.co.id/' rel='noreferrer noopener'>
+          <a href='https://geodashboard.braga.co.id/' target='_blank' rel='noreferrer noopener'>
             <button className='buttonLight text-gray-900 bg-white bg-opacity-50'>
               Map Demo
             </button>
