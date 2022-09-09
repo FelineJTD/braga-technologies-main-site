@@ -183,13 +183,13 @@ export default function Home() {
           <div className='col-start-2 col-span-11 -ml-4'>
             <button 
               className='border-0 hover:text-primary duration-200' 
-              onClick={() => scroll(featureRef, -400)}
+              onClick={() => scroll(featureRef, -300)}
             >
               &lt;
             </button>
             <button 
               className='border-0 hover:text-primary duration-200'
-              onClick={() => scroll(featureRef, 400)}
+              onClick={() => scroll(featureRef, 300)}
             >
               &gt;
             </button>
