@@ -1,12 +1,17 @@
+/* eslint-disable @next/next/no-img-element */
 import Lottie from 'lottie-react'
 import Image from 'next/image'
 
 export default function CardSolution({solution, isDarkMode=false}) {
   return (
-    <div className={`snap-start flex flex-col space-y-2 w-full rounded-lg p-3 border-2 ${isDarkMode? 'border-gray-600' : 'border-gray-200'}`}>
-      <div className='relative bg-gray-100 w-full rounded-lg'>
+    <div className={`group snap-start lg:snap-none flex flex-col space-y-2 w-full rounded-lg p-3 border-2 ${isDarkMode? 'border-gray-600' : 'border-gray-200'}`}>
+      <div className={`${solution.animation?'bg-gray-100':'aspect-[263/120]'} relative w-full rounded-md overflow-hidden`}>
         {solution.animation && <Lottie animationData={solution.animation} loop />}
-        {solution.img && <Image src={solution.img} alt='' layout='fill' />}
+        {solution.img && 
+          <div className='group-hover:scale-110 duration-300 ease-in-out'>
+            <Image src={solution.img} alt='' width={263} height={120} layout='fixed' placeholder='blur' />
+          </div>
+        }
       </div>
       <h5>{solution.title}</h5>
       <p className='text-sm'>{solution.desc}</p>
