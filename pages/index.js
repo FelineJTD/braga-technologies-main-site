@@ -167,8 +167,10 @@ export default function Home() {
             <div className='lg:min-w-[7.5%] min-w-0 -ml-3 lg:ml-0 h-full' />
             { 
               Features.map((feature, index) => (
-                <div key={index} className='lg:snap-start flex border-2 border-gray-700 rounded-lg p-3 space-x-4 min-w-[30rem] lg:min-w-[35vw]'>
-                  <div className='bg-gray-700 h-full w-24 rounded-lg' />
+                <div key={index} className='lg:snap-start flex border-2 border-gray-700 rounded-lg p-3 space-x-4 min-w-[30rem] lg:min-w-[40vw]'>
+                  <div className='bg-gray-800 rounded-lg h-[68px] w-[68px] flex justify-center items-center flex-shrink-0'>
+                    <Image src={feature.img} alt='' height={56} width={56} objectPosition='center' />
+                  </div>
                   <div>
                     <h5 className='font-bold'>{feature.title}</h5>
                     <p className='text-sm'>{feature.desc}</p>

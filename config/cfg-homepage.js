@@ -34,12 +34,15 @@ export const Solutions = [
 export const Features = [
   {
     "title": "Spatial Range Calculation",
+    "img": require('../assets/images/homepage/features/pict-range.svg'),
     "desc": "Visualize multiple layers both vector and raster to perform a detailed, precise, and insightful analysis.",
   }, {
     "title": "Multi-Format Data Visualization",
+    "img": require('../assets/images/homepage/features/pict-dataviz.svg'),
     "desc": "Easily visualize data in point, polygon and polyline format. Inspect rich data display for each attribute.",
   }, {
     "title": "Bootstrap Approach",
+    "img": require('../assets/images/homepage/features/pict-bootstrap.svg'),
     "desc": "Created in no time through bootstrap. Get all the desired features, tailored to your needs.",
   }
 ]
