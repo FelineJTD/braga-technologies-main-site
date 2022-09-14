@@ -11,6 +11,7 @@ import {
 } from '../config/cfg-homepage'
 import BGLottie from '../assets/animations/homepage/bg-section-hero.json'
 import ScrollDown from '../assets/animations/homepage/scroll-down.json'
+import GeoDashboardAnimation from '../assets/animations/homepage/geodashboard.json'
 
 // Components
 import Head from 'next/head'
@@ -148,7 +149,9 @@ export default function Home() {
           <p className='col-span-3 col-start-7 lg:self-end mb-4'>Analyze site conditions, measure key urban indicators, and perform spatial analysis — directly in the browser.</p>
           <button className='col-span-2 lg:self-end mb-4'>GeoDashboard</button>
 
-          <div className='col-span-12 h-96 w-full bg-white my-6 rounded-xl' />
+          <div className='col-span-12 w-full aspect-[1362/625] my-6 rounded-xl'>
+            <Lottie animationData={GeoDashboardAnimation} loop={true} />
+          </div>
 
           <div id='features' className='col-start-1 col-span-12 flex space-x-3 overflow-auto w-full lg:snap-x no-scrollbar' ref={featureRef}>
             {/* spacer */}
