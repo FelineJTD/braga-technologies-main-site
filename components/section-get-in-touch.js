@@ -16,7 +16,7 @@ export default function GetInTouch({number}) {
   }, [isVisible1, isVisible2]);
 
   return (
-    <section className='whiteBG bg-gradient-to-b from-gray-100 to-gray-100 bg-[0_100%] [background-size:100%_50%] bg-no-repeat'>
+    <section className='whiteBG bg-gradient-to-b from-gray-100 to-gray-100 bg-[0_100%] [background-size:100%_96px] md:[background-size:100%_50%] bg-no-repeat'>
       <p className='bold mb-4 text-gray-800'>{number}</p>
       <div className='col-span-4'>
         <p className='mb-4 bold text-gray-800'>Get in Touch</p>
