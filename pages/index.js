@@ -27,7 +27,11 @@ import SectorsSection from '../components/section-sectors'
 export default function Home() {
   const featureRef = useRef();
   const examplesRef = useRef();
-  const width = typeof window !== 'undefined' ? window.innerWidth : 0;
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, [width]);
 
   // ** scroll **
   const scroll = (elementRef, scrollAmount) => {
