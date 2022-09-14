@@ -442,9 +442,9 @@ button {
 }
 
 .fleet1 {
-  @apply top-24 md:top-[10%] right-[10%];
+  @apply -top-4 md:top-[10%] right-[10%];
 }
 
 .fleet2 {
-  @apply bottom-24 md:bottom-[10%] left-[10%];
+  @apply -bottom-4 md:bottom-[10%] left-[10%];
 }

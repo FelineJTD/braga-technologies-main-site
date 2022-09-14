@@ -26,7 +26,7 @@ export default function GetInTouch({number}) {
       <button className='col-span-2 lg:self-end mb-4 border-black'>Contact Us</button>
 
 
-      <div className='relative col-start-2 col-span-10 h-96 w-full my-6'>
+      <div className='relative col-start-2 col-span-10 aspect-[312/156] w-full my-6'>
         <Image src='/shared/get-in-touch.png' alt='' layout='fill' objectFit='cover' objectPosition='center' style={{ borderRadius: '0.75rem' }}/>
         <Fleet
           fleetNum={120}
