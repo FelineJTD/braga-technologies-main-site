@@ -2,40 +2,35 @@
 // In this file: Departments, Benefits, Jobs, Testimonials, LastSectionImage
 
 export const Departments = [{
-  title: 'Management', 
+  title: 'Technology', 
   image: 'https://picsum.photos/200/300',
   teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
   desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
 }, {
-  title: 'Design', 
+  title: 'Managerial', 
   image: 'https://picsum.photos/200/400',
   teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
-  desc: 'A team of Designers, Developers, and Product Managers alike. We work together to create beautiful, functional, and user-friendly products.',
+  desc: 'Making sure that we move forward towards our goals and achieve our vision, The Chiefs, Compliances, Finances, and People and Culture supports everyone at Braga Technologies.',
 }, {
-  title:'Development',
+  title:'Strategic',
   image: 'https://picsum.photos/200/200',
   teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
-  desc: 'A team of Developers at work. We ensure that our products are functional and user-friendly.',
+  desc: 'Living the motto of "The biggest risk is not taking any risk", the Partnership and Strategic team is spearheading the path that Braga takes through their thoughtful decision makings.',
 }, {
-  title: 'Technology',
+  title: 'Design',
   image: 'https://picsum.photos/200/500',
   teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
-  desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
+  desc: 'This team of interdisciplinary creatives of visual communication and digital product designers creates compelling designs whether it is something on print or on screen.',
 }, {
   title: 'Operation',
   image: 'https://picsum.photos/400/300',
   teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
-  desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
+  desc: 'We examine data in new, helpful ways and make sure the people can gather data seamlessly.',
 }, {
-  title: 'General Affairs',
+  title: 'Product',
   image: 'https://picsum.photos/200/600',
   teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
-  desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
-}, {
-  title: 'Others',
-  image: 'https://picsum.photos/200/100',
-  teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
-  desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
+  desc: 'The Product team handles research and development and works closely with cross-functional teams to ensure that we create the best mapping experience out there!',
 }];
 
 export const Benefits = [
