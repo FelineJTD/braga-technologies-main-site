@@ -79,12 +79,12 @@ export default function Home() {
             fleetNum={120}
             isVisible={isVisible1}
             setIsVisible={setIsVisible1}
-            type='bus'
+            type='car'
             color='primary'
             className='top-24 md:top-[25%] left-[10%]'
           />
           <Fleet
-            fleetNum={124}
+            fleetNum={121}
             isVisible={isVisible2}
             setIsVisible={setIsVisible2}
             type='car'
@@ -92,15 +92,15 @@ export default function Home() {
             className='top-36 md:top-[30%] right-[10%] delay-300'
           />
           <Fleet
-            fleetNum={200}
+            fleetNum={122}
             isVisible={isVisible3}
             setIsVisible={setIsVisible3}
             type='car'
-            color='secondary'
+            color='primary'
             className='bottom-52 md:bottom-[28%] left-[15%]'
           />
           <Fleet
-            fleetNum={200}
+            fleetNum={120}
             isVisible={isVisible4}
             setIsVisible={setIsVisible4}
             type='bus'
@@ -164,7 +164,7 @@ export default function Home() {
 
           <div id='features' className='col-start-1 col-span-12 flex space-x-3 overflow-auto w-full lg:snap-x no-scrollbar' ref={featureRef}>
             {/* spacer */}
-            <div className='lg:min-w-[7.5%] min-w-0 -ml-3 lg:ml-0 h-full' />
+            <div className='snap-start lg:min-w-[7.5%] min-w-0 -ml-3 lg:ml-0 min-h-full' />
             { 
               Features.map((feature, index) => (
                 <div key={index} className='lg:snap-start flex border-2 border-gray-700 rounded-lg p-3 space-x-4 min-w-[30rem] lg:min-w-[40vw]'>
@@ -236,7 +236,7 @@ export default function Home() {
           <button className='col-span-2 lg:self-end mb-10'>Works</button>
 
           <div className='col-start-1 col-span-12 flex space-x-3 overflow-auto no-scrollbar w-full snap-x' ref={examplesRef}>
-          <div className='lg:min-w-[7.5%] min-w-0 -ml-3 lg:ml-0 h-full snap-start' />
+          <div className='lg:min-w-[7.5%] min-w-0 -ml-3 lg:ml-0 min-h-full snap-start' />
             {
               Examples.map((example, index) => (
                 <CardSolution solution={example} isDarkMode={true} key={index} />
