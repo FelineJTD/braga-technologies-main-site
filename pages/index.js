@@ -231,7 +231,7 @@ export default function Home() {
           <p className='col-span-3 col-start-7 lg:self-end mb-10'>Our interdisciplinary design and development approach accelerates the geospatial tech delivery to your hands.</p>
           <button className='col-span-2 lg:self-end mb-10'>Works</button>
 
-          <div className='col-start-1 col-span-12 flex space-x-3 overflow-auto no-scrollbar w-full snap-x' ref={examplesRef}>
+          <div className='col-start-1 col-span-12 flex space-x-3 overflow-auto no-scrollbar w-full' ref={examplesRef}>
           <div className='lg:min-w-[7.5%] min-w-0 -ml-3 lg:ml-0 h-full' />
             {
               Examples.map((example, index) => (
@@ -257,12 +257,12 @@ export default function Home() {
 
           <div className='col-start-2 col-span-10 mt-11'>
             <h4>What We Do</h4>
-            <div className='flex flex-col space-y-1 md:space-y-0 w-full md:grid grid-cols-2 px-0 gap-4 mt-8'>
+            <div className='flex flex-col space-y-1 md:space-y-0 w-full md:grid grid-cols-3 px-0 gap-4 mt-8'>
             {
               Services.map((service, index) => (
                 <div key={index} className='border-2 border-gray-600 rounded-lg p-3 w-full'>
                   <h5 className='font-bold'>{service.title}</h5>
-                  <p className='text-sm'>{service.desc}</p>
+                  <p className='text-sm text-gray-300'>{service.desc}</p>
                 </div>
               ))
             }
