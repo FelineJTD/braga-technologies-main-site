@@ -70,7 +70,7 @@ export default function Home() {
           <Lottie animationData={BGLottie} loop={true}/>
         </div>
         { width > 768 && (
-        <>
+        <div className='w-full h-full'>
           <Fleet
             fleetNum={120}
             isVisible={isVisible1}
@@ -103,7 +103,7 @@ export default function Home() {
             color='secondary'
             className='bottom-64 md:bottom-[20%] right-[10%] delay-200'
           />
-        </>
+        </div>
         )}
         {/* 00 */}
         <section className='w-full h-[calc(100vh-2rem)] pt-12 text-center flex flex-col justify-between relative z-10'>
@@ -231,8 +231,8 @@ export default function Home() {
           <p className='col-span-3 col-start-7 lg:self-end mb-10'>Our interdisciplinary design and development approach accelerates the geospatial tech delivery to your hands.</p>
           <button className='col-span-2 lg:self-end mb-10'>Works</button>
 
-          <div className='col-start-1 col-span-12 flex space-x-3 overflow-auto no-scrollbar w-full' ref={examplesRef}>
-          <div className='lg:min-w-[7.5%] min-w-0 -ml-3 lg:ml-0 h-full' />
+          <div className='col-start-1 col-span-12 flex space-x-3 overflow-auto no-scrollbar w-full snap-x' ref={examplesRef}>
+          <div className='lg:min-w-[7.5%] min-w-0 -ml-3 lg:ml-0 h-full snap-start' />
             {
               Examples.map((example, index) => (
                 <CardSolution solution={example} isDarkMode={true} key={index} />
