@@ -51,7 +51,7 @@ export default function Team({departments, page}) {
         { departments.map((department, index) => (
           <button 
             ref={el => deptRef.current[index] = el} key={index} 
-            className={`${selectedDepartmentIdx === index ? 'buttonSelectionTimedSelected' : 'buttonSelection'} font-normal relative min-w-[6rem]`} 
+            className={`${selectedDepartmentIdx === index ? 'buttonSelectionTimedSelected' : 'buttonSelection'} ${page === 'career' ? 'min-w-[6rem]' : 'min-w-[16%]'} font-normal relative`} 
             onClick={() => setSelectedDepartmentIdx(index)}
           >{department.title}</button>
         )) }
