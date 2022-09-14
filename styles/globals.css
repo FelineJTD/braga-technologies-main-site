@@ -440,3 +440,11 @@ button {
 .select-input {
   @apply rounded-lg pt-4 pb-[1.125rem] px-3 w-full bg-white border-[1px] border-gray-400 text-sm text-gray-600;
 }
+
+.fleet1 {
+  @apply top-24 md:top-[10%] right-[10%];
+}
+
+.fleet2 {
+  @apply bottom-24 md:bottom-[10%] left-[10%];
+}

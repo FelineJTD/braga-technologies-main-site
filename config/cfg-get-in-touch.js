@@ -1,0 +1,1 @@
+export const Img = require('/shared/get-in-touch.png');
