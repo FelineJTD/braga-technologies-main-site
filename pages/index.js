@@ -27,6 +27,7 @@ import SectorsSection from '../components/section-sectors'
 export default function Home() {
   const featureRef = useRef();
   const examplesRef = useRef();
+  const width = typeof window !== 'undefined' ? window.innerWidth : 0;
 
   // ** scroll **
   const scroll = (elementRef, scrollAmount) => {
@@ -68,38 +69,42 @@ export default function Home() {
         <div className='md:w-full w-auto h-[calc(100vh-2rem)] absolute -mt-8 z-0'>
           <Lottie animationData={BGLottie} loop={true}/>
         </div>
-        <Fleet
-          fleetNum={120}
-          isVisible={isVisible1}
-          setIsVisible={setIsVisible1}
-          type='bus'
-          color='primary'
-          className='top-24 md:top-[25%] left-[10%]'
-        />
-        <Fleet
-          fleetNum={124}
-          isVisible={isVisible2}
-          setIsVisible={setIsVisible2}
-          type='car'
-          color='primary'
-          className='top-36 md:top-[30%] right-[10%] delay-300'
-        />
-        <Fleet
-          fleetNum={200}
-          isVisible={isVisible3}
-          setIsVisible={setIsVisible3}
-          type='car'
-          color='secondary'
-          className='bottom-52 md:bottom-[28%] left-[15%]'
-        />
-        <Fleet
-          fleetNum={200}
-          isVisible={isVisible4}
-          setIsVisible={setIsVisible4}
-          type='bus'
-          color='secondary'
-          className='bottom-64 md:bottom-[20%] right-[10%] delay-200'
-        />
+        { width > 768 && (
+        <>
+          <Fleet
+            fleetNum={120}
+            isVisible={isVisible1}
+            setIsVisible={setIsVisible1}
+            type='bus'
+            color='primary'
+            className='top-24 md:top-[25%] left-[10%]'
+          />
+          <Fleet
+            fleetNum={124}
+            isVisible={isVisible2}
+            setIsVisible={setIsVisible2}
+            type='car'
+            color='primary'
+            className='top-36 md:top-[30%] right-[10%] delay-300'
+          />
+          <Fleet
+            fleetNum={200}
+            isVisible={isVisible3}
+            setIsVisible={setIsVisible3}
+            type='car'
+            color='secondary'
+            className='bottom-52 md:bottom-[28%] left-[15%]'
+          />
+          <Fleet
+            fleetNum={200}
+            isVisible={isVisible4}
+            setIsVisible={setIsVisible4}
+            type='bus'
+            color='secondary'
+            className='bottom-64 md:bottom-[20%] right-[10%] delay-200'
+          />
+        </>
+        )}
         {/* 00 */}
         <section className='w-full h-[calc(100vh-2rem)] pt-12 text-center flex flex-col justify-between relative z-10'>
           <div className='flex items-center w-full flex-grow px-6 lg:px-[25vw] xl:px-[30vw]'>
