@@ -80,6 +80,14 @@ module.exports = {
             transform: 'translateY(2rem)',
           },
         },
+        'progress-bar': {
+          '0%': {
+            width: '0%',
+          },
+          '100%': {
+            width: '90%',
+          },
+        }
       },
       animation: {
         'fade-in': 'fade-in 0.5s ease-in-out',
@@ -87,6 +95,7 @@ module.exports = {
         'sideways': 'sideways 3s ease-in-out infinite',
         'top-to-bottom': 'top-to-bottom 3s ease-out',
         'bottom-to-top': 'bottom-to-top 3s ease-out',
+        'progress-bar': 'progress-bar 5s linear',
       }
     },
   },
