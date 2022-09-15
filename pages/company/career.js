@@ -45,8 +45,8 @@ export default function Career() {
           <div className='col-start-4 col-span-6 grid grid-cols-2 md:grid-cols-3 gap-6'>
             {Benefits.map((benefit, index) => (
               <div key={index}>
-                <div className='h-12 w-12 rounded-lg bg-gray-100 mb-2'>
-                  <Image src={benefit.img} alt='' height={48} width={48}/>
+                <div className='h-16 w-16 rounded-lg bg-gray-100/30 mb-2'>
+                  <Image src={benefit.img} alt='' height={64} width={64}/>
                 </div>
                 <h5 className='mb-2'>{benefit.title}</h5>
                 <p className='text-sm text-gray-700'>{benefit.description}</p>
