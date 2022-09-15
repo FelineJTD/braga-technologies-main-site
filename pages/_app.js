@@ -30,8 +30,8 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       {/* LOADING */}
-      <div className={`${loading? 'translate-y-0' : '-translate-y-[100vh]'} absolute h-screen w-full bg-gray-50 z-50 duration-500 delay-[50ms]`}>
-        <div>This is Loading</div>
+      <div className={`${loading? 'translate-y-0' : '-translate-y-[100vh]'} absolute h-screen w-full bg-gray-50 z-50 duration-500 delay-[50ms] flex flex-col items-center justify-center`}>
+        <div>Navigating the world, one map at a time</div>
       </div>
 
       <Navbar />
