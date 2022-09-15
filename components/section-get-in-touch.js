@@ -24,8 +24,8 @@ export default function GetInTouch({number}) {
         <h2 className='mb-4'>Start Mapping Your Future, Today.</h2>
       </div>
       <p className='col-span-3 col-start-7 lg:self-end mb-4 text-gray-600'>Find out how you can maximize the value from data and strengthen your decision making.</p>
-      <Link href='/contact'><a>
-        <button className='col-span-2 lg:self-end mb-4 border-black'>Contact Us</button>
+      <Link href='/contact'><a className='col-span-2 lg:self-end mb-4'>
+        <button className='buttonLight'>Contact Us</button>
       </a></Link>
 
 
