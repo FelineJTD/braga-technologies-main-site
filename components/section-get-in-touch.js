@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Fleet from './fleet'
 import Image from 'next/image'
+import Link from 'next/link';
 
 export default function GetInTouch({number}) {
   const [isVisible1, setIsVisible1] = useState(true);
@@ -23,7 +24,9 @@ export default function GetInTouch({number}) {
         <h2 className='mb-4'>Start Mapping Your Future, Today.</h2>
       </div>
       <p className='col-span-3 col-start-7 lg:self-end mb-4 text-gray-600'>Find out how you can maximize the value from data and strengthen your decision making.</p>
-      <button className='col-span-2 lg:self-end mb-4 border-black'>Contact Us</button>
+      <Link href='/contact'><a>
+        <button className='col-span-2 lg:self-end mb-4 border-black'>Contact Us</button>
+      </a></Link>
 
 
       <div className='relative col-start-2 col-span-10 aspect-[312/156] w-full my-6'>

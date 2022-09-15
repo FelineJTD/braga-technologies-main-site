@@ -23,6 +23,7 @@ import Carousel from '../components/carousel'
 import GetInTouch from '../components/section-get-in-touch'
 import Fleet from '../components/fleet'
 import SectorsSection from '../components/section-sectors'
+import Link from 'next/link'
 
 export default function Home() {
   const featureRef = useRef();
@@ -156,7 +157,7 @@ export default function Home() {
             <h2 className='mb-4'>From seeing <i>where</i> to understand <u>why.</u></h2>
           </div>
           <p className='col-span-3 col-start-7 lg:self-end mb-4'>Analyze site conditions, measure key urban indicators, and perform spatial analysis — directly in the browser.</p>
-          <button className='col-span-2 lg:self-end mb-4'>GeoDashboard</button>
+          <Link href='/geodashboard'><a><button className='col-span-2 lg:self-end mb-4'>GeoDashboard</button></a></Link>
 
           <div className='col-span-12 w-full aspect-[1362/625] my-6 rounded-xl'>
             <Lottie animationData={GeoDashboardAnimation} loop={true} />
@@ -233,7 +234,7 @@ export default function Home() {
             <h2 className='mb-10'>Braga Solutions, Integrated to You.</h2>
           </div>
           <p className='col-span-3 col-start-7 lg:self-end mb-10'>Our interdisciplinary design and development approach accelerates the geospatial tech delivery to your hands.</p>
-          <button className='col-span-2 lg:self-end mb-10'>Works</button>
+          <Link href='/works'><a><button className='col-span-2 lg:self-end mb-10'>Works</button></a></Link>
 
           <div className='col-start-1 col-span-12 flex space-x-3 overflow-auto no-scrollbar w-full snap-x' ref={examplesRef}>
           <div className='lg:min-w-[7.5%] min-w-0 -ml-3 lg:ml-0 min-h-full snap-start' />
