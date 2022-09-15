@@ -118,7 +118,7 @@ export default function Home() {
             </h1>
           </div>
           <div className='flex flex-col items-center px-6 lg:px-[25vw] xl:px-[30vw] pb-12 bg-gradient-to-b from-transparent to-gray-50'>
-            <a href='#section1'>
+            <a href='#solutions'>
               <div className='h-6 w-6'>
                 <Lottie animationData={ScrollDown} loop={true} />
               </div>
@@ -133,7 +133,7 @@ export default function Home() {
         <PartnerLogos />
 
         {/* 01 */}
-        <section id='section1' className='whiteBG relative z-20'>
+        <section id='solutions' className='whiteBG relative z-20'>
           <p className='bold mb-4'>01.</p>
           <div className='col-span-4'>
             <p className='mb-4 bold'>Powered by Braga</p>
