@@ -11,19 +11,14 @@ function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-      const handleStart = (url) => (url !== router.asPath) && setLoading(true);
-      const handleComplete = (url) => (url === router.asPath) && setTimeout(() =>{setLoading(false)},5000);
-
-      router.events.on('routeChangeStart', handleStart)
-      router.events.on('routeChangeComplete', handleComplete)
-      router.events.on('routeChangeError',  handleComplete)
-
-      return () => {
-          router.events.off('routeChangeStart', handleStart)
-          router.events.off('routeChangeComplete', handleComplete)
-          router.events.off('routeChangeError', handleComplete)
-      }
-  })
+    const handleStart = () => { setLoading(true); };
+    const handleComplete = () => {
+             setLoading(false);
+    };
+    router.events.on('routeChangeStart', handleStart);
+    router.events.on('routeChangeComplete', handleComplete);
+    router.events.on('routeChangeError', handleComplete);
+  }, [router]);
 
   return (
     <>
@@ -35,13 +30,13 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       {/* LOADING */}
-      <div className={`${loading? 'translate-y-0' : '-translate-y-[100vh]'} absolute h-screen w-full bg-gray-50 z-50 duration-100`}>
+      <div className={`${loading? 'translate-y-0' : '-translate-y-[100vh]'} absolute h-screen w-full bg-gray-50 z-50 duration-500 delay-[50ms]`}>
         <div>This is Loading</div>
       </div>
 
       <Navbar />
       <main className='w-full min-h-screen bg-gray-50 selection:bg-primary selection:text-gray-50 accent-primary'>
-        <div className={`${loading? 'min-h-[16vh]' : 'min-h-0'} duration-500 w-full`}/>
+        <div className={`${loading? 'min-h-[16vh]' : 'min-h-0'} duration-500 delay-100 w-full`} />
         <Component {...pageProps} />
       </main>
       <Footer />
