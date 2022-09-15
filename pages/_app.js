@@ -9,16 +9,31 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [loadingCopy, setLoadingCopy] = useState('Navigating the world, one map at a time.');
 
   useEffect(() => {
     const handleStart = () => { setLoading(true); };
     const handleComplete = () => {
-             setLoading(false);
+      setLoading(false);
     };
     router.events.on('routeChangeStart', handleStart);
     router.events.on('routeChangeComplete', handleComplete);
     router.events.on('routeChangeError', handleComplete);
   }, [router]);
+
+  useEffect(() => {
+    const alt_copies = [
+      'Navigating the world, one map at a time.',
+      'GIS is waking up the world to the power of geography.',
+      'Geographers never get lost. We just do accidental field work.',
+      '“I am the earth in the palm of your hands” – A Map',
+    ]
+    if (!loading) {
+      setTimeout(() => {
+        setLoadingCopy(alt_copies[Math.floor(Math.random() * alt_copies.length)]);
+      }, 500);
+    }
+  }, [loading]);
 
   return (
     <>
@@ -31,7 +46,7 @@ function MyApp({ Component, pageProps }) {
 
       {/* LOADING */}
       <div className={`${loading? 'translate-y-0' : '-translate-y-[100vh]'} absolute h-screen w-full bg-gray-50 z-50 duration-500 delay-[50ms] flex flex-col items-center justify-center`}>
-        <p className='text-xs text-gray-700 mb-3'>Navigating the world, one map at a time</p>
+        <p className='text-xs text-gray-700 mb-3'>{loadingCopy}</p>
         <div className='relative h-0.5 w-full bg-gray-100'>
           <div className={`${loading? 'animate-progress-bar' : 'w-full'} absolute top-0 h-0.5 bg-gray-300 duration-100`} />
         </div>
