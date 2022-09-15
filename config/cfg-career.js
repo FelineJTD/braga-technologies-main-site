@@ -37,36 +37,43 @@ export const Benefits = [
 {
   title: 'Paid Leaves',
   description: 'Take the benefit of taking day off regardless of your needs.',
+  img: require('../assets/images/company/career/benefits/img-leave.svg'),
 },
 {
   title: 'Stuctured Flexible Hours',
   description: 'Set your prefered working hours while keeping your work-life boundaries with building-blocks system!',
+  img: require('../assets/images/company/career/benefits/img-flex.svg'),
 },
 {
   title: 'Healthcare',
   description: 'We look after your physical and mental health through uur self-managed health insurance system.',
+  img: require('../assets/images/company/career/benefits/img-health.svg'),
 },
 {
   title: 'Office Lunch',
   description: 'Hungry tummy won’t distract you, buddy, while you work in-office on working days!',
+  img: require('../assets/images/company/career/benefits/img-lunch.svg'),
 },
 {
   title: 'Financial Security',
   description: 'Our Soft Loan with, no interest, 0% fee and adjustable installment migh help you in times of needs.',
+  img: require('../assets/images/company/career/benefits/img-secure.svg'),
 },
 {
   title: 'Self Development',
   description: 'Embark in career paths, learning materials, and our self-development activities.',
+  img: require('../assets/images/company/career/benefits/img-self.svg'),
 },
 {
   title: 'Family Frendly',
   description: 'For the newlyweds to moms and dads, enjoy our familial allowance, benefits and support!',
+  img: require('../assets/images/company/career/benefits/img-family.svg'),
 },
 {
   title: 'Have Fun!',
   description: 'Recreational activities like games and trips across the beautiful city-of-flowers, what’s not to love?!',
-},
-];
+  img: require('../assets/images/company/career/benefits/img-fun.svg'),
+}];
 
 export const Jobs = [
 {
