@@ -120,7 +120,7 @@ export const Forms = [
     submitLabel: 'Send',
   },
   {
-    title: 'General Affair',
+    title: 'Human Resources',
     info: 'We\'d love to extend our knowledge to everyone beyond ourselves. We hold sharing sessions and discussions based on our expertise to advocate for Geospatial tech.',
     form: [
       {
