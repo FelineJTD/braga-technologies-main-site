@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
     if (!loading && hasTimeElapsed) {
       setTimeout(() => {
         setLoadingCopy(alt_copies[Math.floor(Math.random() * alt_copies.length)]);
-      }, 500);
+      }, 700);
     }
   }, [loading, hasTimeElapsed]);
 
@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       {/* LOADING */}
-      <div className={`${loading || !hasTimeElapsed? 'translate-y-0' : '-translate-y-[100vh] '} absolute h-screen w-full bg-gray-50 z-50 duration-500 flex flex-col items-center justify-center`}>
+      <div className={`${loading || !hasTimeElapsed? 'translate-y-0 duration-500' : '-translate-y-[100vh] duration-700'} absolute h-screen w-full bg-gray-50 z-50 flex flex-col items-center justify-center`}>
         <p className='text-xs text-gray-700 mb-3'>{loadingCopy}</p>
         <div className='relative h-0.5 w-full bg-gray-100'>
           <div className={`${loading || !hasTimeElapsed? 'animate-progress-bar' : 'w-full'} absolute top-0 h-0.5 bg-gray-300 duration-100`} />
@@ -63,7 +63,7 @@ function MyApp({ Component, pageProps }) {
 
       <Navbar />
       <main className='w-full min-h-screen bg-gray-50 selection:bg-primary selection:text-gray-50 accent-primary'>
-        <div className={`${loading || !hasTimeElapsed? 'min-h-[16vh]' : 'min-h-0'} duration-500 delay-100 w-full`} />
+        <div className={`${loading || !hasTimeElapsed? 'min-h-[16vh]' : 'min-h-0'} duration-700 delay-100 w-full`} />
         <Component {...pageProps} />
       </main>
       <Footer />
