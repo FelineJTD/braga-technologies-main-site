@@ -99,14 +99,20 @@ export default function Navbar() {
         <Link href='/'>
           <a className={`${currPage === 'home' ? 'text-primary underline' : ''} text-lg`} onClick={closeMobileNav}>Home</a>
         </Link>
-        <Link href='/geodashboard'>
-          <a className={`${currPage === 'geodashboard' ? 'text-primary underline' : ''} text-lg`} onClick={closeMobileNav}>GeoDashboard</a>
-        </Link>
-        <Link href='/works'>
-          <a className={`${currPage === 'works' ? 'text-primary underline' : ''} text-lg`} onClick={closeMobileNav}>Works</a>
-        </Link>
+        {/* <Link href='/geodashboard'> */}
+          <p className={`${currPage === 'geodashboard' ? 'text-primary underline' : ''} opacity-50 text-lg`} onClick={closeMobileNav}>GeoDashboard</p>
+        {/* </Link> */}
+        {/* <Link href='/works'> */}
+          <p className={`${currPage === 'works' ? 'text-primary underline' : ''} opacity-50 text-lg`} onClick={closeMobileNav}>Works</p>
+        {/* </Link> */}
+        {/* <Link href='/company/culture'> */}
+          <p className={`${currPage === 'company' ? 'text-primary underline' : ''} text-lg`} onClick={closeMobileNav}>Company</p>
+        {/* </Link> */}
         <Link href='/company/culture'>
-          <a className={`${currPage === 'company' ? 'text-primary underline' : ''} text-lg`} onClick={closeMobileNav}>Company</a>
+          <a className="text-base" onClick={closeMobileNav}>Culture</a>
+        </Link>
+        <Link href='/company/career'>
+          <a className="text-base" onClick={closeMobileNav}>Career</a>
         </Link>
         <Link href='/contact'>
           <a className={`${currPage === 'contact' ? 'text-primary underline' : ''} text-lg`} onClick={closeMobileNav}>Contact</a>
@@ -125,12 +131,12 @@ export default function Navbar() {
           <Link href='/'>
             <a className={`${currPage === 'home' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : 'unThin'} text-sm`}>Home</a>
           </Link>
-          <Link href='/geodashboard'>
-            <a className={`${currPage === 'geodashboard' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : 'unThin'} text-sm`}>GeoDashboard</a>
-          </Link>
-          <Link href='/works'>
-            <a className={`${currPage === 'works' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : 'unThin'} text-sm`}>Works</a>
-          </Link>
+          {/* <Link href='/geodashboard'> */}
+            <p className={`${currPage === 'geodashboard' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : ''} opacity-50 text-sm`}>GeoDashboard</p>
+          {/* </Link> */}
+          {/* <Link href='/works'> */}
+            <p className={`${currPage === 'works' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : ''} opacity-50 text-sm`}>Works</p>
+          {/* </Link> */}
           <div className='relative h-full'>
             <p className='opacity-0 text-sm relative z-10'>Company</p>
             <div className='absolute -left-4 top-0 w-[calc(100%+32px)] min-h-[48px] max-h-[48px] hover:max-h-[10rem] duration-500 z-40 overflow-hidden flex flex-col'>

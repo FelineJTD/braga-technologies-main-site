@@ -95,7 +95,7 @@ module.exports = {
         'sideways': 'sideways 3s ease-in-out infinite',
         'top-to-bottom': 'top-to-bottom 3s ease-out',
         'bottom-to-top': 'bottom-to-top 3s ease-out',
-        'progress-bar': 'progress-bar 5s linear',
+        'progress-bar': 'progress-bar 3s linear',
       }
     },
   },

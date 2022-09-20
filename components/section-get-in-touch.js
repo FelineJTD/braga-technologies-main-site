@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Fleet from './fleet'
 import Image from 'next/image'
 import Link from 'next/link';
+import { Img } from '../config/cfg-get-in-touch';
 
 export default function GetInTouch({number}) {
   const [isVisible1, setIsVisible1] = useState(true);
@@ -30,7 +31,7 @@ export default function GetInTouch({number}) {
 
 
       <div className='relative col-start-2 col-span-10 aspect-[312/156] w-full my-6'>
-        <Image src='/shared/get-in-touch.png' alt='' layout='fill' objectFit='cover' objectPosition='center' style={{ borderRadius: '0.75rem' }}/>
+        <Image src={Img} alt='' layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' style={{ borderRadius: '0.75rem' }}/>
         <Fleet
           fleetNum={120}
           isVisible={isVisible1}

@@ -1,1 +1,1 @@
-export const Img = require('/shared/get-in-touch.png');
+export const Img = require('../assets/images/shared/get-in-touch.png');
