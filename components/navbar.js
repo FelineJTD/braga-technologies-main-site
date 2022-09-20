@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 export default function Navbar() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [currPage, setCurrPage] = useState('');
+  const [currPath, setCurrPath] = useState('');
 
   // router
   const router = useRouter();
@@ -13,6 +14,7 @@ export default function Navbar() {
   // TODO: change to split on / and get the first element
   useEffect(() => {
     const currPath = router.pathname;
+    setCurrPath(currPath);
     if (currPath === '/') {
       setCurrPage('home');
     } else if (currPath.substring(0,13) === '/geodashboard') {
@@ -129,32 +131,32 @@ export default function Navbar() {
         <Link href='/'><img src='/logo-braga-full.svg' alt='Braga Technologies Logo' className='hidden md:block h-5 cursor-pointer' /></Link>
         <div className='justify-self-center items-center space-x-6 h-full hidden lg:flex'>
           <Link href='/'>
-            <a className={`${currPage === 'home' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : 'unThin'} text-sm`}>Home</a>
+            <a className={`${currPage === 'home' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px] pointer-events-none' : 'unThin'} text-sm`}>Home</a>
           </Link>
           {/* <Link href='/geodashboard'> */}
-            <p className={`${currPage === 'geodashboard' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : ''} opacity-50 text-sm`}>GeoDashboard</p>
+            <p className={`${currPage === 'geodashboard' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px] pointer-events-none' : ''} opacity-50 text-sm`}>GeoDashboard</p>
           {/* </Link> */}
           {/* <Link href='/works'> */}
-            <p className={`${currPage === 'works' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : ''} opacity-50 text-sm`}>Works</p>
+            <p className={`${currPage === 'works' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : ''} ${currPath === '/works'? 'pointer-events-none' : ''} opacity-50 text-sm`}>Works</p>
           {/* </Link> */}
           <div className='relative h-full'>
             <p className='opacity-0 text-sm relative z-10'>Company</p>
             <div className='absolute -left-4 top-0 w-[calc(100%+32px)] min-h-[48px] max-h-[48px] hover:max-h-[10rem] duration-500 z-40 overflow-hidden flex flex-col'>
               <Link href='/company/culture'>
-                <a className={`${currPage === 'company' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : 'unThin'} left-0 top-0 text-sm mt-[7px] mb-[25%] mx-4`}>Company</a>
+                <a className={`${currPage === 'company' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : 'unThin'}  ${currPath === '/company/culture'? 'pointer-events-none' : ''} left-0 top-0 text-sm mt-[7px] mb-[25%] mx-4`}>Company</a>
               </Link>
               <div className='flex flex-col space-y-2 mt-0.5 py-3 px-4 bg-white bg-opacity-50 backdrop-blur rounded-md'>
                 <Link href='/company/culture'>
-                  <a className='unThin text-sm'>Culture</a>
+                  <a className={`${currPath === '/company/culture'? 'pointer-events-none' : ''} unThin text-sm`}>Culture</a>
                 </Link>
                 <Link href='/company/career'>
-                  <a className='unThin text-sm'>Career</a>
+                  <a className={`${currPath === '/company/career'? 'pointer-events-none' : ''} unThin text-sm`}>Career</a>
                 </Link>
               </div>
             </div>
           </div>
           <Link href='/contact'>
-            <a className={`${currPage === 'contact' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : 'unThin'} text-sm`}>Contact</a>
+            <a className={`${currPage === 'contact' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px] pointer-events-none' : 'unThin'} text-sm`}>Contact</a>
           </Link>
         </div>
         <div className='flex'>
