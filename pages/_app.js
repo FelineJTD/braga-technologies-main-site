@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
       setHasTimeElapsed(false);
       setTimeout(() => {
         setHasTimeElapsed(true);
-      }, 1000);
+      }, 2000);
     }
   }, [loading]);
 
