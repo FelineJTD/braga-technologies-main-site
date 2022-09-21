@@ -74,14 +74,18 @@ export default function JobsSection({jobs}) {
         <div className='flex space-x-3'>
           { currTypeTags.map((tag, index) => (
             <div key={index} className='flex items-center rounded-lg border-gray-400 border-[1px] px-3'>
+              <button className='buttonPlain ml-2 text-sm duration-300 hover:rotate-90' onClick={() => handleTagClick(tag, 'type')}>
+                <Image src='/shared/icon-cross.svg' alt='cross icon' width={10} height={10} />
+              </button>
               <p className='text-sm'>{tag}</p>
-              <button className='buttonPlain ml-2 text-sm hover:text-primary duration-300' onClick={() => handleTagClick(tag, 'type')}>x</button>
             </div>
           ))}
           { currWorkplaceTags.map((tag, index) => (
             <div key={index} className='flex items-center rounded-lg border-gray-400 border-[1px] px-3'>
+              <button className='buttonPlain ml-2 text-sm duration-300 hover:rotate-90' onClick={() => handleTagClick(tag, 'workplace')}>
+                <Image src='/shared/icon-cross.svg' alt='cross icon' width={10} height={10} />
+              </button>
               <p className='text-sm'>{tag}</p>
-              <button className='buttonPlain ml-2 text-sm hover:text-primary duration-300' onClick={() => handleTagClick(tag, 'workplace')}>x</button>
             </div>
           ))}
         </div>
