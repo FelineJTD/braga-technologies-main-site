@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect } from 'react';
 import Image from 'next/image'
+import JobOptions from './cmp-job-options';
 
 export default function JobsSection({jobs}) {
   const [currJobs, setCurrJobs] = useState(jobs);
@@ -8,6 +9,24 @@ export default function JobsSection({jobs}) {
   const [currTypeTags, setCurrTypeTags] = useState([]);
 
   const [isOpen, setIsOpen] = useState(true);
+
+  const Options = [
+    {
+      title: 'Type',
+      options: [
+        'Full Time',
+        'Part Time',
+        'Project Based',
+      ]
+    }, {
+      title: 'Location',
+      options: [
+        'Hybrid',
+        'Remote',
+        'On Site',
+      ]
+    }
+  ]
 
   useEffect(() => {
     if (currTypeTags.length === 0 && currWorkplaceTags.length === 0) {
@@ -40,14 +59,14 @@ export default function JobsSection({jobs}) {
   }, [currTypeTags, jobs]);
 
   const handleTagClick = (tag, type) => {
-    if (type === 'workplace' && currWorkplaceTags.includes(tag)) {
+    if (type === 'Location' && currWorkplaceTags.includes(tag)) {
       setCurrWorkplaceTags(currWorkplaceTags.filter((currTag) => currTag !== tag));
-    } else if (type === 'type' && currTypeTags.includes(tag)) {
+    } else if (type === 'Type' && currTypeTags.includes(tag)) {
       setCurrTypeTags(currTypeTags.filter((currTag) => currTag !== tag));
     } else {
-      if (type === 'workplace') {
+      if (type === 'Location') {
         setCurrWorkplaceTags([...currWorkplaceTags, tag])
-      } else if (type === 'type') {
+      } else if (type === 'Type') {
         setCurrTypeTags([...currTypeTags, tag]);
       }
     }
@@ -64,43 +83,30 @@ export default function JobsSection({jobs}) {
         <Image src='/navbar/ic-arrow-left.svg' alt='drop down icon' width={20} height={20} />
       </button>
 
-      <div className='flex space-x-3 py-3 col-start-2 col-span-10 w-full border-y-[1px] border-gray-600 my-10'>
+      <div className='flex  py-3 col-start-2 col-span-10 w-full border-y-[1px] border-gray-600 my-10'>
 
-        <button className='flex buttonFilter font-normal fontVarNormal'>
-          <p className='text-sm mr-2'>Type</p>
-          <div className='duration-300'>
-            <Image src='/shared/ic-arrow-down.svg' alt='arrow icon' width={20} height={20} />
-          </div>
-        </button>
-
-        <button className='flex buttonFilter font-normal fontVarNormal'>
-          <p className='text-sm mr-2'>Location</p>
-          <div className='duration-300'>
-            <Image src='/shared/ic-arrow-down.svg' alt='arrow icon' width={20} height={20} />
-          </div>
-        </button>
-
-        <button className='buttonFilter font-normal fontVarNormal' onClick={() => handleTagClick('Full Time', 'type')}>Full Time</button>
-        <button className='buttonFilter font-normal fontVarNormal' onClick={() => handleTagClick('Remote', 'workplace')}>Remote</button>
+        { Options.map((option, index) => (
+          <JobOptions key={index} option={option} currTypeTags={currTypeTags} currWorkplaceTags={currWorkplaceTags} handleTagClick={handleTagClick} />
+        ))}
 
         {/* DIVIDER */}
-        <div className='min-h-full w-[1px] bg-gray-600 rounded-lg' />
+        <div className='min-h-full w-[1px] bg-gray-600 rounded-lg mr-3' />
 
-        <div className='flex space-x-3'>
+        <div className='flex space-x-3 overflow-auto'>
           { currTypeTags.map((tag, index) => (
-            <div key={index} className='flex items-center rounded-lg border-gray-400 border-[1px] px-3'>
-              <button className='buttonPlain duration-300 hover:rotate-90' onClick={() => handleTagClick(tag, 'type')}>
+            <div key={index} className='flex items-center rounded-lg border-gray-800 border-[1px] px-3'>
+              <button className='buttonPlain duration-300 h-5 w-5 hover:rotate-90 !py-0' onClick={() => handleTagClick(tag, 'Type')}>
                 <Image src='/shared/ic-cross.svg' alt='cross icon' width={20} height={20} />
               </button>
-              <p className='text-sm ml-2'>{tag}</p>
+              <p className='text-sm ml-2 whitespace-nowrap'>{tag}</p>
             </div>
           ))}
           { currWorkplaceTags.map((tag, index) => (
-            <div key={index} className='flex items-center rounded-lg border-gray-400 border-[1px] px-3'>
-              <button className='buttonPlain duration-300 hover:rotate-90' onClick={() => handleTagClick(tag, 'workplace')}>
+            <div key={index} className='flex items-center rounded-lg border-gray-800 border-[1px] px-3'>
+              <button className='buttonPlain duration-300 h-5 w-5 hover:rotate-90 !py-0' onClick={() => handleTagClick(tag, 'Location')}>
                 <Image src='/shared/ic-cross.svg' alt='cross icon' width={20} height={20} />
               </button>
-              <p className='text-sm ml-2'>{tag}</p>
+              <p className='text-sm ml-2 whitespace-nowrap'>{tag}</p>
             </div>
           ))}
         </div>
