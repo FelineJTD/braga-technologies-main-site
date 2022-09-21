@@ -46,7 +46,7 @@ export const Benefits = [
 },
 {
   title: 'Healthcare',
-  description: 'We look after your physical and mental health through uur self-managed health insurance system.',
+  description: 'We look after your physical and mental health through our self-managed health insurance system.',
   img: require('../assets/images/company/career/benefits/img-health.svg'),
 },
 {
@@ -65,7 +65,7 @@ export const Benefits = [
   img: require('../assets/images/company/career/benefits/img-self.svg'),
 },
 {
-  title: 'Family Frendly',
+  title: 'Family Friendly',
   description: 'For the newlyweds to moms and dads, enjoy our familial allowance, benefits and support!',
   img: require('../assets/images/company/career/benefits/img-family.svg'),
 },
