@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image'
 import JobOptions from './cmp-job-options';
+import Link from 'next/link';
 
 export default function JobsSection({jobs}) {
   const [currJobs, setCurrJobs] = useState(jobs);
@@ -116,7 +117,15 @@ export default function JobsSection({jobs}) {
       <div className={`${isOpen? 'max-h-fit' : 'max-h-0'} duration-500 col-start-2 col-span-10 overflow-hidden`}>
         {
         currJobs.length === 0 ?
-          <p className='col-start-2 col-span-10'>No jobs found</p>
+          <div className='relative flex space-x-8 w-full border-[1px] border-gray-300 rounded-lg p-8 items-center'>
+            <div className='aspect-[2/1] w-1/2 relative'>
+              <Image src='/company/empty-state.svg' alt='' height='100%' layout='fill' />
+            </div>
+            <div className='w-1/2 pr-8'>
+              <h2 className='mb-3'>No current vacancies available at this time.</h2>
+              <p>We’ll share the news as soon as they become available. In the mean time, reach us out for other opportunities <Link href='/contact'><a className='unPrimary text-primary'>here</a></Link>.</p>
+            </div>
+          </div>
         : currJobs.map((job, index) => (
           <div key={index} className='flex space-x-4 w-full mb-6 p-3 rounded-lg border-[1px] border-gray-300 hover:border-gray-500 hover:shadow-md hover:bg-white duration-200 cursor-pointer'>
             <img src={job.img} alt='' className='h-full w-28 rounded-lg object-cover' />
