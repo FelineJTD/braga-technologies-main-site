@@ -85,7 +85,7 @@ export default function JobsSection({jobs}) {
       </button>
 
       <div className={`${isOpen? 'max-h-fit' : 'max-h-0'} duration-500 col-start-2 col-span-10 overflow-hidden`}>
-        <div className='flex py-3 w-full border-y-[1px] border-gray-600 my-10'>
+        <div className='flex py-3 w-full border-y-[1px] border-gray-600 my-10 overflow-auto'>
 
           { Options.map((option, index) => (
             <JobOptions key={index} option={option} currTypeTags={currTypeTags} currWorkplaceTags={currWorkplaceTags} handleTagClick={handleTagClick} />
