@@ -1,7 +1,7 @@
 import BusIcon from '../assets/images/homepage/icon-bus'
 import CarIcon from '../assets/images/homepage/icon-car'
 
-export default function Fleet({fleetNum, isVisible, setIsVisible, type, color, className}) {
+export default function Chip({fleetNum, isVisible, setIsVisible, type, color, className}) {
   return (
     <div className={`${!isVisible? 'fleet-invis' : 'fleet'} ${color === 'primary'? 'fleet-bg-primary' : 'fleet-bg-secondary'} flex absolute px-3 py-2 border-[1px] border-gray-400 hover:border-gray-800 rounded-lg bg-gray-50 z-20 shadow-sm animate-sideways ${className}`} onClick={() => setIsVisible(false)}>
       { type === 'bus' ? 

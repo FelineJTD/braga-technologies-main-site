@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect } from 'react';
-import Fleet from './fleet'
+import Chip from './cmp-chip'
 import Image from 'next/image'
 import Link from 'next/link';
 import { Img } from '../config/cfg-get-in-touch';
@@ -32,7 +32,7 @@ export default function GetInTouch({number}) {
 
       <div className='relative col-start-2 col-span-10 aspect-[312/156] w-full my-6'>
         <Image src={Img} alt='' layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' style={{ borderRadius: '0.75rem' }}/>
-        <Fleet
+        <Chip
           fleetNum={120}
           isVisible={isVisible1}
           setIsVisible={setIsVisible1}
@@ -40,7 +40,7 @@ export default function GetInTouch({number}) {
           color='primary'
           className='fleet1'
         />
-        <Fleet
+        <Chip
           fleetNum={122}
           isVisible={isVisible2}
           setIsVisible={setIsVisible2}

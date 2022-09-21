@@ -21,7 +21,7 @@ import PartnerLogos from '../components/section-partner-logos'
 import CardSolution from '../components/card-solution'
 import Carousel from '../components/carousel'
 import GetInTouch from '../components/section-get-in-touch'
-import Fleet from '../components/fleet'
+import Chip from '../components/cmp-chip'
 import SectorsSection from '../components/section-sectors'
 import Link from 'next/link'
 
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
         { width > 768 && (
         <div className='w-full h-full'>
-          <Fleet
+          <Chip
             fleetNum={120}
             isVisible={isVisible1}
             setIsVisible={setIsVisible1}
@@ -84,7 +84,7 @@ export default function Home() {
             color='primary'
             className='top-24 md:top-[25%] left-[10%]'
           />
-          <Fleet
+          <Chip
             fleetNum={121}
             isVisible={isVisible2}
             setIsVisible={setIsVisible2}
@@ -92,7 +92,7 @@ export default function Home() {
             color='primary'
             className='top-36 md:top-[30%] right-[10%] delay-300'
           />
-          <Fleet
+          <Chip
             fleetNum={122}
             isVisible={isVisible3}
             setIsVisible={setIsVisible3}
@@ -100,7 +100,7 @@ export default function Home() {
             color='primary'
             className='bottom-52 md:bottom-[28%] left-[15%]'
           />
-          <Fleet
+          <Chip
             fleetNum={120}
             isVisible={isVisible4}
             setIsVisible={setIsVisible4}
