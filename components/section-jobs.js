@@ -63,34 +63,50 @@ export default function JobsSection({jobs}) {
       <button className='self-end border-gray-600 hover:bg-gray-200 duration-200 w-12 h-10 p-0 justify-self-end' onClick={() => setIsOpen(!isOpen)}>
         <Image src='/navbar/ic-arrow-left.svg' alt='drop down icon' width={20} height={20} />
       </button>
+
       <div className='flex space-x-3 py-3 col-start-2 col-span-10 w-full border-y-[1px] border-gray-600 my-10'>
-        <button className='buttonFilter font-normal fontVarNormal'>Type</button>
+
+        <button className='flex buttonFilter font-normal fontVarNormal'>
+          <p className='text-sm mr-2'>Type</p>
+          <div className='duration-300'>
+            <Image src='/shared/ic-arrow-down.svg' alt='arrow icon' width={20} height={20} />
+          </div>
+        </button>
+
+        <button className='flex buttonFilter font-normal fontVarNormal'>
+          <p className='text-sm mr-2'>Location</p>
+          <div className='duration-300'>
+            <Image src='/shared/ic-arrow-down.svg' alt='arrow icon' width={20} height={20} />
+          </div>
+        </button>
+
         <button className='buttonFilter font-normal fontVarNormal' onClick={() => handleTagClick('Full Time', 'type')}>Full Time</button>
         <button className='buttonFilter font-normal fontVarNormal' onClick={() => handleTagClick('Remote', 'workplace')}>Remote</button>
 
-        <button className='buttonFilter font-normal fontVarNormal'>Location</button>
-        <div className='min-h-full w-0.5 bg-gray-800' />
+        {/* DIVIDER */}
+        <div className='min-h-full w-[1px] bg-gray-600 rounded-lg' />
 
         <div className='flex space-x-3'>
           { currTypeTags.map((tag, index) => (
             <div key={index} className='flex items-center rounded-lg border-gray-400 border-[1px] px-3'>
-              <button className='buttonPlain ml-2 text-sm duration-300 hover:rotate-90' onClick={() => handleTagClick(tag, 'type')}>
-                <Image src='/shared/icon-cross.svg' alt='cross icon' width={10} height={10} />
+              <button className='buttonPlain duration-300 hover:rotate-90' onClick={() => handleTagClick(tag, 'type')}>
+                <Image src='/shared/ic-cross.svg' alt='cross icon' width={20} height={20} />
               </button>
-              <p className='text-sm'>{tag}</p>
+              <p className='text-sm ml-2'>{tag}</p>
             </div>
           ))}
           { currWorkplaceTags.map((tag, index) => (
             <div key={index} className='flex items-center rounded-lg border-gray-400 border-[1px] px-3'>
-              <button className='buttonPlain ml-2 text-sm duration-300 hover:rotate-90' onClick={() => handleTagClick(tag, 'workplace')}>
-                <Image src='/shared/icon-cross.svg' alt='cross icon' width={10} height={10} />
+              <button className='buttonPlain duration-300 hover:rotate-90' onClick={() => handleTagClick(tag, 'workplace')}>
+                <Image src='/shared/ic-cross.svg' alt='cross icon' width={20} height={20} />
               </button>
-              <p className='text-sm'>{tag}</p>
+              <p className='text-sm ml-2'>{tag}</p>
             </div>
           ))}
         </div>
         <div className='border-r-[1px] border-gray-600 h-full' />
       </div>
+
       <div className={`${isOpen? 'max-h-fit' : 'max-h-0'} duration-500 col-start-2 col-span-10 overflow-hidden`}>
         {
         currJobs.length === 0 ?
