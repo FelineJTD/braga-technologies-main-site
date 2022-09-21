@@ -158,7 +158,7 @@ export default function Home() {
           </div>
           <p className='col-span-3 col-start-7 lg:self-end mb-4'>Analyze site conditions, measure key urban indicators, and perform spatial analysis — directly in the browser.</p>
           <Link href='/geodashboard'><a className='flex justify-end lg:self-end col-span-2 mb-4'>
-            <button className='buttonPrimary whitespace-nowrap'>GeoDashboard &nbsp; &gt;</button>
+            <button className='buttonPrimary whitespace-nowrap disabled:opacity-50' disabled>GeoDashboard &nbsp; &gt;</button>
           </a></Link>
 
           <div className='col-span-12 w-full aspect-[1362/625] my-6 rounded-xl'>
@@ -237,7 +237,7 @@ export default function Home() {
           </div>
           <p className='col-span-3 col-start-7 lg:self-end mb-10'>Our interdisciplinary design and development approach accelerates the geospatial tech delivery to your hands.</p>
           <Link href='/works'><a className='flex justify-end lg:self-end col-span-2 mb-10'>
-            <button className='buttonPrimary'>Works &nbsp; &gt;</button>
+            <button className='buttonPrimary disabled:opacity-50' disabled>Works &nbsp; &gt;</button>
           </a></Link>
 
           <div className='col-start-1 col-span-12 flex space-x-3 overflow-auto no-scrollbar w-full snap-x' ref={examplesRef}>
