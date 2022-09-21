@@ -123,7 +123,7 @@ export default function JobsSection({jobs}) {
             </div>
             <div className='w-1/2 pr-8'>
               <h2 className='mb-3'>No current vacancies available at this time.</h2>
-              <p>We’ll share the news as soon as they become available. In the mean time, reach us out for other opportunities <Link href='/contact'><a className='unPrimary text-primary'>here</a></Link>.</p>
+              <p className='text-gray-700'>We’ll share the news as soon as they become available. In the mean time, reach us out for other opportunities <Link href='/contact'><a className='unPrimary text-primary'>here</a></Link>.</p>
             </div>
           </div>
         : currJobs.map((job, index) => (
