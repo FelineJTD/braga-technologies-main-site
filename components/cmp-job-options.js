@@ -5,7 +5,7 @@ export default function JobOptions({option, currWorkplaceTags, currTypeTags, han
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className='relative min-w-[10rem] mr-3' onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
+    <div className='relative min-w-[8rem] md:min-w-[10rem] mr-3 text-left' onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
       <button className='flex justify-between buttonFilter font-normal fontVarNormal w-full' >
         <p className='text-sm mr-2'>{option.title}</p>
         <div className={`${isOpen? 'rotate-180' : 'rotate-0'} duration-300 w-5 h-5`}>
@@ -19,7 +19,7 @@ export default function JobOptions({option, currWorkplaceTags, currTypeTags, han
           <div className={`${currTypeTags.includes(subOption) || currWorkplaceTags.includes(subOption) ? 'bg-gray-500' : ''} border-[1px] rounded-sm border-gray-500 h-4 w-4 mr-2 `}>
             <Image src='/shared/ic-check.svg' alt='check icon' width={20} height={20} style={{ visibility: (currTypeTags.includes(subOption) || currWorkplaceTags.includes(subOption) ? 'visible' : 'hidden') }} />
           </div>
-          <p className='text-sm'>{ subOption }</p>
+          <p className='text-sm text-left'>{ subOption }</p>
         </button>
       ))}
       </div>
