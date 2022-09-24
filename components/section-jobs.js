@@ -140,11 +140,11 @@ export default function JobsSection({jobs}) {
         <div>
           {
           currJobs.length === 0 ?
-            <div className='relative flex flex-col md:flex-row space-x-8 w-full border-[1px] border-gray-300 rounded-lg p-8 items-center'>
-              <div className='aspect-[2/1] w-1/2 relative mb-8 md:mb-0'>
-                <Image src='/company/empty-state.svg' alt='' height='100%' layout='fill' />
+            <div className='relative flex flex-col md:flex-row md:space-x-8 w-full border-[1px] border-gray-300 rounded-lg p-4 md:p-8 items-center'>
+              <div className='aspect-[2/1] w-full md:w-1/2 relative mb-8 md:mb-0'>
+                <Image src='/company/empty-state.svg' alt='' layout='fill' />
               </div>
-              <div className='w-1/2 pr-8'>
+              <div className='w-full md:w-1/2 md:pr-8'>
                 <h2 className='mb-3'>No current vacancies available at this time.</h2>
                 <p className='text-gray-700'>We’ll share the news as soon as they become available. In the meantime, reach us out for other opportunities <Link href='/contact'><a className='unPrimary text-primary'>here</a></Link>.</p>
               </div>
