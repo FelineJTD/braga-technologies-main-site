@@ -63,7 +63,7 @@ export default function Team({departments, page}) {
             ${index === selectedDepartmentIdx ? 'opacity-100 z-20' : 'opacity-50 z-10'} 
             w-full aspect-[2/1] mt-4 rounded-lg object-cover animate-fade-in absolute duration-500 bg-gray-50`} />
         )) }
-        <div className='w-full relative aspect-[600/260] z-0 mt-8' />
+        <div className='w-full relative aspect-[2/1] z-0 mt-8' />
         { page === 'career' && (
           <p ref={bottomRef} className='text-xs text-gray-600'>{departments[selectedDepartmentIdx].desc}</p>
         )}
