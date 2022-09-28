@@ -3,7 +3,7 @@
 
 // LAST SECTION IMAGE
 // This is the background image for the last section.
-export const LastSectionImage = "https://picsum.photos/1080/1920";
+export const LastSectionImage = '/contact/contact.png';
 
 // FORM FIELDS
 // size: 2 for half, 4 for full. Basically it is a 4-column grid. You can get a 1/4 or 3/4 sizes too with 1 or 3.
