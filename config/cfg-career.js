@@ -4,7 +4,7 @@
 export const Departments = [{
   title: 'Technology', 
   image: 'https://picsum.photos/200/300',
-  teams: 'CTO / Product Owner / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
+  teams: 'Chief Technology Officer / Front End Engineer / Back End Engineer / Data Scientist / Mobile App Developer',
   desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
 }, {
   title: 'Managerial', 
