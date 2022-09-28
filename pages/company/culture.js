@@ -99,7 +99,7 @@ export default function Culture() {
             <p className='bold mb-4'>Culture Manifesto</p>
             <h2 className='w-2/3 lg:w-full'>Only good <u>well-being</u> leads to <i>well-working.</i></h2>
           </div>
-          <p className='col-start-9 col-span-3 text-gray-200 mt-8 mb-[60vw] text-sm relative z-10'>More than our work, we are valuable as a person. As much as you do your best at work, We are committed at prioritizing and improving your well-being.</p>
+          <p className='col-start-9 col-span-3 text-gray-200 mt-8 mb-[60vw] text-sm relative z-10'>More than our work, we are valuable as a person. As much as you do your best at work, we are committed at prioritizing and improving your well-being.</p>
           <p className='col-start-9 col-span-3 text-gray-200 mt-8 bold mb-[60vw] relative z-10 text-lg'>With Braga Technologies, navigate your passion and expertise here together.</p>
           <p className='col-start-9 col-span-3 text-gray-200 mt-8 text-sm relative z-10'>Braga’s living systems and playbook are designed to ensure you have a wholly impeccable experience here.</p>
           <button className='col-start-9 col-span-2 text-gray-200 mt-8 buttonDark relative z-10'>Grow With Us &gt;</button>
@@ -112,7 +112,7 @@ export default function Culture() {
             <p className='mb-4 bold'>Our Team</p>
             <h2 className='mb-6 lg:mb-10'>Here, our difference makes a difference.</h2>
           </div>
-          <p className='col-start-7 col-span-5 self-end -translate-y-2 mb-10'>We&apos;re creating an environment to keep everyone standout with their talents and be able to cherish each and every unique qualities that we have.</p>
+          <p className='col-start-7 col-span-5 self-end -translate-y-2 mb-10'>We&apos;re creating an environment to keep everyone standing out with their talents and be able to cherish each and every unique qualities that we have.</p>
 
           <Team departments={Departments} page='culture' />
         </section>
@@ -134,7 +134,7 @@ export default function Culture() {
               <img src='/company/additional.svg' alt='' className='-mb-0.5 -ml-0.5 select-none hidden md:block' />
             </div>
             <div className='flex flex-col lg:flex-row lg:space-x-4 bg-gray-50 rounded-b-2xl rounded-tr-2xl p-6 lg:items-center justify-between'>
-              <p className='text-sm mb-3 lg:mb-0'>Being part of Braga means finding yourself in a unique position. Seize the possibility to work on challanges that impacts all over the world.</p>
+              <p className='text-sm mb-3 lg:mb-0'>Being part of Braga means finding yourself in a unique position. Seize the possibility to work on challanges that have impacts all over the world.</p>
               <Link href='/company/career'><a>
                 <button className='buttonLight w-2/3 lg:w-auto whitespace-nowrap'>Grow With Us &gt;</button>
               </a></Link>
