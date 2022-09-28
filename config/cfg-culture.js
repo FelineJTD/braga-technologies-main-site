@@ -13,7 +13,7 @@ export const Departments = [{
   desc: 'Making sure we move towards our goal. The Chiefs, Compliances, and People and Culture supports everyone at Braga Technologies',
 }, {
   title:'Strategic',
-  image: '/company/culture-team/strategy.png',
+  image: '/company/culture-team/strategic.png',
   teams: 'Chief Partnership and Strategic Officer / Account Executives / Tender Manager',
   desc: '"The biggest risk is not taking any risk" – We spearhead the paths that Braga takes through their thoughtful decision making.',
 }, {
