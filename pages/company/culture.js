@@ -5,9 +5,11 @@ import { useEffect, useRef, useState } from 'react';
 
 // Data
 import { Departments, Values, LastSectionImage } from '../../config/cfg-culture';
+import Animation from '../../assets/animations/culture/culture-animation.json'
 
 // Components
 import Team from '../../components/section-team';
+import Lottie from 'lottie-react';
 
 export default function Culture() {  
   const valuesRef = useRef();
@@ -89,14 +91,16 @@ export default function Culture() {
           </div>
         </section>
 
-        <section ref={scrollAreaRef} className={`defaultGrid py-14 text-gray-50 bg-gray-900 ${isScrollArea? 'mt-0 mx-0 px-6 xl:px-[calc(10%+1.5rem)]' : 'mt-12 lg:mx-6 rounded-2xl px-6 lg:px-0 xl:px-[10%]'} duration-500`}>
-          <img src='/company/bg.png' alt='' className='absolute z-0 justify-self-center w-1/2 h-[140%] object-cover' />
-          <div className='col-start-2 col-span-3 lg:sticky top-14 z-10 mb-[44vh] lg:mb-0'>
+        <section ref={scrollAreaRef} className={`relative defaultGrid py-14 text-gray-50 bg-gray-900 ${isScrollArea? 'mt-0 mx-0 px-6 xl:px-[calc(10%+1.5rem)]' : 'mt-12 lg:mx-6 rounded-2xl px-6 lg:px-0 xl:px-[10%]'} duration-500`}>
+          <div className='flex items-center justify-center absolute left-0 top-0 h-full w-full max-w-full z-0 pb-28 md:pb-52 lg:pb-60'>
+            <Lottie animationData={Animation} loop />
+          </div>
+          <div className='col-start-2 col-span-3 lg:sticky top-14 z-10 lg:mb-0'>
             <p className='bold mb-4'>Culture Manifesto</p>
             <h2 className='w-2/3 lg:w-full'>Only good <u>well-being</u> leads to <i>well-working.</i></h2>
           </div>
-          <p className='col-start-9 col-span-3 text-gray-200 mt-8 mb-[44vh] text-sm relative z-10'>More than our work, we are valuable as a person. As much as you do your best at work, We are committed at prioritizing and improving your well-being.</p>
-          <p className='col-start-9 col-span-3 text-gray-200 mt-8 bold mb-[44vh] relative z-10 text-lg'>With Braga Technologies, navigate your passion and expertise here together.</p>
+          <p className='col-start-9 col-span-3 text-gray-200 mt-8 mb-[60vw] text-sm relative z-10'>More than our work, we are valuable as a person. As much as you do your best at work, We are committed at prioritizing and improving your well-being.</p>
+          <p className='col-start-9 col-span-3 text-gray-200 mt-8 bold mb-[60vw] relative z-10 text-lg'>With Braga Technologies, navigate your passion and expertise here together.</p>
           <p className='col-start-9 col-span-3 text-gray-200 mt-8 text-sm relative z-10'>Braga’s living systems and playbook are designed to ensure you have a wholly impeccable experience here.</p>
           <button className='col-start-9 col-span-2 text-gray-200 mt-8 buttonDark relative z-10'>Grow With Us &gt;</button>
         </section>
