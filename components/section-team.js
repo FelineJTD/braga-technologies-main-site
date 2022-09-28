@@ -61,7 +61,7 @@ export default function Team({departments, page}) {
         { departments.map((department, index) => (
           <img key={index} src={department.image} alt='' className={` 
             ${index === selectedDepartmentIdx ? 'opacity-100 z-20' : 'opacity-50 z-10'} 
-            w-full aspect-[600/260] mt-4 rounded-lg object-cover animate-fade-in absolute duration-500`} />
+            w-full aspect-[600/260] mt-4 rounded-lg object-cover animate-fade-in absolute duration-500 bg-gray-50`} />
         )) }
         <div className='w-full relative aspect-[600/260] z-0 mt-8' />
         { page === 'career' && (
