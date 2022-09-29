@@ -33,8 +33,8 @@ export default function Career() {
           <p className='col-start-2 col-span-4 mb-4'>Company / <b>Career</b></p>
           <h1 className='row-start-2 lg:col-start-4 col-span-6 mb-6'>Together, Creating an Enormous <u>Impact.</u></h1>
           <p className='row-start-3 lg:col-start-2 col-span-2'><b>Work with Us</b></p>
-          <p className='row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-4 col-span-4 lg:col-span-3 mb-6'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
-          <p className='row-start-4 lg:row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-7 col-span-4 lg:col-span-3 mb-6'>Be a creator. Own what you create, and help others to solve their problems. Interested in doing so? Find which team that suits you well.</p>
+          <p className='row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-4 col-span-4 lg:col-span-3 mb-6'>Be a creator. Own what you create, and help others to solve their problems.</p>
+          <p className='row-start-4 lg:row-start-3 text-xs md:text-sm text-gray-600 col-start-3 lg:col-start-7 col-span-4 lg:col-span-3 mb-6'>Interested in doing so? Find which team that suits you well.</p>
 
           <Team departments={Departments} page='career' />
         </section>
