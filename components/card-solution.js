@@ -14,7 +14,7 @@ export default function CardSolution({solution, isDarkMode=false}) {
         }
       </div>
       <h5>{solution.title}</h5>
-      <p className='text-sm text-gray-500'>{solution.desc}</p>
+      <p className={`${isDarkMode? 'text-gray-300' : 'text-gray-500'} text-sm`}>{solution.desc}</p>
       <div className='min-h-[40px] flex-grow' />
       <div className='flex justify-between justify-self-end items-center space-x-3'>
         <a href={solution.link || '#'} target="_blank" rel='noreferrer noopener'>
