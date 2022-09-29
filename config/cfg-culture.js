@@ -36,23 +36,33 @@ export const Departments = [{
 export const Values = [
   {
     title: 'Committed',
-    headline: 'People can Count on Us.',
+    img: '/company/values/value_commit.svg',
+    headline: 'People can\nCount on Us.',
     desc: 'We commit to being a better professional within each of our own domains to reach the bigger goal.',
   },
   {
     title: 'Courageous',
-    headline: 'Take Risk, Take Ownership.',
-    desc: 'On a highly dynamic of uncertainty and obstacles, it takes courage to sail on that journey.',
+    img: '/company/values/value_courage.svg',
+    headline: 'Take Risk,\nTake Ownership.',
+    desc: 'On a highly dynamic uncertainty and obstacles, it takes courage to sail on that journey.',
   },
   {
     title: 'Focused',
-    headline: 'Setting our Priorities Right',
-    desc: 'We walk further together. As a team player focus on our work as much as the goals of our team.',
+    img: '/company/values/value_focus.svg',
+    headline: 'Setting our\nPriorities Right',
+    desc: 'We walk further together. As a team player, we focus on our work as much as the goals of our team.',
   },
   {
-    title: 'Courageous',
-    headline: 'Take Risk, Take Ownership.',
-    desc: 'On a highly dynamic of uncertainty and obstacles, it takes courage to sail on that journey.',
+    title: 'Openness',
+    img: '/company/values/value_commit.svg',
+    headline: 'Be Your True\nand Honest Self.',
+    desc: 'On a highly dynamic uncertainty and obstacles, it takes courage to sail on that journey.',
+  },
+  {
+    title: 'Respectful',
+    img: '/company/values/value_respect.svg',
+    headline: 'Everyone’s Capable in\nTheir Own Ways',
+    desc: 'We walk further together. As a team player, we focus on our work as much as the goals of our team.',
   },
 ]
 
