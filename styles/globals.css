@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'TT Hoves';
   src: url('../assets/fonts/TT-Hoves/TTHoves-Regular.ttf');
   font-style: normal;
@@ -29,12 +35,6 @@
   src: url('../assets/fonts/TT-Hoves/TTHoves-MediumItalic.ttf');
   font-style: italic;
   font-weight: bold;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
   font-display: swap;
 }
 

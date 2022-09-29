@@ -62,7 +62,7 @@ export default function Team({departments, page}) {
         { departments.map((department, index) => (
           <div key={index} className={` 
           ${index === selectedDepartmentIdx ? 'opacity-100 z-20' : 'opacity-50 z-10'} 
-          w-full aspect-[2/1] mt-4 rounded-lg animate-fade-in absolute duration-500 bg-gray-50 overflow-hidden`} >
+          w-full aspect-[2/1] max-h-[80vh] mt-4 rounded-lg animate-fade-in absolute duration-500 bg-gray-50 overflow-hidden`} >
             <Image src={department.image} alt='' layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' />
           </div>
         )) }

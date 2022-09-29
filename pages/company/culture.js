@@ -94,13 +94,18 @@ export default function Culture() {
           </div>
         </section>
 
-        <section ref={scrollAreaRef} className={`relative defaultGrid py-14 text-gray-50 bg-gray-900 ${isScrollArea? 'mt-0 mx-0 px-6 xl:px-[calc(10%+1.5rem)]' : 'mt-12 lg:mx-6 rounded-2xl px-6 lg:px-0 xl:px-[10%]'} duration-500 mb-6`}>
+        <section ref={scrollAreaRef} className={`relative defaultGrid py-14 text-gray-50 bg-[#0E0D0D] ${isScrollArea? 'mt-0 mx-0 px-6 xl:px-[calc(10%+1.5rem)]' : 'mt-12 lg:mx-6 rounded-2xl px-6 lg:px-0 xl:px-[10%]'} duration-500 mb-6`}>
           <div className='flex items-center justify-center absolute left-0 top-0 h-full w-full max-w-full z-0 pt-5'>
             <Lottie animationData={Animation} loop />
           </div>
           <div className='col-start-2 col-span-3 lg:sticky top-14 z-10 lg:mb-0 pb-[36vw]'>
             <p className='bold mb-4'>Culture Manifesto</p>
-            <h2 className='w-2/3 lg:w-full'>Only good <u>well-being</u> leads to <i>well-working.</i></h2>
+            <h2 className='w-2/3 lg:w-full'>
+              Only good<br />
+              <u>well-being</u><br />
+              leads to<br />
+              <i>well-working.</i>
+            </h2>
           </div>
           <p className='col-start-9 col-span-3 text-gray-200 mt-8 mb-[40vw] text-sm relative z-10'>More than our work, we are valuable as a person. As much as you do your best at work, we are committed at prioritizing and improving your well-being.</p>
           <p className='col-start-9 col-span-3 text-gray-200 mt-8 bold mb-[40vw] relative z-10 text-lg'>With Braga Technologies, navigate your passion and expertise here together.</p>
