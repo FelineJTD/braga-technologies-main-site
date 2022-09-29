@@ -10,6 +10,7 @@ import Animation from '../../assets/animations/culture/culture-animation.json'
 // Components
 import Team from '../../components/section-team';
 import Lottie from 'lottie-react';
+import Image from 'next/image';
 
 export default function Culture() {  
   const valuesRef = useRef();
@@ -67,7 +68,9 @@ export default function Culture() {
             <div className='lg:min-w-[24%] min-w-0 -ml-3 lg:ml-0 h-full' />
             { Values.map((value, index) => (
                 <div key={index} className='flex flex-col space-y-2 min-w-[287px] w-full rounded-lg p-3 border-2 border-gray-200'>
-                  <div className='bg-gray-200 w-full h-24'/>
+                  <div className='flex items-center justify-center bg-gray-200 w-full h-24'>
+                    <Image src={value.img} alt='' layout='fill' objectFit='cover' />
+                  </div>
                   <p className='text-xs'>{value.title}</p>
                   <h5 className='w-7/12'>{value.headline}</h5>
                   <p className='text-sm'>{value.desc}</p>
