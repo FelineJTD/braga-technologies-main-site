@@ -438,7 +438,7 @@ button {
 }
 
 .select-input {
-  @apply rounded-lg pt-4 pb-[1.125rem] px-3 w-full bg-white border-[1px] border-gray-400 text-sm text-gray-600;
+  @apply rounded-lg pt-4 pb-[1.125rem] px-3 w-full bg-white border-[1px] border-gray-400 text-sm text-gray-600 border-r-[16px] border-r-transparent outline outline-1;
 }
 
 .fleet1 {
