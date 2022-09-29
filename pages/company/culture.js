@@ -68,7 +68,7 @@ export default function Culture() {
             <div className='lg:min-w-[24%] min-w-0 -ml-3 lg:ml-0 h-full' />
             { Values.map((value, index) => (
                 <div key={index} className='flex flex-col space-y-2 min-w-[287px] w-full rounded-lg p-3 border-2 border-gray-200'>
-                  <div className='flex items-center justify-center bg-gray-200 w-full h-24'>
+                  <div className='relative flex items-center justify-center bg-gray-200 w-full h-24'>
                     <Image src={value.img} alt='' layout='fill' objectFit='cover' />
                   </div>
                   <p className='text-xs'>{value.title}</p>
