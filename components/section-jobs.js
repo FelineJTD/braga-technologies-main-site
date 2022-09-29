@@ -80,9 +80,9 @@ export default function JobsSection({jobs}) {
         <h2>Explore the career paths.</h2>
       </div>
       <p className='col-start-7 col-span-4 self-end text-gray-600'>Help us to solve the world’s problems through maps, and You. Interested? Find your forte below!</p>
-      <button className='self-end border-gray-600 hover:bg-gray-200 duration-200 w-12 h-10 p-0 justify-self-end' onClick={() => setIsOpen(!isOpen)}>
+      <div className='self-end border border-gray-600 w-12 h-10 p-0 justify-self-end opacity-50 rounded-lg'>
         <Image src='/navbar/ic-arrow-left.svg' alt='drop down icon' width={20} height={20} />
-      </button>
+      </div>
 
       <div className={`${isOpen? 'max-h-fit' : 'max-h-0'} duration-500 col-start-2 col-span-10 overflow-hidden max-w-full`}>
         <div className='flex py-3 w-full border-y-[1px] border-gray-600 mt-10 md:my-10'>
