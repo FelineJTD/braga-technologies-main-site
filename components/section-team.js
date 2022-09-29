@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 /* eslint-disable @next/next/no-img-element */
 export default function Team({departments, page}) {
@@ -59,10 +60,11 @@ export default function Team({departments, page}) {
 
       <div className={`${page === 'career' ? 'lg:col-start-4 col-span-6' : 'col-start-2 col-span-10'} w-ful relative mb-8`}>
         { departments.map((department, index) => (
-          <img key={index} src={department.image} alt='' className={` 
-            ${index === selectedDepartmentIdx ? 'opacity-100 z-20' : 'opacity-50 z-10'} 
-            w-full aspect-[2/1] mt-4 rounded-lg object-cover animate-fade-in absolute duration-500 bg-gray-50`} 
-          />
+          <div key={index} className={` 
+          ${index === selectedDepartmentIdx ? 'opacity-100 z-20' : 'opacity-50 z-10'} 
+          w-full aspect-[2/1] mt-4 rounded-lg animate-fade-in absolute duration-500 bg-gray-50`} >
+            <Image src={department.image} alt='' layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' />
+          </div>
         )) }
         <div className='w-full relative aspect-[2/1] z-0 mt-8' />
         { page === 'career' && (
