@@ -66,9 +66,9 @@ export default function Career() {
           {/* Left */}
           { Testimonials.map((testimonial, index) => (
             <div key={index} className={`${index === currTestimonialIdx ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-12 motion-reduce:translate-y-0'} row-start-3 col-start-1 lg:col-start-2 col-span-4 relative z-10 mt-8 text-gray-50 duration-200 ease-in w-3/4`}>
-              <p className='bg-[url("/company/quote_bg_top.svg")] bg-cover bg-no-repeat italic text-gray-50 w-full aspect-[278/30] pt-4 px-6 text-sm'>Quote</p>
-              <h2 className='bg-primary text-2xl md:text-4xl pt-6 px-6'>{testimonial.headline}</h2>
-              <div className='bg-[url("/company/quote_bg_bottom.svg")] bg-no-repeat w-full aspect-[278/60]' />
+              <p className='bg-[url("/company/quote_bg_top.svg")] bg-cover bg-no-repeat italic text-gray-50 w-full aspect-[278/30] pt-4 px-6 text-sm hidden md:block'>Quote</p>
+              <h2 className='bg-transparent md:bg-primary text-2xl md:text-4xl pt-0 md:pt-6 px-0 md:px-6'>{testimonial.headline}</h2>
+              <div className='bg-[url("/company/quote_bg_bottom.svg")] bg-no-repeat w-full aspect-[278/60] hidden md:block' />
             </div>
           )) }
           { Testimonials.map((testimonial, index) => (

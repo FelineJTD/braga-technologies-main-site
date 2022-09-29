@@ -147,10 +147,10 @@ export default function Navbar() {
               </Link>
               <div className='flex flex-col space-y-2 mt-0.5 py-3 px-4 bg-white bg-opacity-50 backdrop-blur rounded-md'>
                 <Link href='/company/culture'>
-                  <a className={`${currPath === '/company/culture'? 'pointer-events-none' : ''} unThin text-sm`}>Culture</a>
+                  <a className={`${currPath === '/company/culture'? 'pointer-events-none' : ''}`}><p className='unThin text-sm'>Culture</p></a>
                 </Link>
                 <Link href='/company/career'>
-                  <a className={`${currPath === '/company/career'? 'pointer-events-none' : ''} unThin text-sm`}>Career</a>
+                  <a className={`${currPath === '/company/career'? 'pointer-events-none' : ''}`}><p className='unThin text-sm'>Career</p></a>
                 </Link>
               </div>
             </div>
