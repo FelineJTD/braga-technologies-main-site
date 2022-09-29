@@ -155,13 +155,13 @@ export const Examples = [
 
 export const Services = [
   {
-    "title": "Geospatial",
+    "title": "Services",
     "desc": "Data Collection / Spatial Research and Analysis / Data Accuracy / Crowdsourcing / Spatial Insights Discovery",
   }, {
-    "title": "Geospatial + Technology",
+    "title": "Geospatial Technology",
     "desc": "2D and 3D Data Visualization / Big Data Scalability / Multi-Platform Integration / Geographic Information System / Web Map",
   }, {
-    "title": "Technology",
+    "title": "Development",
     "desc": "Full-Stack Web & Mobile / Product Cycle Management / Geo-Artificial Intelligence / Geo-IoT Integrations / CMS",
   }
 ]
