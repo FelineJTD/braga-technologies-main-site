@@ -80,8 +80,8 @@ export default function JobsSection({jobs}) {
         <h2>Explore the career paths.</h2>
       </div>
       <p className='col-start-7 col-span-4 self-end text-gray-600'>Help us to solve the world’s problems through maps, and You. Interested? Find your forte below!</p>
-      <div className='self-end border border-gray-600 w-12 h-10 p-0 justify-self-end opacity-50 rounded-lg'>
-        <Image src='/navbar/ic-arrow-left.svg' alt='drop down icon' width={20} height={20} />
+      <div className='flex items-center justify-center self-end border border-gray-600 w-12 h-10 p-0 justify-self-end opacity-50 rounded-lg'>
+        <Image src='/navbar/ic-arrow-left.svg' alt='drop down icon' objectFit='contain' objectPosition='center' width={20} height={20} />
       </div>
 
       <div className={`${isOpen? 'max-h-fit' : 'max-h-0'} duration-500 col-start-2 col-span-10 overflow-hidden max-w-full`}>
