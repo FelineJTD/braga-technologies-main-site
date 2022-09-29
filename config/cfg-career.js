@@ -3,27 +3,27 @@
 
 export const Departments = [{
   title: 'Technology', 
-  image: '/company/career-team/tech.png',
+  image: require('../public/company/career-team/tech.png'),
   desc: 'A team of Front End, Back End, Data Scientists, and Engineers alike. We implement and facilitate the flow of information and handle product developments and technical issues.',
 }, {
   title: 'Managerial', 
-  image: '/company/career-team/managerial.png',
+  image: require('../public/company/career-team/managerial.png'),
   desc: 'Making sure that we move forward towards our goals and achieve our vision, The Chiefs, Compliances, Finances, and People and Culture supports everyone at Braga Technologies.',
 }, {
   title:'Strategic',
-  image: '/company/career-team/strategic.png',
+  image: require('../public/company/career-team/strategic.png'),
   desc: 'Living the motto of "The biggest risk is not taking any risk", the Partnership and Strategic team is spearheading the path that Braga takes through their thoughtful decision makings.',
 }, {
   title: 'Design',
-  image: '/company/career-team/design.png',
+  image: require('../public/company/career-team/design.png'),
   desc: 'This team of interdisciplinary creatives of visual communication and digital product designers creates compelling designs whether it is something on print or on screen.',
 }, {
   title: 'Operation',
-  image: '/company/career-team/operation.png',
+  image: require('../public/company/career-team/operation.png'),
   desc: 'We examine data in new, helpful ways and make sure the people can gather data seamlessly.',
 }, {
   title: 'Product',
-  image: '/company/career-team/product.png',
+  image: require('../public/company/career-team/product.png'),
   desc: 'The Product team handles research and development and works closely with cross-functional teams to ensure that we create the best mapping experience out there!',
 }];
 
@@ -100,21 +100,21 @@ export const Testimonials = [
 {
   name: 'Dzakky Hazimi',
   title: 'Product Designer',
-  img: '/company/testimonials/dzakky.png',
+  img: require('../public/company/testimonials/dzakky.png'),
   headline: 'To design a spatial product, that’s special.',
   desc: 'Working at Braga Technologies gave me a chance to design spatial products, that’s special in a sense that people rarely know about this niched area when in fact we use them a lot and it is very useful in many aspects in life.”',
 },
 {
   name: 'Muhammad Dita Farel',
   title: 'Account Manager',
-  img: '/company/testimonials/dita.png',
+  img: require('../public/company/testimonials/dita.png'),
   headline: 'An out-of-the-box solution for many things to do.',
   desc: 'The work environment is supportive and, personally, gives me warmth. Braga always has an out-of-the-box solution for everything.\n\nThere’s also this continuous learning aspect of the people in it and I saw the potential for rapid development in the geospatial technology industry.”',
 },
 {
   name: 'Tabah Juliansyah',
   title: 'Front End Engineer',
-  img: '/company/testimonials/tabah.png',
+  img: require('../public/company/testimonials/tabah.png'),
   headline: 'It’s lively here.',
   desc: 'The working environment is comfortable. It’s lively here. Also, Braga Technologies supports us to develop our skills, both professional and life skills, which is great.”',
 },

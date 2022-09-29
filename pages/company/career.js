@@ -65,10 +65,16 @@ export default function Career() {
 
           {/* Left */}
           { Testimonials.map((testimonial, index) => (
-            <h2 key={index} className={`${index === currTestimonialIdx ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-12 motion-reduce:translate-y-0'} row-start-3 col-start-1 lg:col-start-2 col-span-4 relative z-10 mt-8 text-gray-800 duration-200 ease-in text-2xl md:text-4xl`}>{testimonial.headline}</h2>
+            <div key={index} className={`${index === currTestimonialIdx ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-12 motion-reduce:translate-y-0'} row-start-3 col-start-1 lg:col-start-2 col-span-4 relative z-10 mt-8 text-gray-50 duration-200 ease-in w-3/4`}>
+              <p className='bg-[url("/company/quote_bg_top.svg")] bg-cover bg-no-repeat italic text-gray-50 w-full aspect-[278/30] pt-4 px-6 text-sm'>Quote</p>
+              <h2 className='bg-primary text-2xl md:text-4xl pt-6 px-6'>{testimonial.headline}</h2>
+              <div className='bg-[url("/company/quote_bg_bottom.svg")] bg-no-repeat w-full aspect-[278/60]' />
+            </div>
           )) }
           { Testimonials.map((testimonial, index) => (
-            <img key= {index} src={testimonial.img} alt={`Photo of ${testimonial.name}`} className={`${index === currTestimonialIdx ? 'max-h-full z-10' : 'max-h-0 motion-reduce:max-h-full delay-300 z-0'} object-cover object-center row-start-3 col-start-3 lg:col-start-4 col-span-4 aspect-[380/460] w-full bg-gray-500 relative z-0 rounded-xl duration-300`} />
+            <div key= {index} className={`${index === currTestimonialIdx ? 'max-h-full z-10' : 'max-h-0 motion-reduce:max-h-full delay-300 z-0'} row-start-3 col-start-3 lg:col-start-4 col-span-4 aspect-[380/460] w-full bg-gray-500 relative z-0 rounded-xl duration-300 overflow-hidden`}>
+              <Image src={testimonial.img} alt={`Photo of ${testimonial.name}`} layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' />
+            </div>
           )) }
 
           {/* Right */}

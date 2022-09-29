@@ -94,7 +94,7 @@ export default function Culture() {
           </div>
         </section>
 
-        <section ref={scrollAreaRef} className={`relative defaultGrid py-14 text-gray-50 bg-gray-900 ${isScrollArea? 'mt-0 mx-0 px-6 xl:px-[calc(10%+1.5rem)]' : 'mt-12 lg:mx-6 rounded-2xl px-6 lg:px-0 xl:px-[10%]'} duration-500`}>
+        <section ref={scrollAreaRef} className={`relative defaultGrid py-14 text-gray-50 bg-gray-900 ${isScrollArea? 'mt-0 mx-0 px-6 xl:px-[calc(10%+1.5rem)]' : 'mt-12 lg:mx-6 rounded-2xl px-6 lg:px-0 xl:px-[10%]'} duration-500 mb-6`}>
           <div className='flex items-center justify-center absolute left-0 top-0 h-full w-full max-w-full z-0 pt-5'>
             <Lottie animationData={Animation} loop />
           </div>
