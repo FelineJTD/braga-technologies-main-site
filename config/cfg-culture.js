@@ -56,13 +56,13 @@ export const Values = [
     title: 'Openness',
     img: '/company/values/value_commit.svg',
     headline: 'Be Your True\nand Honest Self.',
-    desc: 'On a highly dynamic uncertainty and obstacles, it takes courage to sail on that journey.',
+    desc: 'Braga is a safe space where challanges and obstacles are openly recognized, discussed, and worked on together.',
   },
   {
     title: 'Respectful',
     img: '/company/values/value_respect.svg',
     headline: 'Everyone’s Capable in\nTheir Own Ways',
-    desc: 'We walk further together. As a team player, we focus on our work as much as the goals of our team.',
+    desc: 'Made of people with diverse thoughts and skill sets. We view everyone as a capable, independent professional.',
   },
 ]
 
