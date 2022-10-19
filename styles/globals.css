@@ -58,6 +58,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: #777574;
+  border-radius: 4px;
 }
 
 h1 {
