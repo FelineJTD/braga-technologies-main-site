@@ -3,7 +3,7 @@
 
 // LAST SECTION IMAGE
 // This is the background image for the last section.
-export const LastSectionImage = '/contact/contact.png';
+export const LastSectionImage = require('../public/contact/contact.png');
 
 // FORM FIELDS
 // size: 2 for half, 4 for full. Basically it is a 4-column grid. You can get a 1/4 or 3/4 sizes too with 1 or 3.
@@ -11,7 +11,7 @@ export const LastSectionImage = '/contact/contact.png';
 export const Forms = [
   {
     title: 'Business Inquiries',
-    info: 'Expect our team to reach out to you in at least 2 business days.',
+    info: 'Expect our team to reach out to you in at least 5 business days.',
     form: [
       {
         label: 'First Name',
@@ -73,52 +73,52 @@ export const Forms = [
     ],
     submitLabel: 'Send',
   },
-  {
-    title: 'Tech Support',
-    info: 'Fill this form if you have technical issue to discuss or report to us.',
-    form: [
-      {
-        label: 'First Name',
-        type: 'text',
-        name: 'first-name',
-        size: 2,
-      },
-      {
-        label: 'Last Name',
-        type: 'text',
-        name: 'last-name',
-        size: 2,
-      },
-      {
-        label: 'Email Address',
-        type: 'text',
-        name: 'email',
-        size: 2,
-      },
-      {
-        label: 'Country/Region',
-        type: 'select',
-        name: 'region',
-        options: ['Indonesia', 'United States', 'United Kingdom', 'Australia', 'Canada', 'New Zealand', 'Other'],
-        size: 2,
-      },
-      {
-        label: 'Select Technical Support',
-        type: 'select',
-        name: 'phone-number',
-        options: ['Technical Support', 'Billing Support', 'Other'],
-        size: 4,
-      },
-      {
-        label: 'Message',
-        type: 'textarea',
-        name: 'message',
-        placeholder: 'Tell us about it',
-        size: 4,
-      },
-    ],
-    submitLabel: 'Send',
-  },
+  // {
+  //   title: 'Tech Support',
+  //   info: 'Fill this form if you have technical issue to discuss or report to us.',
+  //   form: [
+  //     {
+  //       label: 'First Name',
+  //       type: 'text',
+  //       name: 'first-name',
+  //       size: 2,
+  //     },
+  //     {
+  //       label: 'Last Name',
+  //       type: 'text',
+  //       name: 'last-name',
+  //       size: 2,
+  //     },
+  //     {
+  //       label: 'Email Address',
+  //       type: 'text',
+  //       name: 'email',
+  //       size: 2,
+  //     },
+  //     {
+  //       label: 'Country/Region',
+  //       type: 'select',
+  //       name: 'region',
+  //       options: ['Indonesia', 'United States', 'United Kingdom', 'Australia', 'Canada', 'New Zealand', 'Other'],
+  //       size: 2,
+  //     },
+  //     {
+  //       label: 'Select Technical Support',
+  //       type: 'select',
+  //       name: 'phone-number',
+  //       options: ['Technical Support', 'Billing Support', 'Other'],
+  //       size: 4,
+  //     },
+  //     {
+  //       label: 'Message',
+  //       type: 'textarea',
+  //       name: 'message',
+  //       placeholder: 'Tell us about it',
+  //       size: 4,
+  //     },
+  //   ],
+  //   submitLabel: 'Send',
+  // },
   {
     title: 'Human Resources',
     info: 'We\'d love to extend our knowledge to everyone beyond ourselves. We hold sharing sessions and discussions based on our expertise to advocate for Geospatial tech.',
@@ -183,10 +183,10 @@ export const Forms = [
     ],
     submitLabel: 'Send',
   },
-  {
-    title: 'Appointment',
-    info: 'Set an appointment and speak with our Representative of Partnership and Strategy for an in depth consultancy or schedule a live demo at your place.',
-    form: [],
-    submitLabel: 'Set a Schedule',
-  },
+  // {
+  //   title: 'Appointment',
+  //   info: 'Set an appointment and speak with our Representative of Partnership and Strategy for an in depth consultancy or schedule a live demo at your place.',
+  //   form: [],
+  //   submitLabel: 'Set a Schedule',
+  // },
 ]
