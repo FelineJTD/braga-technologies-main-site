@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 // Data
-import { Departments, Values, LastSectionImage } from '../../config/cfg-culture';
+import { Values, LastSectionImage } from '../../config/cfg-culture';
 import Animation from '../../assets/animations/culture/culture-animation.json'
 
 // Components
-import Team from '../../components/section-team';
+// import Team from '../../components/section-team';
 import Lottie from 'lottie-react';
 import Image from 'next/image';
 
@@ -56,7 +56,7 @@ export default function Culture() {
 
       <main className='text-gray-900 bg-gray-50 w-full'>
         {/* 00 */}
-        <section className='whiteBGFullGrid'>
+        <section className='whiteBGFullGridSmPadding'>
           <p className='bold mb-4'>00.</p>
           <p className='col-start-2 col-span-4 mb-4'>Company / <b>Culture</b></p>
           <h1 className='row-start-2 lg:col-start-4 col-span-6 mb-6'>Locate your <u>uncharted</u> passion here.</h1>

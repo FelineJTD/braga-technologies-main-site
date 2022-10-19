@@ -354,11 +354,19 @@ button {
 }
 
 .whiteBG {
-  @apply defaultPadding bg-gray-50 text-gray-900 defaultPadding defaultGrid;
+  @apply defaultPadding bg-gray-50 text-gray-900 defaultGrid;
+}
+
+.whiteBGSmPadding {
+  @apply px-6 py-14 xl:px-[10%] bg-gray-50 text-gray-900 defaultGrid;
 }
 
 .whiteBGFullGrid {
-  @apply defaultPadding bg-gray-50 text-gray-900 defaultPadding defaultFullGrid;
+  @apply defaultPadding bg-gray-50 text-gray-900 defaultFullGrid;
+}
+
+.whiteBGFullGridSmPadding {
+  @apply px-6 py-14 xl:px-[10%] bg-gray-50 text-gray-900 defaultFullGrid;
 }
 
 .buttonLight {

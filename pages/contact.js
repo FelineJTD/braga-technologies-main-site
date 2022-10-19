@@ -21,7 +21,7 @@ export default function Contact() {
 
       <main className='text-gray-900 bg-gray-50 w-full'>
         {/* 00 */}
-        <section className='whiteBG'>
+        <section className='whiteBGSmPadding'>
           <p className='bold mb-4'>00.</p>
           <p className='col-span-4 mb-4'>Contact</p>
           <h1 className='row-start-2 col-start-4 col-span-6 mb-6'>Get in touch with us.</h1>

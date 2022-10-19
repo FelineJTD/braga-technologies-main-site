@@ -74,7 +74,7 @@ export default function JobsSection({jobs}) {
   };
 
   return (
-    <section className='whiteBG'>
+    <section className='whiteBGSmPadding'>
       <div className='col-start-2 col-span-4'>
         <p className='mb-4'><b>Work at Braga</b></p>
         <h2>Explore the career paths.</h2>
