@@ -3,7 +3,7 @@ import Link from 'next/link'
 import {useRouter} from 'next/router';
 import { useEffect, useState } from 'react';
 
-export default function Navbar() {
+export default function Navbar(color='light') {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [currPage, setCurrPage] = useState('');
   const [currPath, setCurrPath] = useState('');
@@ -96,7 +96,7 @@ export default function Navbar() {
   return (
     <>
       {/* MOBILE NAV */}
-      <nav id='mobile-nav' className='h-screen w-full bg-white bg-opacity-90 backdrop-blur z-50 fixed top-0 left-0 p-6 duration-300 translate-y-[-100vh] lg:hidden flex flex-col space-y-6 text-right justify-end selection:bg-primary selection:text-gray-50'>
+      <nav id='mobile-nav' className={`h-screen w-full ${color == 'light' ? 'bg-white' : 'bg-gray-800'} bg-opacity-90 backdrop-blur z-50 fixed top-0 left-0 p-6 duration-300 translate-y-[-100vh] lg:hidden flex flex-col space-y-6 text-right justify-end selection:bg-primary selection:text-gray-50`}>
         <div className='divider' aria-hidden/>
         <Link href='/'>
           <a className={`${currPage === 'home' ? 'text-primary underline' : ''} text-lg`} onClick={closeMobileNav}>Home</a>

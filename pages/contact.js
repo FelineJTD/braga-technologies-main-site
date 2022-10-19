@@ -32,7 +32,7 @@ export default function Contact() {
           <div className='dividerBlack col-start-4 col-span-6 w-full mt-8' />
 
           {/* TYPES */}
-          <div className='md:col-start-4 md:col-span-6 md:grid md:grid-cols-4 md:gap-2 flex space-x-2 overflow-auto w-full pb-3 md:pb-0'>
+          <div className='md:col-start-4 md:col-span-6 md:grid md:grid-cols-2 md:gap-2 flex space-x-2 overflow-auto w-full pb-3 md:pb-0'>
             { Forms.map((form, index) => (
               <button key={index} className={`${currForm.title === form.title? 'buttonSelectionSelected' : 'buttonSelection'} text-sm whitespace-nowrap`} onClick={() => setCurrForm(form)}>{form.title}</button>
             ))}

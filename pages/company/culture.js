@@ -94,27 +94,27 @@ export default function Culture() {
           </div>
         </section>
 
-        <section ref={scrollAreaRef} className={`relative defaultGrid py-14 text-gray-50 bg-[#0E0D0D] ${isScrollArea? 'mt-0 mx-0 px-6 xl:px-[calc(10%+1.5rem)]' : 'mt-12 lg:mx-6 rounded-2xl px-6 lg:px-0 xl:px-[10%]'} duration-500 mb-6`}>
-          <div className='flex items-center justify-center absolute left-0 top-0 h-full w-full max-w-full z-0 pt-5'>
+        <section ref={scrollAreaRef} className={`relative defaultGrid py-24 text-gray-50 bg-[#0E0D0D] ${isScrollArea? 'mt-0 mx-0 px-6 xl:px-[calc(10%+1.5rem)]' : 'mt-12 lg:mx-6 rounded-2xl px-6 lg:px-0 xl:px-[10%]'} duration-500`}>
+          <div className='flex items-end justify-center absolute left-0 bottom-0 h-full w-full max-w-full z-0'>
             <Lottie animationData={Animation} loop />
           </div>
-          <div className='col-start-2 col-span-3 lg:sticky top-14 z-10 lg:mb-0 pb-[36vw]'>
+          <div className='col-start-2 col-span-3 lg:sticky top-24 z-10 lg:mb-0 pb-[24vw]'>
             <p className='bold mb-4'>Culture Manifesto</p>
-            <h2 className='w-2/3 lg:w-full'>
+            <h2 className='w-full'>
               Only good<br />
               <u>well-being</u><br />
               leads to<br />
               <i>well-working.</i>
             </h2>
           </div>
-          <p className='col-start-9 col-span-3 text-gray-200 mt-8 mb-[40vw] text-sm relative z-10'>More than our work, we are valuable as a person. As much as you do your best at work, we are committed at prioritizing and improving your well-being.</p>
-          <p className='col-start-9 col-span-3 text-gray-200 mt-8 bold mb-[40vw] relative z-10 text-lg'>With Braga Technologies, navigate your passion and expertise here together.</p>
+          <p className='col-start-9 col-span-3 text-gray-200 mb-[30vw] text-sm relative z-10'>More than our work, we are valuable as a person. As much as you do your best at work, we are committed at prioritizing and improving your well-being.</p>
+          <p className='col-start-9 col-span-3 text-gray-200 mt-8 bold mb-[30vw] relative z-10 text-lg'>With Braga Technologies, navigate your passion and expertise here together.</p>
           <p className='col-start-9 col-span-3 text-gray-200 mt-8 text-sm relative z-10'>Braga’s living systems and playbook are designed to ensure you have a wholly impeccable experience here.</p>
-          <button className='col-start-9 col-span-2 text-gray-200 mt-8 mb-[40vw] buttonDark relative z-10'>Grow With Us &gt;</button>
+          <button className='col-start-9 col-span-2 text-gray-200 mt-8 mb-[30vw] buttonDark relative z-10'>Grow With Us &gt;</button>
         </section>
 
         {/* 01 */}
-        <section className='whiteBG'>
+        {/* <section className='whiteBG'>
           <p className='bold mb-4'>01.</p>
           <div className='col-span-4'>
             <p className='mb-4 bold'>Our Team</p>
@@ -123,7 +123,7 @@ export default function Culture() {
           <p className='col-start-7 col-span-5 self-end -translate-y-2 mb-10'>We&apos;re creating an environment to keep everyone standing out with their talents and be able to cherish each and every unique qualities that we have.</p>
 
           <Team departments={Departments} page='culture' />
-        </section>
+        </section> */}
 
         <section className='px-6 py-14 lg:px-[10%] h-screen bg-cover bg-center bg-no-repeat flex flex-col md:flex-row items-end justify-end' style={{backgroundImage: `url(${LastSectionImage})`}}>
           <div className='w-full md:w-1/2 md:mb-4 flex md:flex-col items-end'>
