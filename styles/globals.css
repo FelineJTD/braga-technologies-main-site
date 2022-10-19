@@ -337,7 +337,7 @@ button {
 }
 
 .defaultPadding {
-  @apply px-6 py-14 xl:px-[10%];
+  @apply px-6 py-24 xl:px-[10%];
 }
 
 .defaultGrid {
