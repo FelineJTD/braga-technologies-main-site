@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import Navbar from '../../components/navbar';
 import JobsSection from '../../components/section-jobs';
 // import Team from '../../components/section-team';
 
@@ -25,6 +26,7 @@ export default function Career() {
         <meta name="keywords" content="Braga Technologies, Braga GeoDashboard, GeoDashboard, GIS, GIS Indonesia, WEBGIS, geospatial services, Bandung technology services" key="keywords"/>
       </Head>
 
+      <Navbar />
       <main className='text-gray-900 bg-gray-50 w-full'>
         {/* 00 */}
         <section className='whiteBGFullGridSmPadding'>

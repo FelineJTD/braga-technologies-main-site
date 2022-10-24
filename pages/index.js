@@ -20,6 +20,7 @@ import Lottie from 'lottie-react'
 import PartnerLogos from '../components/section-partner-logos'
 import CardSolution from '../components/card-solution'
 import Carousel from '../components/carousel'
+import Navbar from '../components/navbar'
 import GetInTouch from '../components/section-get-in-touch'
 import Chip from '../components/cmp-chip'
 import SectorsSection from '../components/section-sectors'
@@ -70,6 +71,7 @@ export default function Home() {
         <meta name="keywords" content="Braga Technologies, Braga GeoDashboard, GeoDashboard, GIS, GIS Indonesia, WEBGIS, geospatial services, Bandung technology services" key="keywords"/>
       </Head>
 
+      <Navbar color='dark' />
       <main className='text-gray-900 bg-gray-50 w-full'>
         { width > 768 && (
         <div className='w-full h-full'>

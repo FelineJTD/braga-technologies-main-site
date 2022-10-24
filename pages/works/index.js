@@ -9,6 +9,7 @@ import { WorksData } from '../../config/cfg-works';
 // Components
 import CardWorks from '../../components/card-works';
 import GetInTouch from '../../components/section-get-in-touch';
+import Navbar from '../../components/navbar';
 
 export default function Works() {
   const [currPage, setCurrPage] = useState(1);
@@ -45,6 +46,7 @@ export default function Works() {
         <meta name="keywords" content="Braga Technologies, Braga GeoDashboard, GeoDashboard, GIS, GIS Indonesia, WEBGIS, geospatial services, Bandung technology services" key="keywords"/>
       </Head>
 
+      <Navbar />
       <main className='text-gray-900 bg-gray-50 w-full'>
         {/* 00 */}
         <section className='whiteBG relative'>

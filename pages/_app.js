@@ -61,7 +61,6 @@ function MyApp({ Component, pageProps }) {
         </div>
       </div>
 
-      <Navbar />
       <main className='w-full min-h-screen bg-gray-50 selection:bg-primary selection:text-gray-50 accent-primary'>
         <div className={`${loading || !hasTimeElapsed? 'min-h-[16vh]' : 'min-h-0'} duration-700 delay-100 w-full`} />
         <Component {...pageProps} />

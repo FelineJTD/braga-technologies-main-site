@@ -7,6 +7,7 @@ import { LastSectionImage, Forms } from '../config/cfg-contact';
 
 // Components
 import FormField from '../components/form-field';
+import Navbar from '../components/navbar';
 
 export default function Contact() {
   const [currForm, setCurrForm] = useState(Forms[0]);
@@ -19,6 +20,7 @@ export default function Contact() {
         <meta name="keywords" content="Braga Technologies, Braga GeoDashboard, GeoDashboard, GIS, GIS Indonesia, WEBGIS, geospatial services, Bandung technology services" key="keywords"/>
       </Head>
 
+      <Navbar />
       <main className='text-gray-900 bg-gray-50 w-full'>
         {/* 00 */}
         <section className='whiteBGSmPadding'>

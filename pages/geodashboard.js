@@ -9,6 +9,7 @@ import { Data01, CustStories } from '../config/cfg-geodashboard';
 import GetInTouch from '../components/section-get-in-touch';
 import PartnerLogos from '../components/section-partner-logos';
 import Carousel from '../components/carousel';
+import Navbar from '../components/navbar';
 
 export default function GeoDashboard() {
 
@@ -39,6 +40,7 @@ export default function GeoDashboard() {
         <meta name="keywords" content="Braga Technologies, Braga GeoDashboard, GeoDashboard, GIS, GIS Indonesia, WEBGIS, geospatial services, Bandung technology services" key="keywords"/>
       </Head>
 
+      <Navbar />
       <main className='text-gray-900 bg-gray-50 w-full'>
         {/* 00 */}
         <section className='whiteBG'>
