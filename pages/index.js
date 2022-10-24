@@ -111,13 +111,13 @@ export default function Home() {
         </div>
         )}
         {/* 00 */}
-        <section className='w-full h-[calc(100vh-2rem)] pt-12 text-center flex flex-col justify-between relative z-10'>
+        <section className='w-full h-[calc(100vh-2rem)] pt-12 text-center flex flex-col justify-between relative z-10 bg-gray-800 text-gray-50 rounded-b-2xl'>
           <div className='flex items-center w-full flex-grow px-6 lg:px-[25vw] xl:px-[30vw]'>
             <h1 className='overflow-hidden'>
               Answering <span className='italic animate-top-to-bottom'>How</span>, by Understanding <span className='underline italic animate-bottom-to-top'>Where</span>
             </h1>
           </div>
-          <div className='flex flex-col items-center px-6 lg:px-[25vw] xl:px-[30vw] pb-12 bg-gradient-to-b from-transparent to-gray-50'>
+          <div className='flex flex-col items-center px-6 lg:px-[25vw] xl:px-[30vw] pb-12 bg-gradient-to-b from-transparent to-gray-800 rounded-b-2xl'>
             <a href='#solutions'>
               <div className='h-6 w-6'>
                 <Lottie animationData={ScrollDown} loop={true} />
