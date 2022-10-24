@@ -240,28 +240,12 @@ export default function Home() {
             <button className='buttonPrimary disabled:opacity-50' disabled>Works &nbsp; &gt;</button>
           </a></Link>
 
-          <div className='col-start-1 col-span-12 flex space-x-3 overflow-auto no-scrollbar w-full snap-x' ref={examplesRef}>
-          <div className='lg:min-w-[7.5%] min-w-0 -ml-3 lg:ml-0 min-h-full snap-start' />
+          <div className='col-start-2 col-span-10 grid grid-cols-3 gap-3 w-full' ref={examplesRef}>
             {
               Examples.map((example, index) => (
                 <CardSolution solution={example} isDarkMode={true} key={index} />
               ))
             }
-          </div>
-          {/* TODO: change to icon */}
-          <div className='col-start-2 col-span-11 -ml-4 mt-8'>
-            <button 
-              className='border-0 hover:text-primary duration-200' 
-              onClick={() => scroll(examplesRef, -300)}
-            >
-              &lt;
-            </button>
-            <button 
-              className='border-0 hover:text-primary duration-200'
-              onClick={() => scroll(examplesRef, 300)}
-            >
-              &gt;
-            </button>
           </div>
 
           <div className='col-start-2 col-span-10 mt-11'>
