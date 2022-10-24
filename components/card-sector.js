@@ -7,8 +7,8 @@ export default function CardSector({sector, selectedSectorTitle, index, isMobile
         <Image src={sector.img} alt={sector.title} objectFit='cover' objectPosition='center' layout='fill' style={{ borderTopLeftRadius: '8px', borderTopRightRadius: '8px'}} />
       </div>
       <div className='flex justify-between p-2 text-gray-800'>
-        <p className='text-xs lg:text-sm'>Initiative Count</p>
-        <p className='text-xs lg:text-sm'>{ sector.count }</p>
+        <p className='text-xs lg:text-sm'>{sector.title}</p>
+        {/* <p className='text-xs lg:text-sm'>{ sector.count }</p> */}
       </div>
     </div>
   )
