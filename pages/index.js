@@ -71,9 +71,6 @@ export default function Home() {
       </Head>
 
       <main className='text-gray-900 bg-gray-50 w-full'>
-        <div className='md:w-full w-auto h-[calc(100vh-2rem)] absolute -mt-8 z-0'>
-          <Lottie animationData={BGLottie} loop={true}/>
-        </div>
         { width > 768 && (
         <div className='w-full h-full'>
           <Chip
@@ -112,12 +109,15 @@ export default function Home() {
         )}
         {/* 00 */}
         <section className='w-full h-[calc(100vh-2rem)] pt-12 text-center flex flex-col justify-between relative z-10 bg-gray-800 text-gray-50 rounded-b-2xl'>
-          <div className='flex items-center w-full flex-grow px-6 lg:px-[25vw] xl:px-[30vw]'>
+          <div className='md:w-full w-auto h-[calc(100vh-2rem)] absolute -mt-8 z-0'>
+            <Lottie animationData={BGLottie} loop={true}/>
+          </div>
+          <div className='flex items-center w-full flex-grow px-6 lg:px-[25vw] xl:px-[30vw] relative z-10'>
             <h1 className='overflow-hidden'>
               Answering <span className='italic animate-top-to-bottom'>How</span>, by Understanding <span className='underline italic animate-bottom-to-top'>Where</span>
             </h1>
           </div>
-          <div className='flex flex-col items-center px-6 lg:px-[25vw] xl:px-[30vw] pb-12 bg-gradient-to-b from-transparent to-gray-800 rounded-b-2xl'>
+          <div className='flex flex-col items-center px-6 lg:px-[25vw] xl:px-[30vw] pb-12 bg-gradient-to-b from-transparent to-gray-800 rounded-b-2xl relative z-10'>
             <a href='#solutions'>
               <div className='h-6 w-6'>
                 <Lottie animationData={ScrollDown} loop={true} />
