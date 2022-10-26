@@ -33,19 +33,19 @@ export default function GetInTouch({number}) {
       <div className='relative col-start-2 col-span-10 aspect-[312/156] w-full my-6'>
         <Image src={Img} alt='' layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' style={{ borderRadius: '0.75rem' }}/>
         <Chip
-          fleetNum={120}
           isVisible={isVisible1}
           setIsVisible={setIsVisible1}
-          type='car'
+          icon={require('../public/homepage/chip-icons/icon-location.svg')}
+          text='Sensor_G01'
           color='primary'
           className='fleet1'
         />
         <Chip
-          fleetNum={122}
           isVisible={isVisible2}
           setIsVisible={setIsVisible2}
-          type='car'
-          color='secondary'
+          icon={require('../public/homepage/chip-icons/icon-location.svg')}
+          text='Sensor_A12'
+          color='primary'
           className='fleet2'
         />
 

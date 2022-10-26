@@ -51,7 +51,7 @@ export default function Works() {
         <meta name="keywords" content="Braga Technologies, Braga GeoDashboard, GeoDashboard, GIS, GIS Indonesia, WEBGIS, geospatial services, Bandung technology services" key="keywords"/>
       </Head>
 
-      <Navbar />
+      <Navbar color='light' />
       <main className='text-gray-900 bg-gray-50 w-full -mt-[4.2rem]'>
         {/* 00 */}
         <section className='text-white rounded-b-2xl px-6 pb-10 pt-[7rem] xl:px-[10%] flex flex-col lg:grid lg:grid-cols-12 items-start gap-x-6 bg-cover bg-center bg-no-repeat'>

@@ -76,35 +76,35 @@ export default function Home() {
         { width > 768 && (
         <div className='w-full h-full'>
           <Chip
-            fleetNum={120}
             isVisible={isVisible1}
             setIsVisible={setIsVisible1}
-            type='car'
+            icon={require('../public/homepage/chip-icons/icon-drone.svg')}
             color='primary'
+            text='Drone_120'
             className='top-24 md:top-[25%] left-[10%]'
           />
           <Chip
-            fleetNum={121}
             isVisible={isVisible2}
             setIsVisible={setIsVisible2}
-            type='car'
+            icon={require('../public/homepage/chip-icons/icon-retail.svg')}
             color='primary'
+            text='Retail Unit'
             className='top-36 md:top-[30%] right-[10%] delay-300'
           />
           <Chip
-            fleetNum={122}
             isVisible={isVisible3}
             setIsVisible={setIsVisible3}
-            type='car'
+            icon={require('../public/homepage/chip-icons/icon-location.svg')}
             color='primary'
+            text='HQ'
             className='bottom-52 md:bottom-[28%] left-[15%]'
           />
           <Chip
-            fleetNum={120}
             isVisible={isVisible4}
             setIsVisible={setIsVisible4}
-            type='bus'
+            icon={require('../public/homepage/chip-icons/icon-bus.svg')}
             color='secondary'
+            text='Fleet_121'
             className='bottom-64 md:bottom-[20%] right-[10%] delay-200'
           />
         </div>

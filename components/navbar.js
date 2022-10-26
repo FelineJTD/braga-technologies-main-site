@@ -2,6 +2,8 @@
 import Link from 'next/link'
 import {useRouter} from 'next/router';
 import { useEffect, useState } from 'react';
+import LogoBragaFull from '../public/logo-braga-full';
+import LogoBragaSm from '../public/logo-braga-sm';
 
 export default function Navbar(color='light') {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -102,10 +104,10 @@ export default function Navbar(color='light') {
           <a className={`${currPage === 'home' ? 'text-primary underline' : ''} text-lg`} onClick={closeMobileNav}>Home</a>
         </Link>
         {/* <Link href='/geodashboard'> */}
-          <p className={`${currPage === 'geodashboard' ? 'text-primary underline' : ''} opacity-50 text-lg`} onClick={closeMobileNav}>GeoDashboard</p>
+          {/* <p className={`${currPage === 'geodashboard' ? 'text-primary underline' : ''} opacity-50 text-lg`} onClick={closeMobileNav}>GeoDashboard</p> */}
         {/* </Link> */}
         {/* <Link href='/works'> */}
-          <p className={`${currPage === 'works' ? 'text-primary underline' : ''} opacity-50 text-lg`} onClick={closeMobileNav}>Works</p>
+          {/* <p className={`${currPage === 'works' ? 'text-primary underline' : ''} opacity-50 text-lg`} onClick={closeMobileNav}>Works</p> */}
         {/* </Link> */}
         {/* <Link href='/company/culture'> */}
           <p className={`${currPage === 'company' ? 'text-primary underline' : ''} text-lg`} onClick={closeMobileNav}>Company</p>
@@ -127,17 +129,19 @@ export default function Navbar(color='light') {
       {/* DESKTOP NAV */}
       <nav id='nav' className={`${color == 'light' ? 'bg-white text-gray-600' : 'bg-gray-800 text-gray-50'} flex items-center justify-between w-full px-6 py-3 bg-opacity-70 backdrop-blur sticky top-0 z-50 duration-200 selection:bg-primary selection:text-gray-50 h-[60px]`}>
         {/* Logo images might be redundant, can be combined with conditionals */}
-        <Link href='/'><img src='/logo-braga-sm.svg' alt='Braga Technologies Logo' className='md:hidden h-5 cursor-pointer' onClick={closeMobileNav}/></Link>
-        <Link href='/'><img src='/logo-braga-full.svg' alt='Braga Technologies Logo' className='hidden md:block h-5 cursor-pointer' /></Link>
+        <Link href='/'><LogoBragaSm className={`${color == 'light' ? 
+        'fill-gray-800' : 'fill-gray-50'} md:hidden h-5 cursor-pointer`} onClick={closeMobileNav}/></Link>
+        <Link href='/'><LogoBragaFull className={`${color == 'light' ? 
+        'fill-gray-800' : 'fill-gray-50'} hidden md:block h-5 cursor-pointer`} /></Link>
         <div className='justify-self-center items-center space-x-6 h-full hidden lg:flex'>
           <Link href='/'>
             <a className={`${currPage === 'home' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px] pointer-events-none' : 'unThin'} text-sm`}>Home</a>
           </Link>
           {/* <Link href='/geodashboard'> */}
-            <p className={`${currPage === 'geodashboard' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px] pointer-events-none' : ''} opacity-50 text-sm`}>GeoDashboard</p>
+            {/* <p className={`${currPage === 'geodashboard' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px] pointer-events-none' : ''} opacity-50 text-sm`}>GeoDashboard</p> */}
           {/* </Link> */}
           {/* <Link href='/works'> */}
-            <p className={`${currPage === 'works' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : ''} ${currPath === '/works'? 'pointer-events-none' : ''} opacity-50 text-sm`}>Works</p>
+            {/* <p className={`${currPage === 'works' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : ''} ${currPath === '/works'? 'pointer-events-none' : ''} opacity-50 text-sm`}>Works</p> */}
           {/* </Link> */}
           <div className='relative h-full'>
             <p className='opacity-0 text-sm relative z-10'>Company</p>
@@ -145,7 +149,7 @@ export default function Navbar(color='light') {
               <Link href='/company/culture'>
                 <a className={`${currPage === 'company' ? 'text-primary underline underline-offset-[5px] decoration-[1.5px]' : 'unThin'}  ${currPath === '/company/culture'? 'pointer-events-none' : ''} left-0 top-0 text-sm mt-[7px] mb-[25%] mx-4`}>Company</a>
               </Link>
-              <div className='flex flex-col space-y-2 mt-0.5 py-3 px-4 bg-white bg-opacity-50 backdrop-blur rounded-md'>
+              <div className={`${color == 'light' ? 'bg-white text-gray-600' : 'bg-gray-800 text-gray-50'} flex flex-col space-y-2 mt-0.5 py-3 px-4 bg-opacity-50 backdrop-blur rounded-md`}>
                 <Link href='/company/culture'>
                   <a className={`${currPath === '/company/culture'? 'pointer-events-none' : ''}`}><p className='unThin text-sm'>Culture</p></a>
                 </Link>
@@ -160,11 +164,12 @@ export default function Navbar(color='light') {
           </Link>
         </div>
         <div className='flex'>
-          <a href='https://geodashboard.braga.co.id/' target='_blank' rel='noreferrer noopener'>
+          {/* <a href='https://geodashboard.braga.co.id/' target='_blank' rel='noreferrer noopener'>
             <button className='buttonLight text-gray-900 bg-white bg-opacity-50'>
               Map Demo
             </button>
-          </a>
+          </a> */}
+          <p className='text-sm'>Geodashboard <span className='bg-primary text-white rounded-3xl text-[8px] py-1 px-2 relative bottom-[2px]'>Releasing Soon</span></p>
           <img src='/navbar/ic-arrow-left.svg' alt='Navbar menu button' id='toggle' onClick={toggleMobileNav} className='lg:hidden ml-3 relative cursor-pointer duration-300' />
         </div>
       </nav>
