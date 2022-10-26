@@ -30,7 +30,7 @@ export default function GetInTouch({number}) {
       </a></Link>
 
 
-      <div className='relative col-start-2 col-span-10 aspect-[312/156] w-full my-6'>
+      <div className='relative col-start-2 col-span-10 aspect-[1838/720] w-full my-6'>
         <Image src={Img} alt='' layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' style={{ borderRadius: '0.75rem' }}/>
         <Chip
           isVisible={isVisible1}
