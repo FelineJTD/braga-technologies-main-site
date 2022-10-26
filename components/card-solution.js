@@ -17,10 +17,12 @@ export default function CardSolution({solution, isDarkMode=false}) {
       <p className={`${isDarkMode? 'text-gray-300' : 'text-gray-500'} text-sm`}>{solution.desc}</p>
       <div className='min-h-[40px] flex-grow' />
       <div className='flex justify-between justify-self-end items-center space-x-3'>
-        <a href={solution.link || '#'} target="_blank" rel='noreferrer noopener'>
-          <button className={`border-[1px] ${isDarkMode? 'border-white enabled:hover:bg-white enabled:hover:text-black' : 'border-black enabled:hover:bg-black enabled:hover:text-white'} disabled:opacity-30 duration-300 whitespace-nowrap`} disabled={solution.comingSoon || false}>{solution.comingSoon? 'Coming Soon' : 'See Solution'}</button>
-        </a>
-        <p className='whitespace-nowrap'>{solution.type}</p>
+        <p className={`${isDarkMode? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-500'} whitespace-nowrap rounded-3xl py-2 px-3 text-xs`}>{solution.type}</p>
+        {!solution.comingSoon &&
+          <a href={solution.link || '#'} target="_blank" rel='noreferrer noopener'>
+            <button className={`border-[1px] ${isDarkMode? 'border-white enabled:hover:bg-white enabled:hover:text-black' : 'border-black enabled:hover:bg-black enabled:hover:text-white'} disabled:opacity-30 duration-300 whitespace-nowrap`}>Visit &nbsp;&nbsp; &gt;</button>
+          </a>
+        }
       </div>
     </div>
   )
