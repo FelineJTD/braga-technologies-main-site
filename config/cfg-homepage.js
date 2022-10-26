@@ -127,29 +127,41 @@ export const Sectors = [
 // SECTION 04
 export const Examples = [
   {
-    "title": "Si-Pulau", 
+    "title": "Si Pulau BIG, WebGIS Information System", 
     "img": require('../assets/images/homepage/products/thumb-sipulau.png'),
     "desc": "Technologies that integrate, process, analyze, and visualize big data for your collective's solution.",
-    "type": "GeoDashboard",
+    "type": "Government",
     "link": "https://sipulau.big.go.id/map",
+  }, {
+    "title": "Event Mapping Information System",
+    "img": require('../assets/images/homepage/products/thumb-event.png'),
+    "desc": "Supporting the Digital Transformation Initiatives of West java, our GeoDashboard is designed to map ongoing events to promote local events with DISPARBUD.",
+    "type": "Tourism",
+    "link": "https://smilingevent.jabarprov.go.id/event-map",
+  }, {
+    "title": "Agriculture Information System",
+    "img": require('../assets/images/homepage/products/thumb-agriculture.png'),
+    "desc": "Imropving the management and presentation of village data in West Java to help in spreading information of land suitability.",
+    "type": "Agriculture",
+    "comingSoon": true,
   }, {
     "title": "Fleet Management System",
     "img": require('../assets/images/homepage/products/thumb-fleet.png'),
-    "desc": "Technologies that integrate, process, analyze, and visualize big data for your collective's solution.",
-    "type": "Enterprise",
+    "desc": "Integrated with GeoDashboard, this system helps in managing large number of a nation-wide operations involving multiple forms of fleet and logistic machinery.",
+    "type": "Asset Management",
     "comingSoon": true,
   }, {
-    "title": "Visitor Monitoring",
-    "img": require('../assets/images/homepage/products/thumb-visitor.png'),
-    "desc": "Technologies that integrate, process, analyze, and visualize big data for your collective's solution.",
-    "type": "Braga-AI",
+    "title": "Crisis Center Reporting Portal",
+    "img": require('../assets/images/homepage/products/thumb-crisis.png'),
+    "desc": "A portal that detects natural and manmade crisis in tourism spot digitally to aid in quick and accurate decision making.",
+    "type": "Tourism",
     "comingSoon": true,
   }, {
-    "title": "West Java Tourism",
-    "img": require('../assets/images/homepage/products/thumb-tourism.png'),
-    "desc": "Technologies that integrate, process, analyze, and visualize big data for your collective's solution..",
-    "type": "GeoDashboard",
-    "link": "https://smilingevent.jabarprov.go.id/event-map",
+    "title": "Vessel Management Monitoring Dashboard",
+    "img": require('../assets/images/homepage/products/thumb-vessel.png'),
+    "desc": "Marine Positioning Integration, Real-time Weather Map, this system is designed to navigate the static and moving assets in the sea.",
+    "type": "Oil and Gas",
+    "comingSoon": true,
   }
 ]
 

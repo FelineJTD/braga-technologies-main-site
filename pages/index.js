@@ -110,7 +110,7 @@ export default function Home() {
         </div>
         )}
         {/* 00 */}
-        <section className='w-full h-[calc(100vh-2rem)] pt-12 text-center flex flex-col justify-between relative z-10 bg-gray-800 text-gray-50 rounded-b-2xl'>
+        <section className='w-full -mt-16 h-[calc(100vh+2rem)] pt-12 text-center flex flex-col justify-between relative z-10 bg-gray-800 text-gray-50 rounded-b-2xl'>
           <div className='md:w-full w-auto h-[calc(100vh-2rem)] absolute -mt-8 z-0'>
             <Lottie animationData={BGLottie} loop={true}/>
           </div>
@@ -246,12 +246,27 @@ export default function Home() {
             </div>
           {/* </Link> */}
 
-          <div className='col-start-2 col-span-10 grid grid-cols-3 gap-3 w-full' ref={examplesRef}>
+          <div className='flex overflow-auto no-scrollbar w-full snap-x col-start-2 col-span-10 lg:grid grid-cols-3 gap-3' ref={examplesRef}>
             {
               Examples.map((example, index) => (
                 <CardSolution solution={example} isDarkMode={true} key={index} />
               ))
             }
+          </div>
+          {/* TODO: change to icon */}
+          <div className='lg:hidden -ml-4 mt-8'>
+            <button 
+              className='border-0 hover:text-primary duration-200' 
+              onClick={() => scroll(examplesRef, -300)}
+            >
+              &lt;
+            </button>
+            <button 
+              className='border-0 hover:text-primary duration-200'
+              onClick={() => scroll(examplesRef, 300)}
+            >
+              &gt;
+            </button>
           </div>
 
           <div className='col-start-2 col-span-10 mt-11'>
