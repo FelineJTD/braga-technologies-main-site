@@ -159,9 +159,11 @@ export default function Home() {
             <h2 className='mb-4'>From seeing <i>where</i> to understand <u>why.</u></h2>
           </div>
           <p className='col-span-3 col-start-7 lg:self-end mb-4'>Analyze site conditions, measure key urban indicators, and perform spatial analysis — directly in the browser.</p>
-          <Link href='/geodashboard'><a className='flex justify-end lg:self-end col-span-2 mb-4'>
-            <button className='buttonPrimary whitespace-nowrap disabled:opacity-50' disabled>GeoDashboard &nbsp; &gt;</button>
-          </a></Link>
+          {/* <Link href='/geodashboard'> */}
+            <div className='flex justify-end lg:self-end col-span-2 mb-4'>
+              <button className='flex justify-end lg:self-end col-span-2 mb-4 lg:mb-0 buttonDark whitespace-nowrap disabled:opacity-50' disabled>GeoDashboard &nbsp; &gt;</button>
+            </div>
+          {/* </Link> */}
 
           <div className='col-span-12 w-full aspect-[1362/625] my-6 rounded-xl'>
             <Lottie animationData={GeoDashboardAnimation} loop={true} />
@@ -238,9 +240,11 @@ export default function Home() {
             <h2 className='mb-10'>Braga Solutions, Integrated to You.</h2>
           </div>
           <p className='col-span-3 col-start-7 lg:self-end mb-10'>Our interdisciplinary design and development approach accelerates the geospatial tech delivery to your hands.</p>
-          <Link href='/works'><a className='flex justify-end lg:self-end col-span-2 mb-10'>
-            <button className='buttonPrimary disabled:opacity-50' disabled>Works &nbsp; &gt;</button>
-          </a></Link>
+          {/* <Link href='/works'> */}
+            <div className='flex justify-end lg:self-end col-span-2 mb-10'>
+              <button className='buttonDark disabled:opacity-50' disabled>Works &nbsp; &gt;</button>
+            </div>
+          {/* </Link> */}
 
           <div className='col-start-2 col-span-10 grid grid-cols-3 gap-3 w-full' ref={examplesRef}>
             {
