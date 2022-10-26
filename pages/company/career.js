@@ -43,44 +43,45 @@ export default function Career() {
           {/* THOUGHTS ON BRAGA */}
 
           {/* Left */}
-          <div className='relative w-full min-h-[18rem] lg:aspect-[380/420] col-start-1 col-span-6 lg:col-start-4 lg:col-span-3'>
+          <div className='relative w-full min-h-[20rem] col-start-1 col-span-6 lg:col-start-4 md:col-span-3 mt-4'>
             <div className='relative w-full h-full'>
             { Testimonials.map((testimonial, index) => (
               <div key={index} className={`${index === currTestimonialIdx ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6 motion-reduce:translate-y-0'} z-10 text-gray-800 md:text-gray-50 duration-300 absolute`}>
                 <div className='flex justify-between mb-4'>
-                  <p className='md:text-sm text-gray-600'><b>{testimonial.name}</b></p>
-                  <p className='text-xs md:text-sm text-gray-400'><i>{testimonial.title}</i></p>
+                  <p className='md:text-xs text-gray-600'><b>{testimonial.name}</b></p>
+                  <p className='md:text-xs text-gray-400'><i>{testimonial.title}</i></p>
                 </div>
-                <h2 className='text-primary text-2xl md:text-3xl'>{testimonial.headline}</h2>
+                <h2 className='text-primary text-3xl'>{testimonial.headline}</h2>
                 <p className='mt-4 flex-grow text-gray-600 duration-500 ease-in mb-4 text-sm'>
                   {testimonial.desc}
                 </p>
               </div>
             )) }
             </div>
-            {/* TODO: change to icon */}
-            <div className='-ml-4 mt-2 relative z-30'>
-              <button 
-                className='border-0 hover:text-primary duration-200' 
-                onClick={() => setCurrTestimonialIdx((currTestimonialIdx - 1 + Testimonials.length)%Testimonials.length)}
-              >
-                &lt;
-              </button>
-              <button 
-                className='border-0 hover:text-primary duration-200'
-                onClick={() => setCurrTestimonialIdx((currTestimonialIdx + 1)%Testimonials.length)}
-              >
-                &gt;
-              </button>
-            </div>
           </div>
           {/* Right */}
-          <div className='col-start-1 col-span-6 lg:col-start-7 lg:col-span-3 relative w-full aspect-[380/460]'>
+          <div className='col-start-1 col-span-6 lg:col-start-7 md:col-start-4 md:col-span-3 relative w-full aspect-[380/460] mt-4'>
           { Testimonials.map((testimonial, index) => (
             <div key= {index} className={`${index === currTestimonialIdx ? 'opacity-100 z-10' : 'opacity-0 motion-reduce:opacity-100 delay-300 z-0'} aspect-[380/460] w-full bg-gray-500 z-0 rounded-xl duration-300 overflow-hidden absolute col-start-3 lg:col-start-7 col-span-3`}>
               <Image src={testimonial.img} alt={`Photo of ${testimonial.name}`} layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' />
             </div>
           )) }
+          </div>
+
+          {/* TODO: change to icon */}
+          <div className='mt-2 -ml-4 col-start-1 lg:col-start-4 col-span-3 relative z-30'>
+            <button 
+              className='border-0 hover:text-primary duration-200' 
+              onClick={() => setCurrTestimonialIdx((currTestimonialIdx - 1 + Testimonials.length)%Testimonials.length)}
+            >
+              &lt;
+            </button>
+            <button 
+              className='border-0 hover:text-primary duration-200'
+              onClick={() => setCurrTestimonialIdx((currTestimonialIdx + 1)%Testimonials.length)}
+            >
+              &gt;
+            </button>
           </div>
         </section>
 
