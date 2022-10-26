@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       {/* LOADING */}
-      <div className={`${loading || !hasTimeElapsed? 'translate-y-0 duration-500' : '-translate-y-[100vh] duration-700'} fixed h-screen w-full bg-gray-50 z-50 flex flex-col items-center justify-center text-center`}>
+      <div className={`${loading || !hasTimeElapsed? 'translate-y-0 duration-500' : '-translate-y-[100vh] duration-700'} fixed h-screen w-full bg-gray-50 z-[70] flex flex-col items-center justify-center text-center`}>
         <p className='text-xs text-gray-700 mb-3'>{loadingCopy}</p>
         <div className='relative h-0.5 w-full bg-gray-100'>
           <div className={`${loading || !hasTimeElapsed? 'animate-progress-bar' : 'w-full'} absolute top-0 h-0.5 bg-gray-300 duration-100`} />

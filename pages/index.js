@@ -87,7 +87,7 @@ export default function Home() {
             isVisible={isVisible2}
             setIsVisible={setIsVisible2}
             icon={require('../public/homepage/chip-icons/icon-retail.svg')}
-            color='primary'
+            color='secondary'
             text='Retail Unit'
             className='top-36 md:top-[30%] right-[10%] delay-300'
           />
@@ -95,7 +95,7 @@ export default function Home() {
             isVisible={isVisible3}
             setIsVisible={setIsVisible3}
             icon={require('../public/homepage/chip-icons/icon-location.svg')}
-            color='primary'
+            color='secondary'
             text='HQ'
             className='bottom-52 md:bottom-[28%] left-[15%]'
           />
@@ -103,7 +103,7 @@ export default function Home() {
             isVisible={isVisible4}
             setIsVisible={setIsVisible4}
             icon={require('../public/homepage/chip-icons/icon-bus.svg')}
-            color='secondary'
+            color='primary'
             text='Fleet_121'
             className='bottom-64 md:bottom-[20%] right-[10%] delay-200'
           />
