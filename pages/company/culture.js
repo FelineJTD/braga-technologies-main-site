@@ -55,7 +55,7 @@ export default function Culture() {
         <meta name="keywords" content="Braga Technologies, Braga GeoDashboard, GeoDashboard, GIS, GIS Indonesia, WEBGIS, geospatial services, Bandung technology services" key="keywords"/>
       </Head>
 
-      <Navbar color='light' />
+      <Navbar color={`${isScrollArea ? 'dark' : 'light'}`} />
       <main className='text-gray-900 bg-gray-50 w-full'>
         {/* 00 */}
         <section className='whiteBGFullGridSmPadding'>
@@ -100,7 +100,7 @@ export default function Culture() {
           <div className='flex items-end justify-center absolute left-0 bottom-0 h-full w-full max-w-full z-0'>
             <Lottie animationData={Animation} loop />
           </div>
-          <div className='col-start-2 col-span-3 lg:sticky top-24 z-10 lg:mb-0 pb-[24vw]'>
+          <div className='col-start-2 col-span-3 lg:sticky top-24 z-10 lg:mb-0 pb-[30vw]'>
             <p className='bold mb-4'>Culture Manifesto</p>
             <h2 className='w-full'>
               Only good<br />
@@ -109,10 +109,12 @@ export default function Culture() {
               <i>well-working.</i>
             </h2>
           </div>
-          <p className='col-start-9 col-span-3 text-gray-200 mb-[30vw] text-sm relative z-10'>More than our work, we are valuable as a person. As much as you do your best at work, we are committed at prioritizing and improving your well-being.</p>
+          <p className='col-start-9 col-span-3 text-gray-200 mb-[24vw] text-sm relative z-10'>More than our work, we are valuable as a person. As much as you do your best at work, we are committed at prioritizing and improving your well-being.</p>
           <p className='col-start-9 col-span-3 text-gray-200 mt-8 bold mb-[30vw] relative z-10 text-lg'>With Braga Technologies, navigate your passion and expertise here together.</p>
           <p className='col-start-9 col-span-3 text-gray-200 mt-8 text-sm relative z-10'>Braga’s living systems and playbook are designed to ensure you have a wholly impeccable experience here.</p>
-          <button className='col-start-9 col-span-2 text-gray-200 mt-8 mb-[30vw] buttonDark relative z-10'>Grow With Us &gt;</button>
+          <button className='col-start-9 col-span-2 text-gray-200 mt-8 mb-[20vw] buttonDark relative z-10'>Grow With Us &gt;</button>
+          <p className='col-start-1 col-span-12 text-center text-sm bg-gradient-to-t from-[#0E0D0D] to-transparent pb-10 pt-24 relative -bottom-[6rem] z-10'>“My main responsibility is not making a big company or big profit,<br />
+          but sharing the welfare as much as possible and building a bright future for all of us.” <br />-Dirga Sumantri, CEO</p>
         </section>
 
         {/* 01 */}
