@@ -109,11 +109,11 @@ export default function Culture() {
               <i>well-working.</i>
             </h2>
           </div>
-          <p className='col-start-9 col-span-3 text-gray-200 mb-[24vw] text-sm relative z-10'>More than our work, we are valuable as a person. As much as you do your best at work, we are committed at prioritizing and improving your well-being.</p>
+          <p className='col-start-9 col-span-3 text-gray-200 mb-[24vw] text-sm relative z-10 mt-8'>More than our work, we are valuable as a person. As much as you do your best at work, we are committed at prioritizing and improving your well-being.</p>
           <p className='col-start-9 col-span-3 text-gray-200 mt-8 bold mb-[30vw] relative z-10 text-lg'>With Braga Technologies, navigate your passion and expertise here together.</p>
           <p className='col-start-9 col-span-3 text-gray-200 mt-8 text-sm relative z-10'>Braga’s living systems and playbook are designed to ensure you have a wholly impeccable experience here.</p>
           <button className='col-start-9 col-span-2 text-gray-200 mt-8 mb-[20vw] buttonDark relative z-10'>Grow With Us &gt;</button>
-          <p className='col-start-1 col-span-12 text-center text-sm bg-gradient-to-t from-[#0E0D0D] to-transparent pb-10 pt-24 relative -bottom-[6rem] z-10'>“My main responsibility is not making a big company or big profit,<br />
+          <p className='col-start-1 col-span-12 text-center text-sm bg-gradient-to-t from-[#0E0D0D] to-transparent pb-10 pt-24 relative -bottom-[6rem] z-10 text-gray-200'>“My main responsibility is not making a big company or big profit,<br />
           but sharing the welfare as much as possible and building a bright future for all of us.” <br />-Dirga Sumantri, CEO</p>
         </section>
 
