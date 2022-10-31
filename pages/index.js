@@ -116,7 +116,7 @@ export default function Home() {
           </div>
           <div className='flex items-center w-full flex-grow px-6 relative z-10 text-center'>
             <h1>
-              Answering <span className='italic animate-top-to-bottom'>How</span>,<br className='hidden md:block'/>by Understanding <span className='underline italic animate-bottom-to-top'>Where</span>
+              Answering <span className='italic animate-top-to-bottom'>How</span>, <br className='hidden md:block'/>by Understanding <span className='underline italic animate-bottom-to-top'>Where</span>
             </h1>
           </div>
           <div className='flex flex-col items-center px-6 lg:px-[25vw] xl:px-[30vw] pb-12 bg-gradient-to-b from-transparent to-gray-800 rounded-b-2xl relative z-10'>
