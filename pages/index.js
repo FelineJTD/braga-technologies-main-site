@@ -115,7 +115,7 @@ export default function Home() {
             <Lottie animationData={BGLottie} loop={true}/>
           </div>
           <div className='flex items-center w-full flex-grow px-6 relative z-10 text-center'>
-            <h1>
+            <h1 className='text-center w-full'>
               Answering <span className='italic animate-top-to-bottom'>How</span>, <br className='hidden md:block'/>by Understanding <span className='underline italic animate-bottom-to-top'>Where</span>
             </h1>
           </div>
