@@ -12,7 +12,7 @@ export default function PartnerLogos() {
                 <Image
                   src={logo}
                   alt='Partner Logo'
-                  height={100}
+                  height={96}
                   layout='fixed'
                   objectFit='contain'
                 />
@@ -27,7 +27,7 @@ export default function PartnerLogos() {
                 <Image
                   src={logo}
                   alt='Partner Logo'
-                  height={100}
+                  height={96}
                   layout='fixed'
                   objectFit='contain'
                 />

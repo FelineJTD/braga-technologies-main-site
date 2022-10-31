@@ -143,7 +143,7 @@ export const Examples = [
     "img": require('../assets/images/homepage/products/thumb-agriculture.png'),
     "desc": "Imropving the management and presentation of village data in West Java to help in spreading information of land suitability.",
     "type": "Agriculture",
-    "comingSoon": true,
+    "link": "https://dashboard-perkebunan.jabarprov.go.id/map",
   }, {
     "title": "Fleet Management System",
     "img": require('../assets/images/homepage/products/thumb-fleet.png'),
