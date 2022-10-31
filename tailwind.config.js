@@ -87,7 +87,11 @@ module.exports = {
           '100%': {
             width: '90%',
           },
-        }
+        },
+        scrollLeft: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
       },
       animation: {
         'fade-in': 'fade-in 0.5s ease-in-out',
@@ -96,6 +100,7 @@ module.exports = {
         'top-to-bottom': 'top-to-bottom 3s ease-out',
         'bottom-to-top': 'bottom-to-top 3s ease-out',
         'progress-bar': 'progress-bar 3s linear',
+        'scrollLeft': 'scrollLeft 60s linear infinite',
       }
     },
   },
