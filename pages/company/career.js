@@ -48,8 +48,8 @@ export default function Career() {
             { Testimonials.map((testimonial, index) => (
               <div key={index} className={`${index === currTestimonialIdx ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6 motion-reduce:translate-y-0'} z-10 text-gray-800 md:text-gray-50 duration-300 absolute`}>
                 <div className='flex justify-between mb-4'>
-                  <p className='md:text-xs text-gray-600'><b>{testimonial.name}</b></p>
-                  <p className='md:text-xs text-gray-400'><i>{testimonial.title}</i></p>
+                  <p className='md:text-xs text-gray-600'><b>{testimonial.title}</b></p>
+                  {/* <p className='md:text-xs text-gray-400'><i>{testimonial.title}</i></p> */}
                 </div>
                 <h2 className='text-primary text-3xl'>{testimonial.headline}</h2>
                 <p className='mt-4 flex-grow text-gray-600 duration-500 ease-in mb-4 text-sm'>
@@ -62,8 +62,14 @@ export default function Career() {
           {/* Right */}
           <div className='col-start-1 col-span-6 lg:col-start-7 md:col-start-4 md:col-span-3 relative w-full aspect-[380/460] mt-4'>
           { Testimonials.map((testimonial, index) => (
-            <div key= {index} className={`${index === currTestimonialIdx ? 'opacity-100 z-10' : 'opacity-0 motion-reduce:opacity-100 delay-300 z-0'} aspect-[380/460] w-full bg-gray-500 z-0 rounded-xl duration-300 overflow-hidden absolute col-start-3 lg:col-start-7 col-span-3`}>
-              <Image src={testimonial.img} alt={`Photo of ${testimonial.name}`} layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' />
+            <div key= {index} className={`${index === currTestimonialIdx ? 'opacity-100 z-10' : 'opacity-0 motion-reduce:opacity-100 delay-300 z-0'} w-full z-0 duration-300 overflow-hidden absolute col-start-3 lg:col-start-7 col-span-3`}>
+              <div className='relative aspect-[380/460] mr-4 rounded-xl'>
+                <Image src={testimonial.img} alt={`Photo of ${testimonial.name}`} layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' className='rounded-xl' />
+              </div>
+              <div className='absolute bottom-8 right-0 text-white rounded-md py-1 px-2 text-xs flex gap-2' style={{ backgroundColor: testimonial.color }}>
+                <Image src={testimonial.icon} alt='' width={12} height={12} />
+                <p>{testimonial.name}</p>
+              </div>
             </div>
           )) }
           </div>
