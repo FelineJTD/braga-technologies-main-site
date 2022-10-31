@@ -114,9 +114,9 @@ export default function Home() {
           <div className='md:w-full w-auto h-[calc(100vh-2rem)] absolute -mt-8 z-0'>
             <Lottie animationData={BGLottie} loop={true}/>
           </div>
-          <div className='flex items-center w-full flex-grow px-6 lg:px-[25vw] xl:px-[30vw] relative z-10'>
-            <h1 className='overflow-hidden'>
-              Answering <span className='italic animate-top-to-bottom'>How</span>, by Understanding <span className='underline italic animate-bottom-to-top'>Where</span>
+          <div className='flex items-center w-full flex-grow px-6 relative z-10'>
+            <h1>
+              Answering <span className='italic animate-top-to-bottom'>How</span>,<br className='hidden md:block'/>by Understanding <span className='underline italic animate-bottom-to-top'>Where</span>
             </h1>
           </div>
           <div className='flex flex-col items-center px-6 lg:px-[25vw] xl:px-[30vw] pb-12 bg-gradient-to-b from-transparent to-gray-800 rounded-b-2xl relative z-10'>
