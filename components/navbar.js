@@ -122,7 +122,7 @@ export default function Navbar({color='light'}) {
           <a className={`${currPage === 'contact' ? 'text-primary underline' : ''} text-lg`} onClick={closeMobileNav}>Contact</a>
         </Link>
         <div className='divider' aria-hidden/>
-        <Link href='/'><a className='text-sm text-gray-500' onClick={closeMobileNav}>Terms of Use</a></Link>
+        {/* <Link href='/'><a className='text-sm text-gray-500' onClick={closeMobileNav}>Terms of Use</a></Link> */}
         <Link href='/'><a className='text-sm text-gray-500' onClick={closeMobileNav}>Privacy</a></Link>
       </nav>
 
@@ -151,10 +151,10 @@ export default function Navbar({color='light'}) {
               </Link>
               <div className={`${color == 'light' ? 'bg-white text-gray-600' : 'bg-gray-800 text-gray-50'} flex flex-col space-y-2 mt-0.5 py-3 px-4 bg-opacity-50 backdrop-blur rounded-md`}>
                 <Link href='/company/culture'>
-                  <a className={`${currPath === '/company/culture'? 'pointer-events-none' : ''}`}><p className='unThin text-sm'>Culture</p></a>
+                  <a className={`${currPath === '/company/culture'? 'pointer-events-none text-primary underline' : ''}`}><p className='unThin text-sm'>Culture</p></a>
                 </Link>
                 <Link href='/company/career'>
-                  <a className={`${currPath === '/company/career'? 'pointer-events-none' : ''}`}><p className='unThin text-sm'>Career</p></a>
+                  <a className={`${currPath === '/company/career'? 'pointer-events-none text-primary underline' : ''}`}><p className='unThin text-sm'>Career</p></a>
                 </Link>
               </div>
             </div>
