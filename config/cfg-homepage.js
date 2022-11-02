@@ -33,17 +33,17 @@ export const Solutions = [
 // SECTION 02
 export const Features = [
   {
-    "title": "Spatial Range Calculation",
+    "title": "Geo-Data Visualization",
     "img": require('../assets/images/homepage/features/pict-range.svg'),
-    "desc": "Visualize multiple layers both vector and raster to perform a detailed, precise, and insightful analysis.",
+    "desc": "Visualize 2D and 3D data with more than 10 types of data (Ex: CSV, SHP, KML, GeoJSON, dwg, dxf, TiFF, obj, LAS, etc)",
   }, {
-    "title": "Multi-Format Data Visualization",
+    "title": "Spatial Analysis",
     "img": require('../assets/images/homepage/features/pict-dataviz.svg'),
-    "desc": "Easily visualize data in point, polygon and polyline format. Inspect rich data display for each attribute.",
+    "desc": "Create new insight with more than 50 analytic tools (Ex: buffer, route finder, multi-site analysis, spatial autocorrelation, etc) ",
   }, {
-    "title": "Bootstrap Approach",
+    "title": "Data External and Sensor Integration",
     "img": require('../assets/images/homepage/features/pict-bootstrap.svg'),
-    "desc": "Created in no time through bootstrap. Get all the desired features, tailored to your needs.",
+    "desc": "Integrate data with external database, APIs or IoT sensors.",
   }
 ]
 
