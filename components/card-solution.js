@@ -5,11 +5,11 @@ import Image from 'next/image'
 export default function CardSolution({solution, isDarkMode=false}) {
   return (
     <div className={`group snap-start lg:snap-none flex flex-col space-y-2 w-full rounded-lg p-3 border-2 ${isDarkMode? 'border-gray-600' : 'border-gray-200'}`}>
-      <div className={`${solution.animation?'bg-gray-100':'aspect-[263/120]'} relative w-full rounded-md overflow-hidden`}>
+      <div className={`${solution.animation?'bg-gray-100':'aspect-[287/160]'} relative w-full rounded-md overflow-hidden`}>
         {solution.animation && <Lottie animationData={solution.animation} loop />}
         {solution.img && 
-          <div className='group-hover:scale-110 duration-300 ease-in-out'>
-            <Image src={solution.img} alt='' width={263} height={120} layout='fixed' placeholder='blur' />
+          <div className='relative group-hover:scale-110 duration-300 ease-in-out w-full h-full'>
+            <Image src={solution.img} alt='' layout='fill' placeholder='blur' />
           </div>
         }
       </div>
