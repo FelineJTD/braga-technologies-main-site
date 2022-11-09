@@ -107,7 +107,7 @@ export const Testimonials = [
   color: '#F36A1D',
 },
 {
-  name: 'Muhammad Dita Farel',
+  name: 'Muhammad Farel',
   title: 'Account Manager',
   img: require('../public/company/testimonials/dita.png'),
   icon: require('../public/company/testimonials/dita.svg'),
