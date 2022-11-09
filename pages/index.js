@@ -204,7 +204,7 @@ export default function Home() {
         </section>
 
         {/* 03 */}
-        <section className='whiteBG'>
+        <section className='whiteBG pb-0 mb-0'>
           <p className='bold mb-4'>03.</p>
           <p className='mb-4 bold col-span-3'>GeoSpatial Potential</p>
           <div className='col-start-9 col-span-4 mb-10'>
