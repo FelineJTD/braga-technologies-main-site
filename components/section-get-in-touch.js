@@ -32,7 +32,7 @@ export default function GetInTouch({number}) {
 
 
       <div className='relative col-start-2 col-span-10 aspect-[1838/720] w-full my-6'>
-        <Lottie src='/lottie/GetInTouch.json' loop autoplay />
+        <Lottie src='/shared/get-in-touch.json' loop autoplay />
         {/* <Image src={Img} alt='' layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' style={{ borderRadius: '0.75rem' }}/> */}
         <Chip
           isVisible={isVisible1}
