@@ -4,6 +4,7 @@ import Chip from './cmp-chip'
 import Image from 'next/image'
 import Link from 'next/link';
 import { Img } from '../config/cfg-get-in-touch';
+import { LottiePlayer } from 'lottie-react';
 
 export default function GetInTouch({number}) {
   const [isVisible1, setIsVisible1] = useState(true);
@@ -31,7 +32,8 @@ export default function GetInTouch({number}) {
 
 
       <div className='relative col-start-2 col-span-10 aspect-[1838/720] w-full my-6'>
-        <Image src={Img} alt='' layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' style={{ borderRadius: '0.75rem' }}/>
+        <LottiePlayer src='/lottie/GetInTouch.json' loop autoplay />
+        {/* <Image src={Img} alt='' layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' style={{ borderRadius: '0.75rem' }}/> */}
         <Chip
           isVisible={isVisible1}
           setIsVisible={setIsVisible1}
