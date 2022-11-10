@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect } from 'react';
 import Chip from './cmp-chip'
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link';
 import { Img } from '../config/cfg-get-in-touch';
 import Lottie from 'lottie-react';
@@ -32,7 +32,7 @@ export default function GetInTouch({number}) {
 
 
       <div className='relative col-start-2 col-span-10 aspect-[1838/720] w-full my-6'>
-        <Lottie src='/shared/get-in-touch.json' loop autoplay />
+        <Lottie src={Img} loop autoplay />
         {/* <Image src={Img} alt='' layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' style={{ borderRadius: '0.75rem' }}/> */}
         <Chip
           isVisible={isVisible1}
