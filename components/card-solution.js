@@ -8,7 +8,7 @@ export default function CardSolution({solution, isDarkMode=false}) {
       <div className={`${solution.animation?'bg-gray-100':'aspect-[287/160]'} relative w-full rounded-md overflow-hidden`}>
         {solution.animation && <Lottie animationData={solution.animation} loop />}
         {solution.img && 
-          <div className='relative group-hover:scale-110 duration-300 ease-in-out w-full h-full'>
+          <div className='relative group-hover:scale-110 duration-300 ease-in-out w-[287px] h-[160px] lg:w-full lg:h-full'>
             <Image src={solution.img} alt='' layout='fill' placeholder='blur' />
           </div>
         }
