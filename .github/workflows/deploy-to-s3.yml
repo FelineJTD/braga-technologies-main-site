@@ -24,7 +24,7 @@ jobs:
            npm run build
      
         - name: Deploy
-          uses: lbertenasco/s3-deploy@v2
+          uses: actions/cache@v2
           with:
             folder: ./
             bucket: braga.co.id
