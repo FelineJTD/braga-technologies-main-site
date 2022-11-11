@@ -14,7 +14,10 @@ jobs:
 
      - name: Setup node
        uses: actions/setup-node@v2
-
+     
+     - name: Install next
+       run:  npm i -g next
+      
      - name: Run APPS
        run: npm run dev
 
