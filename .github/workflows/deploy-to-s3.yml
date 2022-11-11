@@ -12,7 +12,7 @@ env:
   SOURCE_DIR: "build"
 
 jobs:
-  run:
+  build:
     runs-on: ubuntu-latest
     
 strategy:
