@@ -29,5 +29,5 @@ jobs:
             folder: ./
             bucket: braga.co.id
             dist-id: ESN7D10ZHJQZK
-            region: ${{ AWS_REGION }}
+            region: ap-southeast-1
             invalidation: / *
