@@ -1,40 +1,34 @@
 name: S3 Deploy
-
-on:
- push:
-   branches:
-     - main
-
+'on':
+  push:
+    branches:
+      - main
 env:
-  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_ACCESS_KEY_ID: '${{ secrets.AWS_ACCESS_KEY_ID }}'
+  AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_SECRET_ACCESS_KEY }}'
   AWS_REGION: ap-southeast-1
-  SOURCE_DIR: "build"
-
+  SOURCE_DIR: build
 jobs:
   build:
     runs-on: ubuntu-latest
-    
 strategy:
-      matrix:
-        node-version: [16.x]
+  matrix:
+    node-version:
+      - 16.x
 steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-
-    - name: Install dependencies
-      run: yarn
-
-    - name: Build
-      run: yarn build
-
-    - name: Deploy
-      uses: lbertenasco/s3-deploy@v1
-      with:
-        folder: build
-        bucket: braga.co.id
-        dist-id: ESN7D10ZHJQZK
-        invalidation: / *
+  - uses: actions/checkout@v1
+  - name: 'Use Node.js ${{ matrix.node-version }}'
+    uses: actions/setup-node@v1
+    with:
+      node-version: '${{ matrix.node-version }}'
+  - name: Install dependencies
+    run: yarn
+  - name: Build
+    run: yarn build
+  - name: Deploy
+    uses: lbertenasco/s3-deploy@v1
+    with:
+      folder: build
+      bucket: braga.co.id
+      dist-id: ESN7D10ZHJQZK
+      invalidation: / *
