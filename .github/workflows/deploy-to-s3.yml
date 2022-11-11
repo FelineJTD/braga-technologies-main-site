@@ -32,9 +32,9 @@ steps:
       run: yarn build
 
 - name: Deploy
-  uses: lbertenasco/s3-deploy@v1
-  with:
-      folder: build
-      bucket: braga.co.id
-      dist-id: ESN7D10ZHJQZK
-      invalidation: / *
+      uses: lbertenasco/s3-deploy@v1
+      with:
+        folder: build
+        bucket: braga.co.id
+        dist-id: ESN7D10ZHJQZK
+        invalidation: / *
