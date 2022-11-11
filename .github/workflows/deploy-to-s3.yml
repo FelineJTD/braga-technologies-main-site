@@ -37,7 +37,7 @@ jobs:
           yarn build
       
       - name: Deploy
-        run: aws s3 sync ./ s3://${{ secrets.AWS_BUCKET_FRONT }}
+        run: aws s3 sync ./ s3://braga.co.id
 
       - name: Invalidate CloudFront
         uses: chetan/invalidate-cloudfront-action@v2
