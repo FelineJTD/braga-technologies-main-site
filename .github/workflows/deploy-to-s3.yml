@@ -5,14 +5,16 @@ on:
    branches:
      - main
 
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_REGION: ap-southeast-1
+  SOURCE_DIR: "build"
+
 jobs:
   run:
     runs-on: ubuntu-latest
-    env:
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      AWS_DEFAULT_REGION: ap-southeast-1
-
+    
 strategy:
       matrix:
       node-version: [16.x]
@@ -32,7 +34,7 @@ steps:
         - name: Deploy
           uses: lbertenasco/s3-deploy@v1
           with:
-            folder: ./
+            folder: build
             bucket: braga.co.id
             dist-id: ESN7D10ZHJQZK
             invalidation: / *
