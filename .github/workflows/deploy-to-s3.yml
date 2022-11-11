@@ -3,15 +3,11 @@ name: Deploy Front Production
 on:
   push:
     branch: 'main'
-    paths:
-      - './'
+  
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: 'front'
     steps:
       - uses: actions/checkout@v2
 
