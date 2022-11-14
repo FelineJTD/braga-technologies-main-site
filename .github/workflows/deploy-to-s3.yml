@@ -28,7 +28,6 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          folder: build
           node-version: 16
 
       - name: Run a multi-line script
@@ -38,7 +37,7 @@ jobs:
           yarn build
 
       - name: Deploy
-        run: aws s3 sync ./build s3://braga.co.id
+        run: aws s3 sync out s3://braga.co.id
 
       - name: Invalidate CloudFront
         uses: chetan/invalidate-cloudfront-action@v2
