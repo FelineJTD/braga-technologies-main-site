@@ -170,7 +170,7 @@ export default function Navbar({color='light'}) {
             </button>
           </a> */}
           <p className='text-sm'>Geodashboard <span className='bg-primary text-white rounded-3xl text-[8px] py-1 px-2 relative bottom-[2px]'>Releasing Soon</span></p>
-          <img src='/navbar/ic-arrow-left.svg' alt='Navbar menu button' id='toggle' onClick={toggleMobileNav} className='lg:hidden ml-3 relative cursor-pointer duration-300' />
+          <img src={color == 'light' ? '/navbar/ic-arrow-left.svg' : '/navbar/ic-arrow-left-white.svg'} alt='Navbar menu button' id='toggle' onClick={toggleMobileNav} className='lg:hidden ml-3 relative cursor-pointer duration-300' />
         </div>
       </nav>
     </>

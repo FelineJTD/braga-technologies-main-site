@@ -84,10 +84,7 @@ export default function JobsSection({ jobs }) {
         <img
           src='/navbar/ic-arrow-left.svg'
           alt='drop down icon'
-          objectFit='contain'
-          objectPosition='center'
-          width={20}
-          height={20}
+          className='w-5 h-5 object-contain object-center'
         />
       </div>
 
