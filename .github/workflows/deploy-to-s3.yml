@@ -28,11 +28,11 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          path: ./out
           node-version: 16
 
       - name: Run a multi-line script
         run: |
+          mkdir out
           npm install -g yarn
           yarn install --frozen-lockfile
           yarn build
