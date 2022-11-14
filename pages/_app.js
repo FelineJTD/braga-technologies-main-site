@@ -50,6 +50,11 @@ function MyApp({ Component, pageProps }) {
         <title>BragaTechnologies</title>
         <meta name="description" content="Braga Technologies brings Location Insight to help industries and organizations alike in assets monitoring, fleet management, campaign optimation, and more." key="description"/>
         <meta name="keywords" content="Braga Technologies, Braga GeoDashboard, GeoDashboard, GIS, GIS Indonesia, WEBGIS, geospatial services, Bandung technology services" key="keywords"/>
+        {/* thumbnail */}
+        <meta property="og:image" content="/thumbnail.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="680" />
+        <meta property="og:image:alt" content="Braga Technologies" />
         <link rel="icon" href="/logo-braga-sm.svg" />
       </Head>
 
