@@ -32,7 +32,8 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          yarn
+          npm install -g yarn
+          yarn install --frozen-lockfile
           yarn build
 
       - name: Deploy
