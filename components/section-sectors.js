@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState, useEffect, useRef } from "react";
 // import Image from "next/image";
 import CardSector from "./card-sector";
