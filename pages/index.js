@@ -215,9 +215,9 @@ export default function Home() {
                   <img
                     src={feature.img}
                     alt=''
+                    className='object-center'
                     height={56}
                     width={56}
-                    objectPosition='center'
                   />
                 </div>
                 <div>

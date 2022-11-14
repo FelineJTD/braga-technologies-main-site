@@ -103,10 +103,7 @@ export default function Team({ departments, page }) {
             <img
               src={department.image}
               alt=''
-              layout='fill'
-              objectFit='cover'
-              objectPosition='center'
-              placeholder='blur'
+              className='object-cover object-center w-full h-full'
             />
           </div>
         ))}

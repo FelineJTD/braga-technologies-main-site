@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // import Image from "next/image";
 
 export default function CardSector({
@@ -28,10 +29,7 @@ export default function CardSector({
         <img
           src={sector.img}
           alt={sector.title}
-          objectFit='cover'
-          objectPosition='center'
-          layout='fill'
-          style={{ borderTopLeftRadius: "8px", borderTopRightRadius: "8px" }}
+          className='object-cover object-center w-full h-full rounded-t-lg'
         />
       </div>
       <div className='flex justify-between p-2 text-gray-800'>
