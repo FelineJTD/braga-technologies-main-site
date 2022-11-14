@@ -91,35 +91,38 @@ export default function Career() {
           </div>
           {/* Right */}
           <div className='col-start-1 col-span-6 lg:col-start-7 md:col-start-4 md:col-span-3 relative w-full aspect-[380/460] mt-4'>
-            {Testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className={`${
-                  index === currTestimonialIdx
-                    ? "opacity-100 z-10"
-                    : "opacity-0 motion-reduce:opacity-100 delay-300 z-0"
-                } w-full z-0 duration-300 overflow-hidden absolute col-start-3 lg:col-start-7 col-span-3`}
-              >
-                <div className='relative aspect-[380/460] mr-4 rounded-xl'>
-                  <img
-                    src={testimonial.img}
-                    alt={`Photo of ${testimonial.name}`}
-                    layout='fill'
-                    objectFit='cover'
-                    objectPosition='center'
-                    placeholder='blur'
-                    className='rounded-xl'
-                  />
-                </div>
+            {Testimonials.map((testimonial, index) => {
+              console.log(testimonial);
+              return (
                 <div
-                  className='absolute bottom-8 right-0 text-white rounded-md py-1 px-2 text-xs flex gap-2'
-                  style={{ backgroundColor: testimonial.color }}
+                  key={index}
+                  className={`${
+                    index === currTestimonialIdx
+                      ? "opacity-100 z-10"
+                      : "opacity-0 motion-reduce:opacity-100 delay-300 z-0"
+                  } w-full z-0 duration-300 overflow-hidden absolute col-start-3 lg:col-start-7 col-span-3`}
                 >
-                  <img src={testimonial.icon} alt='' width={12} height={12} />
-                  <p>{testimonial.name}</p>
+                  <div className='relative aspect-[380/460] mr-4 rounded-xl'>
+                    <img
+                      src={testimonial.img}
+                      alt={`Photo of ${testimonial.name}`}
+                      layout='fill'
+                      objectFit='cover'
+                      objectPosition='center'
+                      placeholder='blur'
+                      className='rounded-xl'
+                    />
+                  </div>
+                  <div
+                    className='absolute bottom-8 right-0 text-white rounded-md py-1 px-2 text-xs flex gap-2'
+                    style={{ backgroundColor: testimonial.color }}
+                  >
+                    <img src={testimonial.icon} alt='' width={12} height={12} />
+                    <p>{testimonial.name}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* TODO: change to icon */}

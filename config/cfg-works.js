@@ -22,7 +22,7 @@ const WorksData = [
     is_coming_soon: true,
     work_type: "Case Study",
   },
-]
+];
 
 for (let i = 0; i < 50; i++) {
   WorksData.push({
@@ -34,7 +34,7 @@ for (let i = 0; i < 50; i++) {
     number: `No. ${i}`,
     is_coming_soon: false,
     work_type: "Case Study",
-  })
+  });
 }
 
 export { WorksData };

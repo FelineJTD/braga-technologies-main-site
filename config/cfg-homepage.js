@@ -42,17 +42,17 @@ export const Solutions = [
 export const Features = [
   {
     title: "Geo-Data Visualization",
-    img: "images/homepage/features/pict-range.svg",
+    img: "/images/homepage/features/pict-range.svg",
     desc: "Visualize 2D and 3D data with more than 10 types of data (Ex: CSV, SHP, KML, GeoJSON, dwg, dxf, TiFF, obj, LAS, etc)",
   },
   {
     title: "Spatial Analysis",
-    img: "images/homepage/features/pict-dataviz.svg",
+    img: "/images/homepage/features/pict-dataviz.svg",
     desc: "Create new insight with more than 50 analytic tools (Ex: buffer, route finder, multi-site analysis, spatial autocorrelation, etc) ",
   },
   {
     title: "Data External and Sensor Integration",
-    img: "images/homepage/features/pict-bootstrap.svg",
+    img: "/images/homepage/features/pict-bootstrap.svg",
     desc: "Integrate data with external database, APIs or IoT sensors.",
   },
 ];
@@ -62,21 +62,21 @@ export const Quotes = [
   {
     quote:
       "“The Framework will help countries in building capacity using geospatial technology ... to achieve a digital transformation, and bridge the digital divide”",
-    img: "images/homepage/quotes/anna-wellenstein.png",
+    img: "/images/homepage/quotes/anna-wellenstein.png",
     author: "Anna Wellenstein",
     author_title: "Director, Land and Geospatial, World Bank.",
   },
   {
     quote:
       "“Transformasi Digital merupakan solusi tepat dan strategis untuk membawa Indonesia menuju masa depan”",
-    img: "images/homepage/quotes/joko-widodo.png",
+    img: "/images/homepage/quotes/joko-widodo.png",
     author: "Ir. H. Joko Widodo",
     author_title: "President of Indonesia",
   },
   {
     quote:
       "“Geospatial information is a critical component of a national infrastructure and a blueprint of what happens where, with proven societal and economic value”",
-    img: "images/homepage/quotes/stefan-schweinfest.png",
+    img: "/images/homepage/quotes/stefan-schweinfest.png",
     author: "Stefan Schweinfest",
     author_title: "UN Department of Economic and Social Affairs",
   },
@@ -143,42 +143,42 @@ export const Sectors = [
 export const Examples = [
   {
     title: "Si Pulau BIG, WebGIS Information System",
-    img: "images/homepage/products/thumb-sipulau.png",
+    img: "/images/homepage/products/thumb-sipulau.png",
     desc: "Technologies that integrate, process, analyze, and visualize big data for your collective's solution.",
     type: "Government",
     link: "https://sipulau.big.go.id/map",
   },
   {
     title: "Event Mapping Information System",
-    img: "images/homepage/products/thumb-event.png",
+    img: "/images/homepage/products/thumb-event.png",
     desc: "Supporting the Digital Transformation Initiatives of West java, our GeoDashboard is designed to map ongoing events to promote local events with DISPARBUD.",
     type: "Tourism",
     link: "https://smilingevent.jabarprov.go.id/event-map",
   },
   {
     title: "Agriculture Information System",
-    img: "images/homepage/products/thumb-agriculture.png",
+    img: "/images/homepage/products/thumb-agriculture.png",
     desc: "Imropving the management and presentation of village data in West Java to help in spreading information of land suitability.",
     type: "Agriculture",
     link: "https://dashboard-perkebunan.jabarprov.go.id/map",
   },
   {
     title: "Fleet Management System",
-    img: "images/homepage/products/thumb-fleet.png",
+    img: "/images/homepage/products/thumb-fleet.png",
     desc: "Integrated with GeoDashboard, this system helps in managing large number of a nation-wide operations involving multiple forms of fleet and logistic machinery.",
     type: "Asset Management",
     comingSoon: true,
   },
   {
     title: "Crisis Center Reporting Portal",
-    img: "images/homepage/products/thumb-crisis.png",
+    img: "/images/homepage/products/thumb-crisis.png",
     desc: "A portal that detects natural and manmade crisis in tourism spot digitally to aid in quick and accurate decision making.",
     type: "Tourism",
     comingSoon: true,
   },
   {
     title: "Vessel Management Monitoring Dashboard",
-    img: "images/homepage/products/thumb-vessel.png",
+    img: "/images/homepage/products/thumb-vessel.png",
     desc: "Marine Positioning Integration, Real-time Weather Map, this system is designed to navigate the static and moving assets in the sea.",
     type: "Oil and Gas",
     comingSoon: true,
