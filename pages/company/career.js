@@ -106,11 +106,7 @@ export default function Career() {
                     <img
                       src={testimonial.img}
                       alt={`Photo of ${testimonial.name}`}
-                      layout='fill'
-                      objectFit='cover'
-                      objectPosition='center'
-                      placeholder='blur'
-                      className='rounded-xl'
+                      className='object-cover object-center w-full h-full rounded-xl'
                     />
                   </div>
                   <div

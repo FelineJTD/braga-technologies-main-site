@@ -74,7 +74,7 @@ export default function JobsSection({ jobs }) {
         <p className='mb-4'>
           <b>Work at Braga</b>
         </p>
-        <h2>Explore the career paths.</h2>
+        <h2>Explore the<br />career paths.</h2>
       </div>
       <p className='col-start-7 col-span-4 self-end text-gray-600'>
         Help us to solve the world’s problems through maps, and You. Interested?
