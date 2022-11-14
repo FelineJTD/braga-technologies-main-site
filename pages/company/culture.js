@@ -98,7 +98,7 @@ export default function Culture() {
                 className='flex flex-col space-y-2 min-w-[287px] w-full rounded-lg p-3 border-2 border-gray-200'
               >
                 <div className='relative flex items-center justify-center bg-gray-200 w-full aspect-[2/1]'>
-                  <img src={value.img} alt='' layout='fill' objectFit='cover' />
+                  <img src={value.img} alt='' className='object-cover w-full h-full' />
                 </div>
                 <p className='text-xs'>{value.title}</p>
                 <h5 className='w-8/12'>{value.headline}</h5>

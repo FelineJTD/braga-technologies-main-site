@@ -42,7 +42,6 @@ export default function GetInTouch({ number }) {
           loop={true}
           style={{ borderRadius: "0.75rem" }}
         />
-        {/* <img src={Img} alt='' layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' style={{ borderRadius: '0.75rem' }}/> */}
         <Chip
           isVisible={isVisible1}
           setIsVisible={setIsVisible1}

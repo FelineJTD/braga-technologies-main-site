@@ -197,7 +197,7 @@ export default function JobsSection({ jobs }) {
           {currJobs.length === 0 ? (
             <div className='relative flex flex-col md:flex-row md:space-x-8 w-full border-[1px] border-gray-300 rounded-lg p-4 md:p-8 items-center'>
               <div className='aspect-[2/1] w-full md:w-1/2 relative mb-8 md:mb-0'>
-                <img src='/company/empty-state.svg' alt='' layout='fill' />
+                <img src='/company/empty-state.svg' alt='' className='w-full h-full' />
               </div>
               <div className='w-full md:w-1/2 md:pr-8'>
                 <h2 className='mb-3'>

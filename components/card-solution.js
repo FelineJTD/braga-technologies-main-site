@@ -19,7 +19,7 @@ export default function CardSolution({ solution, isDarkMode = false }) {
         )}
         {solution.img && (
           <div className='relative group-hover:scale-110 duration-300 ease-in-out w-[287px] h-[160px] lg:w-full lg:h-full'>
-            <img src={solution.img} alt='' layout='fill' placeholder='blur' />
+            <img src={solution.img} alt='' className='w-full h-full' />
           </div>
         )}
       </div>
