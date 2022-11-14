@@ -2,8 +2,7 @@ name: Deploy Front Production
 
 on:
   push:
-    branch: 'main'
-  
+    branch: "devops"
 
 jobs:
   deploy:
@@ -35,7 +34,7 @@ jobs:
         run: |
           yarn
           yarn build
-      
+
       - name: Deploy
         run: aws s3 sync ./ s3://braga.co.id
 
@@ -47,4 +46,3 @@ jobs:
           AWS_REGION: "ap-southeast-1"
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
