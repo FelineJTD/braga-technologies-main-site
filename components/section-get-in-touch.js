@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState, useEffect } from 'react';
-import Chip from './cmp-chip'
+import { useState, useEffect } from "react";
+import Chip from "./cmp-chip";
 // import Image from 'next/image'
-import Link from 'next/link';
-import { Img } from '../config/cfg-get-in-touch';
-// import Img from '../assets/animations/homepage/get-in-touch.json';
-import Lottie from 'lottie-react';
+import Link from "next/link";
+// import { Img } from "../config/cfg-get-in-touch";
+import Img from "../assets/animations/shared/get-in-touch.json";
+import Lottie from "lottie-react";
 
-export default function GetInTouch({number}) {
+export default function GetInTouch({ number }) {
   const [isVisible1, setIsVisible1] = useState(true);
   const [isVisible2, setIsVisible2] = useState(true);
   useEffect(() => {
@@ -26,19 +26,27 @@ export default function GetInTouch({number}) {
         <p className='mb-4 bold text-gray-800'>Get in Touch</p>
         <h2 className='mb-4'>Start Mapping Your Future, Today.</h2>
       </div>
-      <p className='col-span-3 col-start-7 lg:self-end mb-4 text-gray-600'>Find out how you can maximize the value from data and strengthen your decision making.</p>
-      <Link href='/contact'><a className='flex justify-end col-span-2 lg:self-end mb-4'>
-        <button className='buttonLight'>Contact Us &nbsp; &gt;</button>
-      </a></Link>
-
+      <p className='col-span-3 col-start-7 lg:self-end mb-4 text-gray-600'>
+        Find out how you can maximize the value from data and strengthen your
+        decision making.
+      </p>
+      <Link href='/contact'>
+        <a className='flex justify-end col-span-2 lg:self-end mb-4'>
+          <button className='buttonLight'>Contact Us &nbsp; &gt;</button>
+        </a>
+      </Link>
 
       <div className='relative col-start-2 col-span-10 aspect-[1838/720] w-full my-6'>
-        <Lottie animationData={Img} loop={true} style={{ borderRadius: '0.75rem' }}/>
-        {/* <Image src={Img} alt='' layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' style={{ borderRadius: '0.75rem' }}/> */}
+        <Lottie
+          animationData={Img}
+          loop={true}
+          style={{ borderRadius: "0.75rem" }}
+        />
+        {/* <img src={Img} alt='' layout='fill' objectFit='cover' objectPosition='center' placeholder='blur' style={{ borderRadius: '0.75rem' }}/> */}
         <Chip
           isVisible={isVisible1}
           setIsVisible={setIsVisible1}
-          icon={require('../public/homepage/chip-icons/icon-location.svg')}
+          icon={"homepage/chip-icons/icon-location.svg"}
           text='Sensor_G01'
           color='primary'
           className='fleet1'
@@ -46,13 +54,12 @@ export default function GetInTouch({number}) {
         <Chip
           isVisible={isVisible2}
           setIsVisible={setIsVisible2}
-          icon={require('../public/homepage/chip-icons/icon-location.svg')}
+          icon={"homepage/chip-icons/icon-location.svg"}
           text='Sensor_A12'
           color='primary'
           className='fleet2'
         />
-
       </div>
     </section>
-  )
+  );
 }

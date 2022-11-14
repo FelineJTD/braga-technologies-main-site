@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preexport": "next build",
+    "export": "next export",
+    "deploy": "aws s3 sync out s3://braga.co.id"
   },
   "dependencies": {
     "lottie-react": "^2.3.1",

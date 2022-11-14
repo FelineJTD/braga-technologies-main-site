@@ -1,1 +1,1 @@
-export const Img = require('../public/shared/get-in-touch.json');
+export const Img = "shared/get-in-touch.json";
