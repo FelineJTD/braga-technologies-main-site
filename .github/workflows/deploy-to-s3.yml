@@ -36,9 +36,10 @@ jobs:
           npm install -g yarn
           yarn install --frozen-lockfile
           yarn build
-          
+          yarn export
+
       - name: Deploy
-        run: aws s3 sync ./out s3://braga.co.id
+        run: aws s3 sync out s3://braga.co.id
 
       - name: Invalidate CloudFront
         uses: chetan/invalidate-cloudfront-action@v2
