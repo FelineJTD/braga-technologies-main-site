@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "preexport": "next build",
-    "export": "next export",
-    "deploy": "aws s3 sync ./out s3://braga.co.id"
+    "export": "next export"
   },
   "dependencies": {
     "lottie-react": "^2.3.1",
