@@ -1,8 +1,16 @@
 import Link from 'next/link'
+import Script from 'next/script'
 
 export default function NotFound() {
   return (
     <div className='whiteBG'>
+      <Script
+        async
+        defer
+        data-website-id='9a5ee667-ae45-49bd-bdef-07cd5ec8124d'
+        src='https://stats.braga.co.id/umami.js'
+        strategy='worker'
+      ></Script>
       <div className='col-span-12 min-h-[60vh]'>
         
       </div>

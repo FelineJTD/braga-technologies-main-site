@@ -4,6 +4,9 @@ const nextConfig = {
   swcMinify: true,
   images: { unoptimized: true },
   trailingSlash: true,
+  experimental: {
+    nextScriptWorkers: true,
+  },
 };
 
 module.exports = nextConfig;

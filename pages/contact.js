@@ -8,12 +8,20 @@ import { LastSectionImage, Forms } from '../config/cfg-contact';
 // Components
 import FormField from '../components/form-field';
 import Navbar from '../components/navbar';
+import Script from 'next/script';
 
 export default function Contact() {
   const [currForm, setCurrForm] = useState(Forms[0]);
 
   return (
     <div>
+      <Script
+        async
+        defer
+        data-website-id='9a5ee667-ae45-49bd-bdef-07cd5ec8124d'
+        src='https://stats.braga.co.id/umami.js'
+        strategy='worker'
+      ></Script>
       <Head>
         <title>BragaTechnologies</title>
         <meta name="description" content="Braga Technologies brings Location Insight to help industries and organizations alike in assets monitoring, fleet management, campaign optimation, and more." key="description"/>

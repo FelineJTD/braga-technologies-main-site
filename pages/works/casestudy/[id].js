@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import Script from 'next/script';
 import Navbar from '../../../components/navbar';
 
 // Components
@@ -45,6 +46,13 @@ export default function Works() {
   
   return (
     <div>
+      <Script
+        async
+        defer
+        data-website-id='9a5ee667-ae45-49bd-bdef-07cd5ec8124d'
+        src='https://stats.braga.co.id/umami.js'
+        strategy='worker'
+      ></Script>
       <Head>
         <title>BragaTechnologies</title>
         <meta name="description" content="Braga Technologies brings Location Insight to help industries and organizations alike in assets monitoring, fleet management, campaign optimation, and more." key="description"/>

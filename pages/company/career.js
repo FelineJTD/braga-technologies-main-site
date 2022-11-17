@@ -2,6 +2,7 @@
 import Head from "next/head";
 // import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { useState } from "react";
 import Navbar from "../../components/navbar";
 import JobsSection from "../../components/section-jobs";
@@ -20,6 +21,13 @@ export default function Career() {
 
   return (
     <div>
+      <Script
+        async
+        defer
+        data-website-id='9a5ee667-ae45-49bd-bdef-07cd5ec8124d'
+        src='https://stats.braga.co.id/umami.js'
+        strategy='worker'
+      ></Script>
       <Head>
         <title>BragaTechnologies</title>
         <meta

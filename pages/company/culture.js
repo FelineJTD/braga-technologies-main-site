@@ -12,6 +12,7 @@ import Animation from "../../assets/animations/culture/culture-animation.json";
 import Lottie from "lottie-react";
 // import Image from "next/image";
 import Navbar from "../../components/navbar";
+import Script from "next/script";
 
 export default function Culture() {
   const valuesRef = useRef();
@@ -49,6 +50,13 @@ export default function Culture() {
 
   return (
     <div>
+      <Script
+        async
+        defer
+        data-website-id='9a5ee667-ae45-49bd-bdef-07cd5ec8124d'
+        src='https://stats.braga.co.id/umami.js'
+        strategy='worker'
+      ></Script>
       <Head>
         <title>BragaTechnologies</title>
         <meta

@@ -10,6 +10,7 @@ import { WorksData } from "../../config/cfg-works";
 import CardWorks from "../../components/card-works";
 import GetInTouch from "../../components/section-get-in-touch";
 import Navbar from "../../components/navbar";
+import Script from "next/script";
 
 export default function Works() {
   const [currPage, setCurrPage] = useState(1);
@@ -40,6 +41,13 @@ export default function Works() {
 
   return (
     <div>
+      <Script
+        async
+        defer
+        data-website-id='9a5ee667-ae45-49bd-bdef-07cd5ec8124d'
+        src='https://stats.braga.co.id/umami.js'
+        strategy='worker'
+      ></Script>
       <Head>
         <title>BragaTechnologies</title>
         <meta
