@@ -55,7 +55,7 @@ export default function Culture() {
         defer
         data-website-id='bd28b67f-0082-469a-b11f-aadeb3f13832'
         src='https://stats.braga.co.id/umami.js'
-        strategy='worker'
+        //strategy='worker'
       ></Script>
       <Head>
         <title>BragaTechnologies</title>

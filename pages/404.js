@@ -9,7 +9,7 @@ export default function NotFound() {
         defer
         data-website-id='bd28b67f-0082-469a-b11f-aadeb3f13832'
         src='https://stats.braga.co.id/umami.js'
-        strategy='worker'
+        //strategy='worker'
       ></Script>
       <div className='col-span-12 min-h-[60vh]'></div>
       <h1 className='col-span-3 self-end'>404.</h1>
