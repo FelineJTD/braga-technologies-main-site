@@ -24,7 +24,7 @@ export default function Career() {
       <Script
         async
         defer
-        data-website-id='9a5ee667-ae45-49bd-bdef-07cd5ec8124d'
+        data-website-id='bd28b67f-0082-469a-b11f-aadeb3f13832'
         src='https://stats.braga.co.id/umami.js'
         strategy='worker'
       ></Script>
