@@ -13,6 +13,31 @@ import Script from "next/script";
 export default function Contact() {
   const [currForm, setCurrForm] = useState(Forms[0]);
 
+  const handleSubmit = async (event) => {
+    setFormState("progress");
+    event.preventDefault();
+    let formData = Object.fromEntries(new FormData(event.target));
+    formData.title = currForm.title;
+    formData.newsletter = Boolean(formData.newsletter);
+    try {
+      await fetch("https://panel.braga.co.id/panel/items/braga_contact", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    } catch (error) {
+    } finally {
+      setFormState("ready");
+      setTimeout(() => {
+        setFormState("default");
+        event.target.reset();
+      }, 750);
+    }
+  };
+  const [formState, setFormState] = useState("default");
+
   return (
     <div>
       <Script
@@ -78,12 +103,51 @@ export default function Contact() {
             </div>
 
             {/* FORM */}
-            <form className='md:col-start-1 md:col-span-4 md:grid md:grid-cols-4 md:gap-3 flex flex-col space-y-2 md:space-y-0'>
+            <form
+              className='md:col-start-1 md:col-span-4 md:grid md:grid-cols-4 md:gap-3 flex flex-col space-y-2 md:space-y-0'
+              onSubmit={handleSubmit}
+            >
               {currForm.form.map((field, index) => (
                 <FormField field={field} key={index} />
               ))}
-              <button className='bg-black hover:bg-primary duration-300 text-white border-0 mt-2'>
-                {currForm.submitLabel}
+              <button
+                className='bg-black hover:bg-primary duration-300 text-white border-0 mt-2'
+                role='submit'
+                disabled={formState !== "default"}
+              >
+                {formState === "default" ? (
+                  currForm.submitLabel
+                ) : (
+                  <svg
+                    id='check'
+                    version='1.1'
+                    xmlns='http://www.w3.org/2000/svg'
+                    xmlnsXlink='http://www.w3.org/1999/xlink'
+                    viewBox='0 0 100 100'
+                    xmlSpace='preserve'
+                    className={
+                      "w-6 h-6 block mx-auto " +
+                      (formState === "ready"
+                        ? "ready"
+                        : formState === "progress"
+                        ? "progress"
+                        : "")
+                    }
+                  >
+                    <circle
+                      id='circle'
+                      cx='50'
+                      cy='50'
+                      r='46'
+                      fill='transparent'
+                    />
+                    <polyline
+                      id='tick'
+                      points='25,55 45,70 75,33'
+                      fill='transparent'
+                    />
+                  </svg>
+                )}
               </button>
             </form>
           </div>
@@ -131,6 +195,68 @@ export default function Contact() {
           </div>
         </section>
       </main>
+      {/* https://codepen.io/splitti/pen/jLZjgx */}
+      <style jsx>{`
+        #tick {
+          stroke: white;
+          stroke-width: 6;
+          transition: all 1s;
+        }
+
+        #circle {
+          stroke: white;
+          stroke-width: 6;
+          transform-origin: 50px 50px 0;
+          transition: all 1s;
+        }
+
+        .progress #tick {
+          opacity: 0;
+        }
+
+        .ready #tick {
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+          animation: draw 8s ease-out forwards;
+        }
+
+        .progress #circle {
+          stroke: white;
+          stroke-dasharray: 314;
+          stroke-dashoffset: 1000;
+          animation: spin 3s linear infinite;
+        }
+
+        .ready #circle {
+          stroke-dashoffset: 66;
+          stroke: white;
+        }
+
+        #circle {
+          stroke-dasharray: 500;
+        }
+
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+            stroke-dashoffset: 66;
+          }
+          50% {
+            transform: rotate(540deg);
+            stroke-dashoffset: 314;
+          }
+          100% {
+            transform: rotate(1080deg);
+            stroke-dashoffset: 66;
+          }
+        }
+
+        @keyframes draw {
+          to {
+            stroke-dashoffset: 0;
+          }
+        }
+      `}</style>
     </div>
   );
 }
